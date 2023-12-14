@@ -21,6 +21,7 @@ dev_dependencies:
   freezed: ^2.4.5
   injectable_generator: ^2.1.6
   json_serializable: ^6.7.1
+  auto_exporter: ^1.5.0
 
 scripts: 
   gen-build: "dart run build_runner build"

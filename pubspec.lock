@@ -33,6 +33,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.11.0"
+  auto_exporter:
+    dependency: "direct dev"
+    description:
+      name: auto_exporter
+      sha256: c37fafed7b4328d75cab68df2ba3aa65f336f3b613a7d68570434d0f50c01444
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.5.0"
   boolean_selector:
     dependency: transitive
     description:

@@ -91,13 +91,3 @@ Map<String, dynamic> _$$BaseLoginRequestImplToJson(
       'telephone': instance.telephone,
       'motDePasse': instance.motDePasse,
     };
-
-_$ImageUploadedImpl _$$ImageUploadedImplFromJson(Map<String, dynamic> json) =>
-    _$ImageUploadedImpl(
-      url: json['url'] as String,
-    );
-
-Map<String, dynamic> _$$ImageUploadedImplToJson(_$ImageUploadedImpl instance) =>
-    <String, dynamic>{
-      'url': instance.url,
-    };

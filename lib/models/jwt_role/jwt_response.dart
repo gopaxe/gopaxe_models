@@ -67,11 +67,3 @@ class BaseLoginRequest with _$BaseLoginRequest {
   factory BaseLoginRequest.fromJson(Map<String, dynamic> json) =>
       _$BaseLoginRequestFromJson(json);
 }
-
-@freezed
-class ImageUploaded with _$ImageUploaded {
-  const factory ImageUploaded({required String url}) = _ImageUploaded;
-
-  factory ImageUploaded.fromJson(Map<String, dynamic> json) =>
-      _$ImageUploadedFromJson(json);
-}
