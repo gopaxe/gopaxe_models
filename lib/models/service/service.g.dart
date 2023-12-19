@@ -9,7 +9,6 @@ part of 'service.dart';
 _$CreateServiceRequestImpl _$$CreateServiceRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$CreateServiceRequestImpl(
-      id: json['id'] as int,
       title: json['title'] as String,
       description: json['description'] as String,
       targetedMetierId: json['targetedMetierId'] as int?,
@@ -22,7 +21,6 @@ _$CreateServiceRequestImpl _$$CreateServiceRequestImplFromJson(
 Map<String, dynamic> _$$CreateServiceRequestImplToJson(
         _$CreateServiceRequestImpl instance) =>
     <String, dynamic>{
-      'id': instance.id,
       'title': instance.title,
       'description': instance.description,
       'targetedMetierId': instance.targetedMetierId,

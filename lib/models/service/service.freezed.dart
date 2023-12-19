@@ -20,7 +20,6 @@ CreateServiceRequest _$CreateServiceRequestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CreateServiceRequest {
-  int get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   int? get targetedMetierId => throw _privateConstructorUsedError;
@@ -42,8 +41,7 @@ abstract class $CreateServiceRequestCopyWith<$Res> {
       _$CreateServiceRequestCopyWithImpl<$Res, CreateServiceRequest>;
   @useResult
   $Res call(
-      {int id,
-      String title,
+      {String title,
       String description,
       int? targetedMetierId,
       int? targetedCompetenceId,
@@ -67,7 +65,6 @@ class _$CreateServiceRequestCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
     Object? title = null,
     Object? description = null,
     Object? targetedMetierId = freezed,
@@ -76,10 +73,6 @@ class _$CreateServiceRequestCopyWithImpl<$Res,
     Object? desiredLocation = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -125,8 +118,7 @@ abstract class _$$CreateServiceRequestImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int id,
-      String title,
+      {String title,
       String description,
       int? targetedMetierId,
       int? targetedCompetenceId,
@@ -148,7 +140,6 @@ class __$$CreateServiceRequestImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
     Object? title = null,
     Object? description = null,
     Object? targetedMetierId = freezed,
@@ -157,10 +148,6 @@ class __$$CreateServiceRequestImplCopyWithImpl<$Res>
     Object? desiredLocation = null,
   }) {
     return _then(_$CreateServiceRequestImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -193,8 +180,7 @@ class __$$CreateServiceRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CreateServiceRequestImpl implements _CreateServiceRequest {
   const _$CreateServiceRequestImpl(
-      {required this.id,
-      required this.title,
+      {required this.title,
       required this.description,
       required this.targetedMetierId,
       required this.targetedCompetenceId,
@@ -204,8 +190,6 @@ class _$CreateServiceRequestImpl implements _CreateServiceRequest {
   factory _$CreateServiceRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$CreateServiceRequestImplFromJson(json);
 
-  @override
-  final int id;
   @override
   final String title;
   @override
@@ -222,7 +206,7 @@ class _$CreateServiceRequestImpl implements _CreateServiceRequest {
 
   @override
   String toString() {
-    return 'CreateServiceRequest(id: $id, title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, desiredLocation: $desiredLocation)';
+    return 'CreateServiceRequest(title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, desiredLocation: $desiredLocation)';
   }
 
   @override
@@ -230,7 +214,6 @@ class _$CreateServiceRequestImpl implements _CreateServiceRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateServiceRequestImpl &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -246,7 +229,7 @@ class _$CreateServiceRequestImpl implements _CreateServiceRequest {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, title, description,
+  int get hashCode => Object.hash(runtimeType, title, description,
       targetedMetierId, targetedCompetenceId, completionDate, desiredLocation);
 
   @JsonKey(ignore: true)
@@ -267,8 +250,7 @@ class _$CreateServiceRequestImpl implements _CreateServiceRequest {
 
 abstract class _CreateServiceRequest implements CreateServiceRequest {
   const factory _CreateServiceRequest(
-      {required final int id,
-      required final String title,
+      {required final String title,
       required final String description,
       required final int? targetedMetierId,
       required final int? targetedCompetenceId,
@@ -278,8 +260,6 @@ abstract class _CreateServiceRequest implements CreateServiceRequest {
   factory _CreateServiceRequest.fromJson(Map<String, dynamic> json) =
       _$CreateServiceRequestImpl.fromJson;
 
-  @override
-  int get id;
   @override
   String get title;
   @override

@@ -8,7 +8,6 @@ part 'service.g.dart';
 @freezed
 class CreateServiceRequest with _$CreateServiceRequest {
   const factory CreateServiceRequest({
-    required int id,
     required String title,
     required String description,
     required int? targetedMetierId,
