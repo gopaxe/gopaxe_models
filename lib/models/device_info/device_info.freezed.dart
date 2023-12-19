@@ -24,7 +24,7 @@ mixin _$DeviceInfo {
   String get deviceModel => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   int? get userId => throw _privateConstructorUsedError;
-  bool get isClient => throw _privateConstructorUsedError;
+  bool? get isClient => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,7 +43,7 @@ abstract class $DeviceInfoCopyWith<$Res> {
       String deviceModel,
       String deviceId,
       int? userId,
-      bool isClient});
+      bool? isClient});
 }
 
 /// @nodoc
@@ -63,7 +63,7 @@ class _$DeviceInfoCopyWithImpl<$Res, $Val extends DeviceInfo>
     Object? deviceModel = null,
     Object? deviceId = null,
     Object? userId = freezed,
-    Object? isClient = null,
+    Object? isClient = freezed,
   }) {
     return _then(_value.copyWith(
       deviceBrand: null == deviceBrand
@@ -82,10 +82,10 @@ class _$DeviceInfoCopyWithImpl<$Res, $Val extends DeviceInfo>
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
               as int?,
-      isClient: null == isClient
+      isClient: freezed == isClient
           ? _value.isClient
           : isClient // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
@@ -103,7 +103,7 @@ abstract class _$$DeviceInfoImplCopyWith<$Res>
       String deviceModel,
       String deviceId,
       int? userId,
-      bool isClient});
+      bool? isClient});
 }
 
 /// @nodoc
@@ -121,7 +121,7 @@ class __$$DeviceInfoImplCopyWithImpl<$Res>
     Object? deviceModel = null,
     Object? deviceId = null,
     Object? userId = freezed,
-    Object? isClient = null,
+    Object? isClient = freezed,
   }) {
     return _then(_$DeviceInfoImpl(
       deviceBrand: null == deviceBrand
@@ -140,10 +140,10 @@ class __$$DeviceInfoImplCopyWithImpl<$Res>
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
               as int?,
-      isClient: null == isClient
+      isClient: freezed == isClient
           ? _value.isClient
           : isClient // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -156,7 +156,7 @@ class _$DeviceInfoImpl implements _DeviceInfo {
       required this.deviceModel,
       required this.deviceId,
       this.userId,
-      required this.isClient});
+      this.isClient});
 
   factory _$DeviceInfoImpl.fromJson(Map<String, dynamic> json) =>
       _$$DeviceInfoImplFromJson(json);
@@ -170,7 +170,7 @@ class _$DeviceInfoImpl implements _DeviceInfo {
   @override
   final int? userId;
   @override
-  final bool isClient;
+  final bool? isClient;
 
   @override
   String toString() {
@@ -218,7 +218,7 @@ abstract class _DeviceInfo implements DeviceInfo {
       required final String deviceModel,
       required final String deviceId,
       final int? userId,
-      required final bool isClient}) = _$DeviceInfoImpl;
+      final bool? isClient}) = _$DeviceInfoImpl;
 
   factory _DeviceInfo.fromJson(Map<String, dynamic> json) =
       _$DeviceInfoImpl.fromJson;
@@ -232,7 +232,7 @@ abstract class _DeviceInfo implements DeviceInfo {
   @override
   int? get userId;
   @override
-  bool get isClient;
+  bool? get isClient;
   @override
   @JsonKey(ignore: true)
   _$$DeviceInfoImplCopyWith<_$DeviceInfoImpl> get copyWith =>

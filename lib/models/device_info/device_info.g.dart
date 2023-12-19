@@ -12,7 +12,7 @@ _$DeviceInfoImpl _$$DeviceInfoImplFromJson(Map<String, dynamic> json) =>
       deviceModel: json['deviceModel'] as String,
       deviceId: json['deviceId'] as String,
       userId: json['userId'] as int?,
-      isClient: json['isClient'] as bool,
+      isClient: json['isClient'] as bool?,
     );
 
 Map<String, dynamic> _$$DeviceInfoImplToJson(_$DeviceInfoImpl instance) =>
