@@ -1,0 +1,72 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'service.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$CreateServiceRequestImpl _$$CreateServiceRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CreateServiceRequestImpl(
+      id: json['id'] as int,
+      title: json['title'] as String,
+      description: json['description'] as String,
+      targetedMetierId: json['targetedMetierId'] as int?,
+      targetedCompetenceId: json['targetedCompetenceId'] as int?,
+      completionDate: DateTime.parse(json['completionDate'] as String),
+      desiredLocation:
+          Offset.fromJson(json['desiredLocation'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$CreateServiceRequestImplToJson(
+        _$CreateServiceRequestImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'title': instance.title,
+      'description': instance.description,
+      'targetedMetierId': instance.targetedMetierId,
+      'targetedCompetenceId': instance.targetedCompetenceId,
+      'completionDate': instance.completionDate.toIso8601String(),
+      'desiredLocation': instance.desiredLocation,
+    };
+
+_$ServiceRequestImpl _$$ServiceRequestImplFromJson(Map<String, dynamic> json) =>
+    _$ServiceRequestImpl(
+      id: json['id'] as int,
+      title: json['title'] as String,
+      description: json['description'] as String,
+      targetedMetierId: json['targetedMetierId'] as int?,
+      targetedCompetenceId: json['targetedCompetenceId'] as int?,
+      completionDate: DateTime.parse(json['completionDate'] as String),
+      workerId: json['workerId'] as int?,
+      clientId: json['clientId'] as int,
+      startDate: json['startDate'] == null
+          ? null
+          : DateTime.parse(json['startDate'] as String),
+      contactDate: json['contactDate'] == null
+          ? null
+          : DateTime.parse(json['contactDate'] as String),
+      endDate: json['endDate'] == null
+          ? null
+          : DateTime.parse(json['endDate'] as String),
+      desiredLocation:
+          Offset.fromJson(json['desiredLocation'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$ServiceRequestImplToJson(
+        _$ServiceRequestImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'title': instance.title,
+      'description': instance.description,
+      'targetedMetierId': instance.targetedMetierId,
+      'targetedCompetenceId': instance.targetedCompetenceId,
+      'completionDate': instance.completionDate.toIso8601String(),
+      'workerId': instance.workerId,
+      'clientId': instance.clientId,
+      'startDate': instance.startDate?.toIso8601String(),
+      'contactDate': instance.contactDate?.toIso8601String(),
+      'endDate': instance.endDate?.toIso8601String(),
+      'desiredLocation': instance.desiredLocation,
+    };

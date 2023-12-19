@@ -16,5 +16,7 @@ export 'package:gopaxe_models/models/domain/domain.dart';
 export 'package:gopaxe_models/models/type_compte/type_compte.dart';
 export 'package:gopaxe_models/models/metier/metier.dart';
 export 'package:gopaxe_models/models/client/client.dart';
+export 'package:gopaxe_models/models/service/service.dart';
 export 'package:gopaxe_models/models/jwt_role/rhumaine_output.dart';
+export 'package:gopaxe_models/models/jwt_role/jwt_response.dart';
 export 'package:gopaxe_models/models/jwt_role/role.dart';
