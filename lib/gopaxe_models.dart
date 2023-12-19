@@ -20,3 +20,4 @@ export 'package:gopaxe_models/models/service/service.dart';
 export 'package:gopaxe_models/models/jwt_role/rhumaine_output.dart';
 export 'package:gopaxe_models/models/jwt_role/jwt_response.dart';
 export 'package:gopaxe_models/models/jwt_role/role.dart';
+export 'package:gopaxe_models/models/device_info/device_info.dart';
