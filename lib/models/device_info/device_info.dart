@@ -9,8 +9,6 @@ class DeviceInfo with _$DeviceInfo {
     required String deviceBrand,
     required String deviceModel,
     required String deviceId,
-    int? userId,
-    bool? isClient,
   }) = _DeviceInfo;
 
   factory DeviceInfo.fromJson(Map<String, dynamic> json) =>

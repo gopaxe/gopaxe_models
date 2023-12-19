@@ -23,8 +23,6 @@ mixin _$DeviceInfo {
   String get deviceBrand => throw _privateConstructorUsedError;
   String get deviceModel => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
-  int? get userId => throw _privateConstructorUsedError;
-  bool? get isClient => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,12 +36,7 @@ abstract class $DeviceInfoCopyWith<$Res> {
           DeviceInfo value, $Res Function(DeviceInfo) then) =
       _$DeviceInfoCopyWithImpl<$Res, DeviceInfo>;
   @useResult
-  $Res call(
-      {String deviceBrand,
-      String deviceModel,
-      String deviceId,
-      int? userId,
-      bool? isClient});
+  $Res call({String deviceBrand, String deviceModel, String deviceId});
 }
 
 /// @nodoc
@@ -62,8 +55,6 @@ class _$DeviceInfoCopyWithImpl<$Res, $Val extends DeviceInfo>
     Object? deviceBrand = null,
     Object? deviceModel = null,
     Object? deviceId = null,
-    Object? userId = freezed,
-    Object? isClient = freezed,
   }) {
     return _then(_value.copyWith(
       deviceBrand: null == deviceBrand
@@ -78,14 +69,6 @@ class _$DeviceInfoCopyWithImpl<$Res, $Val extends DeviceInfo>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
-      userId: freezed == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      isClient: freezed == isClient
-          ? _value.isClient
-          : isClient // ignore: cast_nullable_to_non_nullable
-              as bool?,
     ) as $Val);
   }
 }
@@ -98,12 +81,7 @@ abstract class _$$DeviceInfoImplCopyWith<$Res>
       __$$DeviceInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String deviceBrand,
-      String deviceModel,
-      String deviceId,
-      int? userId,
-      bool? isClient});
+  $Res call({String deviceBrand, String deviceModel, String deviceId});
 }
 
 /// @nodoc
@@ -120,8 +98,6 @@ class __$$DeviceInfoImplCopyWithImpl<$Res>
     Object? deviceBrand = null,
     Object? deviceModel = null,
     Object? deviceId = null,
-    Object? userId = freezed,
-    Object? isClient = freezed,
   }) {
     return _then(_$DeviceInfoImpl(
       deviceBrand: null == deviceBrand
@@ -136,14 +112,6 @@ class __$$DeviceInfoImplCopyWithImpl<$Res>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
-      userId: freezed == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      isClient: freezed == isClient
-          ? _value.isClient
-          : isClient // ignore: cast_nullable_to_non_nullable
-              as bool?,
     ));
   }
 }
@@ -154,9 +122,7 @@ class _$DeviceInfoImpl implements _DeviceInfo {
   const _$DeviceInfoImpl(
       {required this.deviceBrand,
       required this.deviceModel,
-      required this.deviceId,
-      this.userId,
-      this.isClient});
+      required this.deviceId});
 
   factory _$DeviceInfoImpl.fromJson(Map<String, dynamic> json) =>
       _$$DeviceInfoImplFromJson(json);
@@ -167,14 +133,10 @@ class _$DeviceInfoImpl implements _DeviceInfo {
   final String deviceModel;
   @override
   final String deviceId;
-  @override
-  final int? userId;
-  @override
-  final bool? isClient;
 
   @override
   String toString() {
-    return 'DeviceInfo(deviceBrand: $deviceBrand, deviceModel: $deviceModel, deviceId: $deviceId, userId: $userId, isClient: $isClient)';
+    return 'DeviceInfo(deviceBrand: $deviceBrand, deviceModel: $deviceModel, deviceId: $deviceId)';
   }
 
   @override
@@ -187,16 +149,13 @@ class _$DeviceInfoImpl implements _DeviceInfo {
             (identical(other.deviceModel, deviceModel) ||
                 other.deviceModel == deviceModel) &&
             (identical(other.deviceId, deviceId) ||
-                other.deviceId == deviceId) &&
-            (identical(other.userId, userId) || other.userId == userId) &&
-            (identical(other.isClient, isClient) ||
-                other.isClient == isClient));
+                other.deviceId == deviceId));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, deviceBrand, deviceModel, deviceId, userId, isClient);
+  int get hashCode =>
+      Object.hash(runtimeType, deviceBrand, deviceModel, deviceId);
 
   @JsonKey(ignore: true)
   @override
@@ -216,9 +175,7 @@ abstract class _DeviceInfo implements DeviceInfo {
   const factory _DeviceInfo(
       {required final String deviceBrand,
       required final String deviceModel,
-      required final String deviceId,
-      final int? userId,
-      final bool? isClient}) = _$DeviceInfoImpl;
+      required final String deviceId}) = _$DeviceInfoImpl;
 
   factory _DeviceInfo.fromJson(Map<String, dynamic> json) =
       _$DeviceInfoImpl.fromJson;
@@ -229,10 +186,6 @@ abstract class _DeviceInfo implements DeviceInfo {
   String get deviceModel;
   @override
   String get deviceId;
-  @override
-  int? get userId;
-  @override
-  bool? get isClient;
   @override
   @JsonKey(ignore: true)
   _$$DeviceInfoImplCopyWith<_$DeviceInfoImpl> get copyWith =>
