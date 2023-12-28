@@ -21,3 +21,6 @@ export 'package:gopaxe_models/models/jwt_role/rhumaine_output.dart';
 export 'package:gopaxe_models/models/jwt_role/jwt_response.dart';
 export 'package:gopaxe_models/models/jwt_role/role.dart';
 export 'package:gopaxe_models/models/device_info/device_info.dart';
+export 'package:gopaxe_models/models/transaction/transaction.dart';
+export 'package:gopaxe_models/models/profile_base/profile_base.dart';
+export 'package:gopaxe_models/models/subscription/subscription.dart';
