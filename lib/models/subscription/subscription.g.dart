@@ -9,7 +9,7 @@ part of 'subscription.dart';
 _$SubscriptionValidityImpl _$$SubscriptionValidityImplFromJson(
         Map<String, dynamic> json) =>
     _$SubscriptionValidityImpl(
-      transactionId: json['transactionId'] as int,
+      transactionId: json['transactionId'] as String,
       isValid: json['isValid'] as bool,
       transactionValidityDate:
           DateTime.parse(json['transactionValidityDate'] as String),

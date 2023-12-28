@@ -6,7 +6,7 @@ part 'transaction.g.dart';
 @freezed
 class TransactionId with _$TransactionId {
   const factory TransactionId({
-    required int transactionId,
+    required String transactionId,
   }) = _TransactionId;
 
   factory TransactionId.fromJson(Map<String, dynamic> json) =>
@@ -16,7 +16,7 @@ class TransactionId with _$TransactionId {
 @freezed
 class Transaction with _$Transaction {
   const factory Transaction(
-      {required int transaction,
+      {required String transactionId,
       required DateTime transactionDate}) = _Transaction;
 
   factory Transaction.fromJson(Map<String, dynamic> json) =>

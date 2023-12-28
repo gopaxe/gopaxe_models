@@ -20,7 +20,7 @@ SubscriptionValidity _$SubscriptionValidityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SubscriptionValidity {
-  int get transactionId => throw _privateConstructorUsedError;
+  String get transactionId => throw _privateConstructorUsedError;
   bool get isValid => throw _privateConstructorUsedError;
   DateTime get transactionValidityDate => throw _privateConstructorUsedError;
 
@@ -37,7 +37,7 @@ abstract class $SubscriptionValidityCopyWith<$Res> {
       _$SubscriptionValidityCopyWithImpl<$Res, SubscriptionValidity>;
   @useResult
   $Res call(
-      {int transactionId, bool isValid, DateTime transactionValidityDate});
+      {String transactionId, bool isValid, DateTime transactionValidityDate});
 }
 
 /// @nodoc
@@ -62,7 +62,7 @@ class _$SubscriptionValidityCopyWithImpl<$Res,
       transactionId: null == transactionId
           ? _value.transactionId
           : transactionId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       isValid: null == isValid
           ? _value.isValid
           : isValid // ignore: cast_nullable_to_non_nullable
@@ -84,7 +84,7 @@ abstract class _$$SubscriptionValidityImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int transactionId, bool isValid, DateTime transactionValidityDate});
+      {String transactionId, bool isValid, DateTime transactionValidityDate});
 }
 
 /// @nodoc
@@ -106,7 +106,7 @@ class __$$SubscriptionValidityImplCopyWithImpl<$Res>
       transactionId: null == transactionId
           ? _value.transactionId
           : transactionId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       isValid: null == isValid
           ? _value.isValid
           : isValid // ignore: cast_nullable_to_non_nullable
@@ -131,7 +131,7 @@ class _$SubscriptionValidityImpl implements _SubscriptionValidity {
       _$$SubscriptionValidityImplFromJson(json);
 
   @override
-  final int transactionId;
+  final String transactionId;
   @override
   final bool isValid;
   @override
@@ -178,7 +178,7 @@ class _$SubscriptionValidityImpl implements _SubscriptionValidity {
 
 abstract class _SubscriptionValidity implements SubscriptionValidity {
   const factory _SubscriptionValidity(
-          {required final int transactionId,
+          {required final String transactionId,
           required final bool isValid,
           required final DateTime transactionValidityDate}) =
       _$SubscriptionValidityImpl;
@@ -187,7 +187,7 @@ abstract class _SubscriptionValidity implements SubscriptionValidity {
       _$SubscriptionValidityImpl.fromJson;
 
   @override
-  int get transactionId;
+  String get transactionId;
   @override
   bool get isValid;
   @override

@@ -6,7 +6,7 @@ part 'subscription.g.dart';
 @freezed
 class SubscriptionValidity with _$SubscriptionValidity {
   const factory SubscriptionValidity(
-      {required int transactionId,
+      {required String transactionId,
       required bool isValid,
       required DateTime transactionValidityDate}) = _SubscriptionValidity;
 

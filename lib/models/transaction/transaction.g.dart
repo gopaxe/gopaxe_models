@@ -8,7 +8,7 @@ part of 'transaction.dart';
 
 _$TransactionIdImpl _$$TransactionIdImplFromJson(Map<String, dynamic> json) =>
     _$TransactionIdImpl(
-      transactionId: json['transactionId'] as int,
+      transactionId: json['transactionId'] as String,
     );
 
 Map<String, dynamic> _$$TransactionIdImplToJson(_$TransactionIdImpl instance) =>
@@ -18,12 +18,12 @@ Map<String, dynamic> _$$TransactionIdImplToJson(_$TransactionIdImpl instance) =>
 
 _$TransactionImpl _$$TransactionImplFromJson(Map<String, dynamic> json) =>
     _$TransactionImpl(
-      transaction: json['transaction'] as int,
+      transactionId: json['transactionId'] as String,
       transactionDate: DateTime.parse(json['transactionDate'] as String),
     );
 
 Map<String, dynamic> _$$TransactionImplToJson(_$TransactionImpl instance) =>
     <String, dynamic>{
-      'transaction': instance.transaction,
+      'transactionId': instance.transactionId,
       'transactionDate': instance.transactionDate.toIso8601String(),
     };
