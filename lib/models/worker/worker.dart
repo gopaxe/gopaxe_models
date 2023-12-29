@@ -77,7 +77,17 @@ class SaveWorker with _$SaveWorker {
 @freezed
 class SaveWorkerWithPassword with _$SaveWorkerWithPassword {
   const factory SaveWorkerWithPassword(
-      {required SaveWorker workerInfo,
+      {required String firstName,
+      required String lastName,
+      required String telephone,
+      required String email,
+      required String rectoUrl,
+      required String versoUrl,
+      required int villeId,
+      required int typeCompteId,
+      required Offset gps,
+      required List<RhumaineSkill> rhumaineSkills,
+      required String photo,
       required String password}) = _SaveWorkerWithPassword;
 
   factory SaveWorkerWithPassword.fromJson(Map<String, dynamic> json) =>

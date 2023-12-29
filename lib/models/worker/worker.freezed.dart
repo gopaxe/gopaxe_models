@@ -1332,7 +1332,17 @@ SaveWorkerWithPassword _$SaveWorkerWithPasswordFromJson(
 
 /// @nodoc
 mixin _$SaveWorkerWithPassword {
-  SaveWorker get workerInfo => throw _privateConstructorUsedError;
+  String get firstName => throw _privateConstructorUsedError;
+  String get lastName => throw _privateConstructorUsedError;
+  String get telephone => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
+  String get rectoUrl => throw _privateConstructorUsedError;
+  String get versoUrl => throw _privateConstructorUsedError;
+  int get villeId => throw _privateConstructorUsedError;
+  int get typeCompteId => throw _privateConstructorUsedError;
+  Offset get gps => throw _privateConstructorUsedError;
+  List<RhumaineSkill> get rhumaineSkills => throw _privateConstructorUsedError;
+  String get photo => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1347,9 +1357,21 @@ abstract class $SaveWorkerWithPasswordCopyWith<$Res> {
           $Res Function(SaveWorkerWithPassword) then) =
       _$SaveWorkerWithPasswordCopyWithImpl<$Res, SaveWorkerWithPassword>;
   @useResult
-  $Res call({SaveWorker workerInfo, String password});
+  $Res call(
+      {String firstName,
+      String lastName,
+      String telephone,
+      String email,
+      String rectoUrl,
+      String versoUrl,
+      int villeId,
+      int typeCompteId,
+      Offset gps,
+      List<RhumaineSkill> rhumaineSkills,
+      String photo,
+      String password});
 
-  $SaveWorkerCopyWith<$Res> get workerInfo;
+  $OffsetCopyWith<$Res> get gps;
 }
 
 /// @nodoc
@@ -1366,14 +1388,64 @@ class _$SaveWorkerWithPasswordCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? workerInfo = null,
+    Object? firstName = null,
+    Object? lastName = null,
+    Object? telephone = null,
+    Object? email = null,
+    Object? rectoUrl = null,
+    Object? versoUrl = null,
+    Object? villeId = null,
+    Object? typeCompteId = null,
+    Object? gps = null,
+    Object? rhumaineSkills = null,
+    Object? photo = null,
     Object? password = null,
   }) {
     return _then(_value.copyWith(
-      workerInfo: null == workerInfo
-          ? _value.workerInfo
-          : workerInfo // ignore: cast_nullable_to_non_nullable
-              as SaveWorker,
+      firstName: null == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String,
+      lastName: null == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String,
+      telephone: null == telephone
+          ? _value.telephone
+          : telephone // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      rectoUrl: null == rectoUrl
+          ? _value.rectoUrl
+          : rectoUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      versoUrl: null == versoUrl
+          ? _value.versoUrl
+          : versoUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      villeId: null == villeId
+          ? _value.villeId
+          : villeId // ignore: cast_nullable_to_non_nullable
+              as int,
+      typeCompteId: null == typeCompteId
+          ? _value.typeCompteId
+          : typeCompteId // ignore: cast_nullable_to_non_nullable
+              as int,
+      gps: null == gps
+          ? _value.gps
+          : gps // ignore: cast_nullable_to_non_nullable
+              as Offset,
+      rhumaineSkills: null == rhumaineSkills
+          ? _value.rhumaineSkills
+          : rhumaineSkills // ignore: cast_nullable_to_non_nullable
+              as List<RhumaineSkill>,
+      photo: null == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String,
       password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
@@ -1383,9 +1455,9 @@ class _$SaveWorkerWithPasswordCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $SaveWorkerCopyWith<$Res> get workerInfo {
-    return $SaveWorkerCopyWith<$Res>(_value.workerInfo, (value) {
-      return _then(_value.copyWith(workerInfo: value) as $Val);
+  $OffsetCopyWith<$Res> get gps {
+    return $OffsetCopyWith<$Res>(_value.gps, (value) {
+      return _then(_value.copyWith(gps: value) as $Val);
     });
   }
 }
@@ -1399,10 +1471,22 @@ abstract class _$$SaveWorkerWithPasswordImplCopyWith<$Res>
       __$$SaveWorkerWithPasswordImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({SaveWorker workerInfo, String password});
+  $Res call(
+      {String firstName,
+      String lastName,
+      String telephone,
+      String email,
+      String rectoUrl,
+      String versoUrl,
+      int villeId,
+      int typeCompteId,
+      Offset gps,
+      List<RhumaineSkill> rhumaineSkills,
+      String photo,
+      String password});
 
   @override
-  $SaveWorkerCopyWith<$Res> get workerInfo;
+  $OffsetCopyWith<$Res> get gps;
 }
 
 /// @nodoc
@@ -1418,14 +1502,64 @@ class __$$SaveWorkerWithPasswordImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? workerInfo = null,
+    Object? firstName = null,
+    Object? lastName = null,
+    Object? telephone = null,
+    Object? email = null,
+    Object? rectoUrl = null,
+    Object? versoUrl = null,
+    Object? villeId = null,
+    Object? typeCompteId = null,
+    Object? gps = null,
+    Object? rhumaineSkills = null,
+    Object? photo = null,
     Object? password = null,
   }) {
     return _then(_$SaveWorkerWithPasswordImpl(
-      workerInfo: null == workerInfo
-          ? _value.workerInfo
-          : workerInfo // ignore: cast_nullable_to_non_nullable
-              as SaveWorker,
+      firstName: null == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String,
+      lastName: null == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String,
+      telephone: null == telephone
+          ? _value.telephone
+          : telephone // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      rectoUrl: null == rectoUrl
+          ? _value.rectoUrl
+          : rectoUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      versoUrl: null == versoUrl
+          ? _value.versoUrl
+          : versoUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      villeId: null == villeId
+          ? _value.villeId
+          : villeId // ignore: cast_nullable_to_non_nullable
+              as int,
+      typeCompteId: null == typeCompteId
+          ? _value.typeCompteId
+          : typeCompteId // ignore: cast_nullable_to_non_nullable
+              as int,
+      gps: null == gps
+          ? _value.gps
+          : gps // ignore: cast_nullable_to_non_nullable
+              as Offset,
+      rhumaineSkills: null == rhumaineSkills
+          ? _value._rhumaineSkills
+          : rhumaineSkills // ignore: cast_nullable_to_non_nullable
+              as List<RhumaineSkill>,
+      photo: null == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String,
       password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
@@ -1438,19 +1572,57 @@ class __$$SaveWorkerWithPasswordImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SaveWorkerWithPasswordImpl implements _SaveWorkerWithPassword {
   const _$SaveWorkerWithPasswordImpl(
-      {required this.workerInfo, required this.password});
+      {required this.firstName,
+      required this.lastName,
+      required this.telephone,
+      required this.email,
+      required this.rectoUrl,
+      required this.versoUrl,
+      required this.villeId,
+      required this.typeCompteId,
+      required this.gps,
+      required final List<RhumaineSkill> rhumaineSkills,
+      required this.photo,
+      required this.password})
+      : _rhumaineSkills = rhumaineSkills;
 
   factory _$SaveWorkerWithPasswordImpl.fromJson(Map<String, dynamic> json) =>
       _$$SaveWorkerWithPasswordImplFromJson(json);
 
   @override
-  final SaveWorker workerInfo;
+  final String firstName;
+  @override
+  final String lastName;
+  @override
+  final String telephone;
+  @override
+  final String email;
+  @override
+  final String rectoUrl;
+  @override
+  final String versoUrl;
+  @override
+  final int villeId;
+  @override
+  final int typeCompteId;
+  @override
+  final Offset gps;
+  final List<RhumaineSkill> _rhumaineSkills;
+  @override
+  List<RhumaineSkill> get rhumaineSkills {
+    if (_rhumaineSkills is EqualUnmodifiableListView) return _rhumaineSkills;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_rhumaineSkills);
+  }
+
+  @override
+  final String photo;
   @override
   final String password;
 
   @override
   String toString() {
-    return 'SaveWorkerWithPassword(workerInfo: $workerInfo, password: $password)';
+    return 'SaveWorkerWithPassword(firstName: $firstName, lastName: $lastName, telephone: $telephone, email: $email, rectoUrl: $rectoUrl, versoUrl: $versoUrl, villeId: $villeId, typeCompteId: $typeCompteId, gps: $gps, rhumaineSkills: $rhumaineSkills, photo: $photo, password: $password)';
   }
 
   @override
@@ -1458,15 +1630,44 @@ class _$SaveWorkerWithPasswordImpl implements _SaveWorkerWithPassword {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SaveWorkerWithPasswordImpl &&
-            (identical(other.workerInfo, workerInfo) ||
-                other.workerInfo == workerInfo) &&
+            (identical(other.firstName, firstName) ||
+                other.firstName == firstName) &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName) &&
+            (identical(other.telephone, telephone) ||
+                other.telephone == telephone) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.rectoUrl, rectoUrl) ||
+                other.rectoUrl == rectoUrl) &&
+            (identical(other.versoUrl, versoUrl) ||
+                other.versoUrl == versoUrl) &&
+            (identical(other.villeId, villeId) || other.villeId == villeId) &&
+            (identical(other.typeCompteId, typeCompteId) ||
+                other.typeCompteId == typeCompteId) &&
+            (identical(other.gps, gps) || other.gps == gps) &&
+            const DeepCollectionEquality()
+                .equals(other._rhumaineSkills, _rhumaineSkills) &&
+            (identical(other.photo, photo) || other.photo == photo) &&
             (identical(other.password, password) ||
                 other.password == password));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, workerInfo, password);
+  int get hashCode => Object.hash(
+      runtimeType,
+      firstName,
+      lastName,
+      telephone,
+      email,
+      rectoUrl,
+      versoUrl,
+      villeId,
+      typeCompteId,
+      gps,
+      const DeepCollectionEquality().hash(_rhumaineSkills),
+      photo,
+      password);
 
   @JsonKey(ignore: true)
   @override
@@ -1485,14 +1686,44 @@ class _$SaveWorkerWithPasswordImpl implements _SaveWorkerWithPassword {
 
 abstract class _SaveWorkerWithPassword implements SaveWorkerWithPassword {
   const factory _SaveWorkerWithPassword(
-      {required final SaveWorker workerInfo,
+      {required final String firstName,
+      required final String lastName,
+      required final String telephone,
+      required final String email,
+      required final String rectoUrl,
+      required final String versoUrl,
+      required final int villeId,
+      required final int typeCompteId,
+      required final Offset gps,
+      required final List<RhumaineSkill> rhumaineSkills,
+      required final String photo,
       required final String password}) = _$SaveWorkerWithPasswordImpl;
 
   factory _SaveWorkerWithPassword.fromJson(Map<String, dynamic> json) =
       _$SaveWorkerWithPasswordImpl.fromJson;
 
   @override
-  SaveWorker get workerInfo;
+  String get firstName;
+  @override
+  String get lastName;
+  @override
+  String get telephone;
+  @override
+  String get email;
+  @override
+  String get rectoUrl;
+  @override
+  String get versoUrl;
+  @override
+  int get villeId;
+  @override
+  int get typeCompteId;
+  @override
+  Offset get gps;
+  @override
+  List<RhumaineSkill> get rhumaineSkills;
+  @override
+  String get photo;
   @override
   String get password;
   @override

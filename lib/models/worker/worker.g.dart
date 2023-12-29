@@ -115,14 +115,35 @@ Map<String, dynamic> _$$SaveWorkerImplToJson(_$SaveWorkerImpl instance) =>
 _$SaveWorkerWithPasswordImpl _$$SaveWorkerWithPasswordImplFromJson(
         Map<String, dynamic> json) =>
     _$SaveWorkerWithPasswordImpl(
-      workerInfo:
-          SaveWorker.fromJson(json['workerInfo'] as Map<String, dynamic>),
+      firstName: json['firstName'] as String,
+      lastName: json['lastName'] as String,
+      telephone: json['telephone'] as String,
+      email: json['email'] as String,
+      rectoUrl: json['rectoUrl'] as String,
+      versoUrl: json['versoUrl'] as String,
+      villeId: json['villeId'] as int,
+      typeCompteId: json['typeCompteId'] as int,
+      gps: Offset.fromJson(json['gps'] as Map<String, dynamic>),
+      rhumaineSkills: (json['rhumaineSkills'] as List<dynamic>)
+          .map((e) => RhumaineSkill.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      photo: json['photo'] as String,
       password: json['password'] as String,
     );
 
 Map<String, dynamic> _$$SaveWorkerWithPasswordImplToJson(
         _$SaveWorkerWithPasswordImpl instance) =>
     <String, dynamic>{
-      'workerInfo': instance.workerInfo,
+      'firstName': instance.firstName,
+      'lastName': instance.lastName,
+      'telephone': instance.telephone,
+      'email': instance.email,
+      'rectoUrl': instance.rectoUrl,
+      'versoUrl': instance.versoUrl,
+      'villeId': instance.villeId,
+      'typeCompteId': instance.typeCompteId,
+      'gps': instance.gps,
+      'rhumaineSkills': instance.rhumaineSkills,
+      'photo': instance.photo,
       'password': instance.password,
     };
