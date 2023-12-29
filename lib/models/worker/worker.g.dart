@@ -111,3 +111,18 @@ Map<String, dynamic> _$$SaveWorkerImplToJson(_$SaveWorkerImpl instance) =>
       'rhumaineSkills': instance.rhumaineSkills,
       'photo': instance.photo,
     };
+
+_$SaveWorkerWithPasswordImpl _$$SaveWorkerWithPasswordImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SaveWorkerWithPasswordImpl(
+      workerInfo:
+          SaveWorker.fromJson(json['workerInfo'] as Map<String, dynamic>),
+      password: json['password'] as String,
+    );
+
+Map<String, dynamic> _$$SaveWorkerWithPasswordImplToJson(
+        _$SaveWorkerWithPasswordImpl instance) =>
+    <String, dynamic>{
+      'workerInfo': instance.workerInfo,
+      'password': instance.password,
+    };

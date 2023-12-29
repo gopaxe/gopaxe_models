@@ -1324,3 +1324,179 @@ abstract class _SaveWorker implements SaveWorker {
   _$$SaveWorkerImplCopyWith<_$SaveWorkerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+SaveWorkerWithPassword _$SaveWorkerWithPasswordFromJson(
+    Map<String, dynamic> json) {
+  return _SaveWorkerWithPassword.fromJson(json);
+}
+
+/// @nodoc
+mixin _$SaveWorkerWithPassword {
+  SaveWorker get workerInfo => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SaveWorkerWithPasswordCopyWith<SaveWorkerWithPassword> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SaveWorkerWithPasswordCopyWith<$Res> {
+  factory $SaveWorkerWithPasswordCopyWith(SaveWorkerWithPassword value,
+          $Res Function(SaveWorkerWithPassword) then) =
+      _$SaveWorkerWithPasswordCopyWithImpl<$Res, SaveWorkerWithPassword>;
+  @useResult
+  $Res call({SaveWorker workerInfo, String password});
+
+  $SaveWorkerCopyWith<$Res> get workerInfo;
+}
+
+/// @nodoc
+class _$SaveWorkerWithPasswordCopyWithImpl<$Res,
+        $Val extends SaveWorkerWithPassword>
+    implements $SaveWorkerWithPasswordCopyWith<$Res> {
+  _$SaveWorkerWithPasswordCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? workerInfo = null,
+    Object? password = null,
+  }) {
+    return _then(_value.copyWith(
+      workerInfo: null == workerInfo
+          ? _value.workerInfo
+          : workerInfo // ignore: cast_nullable_to_non_nullable
+              as SaveWorker,
+      password: null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $SaveWorkerCopyWith<$Res> get workerInfo {
+    return $SaveWorkerCopyWith<$Res>(_value.workerInfo, (value) {
+      return _then(_value.copyWith(workerInfo: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$SaveWorkerWithPasswordImplCopyWith<$Res>
+    implements $SaveWorkerWithPasswordCopyWith<$Res> {
+  factory _$$SaveWorkerWithPasswordImplCopyWith(
+          _$SaveWorkerWithPasswordImpl value,
+          $Res Function(_$SaveWorkerWithPasswordImpl) then) =
+      __$$SaveWorkerWithPasswordImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({SaveWorker workerInfo, String password});
+
+  @override
+  $SaveWorkerCopyWith<$Res> get workerInfo;
+}
+
+/// @nodoc
+class __$$SaveWorkerWithPasswordImplCopyWithImpl<$Res>
+    extends _$SaveWorkerWithPasswordCopyWithImpl<$Res,
+        _$SaveWorkerWithPasswordImpl>
+    implements _$$SaveWorkerWithPasswordImplCopyWith<$Res> {
+  __$$SaveWorkerWithPasswordImplCopyWithImpl(
+      _$SaveWorkerWithPasswordImpl _value,
+      $Res Function(_$SaveWorkerWithPasswordImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? workerInfo = null,
+    Object? password = null,
+  }) {
+    return _then(_$SaveWorkerWithPasswordImpl(
+      workerInfo: null == workerInfo
+          ? _value.workerInfo
+          : workerInfo // ignore: cast_nullable_to_non_nullable
+              as SaveWorker,
+      password: null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$SaveWorkerWithPasswordImpl implements _SaveWorkerWithPassword {
+  const _$SaveWorkerWithPasswordImpl(
+      {required this.workerInfo, required this.password});
+
+  factory _$SaveWorkerWithPasswordImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SaveWorkerWithPasswordImplFromJson(json);
+
+  @override
+  final SaveWorker workerInfo;
+  @override
+  final String password;
+
+  @override
+  String toString() {
+    return 'SaveWorkerWithPassword(workerInfo: $workerInfo, password: $password)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SaveWorkerWithPasswordImpl &&
+            (identical(other.workerInfo, workerInfo) ||
+                other.workerInfo == workerInfo) &&
+            (identical(other.password, password) ||
+                other.password == password));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, workerInfo, password);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SaveWorkerWithPasswordImplCopyWith<_$SaveWorkerWithPasswordImpl>
+      get copyWith => __$$SaveWorkerWithPasswordImplCopyWithImpl<
+          _$SaveWorkerWithPasswordImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$SaveWorkerWithPasswordImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _SaveWorkerWithPassword implements SaveWorkerWithPassword {
+  const factory _SaveWorkerWithPassword(
+      {required final SaveWorker workerInfo,
+      required final String password}) = _$SaveWorkerWithPasswordImpl;
+
+  factory _SaveWorkerWithPassword.fromJson(Map<String, dynamic> json) =
+      _$SaveWorkerWithPasswordImpl.fromJson;
+
+  @override
+  SaveWorker get workerInfo;
+  @override
+  String get password;
+  @override
+  @JsonKey(ignore: true)
+  _$$SaveWorkerWithPasswordImplCopyWith<_$SaveWorkerWithPasswordImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
