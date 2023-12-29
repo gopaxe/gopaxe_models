@@ -22,7 +22,7 @@ class ClientOutPut with _$ClientOutPut {
   const factory ClientOutPut({
     required int clientId,
     required String nom,
-    required String telephone,
+    // required String telephone,
     required String prenom,
   }) = _ClientOutPut;
 
