@@ -21,6 +21,7 @@ TransactionId _$TransactionIdFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$TransactionId {
   String get transactionId => throw _privateConstructorUsedError;
+  double get price => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +35,7 @@ abstract class $TransactionIdCopyWith<$Res> {
           TransactionId value, $Res Function(TransactionId) then) =
       _$TransactionIdCopyWithImpl<$Res, TransactionId>;
   @useResult
-  $Res call({String transactionId});
+  $Res call({String transactionId, double price});
 }
 
 /// @nodoc
@@ -51,12 +52,17 @@ class _$TransactionIdCopyWithImpl<$Res, $Val extends TransactionId>
   @override
   $Res call({
     Object? transactionId = null,
+    Object? price = null,
   }) {
     return _then(_value.copyWith(
       transactionId: null == transactionId
           ? _value.transactionId
           : transactionId // ignore: cast_nullable_to_non_nullable
               as String,
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
   }
 }
@@ -69,7 +75,7 @@ abstract class _$$TransactionIdImplCopyWith<$Res>
       __$$TransactionIdImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String transactionId});
+  $Res call({String transactionId, double price});
 }
 
 /// @nodoc
@@ -84,12 +90,17 @@ class __$$TransactionIdImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? transactionId = null,
+    Object? price = null,
   }) {
     return _then(_$TransactionIdImpl(
       transactionId: null == transactionId
           ? _value.transactionId
           : transactionId // ignore: cast_nullable_to_non_nullable
               as String,
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -97,17 +108,19 @@ class __$$TransactionIdImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$TransactionIdImpl implements _TransactionId {
-  const _$TransactionIdImpl({required this.transactionId});
+  const _$TransactionIdImpl({required this.transactionId, required this.price});
 
   factory _$TransactionIdImpl.fromJson(Map<String, dynamic> json) =>
       _$$TransactionIdImplFromJson(json);
 
   @override
   final String transactionId;
+  @override
+  final double price;
 
   @override
   String toString() {
-    return 'TransactionId(transactionId: $transactionId)';
+    return 'TransactionId(transactionId: $transactionId, price: $price)';
   }
 
   @override
@@ -116,12 +129,13 @@ class _$TransactionIdImpl implements _TransactionId {
         (other.runtimeType == runtimeType &&
             other is _$TransactionIdImpl &&
             (identical(other.transactionId, transactionId) ||
-                other.transactionId == transactionId));
+                other.transactionId == transactionId) &&
+            (identical(other.price, price) || other.price == price));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, transactionId);
+  int get hashCode => Object.hash(runtimeType, transactionId, price);
 
   @JsonKey(ignore: true)
   @override
@@ -138,14 +152,17 @@ class _$TransactionIdImpl implements _TransactionId {
 }
 
 abstract class _TransactionId implements TransactionId {
-  const factory _TransactionId({required final String transactionId}) =
-      _$TransactionIdImpl;
+  const factory _TransactionId(
+      {required final String transactionId,
+      required final double price}) = _$TransactionIdImpl;
 
   factory _TransactionId.fromJson(Map<String, dynamic> json) =
       _$TransactionIdImpl.fromJson;
 
   @override
   String get transactionId;
+  @override
+  double get price;
   @override
   @JsonKey(ignore: true)
   _$$TransactionIdImplCopyWith<_$TransactionIdImpl> get copyWith =>

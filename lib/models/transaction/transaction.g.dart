@@ -9,11 +9,13 @@ part of 'transaction.dart';
 _$TransactionIdImpl _$$TransactionIdImplFromJson(Map<String, dynamic> json) =>
     _$TransactionIdImpl(
       transactionId: json['transactionId'] as String,
+      price: (json['price'] as num).toDouble(),
     );
 
 Map<String, dynamic> _$$TransactionIdImplToJson(_$TransactionIdImpl instance) =>
     <String, dynamic>{
       'transactionId': instance.transactionId,
+      'price': instance.price,
     };
 
 _$TransactionImpl _$$TransactionImplFromJson(Map<String, dynamic> json) =>
