@@ -176,6 +176,7 @@ Transaction _$TransactionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Transaction {
   String get transactionId => throw _privateConstructorUsedError;
+  int get forfaitId => throw _privateConstructorUsedError;
   DateTime get transactionDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -190,7 +191,7 @@ abstract class $TransactionCopyWith<$Res> {
           Transaction value, $Res Function(Transaction) then) =
       _$TransactionCopyWithImpl<$Res, Transaction>;
   @useResult
-  $Res call({String transactionId, DateTime transactionDate});
+  $Res call({String transactionId, int forfaitId, DateTime transactionDate});
 }
 
 /// @nodoc
@@ -207,6 +208,7 @@ class _$TransactionCopyWithImpl<$Res, $Val extends Transaction>
   @override
   $Res call({
     Object? transactionId = null,
+    Object? forfaitId = null,
     Object? transactionDate = null,
   }) {
     return _then(_value.copyWith(
@@ -214,6 +216,10 @@ class _$TransactionCopyWithImpl<$Res, $Val extends Transaction>
           ? _value.transactionId
           : transactionId // ignore: cast_nullable_to_non_nullable
               as String,
+      forfaitId: null == forfaitId
+          ? _value.forfaitId
+          : forfaitId // ignore: cast_nullable_to_non_nullable
+              as int,
       transactionDate: null == transactionDate
           ? _value.transactionDate
           : transactionDate // ignore: cast_nullable_to_non_nullable
@@ -230,7 +236,7 @@ abstract class _$$TransactionImplCopyWith<$Res>
       __$$TransactionImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String transactionId, DateTime transactionDate});
+  $Res call({String transactionId, int forfaitId, DateTime transactionDate});
 }
 
 /// @nodoc
@@ -245,6 +251,7 @@ class __$$TransactionImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? transactionId = null,
+    Object? forfaitId = null,
     Object? transactionDate = null,
   }) {
     return _then(_$TransactionImpl(
@@ -252,6 +259,10 @@ class __$$TransactionImplCopyWithImpl<$Res>
           ? _value.transactionId
           : transactionId // ignore: cast_nullable_to_non_nullable
               as String,
+      forfaitId: null == forfaitId
+          ? _value.forfaitId
+          : forfaitId // ignore: cast_nullable_to_non_nullable
+              as int,
       transactionDate: null == transactionDate
           ? _value.transactionDate
           : transactionDate // ignore: cast_nullable_to_non_nullable
@@ -264,7 +275,9 @@ class __$$TransactionImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TransactionImpl implements _Transaction {
   const _$TransactionImpl(
-      {required this.transactionId, required this.transactionDate});
+      {required this.transactionId,
+      required this.forfaitId,
+      required this.transactionDate});
 
   factory _$TransactionImpl.fromJson(Map<String, dynamic> json) =>
       _$$TransactionImplFromJson(json);
@@ -272,11 +285,13 @@ class _$TransactionImpl implements _Transaction {
   @override
   final String transactionId;
   @override
+  final int forfaitId;
+  @override
   final DateTime transactionDate;
 
   @override
   String toString() {
-    return 'Transaction(transactionId: $transactionId, transactionDate: $transactionDate)';
+    return 'Transaction(transactionId: $transactionId, forfaitId: $forfaitId, transactionDate: $transactionDate)';
   }
 
   @override
@@ -286,13 +301,16 @@ class _$TransactionImpl implements _Transaction {
             other is _$TransactionImpl &&
             (identical(other.transactionId, transactionId) ||
                 other.transactionId == transactionId) &&
+            (identical(other.forfaitId, forfaitId) ||
+                other.forfaitId == forfaitId) &&
             (identical(other.transactionDate, transactionDate) ||
                 other.transactionDate == transactionDate));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, transactionId, transactionDate);
+  int get hashCode =>
+      Object.hash(runtimeType, transactionId, forfaitId, transactionDate);
 
   @JsonKey(ignore: true)
   @override
@@ -311,6 +329,7 @@ class _$TransactionImpl implements _Transaction {
 abstract class _Transaction implements Transaction {
   const factory _Transaction(
       {required final String transactionId,
+      required final int forfaitId,
       required final DateTime transactionDate}) = _$TransactionImpl;
 
   factory _Transaction.fromJson(Map<String, dynamic> json) =
@@ -318,6 +337,8 @@ abstract class _Transaction implements Transaction {
 
   @override
   String get transactionId;
+  @override
+  int get forfaitId;
   @override
   DateTime get transactionDate;
   @override

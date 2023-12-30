@@ -16,6 +16,7 @@ class TransactionId with _$TransactionId {
 class Transaction with _$Transaction {
   const factory Transaction(
       {required String transactionId,
+      required int forfaitId,
       required DateTime transactionDate}) = _Transaction;
 
   factory Transaction.fromJson(Map<String, dynamic> json) =>

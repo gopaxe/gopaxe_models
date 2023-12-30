@@ -21,11 +21,13 @@ Map<String, dynamic> _$$TransactionIdImplToJson(_$TransactionIdImpl instance) =>
 _$TransactionImpl _$$TransactionImplFromJson(Map<String, dynamic> json) =>
     _$TransactionImpl(
       transactionId: json['transactionId'] as String,
+      forfaitId: json['forfaitId'] as int,
       transactionDate: DateTime.parse(json['transactionDate'] as String),
     );
 
 Map<String, dynamic> _$$TransactionImplToJson(_$TransactionImpl instance) =>
     <String, dynamic>{
       'transactionId': instance.transactionId,
+      'forfaitId': instance.forfaitId,
       'transactionDate': instance.transactionDate.toIso8601String(),
     };
