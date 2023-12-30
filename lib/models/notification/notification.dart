@@ -26,3 +26,16 @@ class PushNotiificationToSpecificUser with _$PushNotiificationToSpecificUser {
   factory PushNotiificationToSpecificUser.fromJson(Map<String, dynamic> json) =>
       _$PushNotiificationToSpecificUserFromJson(json);
 }
+
+@freezed
+class NotificationResponse with _$NotificationResponse {
+  const factory NotificationResponse({
+    required int id,
+    required String message,
+    required bool isRead,
+    required DateTime dateEnvoi,
+  }) = _NotificationResponse;
+
+  factory NotificationResponse.fromJson(Map<String, dynamic> json) =>
+      _$NotificationResponseFromJson(json);
+}

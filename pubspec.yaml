@@ -24,4 +24,5 @@ dev_dependencies:
   auto_exporter: ^1.5.0
 
 scripts: 
-  gen-build: "dart run build_runner build && rm lib/gopaxe_models.dart && mv lib/export.dart lib/gopaxe_models.dart"
+  gen-build: 'dart run build_runner build && rm lib/gopaxe_models.dart && mv lib/export.dart lib/gopaxe_models.dart && git add . && git commit -m "Added new model" && git push'
+  gen-watch: 'dart run build_runner watch && rm lib/gopaxe_models.dart && mv lib/export.dart lib/gopaxe_models.dart'
