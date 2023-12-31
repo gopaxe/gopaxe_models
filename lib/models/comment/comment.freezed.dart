@@ -23,7 +23,6 @@ mixin _$Comment {
   int get commentId => throw _privateConstructorUsedError;
   int get serviceId => throw _privateConstructorUsedError;
   int get workerId => throw _privateConstructorUsedError;
-  int get clientId => throw _privateConstructorUsedError;
   int get score => throw _privateConstructorUsedError;
   String get content => throw _privateConstructorUsedError;
   DateTime get createdDate => throw _privateConstructorUsedError;
@@ -42,7 +41,6 @@ abstract class $CommentCopyWith<$Res> {
       {int commentId,
       int serviceId,
       int workerId,
-      int clientId,
       int score,
       String content,
       DateTime createdDate});
@@ -64,7 +62,6 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
     Object? commentId = null,
     Object? serviceId = null,
     Object? workerId = null,
-    Object? clientId = null,
     Object? score = null,
     Object? content = null,
     Object? createdDate = null,
@@ -81,10 +78,6 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
       workerId: null == workerId
           ? _value.workerId
           : workerId // ignore: cast_nullable_to_non_nullable
-              as int,
-      clientId: null == clientId
-          ? _value.clientId
-          : clientId // ignore: cast_nullable_to_non_nullable
               as int,
       score: null == score
           ? _value.score
@@ -113,7 +106,6 @@ abstract class _$$CommentImplCopyWith<$Res> implements $CommentCopyWith<$Res> {
       {int commentId,
       int serviceId,
       int workerId,
-      int clientId,
       int score,
       String content,
       DateTime createdDate});
@@ -133,7 +125,6 @@ class __$$CommentImplCopyWithImpl<$Res>
     Object? commentId = null,
     Object? serviceId = null,
     Object? workerId = null,
-    Object? clientId = null,
     Object? score = null,
     Object? content = null,
     Object? createdDate = null,
@@ -150,10 +141,6 @@ class __$$CommentImplCopyWithImpl<$Res>
       workerId: null == workerId
           ? _value.workerId
           : workerId // ignore: cast_nullable_to_non_nullable
-              as int,
-      clientId: null == clientId
-          ? _value.clientId
-          : clientId // ignore: cast_nullable_to_non_nullable
               as int,
       score: null == score
           ? _value.score
@@ -178,7 +165,6 @@ class _$CommentImpl implements _Comment {
       {required this.commentId,
       required this.serviceId,
       required this.workerId,
-      required this.clientId,
       required this.score,
       required this.content,
       required this.createdDate});
@@ -193,8 +179,6 @@ class _$CommentImpl implements _Comment {
   @override
   final int workerId;
   @override
-  final int clientId;
-  @override
   final int score;
   @override
   final String content;
@@ -203,7 +187,7 @@ class _$CommentImpl implements _Comment {
 
   @override
   String toString() {
-    return 'Comment(commentId: $commentId, serviceId: $serviceId, workerId: $workerId, clientId: $clientId, score: $score, content: $content, createdDate: $createdDate)';
+    return 'Comment(commentId: $commentId, serviceId: $serviceId, workerId: $workerId, score: $score, content: $content, createdDate: $createdDate)';
   }
 
   @override
@@ -217,8 +201,6 @@ class _$CommentImpl implements _Comment {
                 other.serviceId == serviceId) &&
             (identical(other.workerId, workerId) ||
                 other.workerId == workerId) &&
-            (identical(other.clientId, clientId) ||
-                other.clientId == clientId) &&
             (identical(other.score, score) || other.score == score) &&
             (identical(other.content, content) || other.content == content) &&
             (identical(other.createdDate, createdDate) ||
@@ -227,8 +209,8 @@ class _$CommentImpl implements _Comment {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, commentId, serviceId, workerId,
-      clientId, score, content, createdDate);
+  int get hashCode => Object.hash(
+      runtimeType, commentId, serviceId, workerId, score, content, createdDate);
 
   @JsonKey(ignore: true)
   @override
@@ -249,7 +231,6 @@ abstract class _Comment implements Comment {
       {required final int commentId,
       required final int serviceId,
       required final int workerId,
-      required final int clientId,
       required final int score,
       required final String content,
       required final DateTime createdDate}) = _$CommentImpl;
@@ -262,8 +243,6 @@ abstract class _Comment implements Comment {
   int get serviceId;
   @override
   int get workerId;
-  @override
-  int get clientId;
   @override
   int get score;
   @override

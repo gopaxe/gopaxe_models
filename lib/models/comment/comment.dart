@@ -9,7 +9,6 @@ class Comment with _$Comment {
     required int commentId,
     required int serviceId,
     required int workerId,
-    required int clientId,
     required int score,
     required String content,
     required DateTime createdDate,
