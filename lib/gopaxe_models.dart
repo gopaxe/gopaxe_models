@@ -25,3 +25,4 @@ export 'package:gopaxe_models/models/transaction/transaction.dart';
 export 'package:gopaxe_models/models/profile_base/profile_base.dart';
 export 'package:gopaxe_models/models/subscription/subscription.dart';
 export 'package:gopaxe_models/models/http_error/http_error.dart';
+export 'package:gopaxe_models/models/comment/comment.dart';
