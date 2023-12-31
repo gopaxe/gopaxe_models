@@ -52,7 +52,7 @@ _$WorkerImpl _$$WorkerImplFromJson(Map<String, dynamic> json) => _$WorkerImpl(
       email: json['email'] as String?,
       offset: Offset.fromJson(json['offset'] as Map<String, dynamic>),
       telephone: json['telephone'] as String,
-      hashedTelephone: json['hashedTelephone'] as String,
+      hashedTelephone: json['hashedTelephone'] as String? ?? '',
       typeComptedId: json['typeComptedId'] as int,
       cni: Cni.fromJson(json['cni'] as Map<String, dynamic>),
       rhumaineSkills: (json['rhumaineSkills'] as List<dynamic>)

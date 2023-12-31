@@ -43,7 +43,7 @@ class Worker with _$Worker {
     String? email,
     required Offset offset,
     required String telephone,
-    required String hashedTelephone,
+    @Default('') String hashedTelephone,
     required int typeComptedId,
     required Cni cni,
     required List<RhumaineSkill> rhumaineSkills,

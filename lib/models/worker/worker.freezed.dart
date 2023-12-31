@@ -780,7 +780,7 @@ class _$WorkerImpl implements _Worker {
       this.email,
       required this.offset,
       required this.telephone,
-      required this.hashedTelephone,
+      this.hashedTelephone = '',
       required this.typeComptedId,
       required this.cni,
       required final List<RhumaineSkill> rhumaineSkills,
@@ -808,6 +808,7 @@ class _$WorkerImpl implements _Worker {
   @override
   final String telephone;
   @override
+  @JsonKey()
   final String hashedTelephone;
   @override
   final int typeComptedId;
@@ -903,7 +904,7 @@ abstract class _Worker implements Worker {
       final String? email,
       required final Offset offset,
       required final String telephone,
-      required final String hashedTelephone,
+      final String hashedTelephone,
       required final int typeComptedId,
       required final Cni cni,
       required final List<RhumaineSkill> rhumaineSkills,
