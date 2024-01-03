@@ -26,3 +26,4 @@ export 'package:gopaxe_models/models/type_compte/type_compte.dart';
 export 'package:gopaxe_models/models/client/client.dart';
 export 'package:gopaxe_models/models/comment/comment.dart';
 export 'package:gopaxe_models/models/http_error/http_error.dart';
+export 'package:gopaxe_models/models/location/location.dart';
