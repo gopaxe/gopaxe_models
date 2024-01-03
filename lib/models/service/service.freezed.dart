@@ -297,6 +297,7 @@ mixin _$ServiceRequest {
   DateTime? get contactDate =>
       throw _privateConstructorUsedError; // Date which client and worker meet
   DateTime? get endDate => throw _privateConstructorUsedError;
+  DateTime? get createdDate => throw _privateConstructorUsedError;
   Offset get desiredLocation => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -324,6 +325,7 @@ abstract class $ServiceRequestCopyWith<$Res> {
       DateTime? cancelDate,
       DateTime? contactDate,
       DateTime? endDate,
+      DateTime? createdDate,
       Offset desiredLocation});
 
   $OffsetCopyWith<$Res> get desiredLocation;
@@ -354,6 +356,7 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
     Object? cancelDate = freezed,
     Object? contactDate = freezed,
     Object? endDate = freezed,
+    Object? createdDate = freezed,
     Object? desiredLocation = null,
   }) {
     return _then(_value.copyWith(
@@ -405,6 +408,10 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      createdDate: freezed == createdDate
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       desiredLocation: null == desiredLocation
           ? _value.desiredLocation
           : desiredLocation // ignore: cast_nullable_to_non_nullable
@@ -442,6 +449,7 @@ abstract class _$$ServiceRequestImplCopyWith<$Res>
       DateTime? cancelDate,
       DateTime? contactDate,
       DateTime? endDate,
+      DateTime? createdDate,
       Offset desiredLocation});
 
   @override
@@ -471,6 +479,7 @@ class __$$ServiceRequestImplCopyWithImpl<$Res>
     Object? cancelDate = freezed,
     Object? contactDate = freezed,
     Object? endDate = freezed,
+    Object? createdDate = freezed,
     Object? desiredLocation = null,
   }) {
     return _then(_$ServiceRequestImpl(
@@ -522,6 +531,10 @@ class __$$ServiceRequestImplCopyWithImpl<$Res>
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      createdDate: freezed == createdDate
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       desiredLocation: null == desiredLocation
           ? _value.desiredLocation
           : desiredLocation // ignore: cast_nullable_to_non_nullable
@@ -546,6 +559,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
       required this.cancelDate,
       required this.contactDate,
       required this.endDate,
+      required this.createdDate,
       required this.desiredLocation});
 
   factory _$ServiceRequestImpl.fromJson(Map<String, dynamic> json) =>
@@ -577,11 +591,13 @@ class _$ServiceRequestImpl implements _ServiceRequest {
   @override
   final DateTime? endDate;
   @override
+  final DateTime? createdDate;
+  @override
   final Offset desiredLocation;
 
   @override
   String toString() {
-    return 'ServiceRequest(id: $id, title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, workerId: $workerId, clientId: $clientId, startDate: $startDate, cancelDate: $cancelDate, contactDate: $contactDate, endDate: $endDate, desiredLocation: $desiredLocation)';
+    return 'ServiceRequest(id: $id, title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, workerId: $workerId, clientId: $clientId, startDate: $startDate, cancelDate: $cancelDate, contactDate: $contactDate, endDate: $endDate, createdDate: $createdDate, desiredLocation: $desiredLocation)';
   }
 
   @override
@@ -610,6 +626,8 @@ class _$ServiceRequestImpl implements _ServiceRequest {
             (identical(other.contactDate, contactDate) ||
                 other.contactDate == contactDate) &&
             (identical(other.endDate, endDate) || other.endDate == endDate) &&
+            (identical(other.createdDate, createdDate) ||
+                other.createdDate == createdDate) &&
             (identical(other.desiredLocation, desiredLocation) ||
                 other.desiredLocation == desiredLocation));
   }
@@ -630,6 +648,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
       cancelDate,
       contactDate,
       endDate,
+      createdDate,
       desiredLocation);
 
   @JsonKey(ignore: true)
@@ -661,6 +680,7 @@ abstract class _ServiceRequest implements ServiceRequest {
       required final DateTime? cancelDate,
       required final DateTime? contactDate,
       required final DateTime? endDate,
+      required final DateTime? createdDate,
       required final Offset desiredLocation}) = _$ServiceRequestImpl;
 
   factory _ServiceRequest.fromJson(Map<String, dynamic> json) =
@@ -690,6 +710,8 @@ abstract class _ServiceRequest implements ServiceRequest {
   DateTime? get contactDate;
   @override // Date which client and worker meet
   DateTime? get endDate;
+  @override
+  DateTime? get createdDate;
   @override
   Offset get desiredLocation;
   @override

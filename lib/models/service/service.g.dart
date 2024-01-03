@@ -51,6 +51,9 @@ _$ServiceRequestImpl _$$ServiceRequestImplFromJson(Map<String, dynamic> json) =>
       endDate: json['endDate'] == null
           ? null
           : DateTime.parse(json['endDate'] as String),
+      createdDate: json['createdDate'] == null
+          ? null
+          : DateTime.parse(json['createdDate'] as String),
       desiredLocation:
           Offset.fromJson(json['desiredLocation'] as Map<String, dynamic>),
     );
@@ -70,5 +73,6 @@ Map<String, dynamic> _$$ServiceRequestImplToJson(
       'cancelDate': instance.cancelDate?.toIso8601String(),
       'contactDate': instance.contactDate?.toIso8601String(),
       'endDate': instance.endDate?.toIso8601String(),
+      'createdDate': instance.createdDate?.toIso8601String(),
       'desiredLocation': instance.desiredLocation,
     };
