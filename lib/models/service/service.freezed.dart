@@ -293,6 +293,7 @@ mixin _$ServiceRequest {
   int? get workerId => throw _privateConstructorUsedError;
   int get clientId => throw _privateConstructorUsedError;
   DateTime? get startDate => throw _privateConstructorUsedError;
+  DateTime? get cancelDate => throw _privateConstructorUsedError;
   DateTime? get contactDate =>
       throw _privateConstructorUsedError; // Date which client and worker meet
   DateTime? get endDate => throw _privateConstructorUsedError;
@@ -320,6 +321,7 @@ abstract class $ServiceRequestCopyWith<$Res> {
       int? workerId,
       int clientId,
       DateTime? startDate,
+      DateTime? cancelDate,
       DateTime? contactDate,
       DateTime? endDate,
       Offset desiredLocation});
@@ -349,6 +351,7 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
     Object? workerId = freezed,
     Object? clientId = null,
     Object? startDate = freezed,
+    Object? cancelDate = freezed,
     Object? contactDate = freezed,
     Object? endDate = freezed,
     Object? desiredLocation = null,
@@ -389,6 +392,10 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
       startDate: freezed == startDate
           ? _value.startDate
           : startDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      cancelDate: freezed == cancelDate
+          ? _value.cancelDate
+          : cancelDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
       contactDate: freezed == contactDate
           ? _value.contactDate
@@ -432,6 +439,7 @@ abstract class _$$ServiceRequestImplCopyWith<$Res>
       int? workerId,
       int clientId,
       DateTime? startDate,
+      DateTime? cancelDate,
       DateTime? contactDate,
       DateTime? endDate,
       Offset desiredLocation});
@@ -460,6 +468,7 @@ class __$$ServiceRequestImplCopyWithImpl<$Res>
     Object? workerId = freezed,
     Object? clientId = null,
     Object? startDate = freezed,
+    Object? cancelDate = freezed,
     Object? contactDate = freezed,
     Object? endDate = freezed,
     Object? desiredLocation = null,
@@ -501,6 +510,10 @@ class __$$ServiceRequestImplCopyWithImpl<$Res>
           ? _value.startDate
           : startDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      cancelDate: freezed == cancelDate
+          ? _value.cancelDate
+          : cancelDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       contactDate: freezed == contactDate
           ? _value.contactDate
           : contactDate // ignore: cast_nullable_to_non_nullable
@@ -530,6 +543,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
       required this.workerId,
       required this.clientId,
       required this.startDate,
+      required this.cancelDate,
       required this.contactDate,
       required this.endDate,
       required this.desiredLocation});
@@ -556,6 +570,8 @@ class _$ServiceRequestImpl implements _ServiceRequest {
   @override
   final DateTime? startDate;
   @override
+  final DateTime? cancelDate;
+  @override
   final DateTime? contactDate;
 // Date which client and worker meet
   @override
@@ -565,7 +581,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
 
   @override
   String toString() {
-    return 'ServiceRequest(id: $id, title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, workerId: $workerId, clientId: $clientId, startDate: $startDate, contactDate: $contactDate, endDate: $endDate, desiredLocation: $desiredLocation)';
+    return 'ServiceRequest(id: $id, title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, workerId: $workerId, clientId: $clientId, startDate: $startDate, cancelDate: $cancelDate, contactDate: $contactDate, endDate: $endDate, desiredLocation: $desiredLocation)';
   }
 
   @override
@@ -589,6 +605,8 @@ class _$ServiceRequestImpl implements _ServiceRequest {
                 other.clientId == clientId) &&
             (identical(other.startDate, startDate) ||
                 other.startDate == startDate) &&
+            (identical(other.cancelDate, cancelDate) ||
+                other.cancelDate == cancelDate) &&
             (identical(other.contactDate, contactDate) ||
                 other.contactDate == contactDate) &&
             (identical(other.endDate, endDate) || other.endDate == endDate) &&
@@ -609,6 +627,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
       workerId,
       clientId,
       startDate,
+      cancelDate,
       contactDate,
       endDate,
       desiredLocation);
@@ -639,6 +658,7 @@ abstract class _ServiceRequest implements ServiceRequest {
       required final int? workerId,
       required final int clientId,
       required final DateTime? startDate,
+      required final DateTime? cancelDate,
       required final DateTime? contactDate,
       required final DateTime? endDate,
       required final Offset desiredLocation}) = _$ServiceRequestImpl;
@@ -664,6 +684,8 @@ abstract class _ServiceRequest implements ServiceRequest {
   int get clientId;
   @override
   DateTime? get startDate;
+  @override
+  DateTime? get cancelDate;
   @override
   DateTime? get contactDate;
   @override // Date which client and worker meet

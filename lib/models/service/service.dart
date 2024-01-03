@@ -33,6 +33,7 @@ class ServiceRequest with _$ServiceRequest {
     required int? workerId,
     required int clientId,
     required DateTime? startDate,
+    required DateTime? cancelDate,
     required DateTime? contactDate, // Date which client and worker meet
     required DateTime? endDate,
     required Offset desiredLocation,

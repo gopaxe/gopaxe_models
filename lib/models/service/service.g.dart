@@ -42,6 +42,9 @@ _$ServiceRequestImpl _$$ServiceRequestImplFromJson(Map<String, dynamic> json) =>
       startDate: json['startDate'] == null
           ? null
           : DateTime.parse(json['startDate'] as String),
+      cancelDate: json['cancelDate'] == null
+          ? null
+          : DateTime.parse(json['cancelDate'] as String),
       contactDate: json['contactDate'] == null
           ? null
           : DateTime.parse(json['contactDate'] as String),
@@ -64,6 +67,7 @@ Map<String, dynamic> _$$ServiceRequestImplToJson(
       'workerId': instance.workerId,
       'clientId': instance.clientId,
       'startDate': instance.startDate?.toIso8601String(),
+      'cancelDate': instance.cancelDate?.toIso8601String(),
       'contactDate': instance.contactDate?.toIso8601String(),
       'endDate': instance.endDate?.toIso8601String(),
       'desiredLocation': instance.desiredLocation,
