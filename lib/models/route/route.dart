@@ -1,18 +1,18 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'location.freezed.dart';
-part 'location.g.dart';
+part 'route.freezed.dart';
+part 'route.g.dart';
 
 @freezed
-class LocationModel with _$LocationModel {
-  factory LocationModel({
+class RouteModel with _$RouteModel {
+  factory RouteModel({
     List<Waypoints>? waypoints,
     List<Routes>? routes,
     String? code,
-  }) = _LocationModel;
+  }) = _RouteModel;
 
-  factory LocationModel.fromJson(Map<String, dynamic> json) =>
-      _$LocationModelFromJson(json);
+  factory RouteModel.fromJson(Map<String, dynamic> json) =>
+      _$RouteModelFromJson(json);
 }
 
 @freezed
