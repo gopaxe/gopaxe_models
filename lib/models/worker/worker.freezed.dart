@@ -183,6 +183,214 @@ abstract class _Offset implements Offset {
       throw _privateConstructorUsedError;
 }
 
+UserOffset _$UserOffsetFromJson(Map<String, dynamic> json) {
+  return _UserOffset.fromJson(json);
+}
+
+/// @nodoc
+mixin _$UserOffset {
+  int get id => throw _privateConstructorUsedError;
+  Offset get offset => throw _privateConstructorUsedError;
+  bool get isClient => throw _privateConstructorUsedError;
+  String? get locationHash => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UserOffsetCopyWith<UserOffset> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UserOffsetCopyWith<$Res> {
+  factory $UserOffsetCopyWith(
+          UserOffset value, $Res Function(UserOffset) then) =
+      _$UserOffsetCopyWithImpl<$Res, UserOffset>;
+  @useResult
+  $Res call({int id, Offset offset, bool isClient, String? locationHash});
+
+  $OffsetCopyWith<$Res> get offset;
+}
+
+/// @nodoc
+class _$UserOffsetCopyWithImpl<$Res, $Val extends UserOffset>
+    implements $UserOffsetCopyWith<$Res> {
+  _$UserOffsetCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? offset = null,
+    Object? isClient = null,
+    Object? locationHash = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      offset: null == offset
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
+              as Offset,
+      isClient: null == isClient
+          ? _value.isClient
+          : isClient // ignore: cast_nullable_to_non_nullable
+              as bool,
+      locationHash: freezed == locationHash
+          ? _value.locationHash
+          : locationHash // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $OffsetCopyWith<$Res> get offset {
+    return $OffsetCopyWith<$Res>(_value.offset, (value) {
+      return _then(_value.copyWith(offset: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$UserOffsetImplCopyWith<$Res>
+    implements $UserOffsetCopyWith<$Res> {
+  factory _$$UserOffsetImplCopyWith(
+          _$UserOffsetImpl value, $Res Function(_$UserOffsetImpl) then) =
+      __$$UserOffsetImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int id, Offset offset, bool isClient, String? locationHash});
+
+  @override
+  $OffsetCopyWith<$Res> get offset;
+}
+
+/// @nodoc
+class __$$UserOffsetImplCopyWithImpl<$Res>
+    extends _$UserOffsetCopyWithImpl<$Res, _$UserOffsetImpl>
+    implements _$$UserOffsetImplCopyWith<$Res> {
+  __$$UserOffsetImplCopyWithImpl(
+      _$UserOffsetImpl _value, $Res Function(_$UserOffsetImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? offset = null,
+    Object? isClient = null,
+    Object? locationHash = freezed,
+  }) {
+    return _then(_$UserOffsetImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      offset: null == offset
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
+              as Offset,
+      isClient: null == isClient
+          ? _value.isClient
+          : isClient // ignore: cast_nullable_to_non_nullable
+              as bool,
+      locationHash: freezed == locationHash
+          ? _value.locationHash
+          : locationHash // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$UserOffsetImpl implements _UserOffset {
+  const _$UserOffsetImpl(
+      {required this.id,
+      required this.offset,
+      required this.isClient,
+      this.locationHash});
+
+  factory _$UserOffsetImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserOffsetImplFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final Offset offset;
+  @override
+  final bool isClient;
+  @override
+  final String? locationHash;
+
+  @override
+  String toString() {
+    return 'UserOffset(id: $id, offset: $offset, isClient: $isClient, locationHash: $locationHash)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UserOffsetImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.offset, offset) || other.offset == offset) &&
+            (identical(other.isClient, isClient) ||
+                other.isClient == isClient) &&
+            (identical(other.locationHash, locationHash) ||
+                other.locationHash == locationHash));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, id, offset, isClient, locationHash);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UserOffsetImplCopyWith<_$UserOffsetImpl> get copyWith =>
+      __$$UserOffsetImplCopyWithImpl<_$UserOffsetImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$UserOffsetImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _UserOffset implements UserOffset {
+  const factory _UserOffset(
+      {required final int id,
+      required final Offset offset,
+      required final bool isClient,
+      final String? locationHash}) = _$UserOffsetImpl;
+
+  factory _UserOffset.fromJson(Map<String, dynamic> json) =
+      _$UserOffsetImpl.fromJson;
+
+  @override
+  int get id;
+  @override
+  Offset get offset;
+  @override
+  bool get isClient;
+  @override
+  String? get locationHash;
+  @override
+  @JsonKey(ignore: true)
+  _$$UserOffsetImplCopyWith<_$UserOffsetImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 Cni _$CniFromJson(Map<String, dynamic> json) {
   return _Cni.fromJson(json);
 }

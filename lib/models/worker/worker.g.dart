@@ -19,6 +19,22 @@ Map<String, dynamic> _$$OffsetImplToJson(_$OffsetImpl instance) =>
       'locationHash': instance.locationHash,
     };
 
+_$UserOffsetImpl _$$UserOffsetImplFromJson(Map<String, dynamic> json) =>
+    _$UserOffsetImpl(
+      id: json['id'] as int,
+      offset: Offset.fromJson(json['offset'] as Map<String, dynamic>),
+      isClient: json['isClient'] as bool,
+      locationHash: json['locationHash'] as String?,
+    );
+
+Map<String, dynamic> _$$UserOffsetImplToJson(_$UserOffsetImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'offset': instance.offset,
+      'isClient': instance.isClient,
+      'locationHash': instance.locationHash,
+    };
+
 _$CniImpl _$$CniImplFromJson(Map<String, dynamic> json) => _$CniImpl(
       versoUrl: json['versoUrl'] as String,
       rectoUrl: json['rectoUrl'] as String,

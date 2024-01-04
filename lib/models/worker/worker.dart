@@ -14,6 +14,18 @@ class Offset with _$Offset {
 }
 
 @freezed
+class UserOffset with _$UserOffset {
+  const factory UserOffset(
+      {required int id,
+      required Offset offset,
+      required bool isClient,
+      String? locationHash}) = _UserOffset;
+
+  factory UserOffset.fromJson(Map<String, dynamic> json) =>
+      _$UserOffsetFromJson(json);
+}
+
+@freezed
 class Cni with _$Cni {
   const factory Cni({required String versoUrl, required String rectoUrl}) =
       _Cni;
