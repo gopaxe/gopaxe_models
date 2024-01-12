@@ -883,7 +883,7 @@ BaseLoginRequest _$BaseLoginRequestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BaseLoginRequest {
-  String get id => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError;
   String get telephone => throw _privateConstructorUsedError;
   String get motDePasse => throw _privateConstructorUsedError;
 
@@ -899,7 +899,7 @@ abstract class $BaseLoginRequestCopyWith<$Res> {
           BaseLoginRequest value, $Res Function(BaseLoginRequest) then) =
       _$BaseLoginRequestCopyWithImpl<$Res, BaseLoginRequest>;
   @useResult
-  $Res call({String id, String telephone, String motDePasse});
+  $Res call({int id, String telephone, String motDePasse});
 }
 
 /// @nodoc
@@ -923,7 +923,7 @@ class _$BaseLoginRequestCopyWithImpl<$Res, $Val extends BaseLoginRequest>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       telephone: null == telephone
           ? _value.telephone
           : telephone // ignore: cast_nullable_to_non_nullable
@@ -944,7 +944,7 @@ abstract class _$$BaseLoginRequestImplCopyWith<$Res>
       __$$BaseLoginRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, String telephone, String motDePasse});
+  $Res call({int id, String telephone, String motDePasse});
 }
 
 /// @nodoc
@@ -966,7 +966,7 @@ class __$$BaseLoginRequestImplCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       telephone: null == telephone
           ? _value.telephone
           : telephone // ignore: cast_nullable_to_non_nullable
@@ -989,7 +989,7 @@ class _$BaseLoginRequestImpl implements _BaseLoginRequest {
       _$$BaseLoginRequestImplFromJson(json);
 
   @override
-  final String id;
+  final int id;
   @override
   final String telephone;
   @override
@@ -1033,7 +1033,7 @@ class _$BaseLoginRequestImpl implements _BaseLoginRequest {
 
 abstract class _BaseLoginRequest implements BaseLoginRequest {
   const factory _BaseLoginRequest(
-      {required final String id,
+      {required final int id,
       required final String telephone,
       required final String motDePasse}) = _$BaseLoginRequestImpl;
 
@@ -1041,7 +1041,7 @@ abstract class _BaseLoginRequest implements BaseLoginRequest {
       _$BaseLoginRequestImpl.fromJson;
 
   @override
-  String get id;
+  int get id;
   @override
   String get telephone;
   @override
