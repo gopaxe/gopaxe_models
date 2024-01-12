@@ -61,7 +61,7 @@ class UnAuthorizedResponse with _$UnAuthorizedResponse {
 @freezed
 class BaseLoginRequest with _$BaseLoginRequest {
   const factory BaseLoginRequest(
-      {required String id,
+      {required int id,
       required String telephone,
       required String motDePasse}) = _BaseLoginRequest;
 
