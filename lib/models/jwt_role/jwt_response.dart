@@ -61,8 +61,7 @@ class UnAuthorizedResponse with _$UnAuthorizedResponse {
 @freezed
 class BaseLoginRequest with _$BaseLoginRequest {
   const factory BaseLoginRequest(
-      {required String id,
-      required String telephone,
+      {required String telephone,
       required String motDePasse}) = _BaseLoginRequest;
 
   factory BaseLoginRequest.fromJson(Map<String, dynamic> json) =>
