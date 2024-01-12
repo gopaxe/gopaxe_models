@@ -883,6 +883,7 @@ BaseLoginRequest _$BaseLoginRequestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BaseLoginRequest {
+  String get id => throw _privateConstructorUsedError;
   String get telephone => throw _privateConstructorUsedError;
   String get motDePasse => throw _privateConstructorUsedError;
 
@@ -898,7 +899,7 @@ abstract class $BaseLoginRequestCopyWith<$Res> {
           BaseLoginRequest value, $Res Function(BaseLoginRequest) then) =
       _$BaseLoginRequestCopyWithImpl<$Res, BaseLoginRequest>;
   @useResult
-  $Res call({String telephone, String motDePasse});
+  $Res call({String id, String telephone, String motDePasse});
 }
 
 /// @nodoc
@@ -914,10 +915,15 @@ class _$BaseLoginRequestCopyWithImpl<$Res, $Val extends BaseLoginRequest>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? telephone = null,
     Object? motDePasse = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       telephone: null == telephone
           ? _value.telephone
           : telephone // ignore: cast_nullable_to_non_nullable
@@ -938,7 +944,7 @@ abstract class _$$BaseLoginRequestImplCopyWith<$Res>
       __$$BaseLoginRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String telephone, String motDePasse});
+  $Res call({String id, String telephone, String motDePasse});
 }
 
 /// @nodoc
@@ -952,10 +958,15 @@ class __$$BaseLoginRequestImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? telephone = null,
     Object? motDePasse = null,
   }) {
     return _then(_$BaseLoginRequestImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       telephone: null == telephone
           ? _value.telephone
           : telephone // ignore: cast_nullable_to_non_nullable
@@ -972,11 +983,13 @@ class __$$BaseLoginRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$BaseLoginRequestImpl implements _BaseLoginRequest {
   const _$BaseLoginRequestImpl(
-      {required this.telephone, required this.motDePasse});
+      {required this.id, required this.telephone, required this.motDePasse});
 
   factory _$BaseLoginRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$BaseLoginRequestImplFromJson(json);
 
+  @override
+  final String id;
   @override
   final String telephone;
   @override
@@ -984,7 +997,7 @@ class _$BaseLoginRequestImpl implements _BaseLoginRequest {
 
   @override
   String toString() {
-    return 'BaseLoginRequest(telephone: $telephone, motDePasse: $motDePasse)';
+    return 'BaseLoginRequest(id: $id, telephone: $telephone, motDePasse: $motDePasse)';
   }
 
   @override
@@ -992,6 +1005,7 @@ class _$BaseLoginRequestImpl implements _BaseLoginRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BaseLoginRequestImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.telephone, telephone) ||
                 other.telephone == telephone) &&
             (identical(other.motDePasse, motDePasse) ||
@@ -1000,7 +1014,7 @@ class _$BaseLoginRequestImpl implements _BaseLoginRequest {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, telephone, motDePasse);
+  int get hashCode => Object.hash(runtimeType, id, telephone, motDePasse);
 
   @JsonKey(ignore: true)
   @override
@@ -1019,12 +1033,15 @@ class _$BaseLoginRequestImpl implements _BaseLoginRequest {
 
 abstract class _BaseLoginRequest implements BaseLoginRequest {
   const factory _BaseLoginRequest(
-      {required final String telephone,
+      {required final String id,
+      required final String telephone,
       required final String motDePasse}) = _$BaseLoginRequestImpl;
 
   factory _BaseLoginRequest.fromJson(Map<String, dynamic> json) =
       _$BaseLoginRequestImpl.fromJson;
 
+  @override
+  String get id;
   @override
   String get telephone;
   @override
