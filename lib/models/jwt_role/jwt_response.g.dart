@@ -81,6 +81,7 @@ Map<String, dynamic> _$$UnAuthorizedResponseImplToJson(
 _$BaseLoginRequestImpl _$$BaseLoginRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$BaseLoginRequestImpl(
+      id: json['id'] as String,
       telephone: json['telephone'] as String,
       motDePasse: json['motDePasse'] as String,
     );
@@ -88,6 +89,7 @@ _$BaseLoginRequestImpl _$$BaseLoginRequestImplFromJson(
 Map<String, dynamic> _$$BaseLoginRequestImplToJson(
         _$BaseLoginRequestImpl instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'telephone': instance.telephone,
       'motDePasse': instance.motDePasse,
     };
