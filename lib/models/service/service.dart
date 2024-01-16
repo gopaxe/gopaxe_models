@@ -51,7 +51,7 @@ class ServiceRequest with _$ServiceRequest {
 @freezed
 class ServiceRequestWithClient with _$ServiceRequestWithClient {
   const factory ServiceRequestWithClient(
-      {required Client client,
+      {required ClientServiceInfos client,
       required ServiceRequest service}) = _ServiceRequestWithClient;
 
   factory ServiceRequestWithClient.fromJson(Map<String, dynamic> json) =>

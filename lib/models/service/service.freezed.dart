@@ -755,7 +755,7 @@ ServiceRequestWithClient _$ServiceRequestWithClientFromJson(
 
 /// @nodoc
 mixin _$ServiceRequestWithClient {
-  Client get client => throw _privateConstructorUsedError;
+  ClientServiceInfos get client => throw _privateConstructorUsedError;
   ServiceRequest get service => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -770,9 +770,9 @@ abstract class $ServiceRequestWithClientCopyWith<$Res> {
           $Res Function(ServiceRequestWithClient) then) =
       _$ServiceRequestWithClientCopyWithImpl<$Res, ServiceRequestWithClient>;
   @useResult
-  $Res call({Client client, ServiceRequest service});
+  $Res call({ClientServiceInfos client, ServiceRequest service});
 
-  $ClientCopyWith<$Res> get client;
+  $ClientServiceInfosCopyWith<$Res> get client;
   $ServiceRequestCopyWith<$Res> get service;
 }
 
@@ -797,7 +797,7 @@ class _$ServiceRequestWithClientCopyWithImpl<$Res,
       client: null == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
-              as Client,
+              as ClientServiceInfos,
       service: null == service
           ? _value.service
           : service // ignore: cast_nullable_to_non_nullable
@@ -807,8 +807,8 @@ class _$ServiceRequestWithClientCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ClientCopyWith<$Res> get client {
-    return $ClientCopyWith<$Res>(_value.client, (value) {
+  $ClientServiceInfosCopyWith<$Res> get client {
+    return $ClientServiceInfosCopyWith<$Res>(_value.client, (value) {
       return _then(_value.copyWith(client: value) as $Val);
     });
   }
@@ -831,10 +831,10 @@ abstract class _$$ServiceRequestWithClientImplCopyWith<$Res>
       __$$ServiceRequestWithClientImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Client client, ServiceRequest service});
+  $Res call({ClientServiceInfos client, ServiceRequest service});
 
   @override
-  $ClientCopyWith<$Res> get client;
+  $ClientServiceInfosCopyWith<$Res> get client;
   @override
   $ServiceRequestCopyWith<$Res> get service;
 }
@@ -859,7 +859,7 @@ class __$$ServiceRequestWithClientImplCopyWithImpl<$Res>
       client: null == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
-              as Client,
+              as ClientServiceInfos,
       service: null == service
           ? _value.service
           : service // ignore: cast_nullable_to_non_nullable
@@ -878,7 +878,7 @@ class _$ServiceRequestWithClientImpl implements _ServiceRequestWithClient {
       _$$ServiceRequestWithClientImplFromJson(json);
 
   @override
-  final Client client;
+  final ClientServiceInfos client;
   @override
   final ServiceRequest service;
 
@@ -917,14 +917,14 @@ class _$ServiceRequestWithClientImpl implements _ServiceRequestWithClient {
 
 abstract class _ServiceRequestWithClient implements ServiceRequestWithClient {
   const factory _ServiceRequestWithClient(
-      {required final Client client,
+      {required final ClientServiceInfos client,
       required final ServiceRequest service}) = _$ServiceRequestWithClientImpl;
 
   factory _ServiceRequestWithClient.fromJson(Map<String, dynamic> json) =
       _$ServiceRequestWithClientImpl.fromJson;
 
   @override
-  Client get client;
+  ClientServiceInfos get client;
   @override
   ServiceRequest get service;
   @override
