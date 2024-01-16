@@ -205,6 +205,251 @@ abstract class _Client implements Client {
       throw _privateConstructorUsedError;
 }
 
+ClientServiceInfos _$ClientServiceInfosFromJson(Map<String, dynamic> json) {
+  return _ClientServiceInfos.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ClientServiceInfos {
+  int get clientId => throw _privateConstructorUsedError;
+  String get nom => throw _privateConstructorUsedError;
+  String get prenom => throw _privateConstructorUsedError;
+  double get score => throw _privateConstructorUsedError;
+  int get totalServicePosted => throw _privateConstructorUsedError;
+  DateTime get registeredDate => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ClientServiceInfosCopyWith<ClientServiceInfos> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ClientServiceInfosCopyWith<$Res> {
+  factory $ClientServiceInfosCopyWith(
+          ClientServiceInfos value, $Res Function(ClientServiceInfos) then) =
+      _$ClientServiceInfosCopyWithImpl<$Res, ClientServiceInfos>;
+  @useResult
+  $Res call(
+      {int clientId,
+      String nom,
+      String prenom,
+      double score,
+      int totalServicePosted,
+      DateTime registeredDate});
+}
+
+/// @nodoc
+class _$ClientServiceInfosCopyWithImpl<$Res, $Val extends ClientServiceInfos>
+    implements $ClientServiceInfosCopyWith<$Res> {
+  _$ClientServiceInfosCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? clientId = null,
+    Object? nom = null,
+    Object? prenom = null,
+    Object? score = null,
+    Object? totalServicePosted = null,
+    Object? registeredDate = null,
+  }) {
+    return _then(_value.copyWith(
+      clientId: null == clientId
+          ? _value.clientId
+          : clientId // ignore: cast_nullable_to_non_nullable
+              as int,
+      nom: null == nom
+          ? _value.nom
+          : nom // ignore: cast_nullable_to_non_nullable
+              as String,
+      prenom: null == prenom
+          ? _value.prenom
+          : prenom // ignore: cast_nullable_to_non_nullable
+              as String,
+      score: null == score
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as double,
+      totalServicePosted: null == totalServicePosted
+          ? _value.totalServicePosted
+          : totalServicePosted // ignore: cast_nullable_to_non_nullable
+              as int,
+      registeredDate: null == registeredDate
+          ? _value.registeredDate
+          : registeredDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ClientServiceInfosImplCopyWith<$Res>
+    implements $ClientServiceInfosCopyWith<$Res> {
+  factory _$$ClientServiceInfosImplCopyWith(_$ClientServiceInfosImpl value,
+          $Res Function(_$ClientServiceInfosImpl) then) =
+      __$$ClientServiceInfosImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int clientId,
+      String nom,
+      String prenom,
+      double score,
+      int totalServicePosted,
+      DateTime registeredDate});
+}
+
+/// @nodoc
+class __$$ClientServiceInfosImplCopyWithImpl<$Res>
+    extends _$ClientServiceInfosCopyWithImpl<$Res, _$ClientServiceInfosImpl>
+    implements _$$ClientServiceInfosImplCopyWith<$Res> {
+  __$$ClientServiceInfosImplCopyWithImpl(_$ClientServiceInfosImpl _value,
+      $Res Function(_$ClientServiceInfosImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? clientId = null,
+    Object? nom = null,
+    Object? prenom = null,
+    Object? score = null,
+    Object? totalServicePosted = null,
+    Object? registeredDate = null,
+  }) {
+    return _then(_$ClientServiceInfosImpl(
+      clientId: null == clientId
+          ? _value.clientId
+          : clientId // ignore: cast_nullable_to_non_nullable
+              as int,
+      nom: null == nom
+          ? _value.nom
+          : nom // ignore: cast_nullable_to_non_nullable
+              as String,
+      prenom: null == prenom
+          ? _value.prenom
+          : prenom // ignore: cast_nullable_to_non_nullable
+              as String,
+      score: null == score
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as double,
+      totalServicePosted: null == totalServicePosted
+          ? _value.totalServicePosted
+          : totalServicePosted // ignore: cast_nullable_to_non_nullable
+              as int,
+      registeredDate: null == registeredDate
+          ? _value.registeredDate
+          : registeredDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ClientServiceInfosImpl implements _ClientServiceInfos {
+  const _$ClientServiceInfosImpl(
+      {required this.clientId,
+      required this.nom,
+      required this.prenom,
+      required this.score,
+      required this.totalServicePosted,
+      required this.registeredDate});
+
+  factory _$ClientServiceInfosImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ClientServiceInfosImplFromJson(json);
+
+  @override
+  final int clientId;
+  @override
+  final String nom;
+  @override
+  final String prenom;
+  @override
+  final double score;
+  @override
+  final int totalServicePosted;
+  @override
+  final DateTime registeredDate;
+
+  @override
+  String toString() {
+    return 'ClientServiceInfos(clientId: $clientId, nom: $nom, prenom: $prenom, score: $score, totalServicePosted: $totalServicePosted, registeredDate: $registeredDate)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ClientServiceInfosImpl &&
+            (identical(other.clientId, clientId) ||
+                other.clientId == clientId) &&
+            (identical(other.nom, nom) || other.nom == nom) &&
+            (identical(other.prenom, prenom) || other.prenom == prenom) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.totalServicePosted, totalServicePosted) ||
+                other.totalServicePosted == totalServicePosted) &&
+            (identical(other.registeredDate, registeredDate) ||
+                other.registeredDate == registeredDate));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, clientId, nom, prenom, score,
+      totalServicePosted, registeredDate);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ClientServiceInfosImplCopyWith<_$ClientServiceInfosImpl> get copyWith =>
+      __$$ClientServiceInfosImplCopyWithImpl<_$ClientServiceInfosImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ClientServiceInfosImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ClientServiceInfos implements ClientServiceInfos {
+  const factory _ClientServiceInfos(
+      {required final int clientId,
+      required final String nom,
+      required final String prenom,
+      required final double score,
+      required final int totalServicePosted,
+      required final DateTime registeredDate}) = _$ClientServiceInfosImpl;
+
+  factory _ClientServiceInfos.fromJson(Map<String, dynamic> json) =
+      _$ClientServiceInfosImpl.fromJson;
+
+  @override
+  int get clientId;
+  @override
+  String get nom;
+  @override
+  String get prenom;
+  @override
+  double get score;
+  @override
+  int get totalServicePosted;
+  @override
+  DateTime get registeredDate;
+  @override
+  @JsonKey(ignore: true)
+  _$$ClientServiceInfosImplCopyWith<_$ClientServiceInfosImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 ClientOutPut _$ClientOutPutFromJson(Map<String, dynamic> json) {
   return _ClientOutPut.fromJson(json);
 }

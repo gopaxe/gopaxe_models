@@ -18,6 +18,20 @@ class Client with _$Client {
 }
 
 @freezed
+class ClientServiceInfos with _$ClientServiceInfos {
+  const factory ClientServiceInfos(
+      {required int clientId,
+      required String nom,
+      required String prenom,
+      required double score,
+      required int totalServicePosted,
+      required DateTime registeredDate}) = _ClientServiceInfos;
+
+  factory ClientServiceInfos.fromJson(Map<String, dynamic> json) =>
+      _$ClientServiceInfosFromJson(json);
+}
+
+@freezed
 class ClientOutPut with _$ClientOutPut {
   const factory ClientOutPut({
     required int clientId,

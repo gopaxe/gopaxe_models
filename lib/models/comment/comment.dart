@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:gopaxe_models/gopaxe_models.dart';
 part 'comment.freezed.dart';
 
 part 'comment.g.dart';
@@ -9,6 +10,8 @@ class Comment with _$Comment {
     required int commentId,
     required int serviceId,
     required int workerId,
+    required Worker worker,
+    required Client client,
     required int score,
     required String content,
     required DateTime createdDate,

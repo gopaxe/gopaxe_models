@@ -21,6 +21,28 @@ Map<String, dynamic> _$$ClientImplToJson(_$ClientImpl instance) =>
       'motDePasse': instance.motDePasse,
     };
 
+_$ClientServiceInfosImpl _$$ClientServiceInfosImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ClientServiceInfosImpl(
+      clientId: json['clientId'] as int,
+      nom: json['nom'] as String,
+      prenom: json['prenom'] as String,
+      score: (json['score'] as num).toDouble(),
+      totalServicePosted: json['totalServicePosted'] as int,
+      registeredDate: DateTime.parse(json['registeredDate'] as String),
+    );
+
+Map<String, dynamic> _$$ClientServiceInfosImplToJson(
+        _$ClientServiceInfosImpl instance) =>
+    <String, dynamic>{
+      'clientId': instance.clientId,
+      'nom': instance.nom,
+      'prenom': instance.prenom,
+      'score': instance.score,
+      'totalServicePosted': instance.totalServicePosted,
+      'registeredDate': instance.registeredDate.toIso8601String(),
+    };
+
 _$ClientOutPutImpl _$$ClientOutPutImplFromJson(Map<String, dynamic> json) =>
     _$ClientOutPutImpl(
       clientId: json['clientId'] as int,

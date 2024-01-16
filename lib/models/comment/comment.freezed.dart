@@ -23,6 +23,8 @@ mixin _$Comment {
   int get commentId => throw _privateConstructorUsedError;
   int get serviceId => throw _privateConstructorUsedError;
   int get workerId => throw _privateConstructorUsedError;
+  Worker get worker => throw _privateConstructorUsedError;
+  Client get client => throw _privateConstructorUsedError;
   int get score => throw _privateConstructorUsedError;
   String get content => throw _privateConstructorUsedError;
   DateTime get createdDate => throw _privateConstructorUsedError;
@@ -41,9 +43,14 @@ abstract class $CommentCopyWith<$Res> {
       {int commentId,
       int serviceId,
       int workerId,
+      Worker worker,
+      Client client,
       int score,
       String content,
       DateTime createdDate});
+
+  $WorkerCopyWith<$Res> get worker;
+  $ClientCopyWith<$Res> get client;
 }
 
 /// @nodoc
@@ -62,6 +69,8 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
     Object? commentId = null,
     Object? serviceId = null,
     Object? workerId = null,
+    Object? worker = null,
+    Object? client = null,
     Object? score = null,
     Object? content = null,
     Object? createdDate = null,
@@ -79,6 +88,14 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
           ? _value.workerId
           : workerId // ignore: cast_nullable_to_non_nullable
               as int,
+      worker: null == worker
+          ? _value.worker
+          : worker // ignore: cast_nullable_to_non_nullable
+              as Worker,
+      client: null == client
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client,
       score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
@@ -93,6 +110,22 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
               as DateTime,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WorkerCopyWith<$Res> get worker {
+    return $WorkerCopyWith<$Res>(_value.worker, (value) {
+      return _then(_value.copyWith(worker: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ClientCopyWith<$Res> get client {
+    return $ClientCopyWith<$Res>(_value.client, (value) {
+      return _then(_value.copyWith(client: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -106,9 +139,16 @@ abstract class _$$CommentImplCopyWith<$Res> implements $CommentCopyWith<$Res> {
       {int commentId,
       int serviceId,
       int workerId,
+      Worker worker,
+      Client client,
       int score,
       String content,
       DateTime createdDate});
+
+  @override
+  $WorkerCopyWith<$Res> get worker;
+  @override
+  $ClientCopyWith<$Res> get client;
 }
 
 /// @nodoc
@@ -125,6 +165,8 @@ class __$$CommentImplCopyWithImpl<$Res>
     Object? commentId = null,
     Object? serviceId = null,
     Object? workerId = null,
+    Object? worker = null,
+    Object? client = null,
     Object? score = null,
     Object? content = null,
     Object? createdDate = null,
@@ -142,6 +184,14 @@ class __$$CommentImplCopyWithImpl<$Res>
           ? _value.workerId
           : workerId // ignore: cast_nullable_to_non_nullable
               as int,
+      worker: null == worker
+          ? _value.worker
+          : worker // ignore: cast_nullable_to_non_nullable
+              as Worker,
+      client: null == client
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client,
       score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
@@ -165,6 +215,8 @@ class _$CommentImpl implements _Comment {
       {required this.commentId,
       required this.serviceId,
       required this.workerId,
+      required this.worker,
+      required this.client,
       required this.score,
       required this.content,
       required this.createdDate});
@@ -179,6 +231,10 @@ class _$CommentImpl implements _Comment {
   @override
   final int workerId;
   @override
+  final Worker worker;
+  @override
+  final Client client;
+  @override
   final int score;
   @override
   final String content;
@@ -187,7 +243,7 @@ class _$CommentImpl implements _Comment {
 
   @override
   String toString() {
-    return 'Comment(commentId: $commentId, serviceId: $serviceId, workerId: $workerId, score: $score, content: $content, createdDate: $createdDate)';
+    return 'Comment(commentId: $commentId, serviceId: $serviceId, workerId: $workerId, worker: $worker, client: $client, score: $score, content: $content, createdDate: $createdDate)';
   }
 
   @override
@@ -201,6 +257,8 @@ class _$CommentImpl implements _Comment {
                 other.serviceId == serviceId) &&
             (identical(other.workerId, workerId) ||
                 other.workerId == workerId) &&
+            (identical(other.worker, worker) || other.worker == worker) &&
+            (identical(other.client, client) || other.client == client) &&
             (identical(other.score, score) || other.score == score) &&
             (identical(other.content, content) || other.content == content) &&
             (identical(other.createdDate, createdDate) ||
@@ -209,8 +267,8 @@ class _$CommentImpl implements _Comment {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, commentId, serviceId, workerId, score, content, createdDate);
+  int get hashCode => Object.hash(runtimeType, commentId, serviceId, workerId,
+      worker, client, score, content, createdDate);
 
   @JsonKey(ignore: true)
   @override
@@ -231,6 +289,8 @@ abstract class _Comment implements Comment {
       {required final int commentId,
       required final int serviceId,
       required final int workerId,
+      required final Worker worker,
+      required final Client client,
       required final int score,
       required final String content,
       required final DateTime createdDate}) = _$CommentImpl;
@@ -243,6 +303,10 @@ abstract class _Comment implements Comment {
   int get serviceId;
   @override
   int get workerId;
+  @override
+  Worker get worker;
+  @override
+  Client get client;
   @override
   int get score;
   @override
