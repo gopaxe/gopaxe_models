@@ -291,6 +291,8 @@ mixin _$ServiceRequest {
   int? get targetedCompetenceId => throw _privateConstructorUsedError;
   DateTime get completionDate => throw _privateConstructorUsedError;
   int? get workerId => throw _privateConstructorUsedError;
+
+  /// Contains workerId to which that service is for
   int? get forWorkerId => throw _privateConstructorUsedError;
   int get clientId => throw _privateConstructorUsedError;
   DateTime? get startDate => throw _privateConstructorUsedError;
@@ -593,6 +595,8 @@ class _$ServiceRequestImpl implements _ServiceRequest {
   final DateTime completionDate;
   @override
   final int? workerId;
+
+  /// Contains workerId to which that service is for
   @override
   final int? forWorkerId;
   @override
@@ -613,7 +617,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
 
   @override
   String toString() {
-    return 'ServiceRequest(id: $id, title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, workerId: $workerId, clientId: $clientId, startDate: $startDate, contactDate: $contactDate, endDate: $endDate, desiredLocation: $desiredLocation)';
+    return 'ServiceRequest(id: $id, title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, workerId: $workerId, forWorkerId: $forWorkerId, clientId: $clientId, startDate: $startDate, cancelDate: $cancelDate, contactDate: $contactDate, endDate: $endDate, createdDate: $createdDate, desiredLocation: $desiredLocation)';
   }
 
   @override
@@ -721,6 +725,8 @@ abstract class _ServiceRequest implements ServiceRequest {
   @override
   int? get workerId;
   @override
+
+  /// Contains workerId to which that service is for
   int? get forWorkerId;
   @override
   int get clientId;
