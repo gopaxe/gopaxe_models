@@ -31,6 +31,7 @@ class ServiceRequest with _$ServiceRequest {
     required int? targetedCompetenceId,
     required DateTime completionDate,
     required int? workerId,
+    int? forWorkerId,
     required int clientId,
     required DateTime? startDate,
     required DateTime? cancelDate,

@@ -38,6 +38,7 @@ _$ServiceRequestImpl _$$ServiceRequestImplFromJson(Map<String, dynamic> json) =>
       targetedCompetenceId: json['targetedCompetenceId'] as int?,
       completionDate: DateTime.parse(json['completionDate'] as String),
       workerId: json['workerId'] as int?,
+      forWorkerId: json['forWorkerId'] as int?,
       clientId: json['clientId'] as int,
       startDate: json['startDate'] == null
           ? null
@@ -68,6 +69,7 @@ Map<String, dynamic> _$$ServiceRequestImplToJson(
       'targetedCompetenceId': instance.targetedCompetenceId,
       'completionDate': instance.completionDate.toIso8601String(),
       'workerId': instance.workerId,
+      'forWorkerId': instance.forWorkerId,
       'clientId': instance.clientId,
       'startDate': instance.startDate?.toIso8601String(),
       'cancelDate': instance.cancelDate?.toIso8601String(),
