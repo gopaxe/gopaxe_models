@@ -52,7 +52,7 @@ class ServiceRequest with _$ServiceRequest {
 class ServiceRequestWithClient with _$ServiceRequestWithClient {
   const factory ServiceRequestWithClient(
       {required Client client,
-      required ServiceRequestWithClient service}) = _ServiceRequestWithClient;
+      required ServiceRequest service}) = _ServiceRequestWithClient;
 
   factory ServiceRequestWithClient.fromJson(Map<String, dynamic> json) =>
       _$ServiceRequestWithClientFromJson(json);

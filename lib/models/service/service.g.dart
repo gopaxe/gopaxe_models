@@ -83,8 +83,7 @@ _$ServiceRequestWithClientImpl _$$ServiceRequestWithClientImplFromJson(
         Map<String, dynamic> json) =>
     _$ServiceRequestWithClientImpl(
       client: Client.fromJson(json['client'] as Map<String, dynamic>),
-      service: ServiceRequestWithClient.fromJson(
-          json['service'] as Map<String, dynamic>),
+      service: ServiceRequest.fromJson(json['service'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$ServiceRequestWithClientImplToJson(

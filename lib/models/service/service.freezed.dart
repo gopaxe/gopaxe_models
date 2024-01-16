@@ -756,7 +756,7 @@ ServiceRequestWithClient _$ServiceRequestWithClientFromJson(
 /// @nodoc
 mixin _$ServiceRequestWithClient {
   Client get client => throw _privateConstructorUsedError;
-  ServiceRequestWithClient get service => throw _privateConstructorUsedError;
+  ServiceRequest get service => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -770,10 +770,10 @@ abstract class $ServiceRequestWithClientCopyWith<$Res> {
           $Res Function(ServiceRequestWithClient) then) =
       _$ServiceRequestWithClientCopyWithImpl<$Res, ServiceRequestWithClient>;
   @useResult
-  $Res call({Client client, ServiceRequestWithClient service});
+  $Res call({Client client, ServiceRequest service});
 
   $ClientCopyWith<$Res> get client;
-  $ServiceRequestWithClientCopyWith<$Res> get service;
+  $ServiceRequestCopyWith<$Res> get service;
 }
 
 /// @nodoc
@@ -801,7 +801,7 @@ class _$ServiceRequestWithClientCopyWithImpl<$Res,
       service: null == service
           ? _value.service
           : service // ignore: cast_nullable_to_non_nullable
-              as ServiceRequestWithClient,
+              as ServiceRequest,
     ) as $Val);
   }
 
@@ -815,8 +815,8 @@ class _$ServiceRequestWithClientCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ServiceRequestWithClientCopyWith<$Res> get service {
-    return $ServiceRequestWithClientCopyWith<$Res>(_value.service, (value) {
+  $ServiceRequestCopyWith<$Res> get service {
+    return $ServiceRequestCopyWith<$Res>(_value.service, (value) {
       return _then(_value.copyWith(service: value) as $Val);
     });
   }
@@ -831,12 +831,12 @@ abstract class _$$ServiceRequestWithClientImplCopyWith<$Res>
       __$$ServiceRequestWithClientImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Client client, ServiceRequestWithClient service});
+  $Res call({Client client, ServiceRequest service});
 
   @override
   $ClientCopyWith<$Res> get client;
   @override
-  $ServiceRequestWithClientCopyWith<$Res> get service;
+  $ServiceRequestCopyWith<$Res> get service;
 }
 
 /// @nodoc
@@ -863,7 +863,7 @@ class __$$ServiceRequestWithClientImplCopyWithImpl<$Res>
       service: null == service
           ? _value.service
           : service // ignore: cast_nullable_to_non_nullable
-              as ServiceRequestWithClient,
+              as ServiceRequest,
     ));
   }
 }
@@ -880,7 +880,7 @@ class _$ServiceRequestWithClientImpl implements _ServiceRequestWithClient {
   @override
   final Client client;
   @override
-  final ServiceRequestWithClient service;
+  final ServiceRequest service;
 
   @override
   String toString() {
@@ -917,9 +917,8 @@ class _$ServiceRequestWithClientImpl implements _ServiceRequestWithClient {
 
 abstract class _ServiceRequestWithClient implements ServiceRequestWithClient {
   const factory _ServiceRequestWithClient(
-          {required final Client client,
-          required final ServiceRequestWithClient service}) =
-      _$ServiceRequestWithClientImpl;
+      {required final Client client,
+      required final ServiceRequest service}) = _$ServiceRequestWithClientImpl;
 
   factory _ServiceRequestWithClient.fromJson(Map<String, dynamic> json) =
       _$ServiceRequestWithClientImpl.fromJson;
@@ -927,7 +926,7 @@ abstract class _ServiceRequestWithClient implements ServiceRequestWithClient {
   @override
   Client get client;
   @override
-  ServiceRequestWithClient get service;
+  ServiceRequest get service;
   @override
   @JsonKey(ignore: true)
   _$$ServiceRequestWithClientImplCopyWith<_$ServiceRequestWithClientImpl>
