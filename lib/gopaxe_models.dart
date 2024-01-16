@@ -3,7 +3,6 @@
 // remenber to format this file, you can use: dart format
 // publish your package hint: dart pub publish --dry-run
 // if you want to update your packages on power: dart pub upgrade --major-versions
-export 'package:gopaxe_models/gopaxe_models.dart';
 export 'package:gopaxe_models/models/worker/worker.dart';
 export 'package:gopaxe_models/models/admin/admin.dart';
 export 'package:gopaxe_models/models/pays/pays.dart';

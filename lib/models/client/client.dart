@@ -10,6 +10,7 @@ class Client with _$Client {
   const factory Client({
     required int clientId,
     required String nom,
+    String? photo,
     required String prenom,
     required String motDePasse,
   }) = _Client;
@@ -21,6 +22,7 @@ class Client with _$Client {
 class ClientServiceInfos with _$ClientServiceInfos {
   const factory ClientServiceInfos(
       {required int clientId,
+      String? photo,
       required String nom,
       required String prenom,
       required double score,

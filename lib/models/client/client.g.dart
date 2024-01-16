@@ -9,6 +9,7 @@ part of 'client.dart';
 _$ClientImpl _$$ClientImplFromJson(Map<String, dynamic> json) => _$ClientImpl(
       clientId: json['clientId'] as int,
       nom: json['nom'] as String,
+      photo: json['photo'] as String?,
       prenom: json['prenom'] as String,
       motDePasse: json['motDePasse'] as String,
     );
@@ -17,6 +18,7 @@ Map<String, dynamic> _$$ClientImplToJson(_$ClientImpl instance) =>
     <String, dynamic>{
       'clientId': instance.clientId,
       'nom': instance.nom,
+      'photo': instance.photo,
       'prenom': instance.prenom,
       'motDePasse': instance.motDePasse,
     };
@@ -25,6 +27,7 @@ _$ClientServiceInfosImpl _$$ClientServiceInfosImplFromJson(
         Map<String, dynamic> json) =>
     _$ClientServiceInfosImpl(
       clientId: json['clientId'] as int,
+      photo: json['photo'] as String?,
       nom: json['nom'] as String,
       prenom: json['prenom'] as String,
       score: (json['score'] as num).toDouble(),
@@ -36,6 +39,7 @@ Map<String, dynamic> _$$ClientServiceInfosImplToJson(
         _$ClientServiceInfosImpl instance) =>
     <String, dynamic>{
       'clientId': instance.clientId,
+      'photo': instance.photo,
       'nom': instance.nom,
       'prenom': instance.prenom,
       'score': instance.score,
