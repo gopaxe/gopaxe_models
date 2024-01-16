@@ -747,3 +747,189 @@ abstract class _ServiceRequest implements ServiceRequest {
   _$$ServiceRequestImplCopyWith<_$ServiceRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+ServiceRequestWithClient _$ServiceRequestWithClientFromJson(
+    Map<String, dynamic> json) {
+  return _ServiceRequestWithClient.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ServiceRequestWithClient {
+  Client get client => throw _privateConstructorUsedError;
+  ServiceRequestWithClient get service => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ServiceRequestWithClientCopyWith<ServiceRequestWithClient> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ServiceRequestWithClientCopyWith<$Res> {
+  factory $ServiceRequestWithClientCopyWith(ServiceRequestWithClient value,
+          $Res Function(ServiceRequestWithClient) then) =
+      _$ServiceRequestWithClientCopyWithImpl<$Res, ServiceRequestWithClient>;
+  @useResult
+  $Res call({Client client, ServiceRequestWithClient service});
+
+  $ClientCopyWith<$Res> get client;
+  $ServiceRequestWithClientCopyWith<$Res> get service;
+}
+
+/// @nodoc
+class _$ServiceRequestWithClientCopyWithImpl<$Res,
+        $Val extends ServiceRequestWithClient>
+    implements $ServiceRequestWithClientCopyWith<$Res> {
+  _$ServiceRequestWithClientCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? client = null,
+    Object? service = null,
+  }) {
+    return _then(_value.copyWith(
+      client: null == client
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client,
+      service: null == service
+          ? _value.service
+          : service // ignore: cast_nullable_to_non_nullable
+              as ServiceRequestWithClient,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ClientCopyWith<$Res> get client {
+    return $ClientCopyWith<$Res>(_value.client, (value) {
+      return _then(_value.copyWith(client: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ServiceRequestWithClientCopyWith<$Res> get service {
+    return $ServiceRequestWithClientCopyWith<$Res>(_value.service, (value) {
+      return _then(_value.copyWith(service: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$ServiceRequestWithClientImplCopyWith<$Res>
+    implements $ServiceRequestWithClientCopyWith<$Res> {
+  factory _$$ServiceRequestWithClientImplCopyWith(
+          _$ServiceRequestWithClientImpl value,
+          $Res Function(_$ServiceRequestWithClientImpl) then) =
+      __$$ServiceRequestWithClientImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Client client, ServiceRequestWithClient service});
+
+  @override
+  $ClientCopyWith<$Res> get client;
+  @override
+  $ServiceRequestWithClientCopyWith<$Res> get service;
+}
+
+/// @nodoc
+class __$$ServiceRequestWithClientImplCopyWithImpl<$Res>
+    extends _$ServiceRequestWithClientCopyWithImpl<$Res,
+        _$ServiceRequestWithClientImpl>
+    implements _$$ServiceRequestWithClientImplCopyWith<$Res> {
+  __$$ServiceRequestWithClientImplCopyWithImpl(
+      _$ServiceRequestWithClientImpl _value,
+      $Res Function(_$ServiceRequestWithClientImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? client = null,
+    Object? service = null,
+  }) {
+    return _then(_$ServiceRequestWithClientImpl(
+      client: null == client
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client,
+      service: null == service
+          ? _value.service
+          : service // ignore: cast_nullable_to_non_nullable
+              as ServiceRequestWithClient,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ServiceRequestWithClientImpl implements _ServiceRequestWithClient {
+  const _$ServiceRequestWithClientImpl(
+      {required this.client, required this.service});
+
+  factory _$ServiceRequestWithClientImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ServiceRequestWithClientImplFromJson(json);
+
+  @override
+  final Client client;
+  @override
+  final ServiceRequestWithClient service;
+
+  @override
+  String toString() {
+    return 'ServiceRequestWithClient(client: $client, service: $service)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ServiceRequestWithClientImpl &&
+            (identical(other.client, client) || other.client == client) &&
+            (identical(other.service, service) || other.service == service));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, client, service);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ServiceRequestWithClientImplCopyWith<_$ServiceRequestWithClientImpl>
+      get copyWith => __$$ServiceRequestWithClientImplCopyWithImpl<
+          _$ServiceRequestWithClientImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ServiceRequestWithClientImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ServiceRequestWithClient implements ServiceRequestWithClient {
+  const factory _ServiceRequestWithClient(
+          {required final Client client,
+          required final ServiceRequestWithClient service}) =
+      _$ServiceRequestWithClientImpl;
+
+  factory _ServiceRequestWithClient.fromJson(Map<String, dynamic> json) =
+      _$ServiceRequestWithClientImpl.fromJson;
+
+  @override
+  Client get client;
+  @override
+  ServiceRequestWithClient get service;
+  @override
+  @JsonKey(ignore: true)
+  _$$ServiceRequestWithClientImplCopyWith<_$ServiceRequestWithClientImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}

@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:gopaxe_models/gopaxe_models.dart';
 
 import '../worker/worker.dart';
 
@@ -45,4 +46,14 @@ class ServiceRequest with _$ServiceRequest {
 
   factory ServiceRequest.fromJson(Map<String, dynamic> json) =>
       _$ServiceRequestFromJson(json);
+}
+
+@freezed
+class ServiceRequestWithClient with _$ServiceRequestWithClient {
+  const factory ServiceRequestWithClient(
+      {required Client client,
+      required ServiceRequestWithClient service}) = _ServiceRequestWithClient;
+
+  factory ServiceRequestWithClient.fromJson(Map<String, dynamic> json) =>
+      _$ServiceRequestWithClientFromJson(json);
 }

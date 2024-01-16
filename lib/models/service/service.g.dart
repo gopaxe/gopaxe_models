@@ -78,3 +78,18 @@ Map<String, dynamic> _$$ServiceRequestImplToJson(
       'createdDate': instance.createdDate?.toIso8601String(),
       'desiredLocation': instance.desiredLocation,
     };
+
+_$ServiceRequestWithClientImpl _$$ServiceRequestWithClientImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ServiceRequestWithClientImpl(
+      client: Client.fromJson(json['client'] as Map<String, dynamic>),
+      service: ServiceRequestWithClient.fromJson(
+          json['service'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$ServiceRequestWithClientImplToJson(
+        _$ServiceRequestWithClientImpl instance) =>
+    <String, dynamic>{
+      'client': instance.client,
+      'service': instance.service,
+    };
