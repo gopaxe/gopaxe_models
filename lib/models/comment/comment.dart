@@ -12,6 +12,7 @@ class Comment with _$Comment {
     required int workerId,
     required Worker worker,
     required Client client,
+    required bool sendByWorker,
     required int score,
     required String content,
     required DateTime createdDate,
