@@ -96,6 +96,26 @@ Map<String, dynamic> _$$WorkerImplToJson(_$WorkerImpl instance) =>
       'dateCreation': instance.dateCreation.toIso8601String(),
     };
 
+_$WorkerServiceInfosImpl _$$WorkerServiceInfosImplFromJson(
+        Map<String, dynamic> json) =>
+    _$WorkerServiceInfosImpl(
+      workerId: json['workerId'] as int,
+      photo: json['photo'] as String?,
+      nom: json['nom'] as String,
+      prenom: json['prenom'] as String,
+      registeredDate: DateTime.parse(json['registeredDate'] as String),
+    );
+
+Map<String, dynamic> _$$WorkerServiceInfosImplToJson(
+        _$WorkerServiceInfosImpl instance) =>
+    <String, dynamic>{
+      'workerId': instance.workerId,
+      'photo': instance.photo,
+      'nom': instance.nom,
+      'prenom': instance.prenom,
+      'registeredDate': instance.registeredDate.toIso8601String(),
+    };
+
 _$SaveWorkerImpl _$$SaveWorkerImplFromJson(Map<String, dynamic> json) =>
     _$SaveWorkerImpl(
       firstName: json['firstName'] as String,

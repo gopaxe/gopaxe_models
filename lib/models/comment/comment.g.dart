@@ -11,8 +11,10 @@ _$CommentImpl _$$CommentImplFromJson(Map<String, dynamic> json) =>
       commentId: json['commentId'] as int,
       serviceId: json['serviceId'] as int,
       workerId: json['workerId'] as int,
-      worker: Worker.fromJson(json['worker'] as Map<String, dynamic>),
-      client: Client.fromJson(json['client'] as Map<String, dynamic>),
+      worker:
+          WorkerServiceInfos.fromJson(json['worker'] as Map<String, dynamic>),
+      client:
+          ClientServiceInfos.fromJson(json['client'] as Map<String, dynamic>),
       sendByWorker: json['sendByWorker'] as bool,
       score: json['score'] as int,
       content: json['content'] as String,

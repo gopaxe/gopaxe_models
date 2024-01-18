@@ -1155,6 +1155,230 @@ abstract class _Worker implements Worker {
       throw _privateConstructorUsedError;
 }
 
+WorkerServiceInfos _$WorkerServiceInfosFromJson(Map<String, dynamic> json) {
+  return _WorkerServiceInfos.fromJson(json);
+}
+
+/// @nodoc
+mixin _$WorkerServiceInfos {
+  int get workerId => throw _privateConstructorUsedError;
+  String? get photo => throw _privateConstructorUsedError;
+  String get nom => throw _privateConstructorUsedError;
+  String get prenom => throw _privateConstructorUsedError;
+  DateTime get registeredDate => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $WorkerServiceInfosCopyWith<WorkerServiceInfos> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $WorkerServiceInfosCopyWith<$Res> {
+  factory $WorkerServiceInfosCopyWith(
+          WorkerServiceInfos value, $Res Function(WorkerServiceInfos) then) =
+      _$WorkerServiceInfosCopyWithImpl<$Res, WorkerServiceInfos>;
+  @useResult
+  $Res call(
+      {int workerId,
+      String? photo,
+      String nom,
+      String prenom,
+      DateTime registeredDate});
+}
+
+/// @nodoc
+class _$WorkerServiceInfosCopyWithImpl<$Res, $Val extends WorkerServiceInfos>
+    implements $WorkerServiceInfosCopyWith<$Res> {
+  _$WorkerServiceInfosCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? workerId = null,
+    Object? photo = freezed,
+    Object? nom = null,
+    Object? prenom = null,
+    Object? registeredDate = null,
+  }) {
+    return _then(_value.copyWith(
+      workerId: null == workerId
+          ? _value.workerId
+          : workerId // ignore: cast_nullable_to_non_nullable
+              as int,
+      photo: freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nom: null == nom
+          ? _value.nom
+          : nom // ignore: cast_nullable_to_non_nullable
+              as String,
+      prenom: null == prenom
+          ? _value.prenom
+          : prenom // ignore: cast_nullable_to_non_nullable
+              as String,
+      registeredDate: null == registeredDate
+          ? _value.registeredDate
+          : registeredDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$WorkerServiceInfosImplCopyWith<$Res>
+    implements $WorkerServiceInfosCopyWith<$Res> {
+  factory _$$WorkerServiceInfosImplCopyWith(_$WorkerServiceInfosImpl value,
+          $Res Function(_$WorkerServiceInfosImpl) then) =
+      __$$WorkerServiceInfosImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int workerId,
+      String? photo,
+      String nom,
+      String prenom,
+      DateTime registeredDate});
+}
+
+/// @nodoc
+class __$$WorkerServiceInfosImplCopyWithImpl<$Res>
+    extends _$WorkerServiceInfosCopyWithImpl<$Res, _$WorkerServiceInfosImpl>
+    implements _$$WorkerServiceInfosImplCopyWith<$Res> {
+  __$$WorkerServiceInfosImplCopyWithImpl(_$WorkerServiceInfosImpl _value,
+      $Res Function(_$WorkerServiceInfosImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? workerId = null,
+    Object? photo = freezed,
+    Object? nom = null,
+    Object? prenom = null,
+    Object? registeredDate = null,
+  }) {
+    return _then(_$WorkerServiceInfosImpl(
+      workerId: null == workerId
+          ? _value.workerId
+          : workerId // ignore: cast_nullable_to_non_nullable
+              as int,
+      photo: freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nom: null == nom
+          ? _value.nom
+          : nom // ignore: cast_nullable_to_non_nullable
+              as String,
+      prenom: null == prenom
+          ? _value.prenom
+          : prenom // ignore: cast_nullable_to_non_nullable
+              as String,
+      registeredDate: null == registeredDate
+          ? _value.registeredDate
+          : registeredDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$WorkerServiceInfosImpl implements _WorkerServiceInfos {
+  const _$WorkerServiceInfosImpl(
+      {required this.workerId,
+      this.photo,
+      required this.nom,
+      required this.prenom,
+      required this.registeredDate});
+
+  factory _$WorkerServiceInfosImpl.fromJson(Map<String, dynamic> json) =>
+      _$$WorkerServiceInfosImplFromJson(json);
+
+  @override
+  final int workerId;
+  @override
+  final String? photo;
+  @override
+  final String nom;
+  @override
+  final String prenom;
+  @override
+  final DateTime registeredDate;
+
+  @override
+  String toString() {
+    return 'WorkerServiceInfos(workerId: $workerId, photo: $photo, nom: $nom, prenom: $prenom, registeredDate: $registeredDate)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WorkerServiceInfosImpl &&
+            (identical(other.workerId, workerId) ||
+                other.workerId == workerId) &&
+            (identical(other.photo, photo) || other.photo == photo) &&
+            (identical(other.nom, nom) || other.nom == nom) &&
+            (identical(other.prenom, prenom) || other.prenom == prenom) &&
+            (identical(other.registeredDate, registeredDate) ||
+                other.registeredDate == registeredDate));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, workerId, photo, nom, prenom, registeredDate);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WorkerServiceInfosImplCopyWith<_$WorkerServiceInfosImpl> get copyWith =>
+      __$$WorkerServiceInfosImplCopyWithImpl<_$WorkerServiceInfosImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$WorkerServiceInfosImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _WorkerServiceInfos implements WorkerServiceInfos {
+  const factory _WorkerServiceInfos(
+      {required final int workerId,
+      final String? photo,
+      required final String nom,
+      required final String prenom,
+      required final DateTime registeredDate}) = _$WorkerServiceInfosImpl;
+
+  factory _WorkerServiceInfos.fromJson(Map<String, dynamic> json) =
+      _$WorkerServiceInfosImpl.fromJson;
+
+  @override
+  int get workerId;
+  @override
+  String? get photo;
+  @override
+  String get nom;
+  @override
+  String get prenom;
+  @override
+  DateTime get registeredDate;
+  @override
+  @JsonKey(ignore: true)
+  _$$WorkerServiceInfosImplCopyWith<_$WorkerServiceInfosImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 SaveWorker _$SaveWorkerFromJson(Map<String, dynamic> json) {
   return _SaveWorker.fromJson(json);
 }

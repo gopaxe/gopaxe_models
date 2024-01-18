@@ -67,6 +67,19 @@ class Worker with _$Worker {
 }
 
 @freezed
+class WorkerServiceInfos with _$WorkerServiceInfos {
+  const factory WorkerServiceInfos(
+      {required int workerId,
+      String? photo,
+      required String nom,
+      required String prenom,
+      required DateTime registeredDate}) = _WorkerServiceInfos;
+
+  factory WorkerServiceInfos.fromJson(Map<String, dynamic> json) =>
+      _$WorkerServiceInfosFromJson(json);
+}
+
+@freezed
 class SaveWorker with _$SaveWorker {
   const factory SaveWorker({
     required String firstName,

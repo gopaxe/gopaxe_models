@@ -23,8 +23,8 @@ mixin _$Comment {
   int get commentId => throw _privateConstructorUsedError;
   int get serviceId => throw _privateConstructorUsedError;
   int get workerId => throw _privateConstructorUsedError;
-  Worker get worker => throw _privateConstructorUsedError;
-  Client get client => throw _privateConstructorUsedError;
+  WorkerServiceInfos get worker => throw _privateConstructorUsedError;
+  ClientServiceInfos get client => throw _privateConstructorUsedError;
   bool get sendByWorker => throw _privateConstructorUsedError;
   int get score => throw _privateConstructorUsedError;
   String get content => throw _privateConstructorUsedError;
@@ -44,15 +44,15 @@ abstract class $CommentCopyWith<$Res> {
       {int commentId,
       int serviceId,
       int workerId,
-      Worker worker,
-      Client client,
+      WorkerServiceInfos worker,
+      ClientServiceInfos client,
       bool sendByWorker,
       int score,
       String content,
       DateTime createdDate});
 
-  $WorkerCopyWith<$Res> get worker;
-  $ClientCopyWith<$Res> get client;
+  $WorkerServiceInfosCopyWith<$Res> get worker;
+  $ClientServiceInfosCopyWith<$Res> get client;
 }
 
 /// @nodoc
@@ -94,11 +94,11 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
       worker: null == worker
           ? _value.worker
           : worker // ignore: cast_nullable_to_non_nullable
-              as Worker,
+              as WorkerServiceInfos,
       client: null == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
-              as Client,
+              as ClientServiceInfos,
       sendByWorker: null == sendByWorker
           ? _value.sendByWorker
           : sendByWorker // ignore: cast_nullable_to_non_nullable
@@ -120,16 +120,16 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
 
   @override
   @pragma('vm:prefer-inline')
-  $WorkerCopyWith<$Res> get worker {
-    return $WorkerCopyWith<$Res>(_value.worker, (value) {
+  $WorkerServiceInfosCopyWith<$Res> get worker {
+    return $WorkerServiceInfosCopyWith<$Res>(_value.worker, (value) {
       return _then(_value.copyWith(worker: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ClientCopyWith<$Res> get client {
-    return $ClientCopyWith<$Res>(_value.client, (value) {
+  $ClientServiceInfosCopyWith<$Res> get client {
+    return $ClientServiceInfosCopyWith<$Res>(_value.client, (value) {
       return _then(_value.copyWith(client: value) as $Val);
     });
   }
@@ -146,17 +146,17 @@ abstract class _$$CommentImplCopyWith<$Res> implements $CommentCopyWith<$Res> {
       {int commentId,
       int serviceId,
       int workerId,
-      Worker worker,
-      Client client,
+      WorkerServiceInfos worker,
+      ClientServiceInfos client,
       bool sendByWorker,
       int score,
       String content,
       DateTime createdDate});
 
   @override
-  $WorkerCopyWith<$Res> get worker;
+  $WorkerServiceInfosCopyWith<$Res> get worker;
   @override
-  $ClientCopyWith<$Res> get client;
+  $ClientServiceInfosCopyWith<$Res> get client;
 }
 
 /// @nodoc
@@ -196,11 +196,11 @@ class __$$CommentImplCopyWithImpl<$Res>
       worker: null == worker
           ? _value.worker
           : worker // ignore: cast_nullable_to_non_nullable
-              as Worker,
+              as WorkerServiceInfos,
       client: null == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
-              as Client,
+              as ClientServiceInfos,
       sendByWorker: null == sendByWorker
           ? _value.sendByWorker
           : sendByWorker // ignore: cast_nullable_to_non_nullable
@@ -245,9 +245,9 @@ class _$CommentImpl implements _Comment {
   @override
   final int workerId;
   @override
-  final Worker worker;
+  final WorkerServiceInfos worker;
   @override
-  final Client client;
+  final ClientServiceInfos client;
   @override
   final bool sendByWorker;
   @override
@@ -307,8 +307,8 @@ abstract class _Comment implements Comment {
       {required final int commentId,
       required final int serviceId,
       required final int workerId,
-      required final Worker worker,
-      required final Client client,
+      required final WorkerServiceInfos worker,
+      required final ClientServiceInfos client,
       required final bool sendByWorker,
       required final int score,
       required final String content,
@@ -323,9 +323,9 @@ abstract class _Comment implements Comment {
   @override
   int get workerId;
   @override
-  Worker get worker;
+  WorkerServiceInfos get worker;
   @override
-  Client get client;
+  ClientServiceInfos get client;
   @override
   bool get sendByWorker;
   @override
