@@ -61,6 +61,7 @@ Map<String, dynamic> _$$RhumaineSkillImplToJson(_$RhumaineSkillImpl instance) =>
 
 _$WorkerImpl _$$WorkerImplFromJson(Map<String, dynamic> json) => _$WorkerImpl(
       workerId: json['workerId'] as int,
+      uuid: json['uuid'] as String,
       photo: json['photo'] as String,
       firstName: json['firstName'] as String,
       lastName: json['lastName'] as String,
@@ -81,6 +82,7 @@ _$WorkerImpl _$$WorkerImplFromJson(Map<String, dynamic> json) => _$WorkerImpl(
 Map<String, dynamic> _$$WorkerImplToJson(_$WorkerImpl instance) =>
     <String, dynamic>{
       'workerId': instance.workerId,
+      'uuid': instance.uuid,
       'photo': instance.photo,
       'firstName': instance.firstName,
       'lastName': instance.lastName,

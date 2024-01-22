@@ -711,6 +711,7 @@ Worker _$WorkerFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Worker {
   int get workerId => throw _privateConstructorUsedError;
+  String get uuid => throw _privateConstructorUsedError;
   String get photo => throw _privateConstructorUsedError;
   String get firstName => throw _privateConstructorUsedError;
   String get lastName => throw _privateConstructorUsedError;
@@ -737,6 +738,7 @@ abstract class $WorkerCopyWith<$Res> {
   @useResult
   $Res call(
       {int workerId,
+      String uuid,
       String photo,
       String firstName,
       String lastName,
@@ -769,6 +771,7 @@ class _$WorkerCopyWithImpl<$Res, $Val extends Worker>
   @override
   $Res call({
     Object? workerId = null,
+    Object? uuid = null,
     Object? photo = null,
     Object? firstName = null,
     Object? lastName = null,
@@ -788,6 +791,10 @@ class _$WorkerCopyWithImpl<$Res, $Val extends Worker>
           ? _value.workerId
           : workerId // ignore: cast_nullable_to_non_nullable
               as int,
+      uuid: null == uuid
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
+              as String,
       photo: null == photo
           ? _value.photo
           : photo // ignore: cast_nullable_to_non_nullable
@@ -869,6 +876,7 @@ abstract class _$$WorkerImplCopyWith<$Res> implements $WorkerCopyWith<$Res> {
   @useResult
   $Res call(
       {int workerId,
+      String uuid,
       String photo,
       String firstName,
       String lastName,
@@ -901,6 +909,7 @@ class __$$WorkerImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? workerId = null,
+    Object? uuid = null,
     Object? photo = null,
     Object? firstName = null,
     Object? lastName = null,
@@ -920,6 +929,10 @@ class __$$WorkerImplCopyWithImpl<$Res>
           ? _value.workerId
           : workerId // ignore: cast_nullable_to_non_nullable
               as int,
+      uuid: null == uuid
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
+              as String,
       photo: null == photo
           ? _value.photo
           : photo // ignore: cast_nullable_to_non_nullable
@@ -981,6 +994,7 @@ class __$$WorkerImplCopyWithImpl<$Res>
 class _$WorkerImpl implements _Worker {
   const _$WorkerImpl(
       {required this.workerId,
+      required this.uuid,
       required this.photo,
       required this.firstName,
       required this.lastName,
@@ -1001,6 +1015,8 @@ class _$WorkerImpl implements _Worker {
 
   @override
   final int workerId;
+  @override
+  final String uuid;
   @override
   final String photo;
   @override
@@ -1037,7 +1053,7 @@ class _$WorkerImpl implements _Worker {
 
   @override
   String toString() {
-    return 'Worker(workerId: $workerId, photo: $photo, firstName: $firstName, lastName: $lastName, qrCode: $qrCode, email: $email, offset: $offset, telephone: $telephone, hashedTelephone: $hashedTelephone, typeComptedId: $typeComptedId, cni: $cni, rhumaineSkills: $rhumaineSkills, villeId: $villeId, dateCreation: $dateCreation)';
+    return 'Worker(workerId: $workerId, uuid: $uuid, photo: $photo, firstName: $firstName, lastName: $lastName, qrCode: $qrCode, email: $email, offset: $offset, telephone: $telephone, hashedTelephone: $hashedTelephone, typeComptedId: $typeComptedId, cni: $cni, rhumaineSkills: $rhumaineSkills, villeId: $villeId, dateCreation: $dateCreation)';
   }
 
   @override
@@ -1047,6 +1063,7 @@ class _$WorkerImpl implements _Worker {
             other is _$WorkerImpl &&
             (identical(other.workerId, workerId) ||
                 other.workerId == workerId) &&
+            (identical(other.uuid, uuid) || other.uuid == uuid) &&
             (identical(other.photo, photo) || other.photo == photo) &&
             (identical(other.firstName, firstName) ||
                 other.firstName == firstName) &&
@@ -1074,6 +1091,7 @@ class _$WorkerImpl implements _Worker {
   int get hashCode => Object.hash(
       runtimeType,
       workerId,
+      uuid,
       photo,
       firstName,
       lastName,
@@ -1105,6 +1123,7 @@ class _$WorkerImpl implements _Worker {
 abstract class _Worker implements Worker {
   const factory _Worker(
       {required final int workerId,
+      required final String uuid,
       required final String photo,
       required final String firstName,
       required final String lastName,
@@ -1123,6 +1142,8 @@ abstract class _Worker implements Worker {
 
   @override
   int get workerId;
+  @override
+  String get uuid;
   @override
   String get photo;
   @override

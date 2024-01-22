@@ -48,6 +48,7 @@ class RhumaineSkill with _$RhumaineSkill {
 class Worker with _$Worker {
   const factory Worker({
     required int workerId,
+    required String uuid,
     required String photo,
     required String firstName,
     required String lastName,
