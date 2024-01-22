@@ -7,7 +7,6 @@ export 'package:gopaxe_models/models/worker/worker.dart';
 export 'package:gopaxe_models/models/admin/admin.dart';
 export 'package:gopaxe_models/models/pays/pays.dart';
 export 'package:gopaxe_models/models/sign_in/sign_in_worker.dart';
-export 'package:gopaxe_models/models/notification/notification.dart';
 export 'package:gopaxe_models/models/image_uploaded/image_uploaded.dart';
 export 'package:gopaxe_models/models/competence/competence.dart';
 export 'package:gopaxe_models/models/ville/ville.dart';
