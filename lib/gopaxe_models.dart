@@ -26,3 +26,4 @@ export 'package:gopaxe_models/models/subscription/subscription.dart';
 export 'package:gopaxe_models/models/http_error/http_error.dart';
 export 'package:gopaxe_models/models/comment/comment.dart';
 export 'package:gopaxe_models/models/route/route.dart';
+export 'package:gopaxe_models/models/notification/notification.dart';
