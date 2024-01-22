@@ -20,11 +20,22 @@ class PushNotiificationToSpecificUser with _$PushNotiificationToSpecificUser {
       {required String appId,
       required String name,
       required Headings headings,
-      required List<String> includeSubscriptionIds,
+      required PushNotificationAliase includeAliases,
       required Headings contents}) = _PushNotiificationToSpecificUser;
 
   factory PushNotiificationToSpecificUser.fromJson(Map<String, dynamic> json) =>
       _$PushNotiificationToSpecificUserFromJson(json);
+}
+
+@freezed
+class PushNotificationAliase with _$PushNotificationAliase {
+  // ignore: invalid_annotation_target
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  const factory PushNotificationAliase({required List<String> externalId}) =
+      _PushNotificationAliase;
+
+  factory PushNotificationAliase.fromJson(Map<String, dynamic> json) =>
+      _$PushNotificationAliaseFromJson(json);
 }
 
 @freezed

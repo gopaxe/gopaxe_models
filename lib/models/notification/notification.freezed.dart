@@ -177,7 +177,8 @@ mixin _$PushNotiificationToSpecificUser {
   String get appId => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   Headings get headings => throw _privateConstructorUsedError;
-  List<String> get includeSubscriptionIds => throw _privateConstructorUsedError;
+  PushNotificationAliase get includeAliases =>
+      throw _privateConstructorUsedError;
   Headings get contents => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -198,10 +199,11 @@ abstract class $PushNotiificationToSpecificUserCopyWith<$Res> {
       {String appId,
       String name,
       Headings headings,
-      List<String> includeSubscriptionIds,
+      PushNotificationAliase includeAliases,
       Headings contents});
 
   $HeadingsCopyWith<$Res> get headings;
+  $PushNotificationAliaseCopyWith<$Res> get includeAliases;
   $HeadingsCopyWith<$Res> get contents;
 }
 
@@ -222,7 +224,7 @@ class _$PushNotiificationToSpecificUserCopyWithImpl<$Res,
     Object? appId = null,
     Object? name = null,
     Object? headings = null,
-    Object? includeSubscriptionIds = null,
+    Object? includeAliases = null,
     Object? contents = null,
   }) {
     return _then(_value.copyWith(
@@ -238,10 +240,10 @@ class _$PushNotiificationToSpecificUserCopyWithImpl<$Res,
           ? _value.headings
           : headings // ignore: cast_nullable_to_non_nullable
               as Headings,
-      includeSubscriptionIds: null == includeSubscriptionIds
-          ? _value.includeSubscriptionIds
-          : includeSubscriptionIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+      includeAliases: null == includeAliases
+          ? _value.includeAliases
+          : includeAliases // ignore: cast_nullable_to_non_nullable
+              as PushNotificationAliase,
       contents: null == contents
           ? _value.contents
           : contents // ignore: cast_nullable_to_non_nullable
@@ -254,6 +256,15 @@ class _$PushNotiificationToSpecificUserCopyWithImpl<$Res,
   $HeadingsCopyWith<$Res> get headings {
     return $HeadingsCopyWith<$Res>(_value.headings, (value) {
       return _then(_value.copyWith(headings: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PushNotificationAliaseCopyWith<$Res> get includeAliases {
+    return $PushNotificationAliaseCopyWith<$Res>(_value.includeAliases,
+        (value) {
+      return _then(_value.copyWith(includeAliases: value) as $Val);
     });
   }
 
@@ -279,11 +290,13 @@ abstract class _$$PushNotiificationToSpecificUserImplCopyWith<$Res>
       {String appId,
       String name,
       Headings headings,
-      List<String> includeSubscriptionIds,
+      PushNotificationAliase includeAliases,
       Headings contents});
 
   @override
   $HeadingsCopyWith<$Res> get headings;
+  @override
+  $PushNotificationAliaseCopyWith<$Res> get includeAliases;
   @override
   $HeadingsCopyWith<$Res> get contents;
 }
@@ -304,7 +317,7 @@ class __$$PushNotiificationToSpecificUserImplCopyWithImpl<$Res>
     Object? appId = null,
     Object? name = null,
     Object? headings = null,
-    Object? includeSubscriptionIds = null,
+    Object? includeAliases = null,
     Object? contents = null,
   }) {
     return _then(_$PushNotiificationToSpecificUserImpl(
@@ -320,10 +333,10 @@ class __$$PushNotiificationToSpecificUserImplCopyWithImpl<$Res>
           ? _value.headings
           : headings // ignore: cast_nullable_to_non_nullable
               as Headings,
-      includeSubscriptionIds: null == includeSubscriptionIds
-          ? _value._includeSubscriptionIds
-          : includeSubscriptionIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+      includeAliases: null == includeAliases
+          ? _value.includeAliases
+          : includeAliases // ignore: cast_nullable_to_non_nullable
+              as PushNotificationAliase,
       contents: null == contents
           ? _value.contents
           : contents // ignore: cast_nullable_to_non_nullable
@@ -341,9 +354,8 @@ class _$PushNotiificationToSpecificUserImpl
       {required this.appId,
       required this.name,
       required this.headings,
-      required final List<String> includeSubscriptionIds,
-      required this.contents})
-      : _includeSubscriptionIds = includeSubscriptionIds;
+      required this.includeAliases,
+      required this.contents});
 
   factory _$PushNotiificationToSpecificUserImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -355,21 +367,14 @@ class _$PushNotiificationToSpecificUserImpl
   final String name;
   @override
   final Headings headings;
-  final List<String> _includeSubscriptionIds;
   @override
-  List<String> get includeSubscriptionIds {
-    if (_includeSubscriptionIds is EqualUnmodifiableListView)
-      return _includeSubscriptionIds;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_includeSubscriptionIds);
-  }
-
+  final PushNotificationAliase includeAliases;
   @override
   final Headings contents;
 
   @override
   String toString() {
-    return 'PushNotiificationToSpecificUser(appId: $appId, name: $name, headings: $headings, includeSubscriptionIds: $includeSubscriptionIds, contents: $contents)';
+    return 'PushNotiificationToSpecificUser(appId: $appId, name: $name, headings: $headings, includeAliases: $includeAliases, contents: $contents)';
   }
 
   @override
@@ -381,16 +386,16 @@ class _$PushNotiificationToSpecificUserImpl
             (identical(other.name, name) || other.name == name) &&
             (identical(other.headings, headings) ||
                 other.headings == headings) &&
-            const DeepCollectionEquality().equals(
-                other._includeSubscriptionIds, _includeSubscriptionIds) &&
+            (identical(other.includeAliases, includeAliases) ||
+                other.includeAliases == includeAliases) &&
             (identical(other.contents, contents) ||
                 other.contents == contents));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, appId, name, headings,
-      const DeepCollectionEquality().hash(_includeSubscriptionIds), contents);
+  int get hashCode =>
+      Object.hash(runtimeType, appId, name, headings, includeAliases, contents);
 
   @JsonKey(ignore: true)
   @override
@@ -414,7 +419,7 @@ abstract class _PushNotiificationToSpecificUser
           {required final String appId,
           required final String name,
           required final Headings headings,
-          required final List<String> includeSubscriptionIds,
+          required final PushNotificationAliase includeAliases,
           required final Headings contents}) =
       _$PushNotiificationToSpecificUserImpl;
 
@@ -428,13 +433,165 @@ abstract class _PushNotiificationToSpecificUser
   @override
   Headings get headings;
   @override
-  List<String> get includeSubscriptionIds;
+  PushNotificationAliase get includeAliases;
   @override
   Headings get contents;
   @override
   @JsonKey(ignore: true)
   _$$PushNotiificationToSpecificUserImplCopyWith<
           _$PushNotiificationToSpecificUserImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+PushNotificationAliase _$PushNotificationAliaseFromJson(
+    Map<String, dynamic> json) {
+  return _PushNotificationAliase.fromJson(json);
+}
+
+/// @nodoc
+mixin _$PushNotificationAliase {
+  List<String> get externalId => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PushNotificationAliaseCopyWith<PushNotificationAliase> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PushNotificationAliaseCopyWith<$Res> {
+  factory $PushNotificationAliaseCopyWith(PushNotificationAliase value,
+          $Res Function(PushNotificationAliase) then) =
+      _$PushNotificationAliaseCopyWithImpl<$Res, PushNotificationAliase>;
+  @useResult
+  $Res call({List<String> externalId});
+}
+
+/// @nodoc
+class _$PushNotificationAliaseCopyWithImpl<$Res,
+        $Val extends PushNotificationAliase>
+    implements $PushNotificationAliaseCopyWith<$Res> {
+  _$PushNotificationAliaseCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? externalId = null,
+  }) {
+    return _then(_value.copyWith(
+      externalId: null == externalId
+          ? _value.externalId
+          : externalId // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$PushNotificationAliaseImplCopyWith<$Res>
+    implements $PushNotificationAliaseCopyWith<$Res> {
+  factory _$$PushNotificationAliaseImplCopyWith(
+          _$PushNotificationAliaseImpl value,
+          $Res Function(_$PushNotificationAliaseImpl) then) =
+      __$$PushNotificationAliaseImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<String> externalId});
+}
+
+/// @nodoc
+class __$$PushNotificationAliaseImplCopyWithImpl<$Res>
+    extends _$PushNotificationAliaseCopyWithImpl<$Res,
+        _$PushNotificationAliaseImpl>
+    implements _$$PushNotificationAliaseImplCopyWith<$Res> {
+  __$$PushNotificationAliaseImplCopyWithImpl(
+      _$PushNotificationAliaseImpl _value,
+      $Res Function(_$PushNotificationAliaseImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? externalId = null,
+  }) {
+    return _then(_$PushNotificationAliaseImpl(
+      externalId: null == externalId
+          ? _value._externalId
+          : externalId // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
+class _$PushNotificationAliaseImpl implements _PushNotificationAliase {
+  const _$PushNotificationAliaseImpl({required final List<String> externalId})
+      : _externalId = externalId;
+
+  factory _$PushNotificationAliaseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PushNotificationAliaseImplFromJson(json);
+
+  final List<String> _externalId;
+  @override
+  List<String> get externalId {
+    if (_externalId is EqualUnmodifiableListView) return _externalId;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_externalId);
+  }
+
+  @override
+  String toString() {
+    return 'PushNotificationAliase(externalId: $externalId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PushNotificationAliaseImpl &&
+            const DeepCollectionEquality()
+                .equals(other._externalId, _externalId));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_externalId));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PushNotificationAliaseImplCopyWith<_$PushNotificationAliaseImpl>
+      get copyWith => __$$PushNotificationAliaseImplCopyWithImpl<
+          _$PushNotificationAliaseImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PushNotificationAliaseImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _PushNotificationAliase implements PushNotificationAliase {
+  const factory _PushNotificationAliase(
+      {required final List<String> externalId}) = _$PushNotificationAliaseImpl;
+
+  factory _PushNotificationAliase.fromJson(Map<String, dynamic> json) =
+      _$PushNotificationAliaseImpl.fromJson;
+
+  @override
+  List<String> get externalId;
+  @override
+  @JsonKey(ignore: true)
+  _$$PushNotificationAliaseImplCopyWith<_$PushNotificationAliaseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 

@@ -24,10 +24,8 @@ _$PushNotiificationToSpecificUserImpl
           appId: json['app_id'] as String,
           name: json['name'] as String,
           headings: Headings.fromJson(json['headings'] as Map<String, dynamic>),
-          includeSubscriptionIds:
-              (json['include_subscription_ids'] as List<dynamic>)
-                  .map((e) => e as String)
-                  .toList(),
+          includeAliases: PushNotificationAliase.fromJson(
+              json['include_aliases'] as Map<String, dynamic>),
           contents: Headings.fromJson(json['contents'] as Map<String, dynamic>),
         );
 
@@ -37,8 +35,22 @@ Map<String, dynamic> _$$PushNotiificationToSpecificUserImplToJson(
       'app_id': instance.appId,
       'name': instance.name,
       'headings': instance.headings,
-      'include_subscription_ids': instance.includeSubscriptionIds,
+      'include_aliases': instance.includeAliases,
       'contents': instance.contents,
+    };
+
+_$PushNotificationAliaseImpl _$$PushNotificationAliaseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$PushNotificationAliaseImpl(
+      externalId: (json['external_id'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+    );
+
+Map<String, dynamic> _$$PushNotificationAliaseImplToJson(
+        _$PushNotificationAliaseImpl instance) =>
+    <String, dynamic>{
+      'external_id': instance.externalId,
     };
 
 _$NotificationResponseImpl _$$NotificationResponseImplFromJson(
