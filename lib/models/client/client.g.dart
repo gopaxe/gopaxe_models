@@ -51,6 +51,7 @@ _$ClientOutPutImpl _$$ClientOutPutImplFromJson(Map<String, dynamic> json) =>
     _$ClientOutPutImpl(
       clientId: json['clientId'] as int,
       nom: json['nom'] as String,
+      uuid: json['uuid'] as String,
       prenom: json['prenom'] as String,
     );
 
@@ -58,6 +59,7 @@ Map<String, dynamic> _$$ClientOutPutImplToJson(_$ClientOutPutImpl instance) =>
     <String, dynamic>{
       'clientId': instance.clientId,
       'nom': instance.nom,
+      'uuid': instance.uuid,
       'prenom': instance.prenom,
     };
 

@@ -505,7 +505,8 @@ ClientOutPut _$ClientOutPutFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ClientOutPut {
   int get clientId => throw _privateConstructorUsedError;
-  String get nom =>
+  String get nom => throw _privateConstructorUsedError;
+  String get uuid =>
       throw _privateConstructorUsedError; // required String telephone,
   String get prenom => throw _privateConstructorUsedError;
 
@@ -521,7 +522,7 @@ abstract class $ClientOutPutCopyWith<$Res> {
           ClientOutPut value, $Res Function(ClientOutPut) then) =
       _$ClientOutPutCopyWithImpl<$Res, ClientOutPut>;
   @useResult
-  $Res call({int clientId, String nom, String prenom});
+  $Res call({int clientId, String nom, String uuid, String prenom});
 }
 
 /// @nodoc
@@ -539,6 +540,7 @@ class _$ClientOutPutCopyWithImpl<$Res, $Val extends ClientOutPut>
   $Res call({
     Object? clientId = null,
     Object? nom = null,
+    Object? uuid = null,
     Object? prenom = null,
   }) {
     return _then(_value.copyWith(
@@ -549,6 +551,10 @@ class _$ClientOutPutCopyWithImpl<$Res, $Val extends ClientOutPut>
       nom: null == nom
           ? _value.nom
           : nom // ignore: cast_nullable_to_non_nullable
+              as String,
+      uuid: null == uuid
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
               as String,
       prenom: null == prenom
           ? _value.prenom
@@ -566,7 +572,7 @@ abstract class _$$ClientOutPutImplCopyWith<$Res>
       __$$ClientOutPutImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int clientId, String nom, String prenom});
+  $Res call({int clientId, String nom, String uuid, String prenom});
 }
 
 /// @nodoc
@@ -582,6 +588,7 @@ class __$$ClientOutPutImplCopyWithImpl<$Res>
   $Res call({
     Object? clientId = null,
     Object? nom = null,
+    Object? uuid = null,
     Object? prenom = null,
   }) {
     return _then(_$ClientOutPutImpl(
@@ -592,6 +599,10 @@ class __$$ClientOutPutImplCopyWithImpl<$Res>
       nom: null == nom
           ? _value.nom
           : nom // ignore: cast_nullable_to_non_nullable
+              as String,
+      uuid: null == uuid
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
               as String,
       prenom: null == prenom
           ? _value.prenom
@@ -605,7 +616,10 @@ class __$$ClientOutPutImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ClientOutPutImpl implements _ClientOutPut {
   const _$ClientOutPutImpl(
-      {required this.clientId, required this.nom, required this.prenom});
+      {required this.clientId,
+      required this.nom,
+      required this.uuid,
+      required this.prenom});
 
   factory _$ClientOutPutImpl.fromJson(Map<String, dynamic> json) =>
       _$$ClientOutPutImplFromJson(json);
@@ -614,13 +628,15 @@ class _$ClientOutPutImpl implements _ClientOutPut {
   final int clientId;
   @override
   final String nom;
+  @override
+  final String uuid;
 // required String telephone,
   @override
   final String prenom;
 
   @override
   String toString() {
-    return 'ClientOutPut(clientId: $clientId, nom: $nom, prenom: $prenom)';
+    return 'ClientOutPut(clientId: $clientId, nom: $nom, uuid: $uuid, prenom: $prenom)';
   }
 
   @override
@@ -631,12 +647,13 @@ class _$ClientOutPutImpl implements _ClientOutPut {
             (identical(other.clientId, clientId) ||
                 other.clientId == clientId) &&
             (identical(other.nom, nom) || other.nom == nom) &&
+            (identical(other.uuid, uuid) || other.uuid == uuid) &&
             (identical(other.prenom, prenom) || other.prenom == prenom));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, clientId, nom, prenom);
+  int get hashCode => Object.hash(runtimeType, clientId, nom, uuid, prenom);
 
   @JsonKey(ignore: true)
   @override
@@ -656,6 +673,7 @@ abstract class _ClientOutPut implements ClientOutPut {
   const factory _ClientOutPut(
       {required final int clientId,
       required final String nom,
+      required final String uuid,
       required final String prenom}) = _$ClientOutPutImpl;
 
   factory _ClientOutPut.fromJson(Map<String, dynamic> json) =
@@ -665,6 +683,8 @@ abstract class _ClientOutPut implements ClientOutPut {
   int get clientId;
   @override
   String get nom;
+  @override
+  String get uuid;
   @override // required String telephone,
   String get prenom;
   @override
