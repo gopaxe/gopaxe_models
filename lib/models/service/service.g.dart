@@ -13,6 +13,7 @@ _$CreateServiceRequestImpl _$$CreateServiceRequestImplFromJson(
       description: json['description'] as String,
       targetedMetierId: json['targetedMetierId'] as int?,
       targetedCompetenceId: json['targetedCompetenceId'] as int?,
+      forWorkerId: json['forWorkerId'] as int?,
       completionDate: DateTime.parse(json['completionDate'] as String),
       desiredLocation:
           Offset.fromJson(json['desiredLocation'] as Map<String, dynamic>),
@@ -25,6 +26,7 @@ Map<String, dynamic> _$$CreateServiceRequestImplToJson(
       'description': instance.description,
       'targetedMetierId': instance.targetedMetierId,
       'targetedCompetenceId': instance.targetedCompetenceId,
+      'forWorkerId': instance.forWorkerId,
       'completionDate': instance.completionDate.toIso8601String(),
       'desiredLocation': instance.desiredLocation,
     };

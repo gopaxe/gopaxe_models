@@ -13,6 +13,7 @@ class CreateServiceRequest with _$CreateServiceRequest {
     required String description,
     required int? targetedMetierId,
     required int? targetedCompetenceId,
+    int? forWorkerId,
     required DateTime
         completionDate, // Date a laquelle le client aimerais que son travaille soit terminer au plus tart
     required Offset desiredLocation,

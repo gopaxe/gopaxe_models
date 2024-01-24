@@ -24,6 +24,7 @@ mixin _$CreateServiceRequest {
   String get description => throw _privateConstructorUsedError;
   int? get targetedMetierId => throw _privateConstructorUsedError;
   int? get targetedCompetenceId => throw _privateConstructorUsedError;
+  int? get forWorkerId => throw _privateConstructorUsedError;
   DateTime get completionDate =>
       throw _privateConstructorUsedError; // Date a laquelle le client aimerais que son travaille soit terminer au plus tart
   Offset get desiredLocation => throw _privateConstructorUsedError;
@@ -45,6 +46,7 @@ abstract class $CreateServiceRequestCopyWith<$Res> {
       String description,
       int? targetedMetierId,
       int? targetedCompetenceId,
+      int? forWorkerId,
       DateTime completionDate,
       Offset desiredLocation});
 
@@ -69,6 +71,7 @@ class _$CreateServiceRequestCopyWithImpl<$Res,
     Object? description = null,
     Object? targetedMetierId = freezed,
     Object? targetedCompetenceId = freezed,
+    Object? forWorkerId = freezed,
     Object? completionDate = null,
     Object? desiredLocation = null,
   }) {
@@ -88,6 +91,10 @@ class _$CreateServiceRequestCopyWithImpl<$Res,
       targetedCompetenceId: freezed == targetedCompetenceId
           ? _value.targetedCompetenceId
           : targetedCompetenceId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      forWorkerId: freezed == forWorkerId
+          ? _value.forWorkerId
+          : forWorkerId // ignore: cast_nullable_to_non_nullable
               as int?,
       completionDate: null == completionDate
           ? _value.completionDate
@@ -122,6 +129,7 @@ abstract class _$$CreateServiceRequestImplCopyWith<$Res>
       String description,
       int? targetedMetierId,
       int? targetedCompetenceId,
+      int? forWorkerId,
       DateTime completionDate,
       Offset desiredLocation});
 
@@ -144,6 +152,7 @@ class __$$CreateServiceRequestImplCopyWithImpl<$Res>
     Object? description = null,
     Object? targetedMetierId = freezed,
     Object? targetedCompetenceId = freezed,
+    Object? forWorkerId = freezed,
     Object? completionDate = null,
     Object? desiredLocation = null,
   }) {
@@ -163,6 +172,10 @@ class __$$CreateServiceRequestImplCopyWithImpl<$Res>
       targetedCompetenceId: freezed == targetedCompetenceId
           ? _value.targetedCompetenceId
           : targetedCompetenceId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      forWorkerId: freezed == forWorkerId
+          ? _value.forWorkerId
+          : forWorkerId // ignore: cast_nullable_to_non_nullable
               as int?,
       completionDate: null == completionDate
           ? _value.completionDate
@@ -184,6 +197,7 @@ class _$CreateServiceRequestImpl implements _CreateServiceRequest {
       required this.description,
       required this.targetedMetierId,
       required this.targetedCompetenceId,
+      this.forWorkerId,
       required this.completionDate,
       required this.desiredLocation});
 
@@ -199,6 +213,8 @@ class _$CreateServiceRequestImpl implements _CreateServiceRequest {
   @override
   final int? targetedCompetenceId;
   @override
+  final int? forWorkerId;
+  @override
   final DateTime completionDate;
 // Date a laquelle le client aimerais que son travaille soit terminer au plus tart
   @override
@@ -206,7 +222,7 @@ class _$CreateServiceRequestImpl implements _CreateServiceRequest {
 
   @override
   String toString() {
-    return 'CreateServiceRequest(title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, desiredLocation: $desiredLocation)';
+    return 'CreateServiceRequest(title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, forWorkerId: $forWorkerId, completionDate: $completionDate, desiredLocation: $desiredLocation)';
   }
 
   @override
@@ -221,6 +237,8 @@ class _$CreateServiceRequestImpl implements _CreateServiceRequest {
                 other.targetedMetierId == targetedMetierId) &&
             (identical(other.targetedCompetenceId, targetedCompetenceId) ||
                 other.targetedCompetenceId == targetedCompetenceId) &&
+            (identical(other.forWorkerId, forWorkerId) ||
+                other.forWorkerId == forWorkerId) &&
             (identical(other.completionDate, completionDate) ||
                 other.completionDate == completionDate) &&
             (identical(other.desiredLocation, desiredLocation) ||
@@ -229,8 +247,15 @@ class _$CreateServiceRequestImpl implements _CreateServiceRequest {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, title, description,
-      targetedMetierId, targetedCompetenceId, completionDate, desiredLocation);
+  int get hashCode => Object.hash(
+      runtimeType,
+      title,
+      description,
+      targetedMetierId,
+      targetedCompetenceId,
+      forWorkerId,
+      completionDate,
+      desiredLocation);
 
   @JsonKey(ignore: true)
   @override
@@ -254,6 +279,7 @@ abstract class _CreateServiceRequest implements CreateServiceRequest {
       required final String description,
       required final int? targetedMetierId,
       required final int? targetedCompetenceId,
+      final int? forWorkerId,
       required final DateTime completionDate,
       required final Offset desiredLocation}) = _$CreateServiceRequestImpl;
 
@@ -268,6 +294,8 @@ abstract class _CreateServiceRequest implements CreateServiceRequest {
   int? get targetedMetierId;
   @override
   int? get targetedCompetenceId;
+  @override
+  int? get forWorkerId;
   @override
   DateTime get completionDate;
   @override // Date a laquelle le client aimerais que son travaille soit terminer au plus tart
