@@ -1,8 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:gopaxe_models/gopaxe_models.dart';
 
-import '../worker/worker.dart';
-
 part 'service.freezed.dart';
 part 'service.g.dart';
 
