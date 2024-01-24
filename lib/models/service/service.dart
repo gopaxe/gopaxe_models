@@ -32,6 +32,7 @@ class ServiceRequest with _$ServiceRequest {
     required int? targetedCompetenceId,
     required DateTime completionDate,
     required int? workerId,
+    required bool hasWorkerLocationShared,
 
     /// Contains workerId to which that service is for
     int? forWorkerId,

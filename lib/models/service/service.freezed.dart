@@ -341,6 +341,7 @@ mixin _$ServiceRequest {
   int? get targetedCompetenceId => throw _privateConstructorUsedError;
   DateTime get completionDate => throw _privateConstructorUsedError;
   int? get workerId => throw _privateConstructorUsedError;
+  bool get hasWorkerLocationShared => throw _privateConstructorUsedError;
 
   /// Contains workerId to which that service is for
   int? get forWorkerId => throw _privateConstructorUsedError; // Issue photo
@@ -374,6 +375,7 @@ abstract class $ServiceRequestCopyWith<$Res> {
       int? targetedCompetenceId,
       DateTime completionDate,
       int? workerId,
+      bool hasWorkerLocationShared,
       int? forWorkerId,
       String? issuePhotoUrl,
       int clientId,
@@ -407,6 +409,7 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
     Object? targetedCompetenceId = freezed,
     Object? completionDate = null,
     Object? workerId = freezed,
+    Object? hasWorkerLocationShared = null,
     Object? forWorkerId = freezed,
     Object? issuePhotoUrl = freezed,
     Object? clientId = null,
@@ -446,6 +449,10 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
           ? _value.workerId
           : workerId // ignore: cast_nullable_to_non_nullable
               as int?,
+      hasWorkerLocationShared: null == hasWorkerLocationShared
+          ? _value.hasWorkerLocationShared
+          : hasWorkerLocationShared // ignore: cast_nullable_to_non_nullable
+              as bool,
       forWorkerId: freezed == forWorkerId
           ? _value.forWorkerId
           : forWorkerId // ignore: cast_nullable_to_non_nullable
@@ -510,6 +517,7 @@ abstract class _$$ServiceRequestImplCopyWith<$Res>
       int? targetedCompetenceId,
       DateTime completionDate,
       int? workerId,
+      bool hasWorkerLocationShared,
       int? forWorkerId,
       String? issuePhotoUrl,
       int clientId,
@@ -542,6 +550,7 @@ class __$$ServiceRequestImplCopyWithImpl<$Res>
     Object? targetedCompetenceId = freezed,
     Object? completionDate = null,
     Object? workerId = freezed,
+    Object? hasWorkerLocationShared = null,
     Object? forWorkerId = freezed,
     Object? issuePhotoUrl = freezed,
     Object? clientId = null,
@@ -581,6 +590,10 @@ class __$$ServiceRequestImplCopyWithImpl<$Res>
           ? _value.workerId
           : workerId // ignore: cast_nullable_to_non_nullable
               as int?,
+      hasWorkerLocationShared: null == hasWorkerLocationShared
+          ? _value.hasWorkerLocationShared
+          : hasWorkerLocationShared // ignore: cast_nullable_to_non_nullable
+              as bool,
       forWorkerId: freezed == forWorkerId
           ? _value.forWorkerId
           : forWorkerId // ignore: cast_nullable_to_non_nullable
@@ -632,6 +645,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
       required this.targetedCompetenceId,
       required this.completionDate,
       required this.workerId,
+      required this.hasWorkerLocationShared,
       this.forWorkerId,
       this.issuePhotoUrl,
       required this.clientId,
@@ -659,6 +673,8 @@ class _$ServiceRequestImpl implements _ServiceRequest {
   final DateTime completionDate;
   @override
   final int? workerId;
+  @override
+  final bool hasWorkerLocationShared;
 
   /// Contains workerId to which that service is for
   @override
@@ -684,7 +700,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
 
   @override
   String toString() {
-    return 'ServiceRequest(id: $id, title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, workerId: $workerId, forWorkerId: $forWorkerId, issuePhotoUrl: $issuePhotoUrl, clientId: $clientId, startDate: $startDate, cancelDate: $cancelDate, contactDate: $contactDate, endDate: $endDate, createdDate: $createdDate, desiredLocation: $desiredLocation)';
+    return 'ServiceRequest(id: $id, title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, workerId: $workerId, hasWorkerLocationShared: $hasWorkerLocationShared, forWorkerId: $forWorkerId, issuePhotoUrl: $issuePhotoUrl, clientId: $clientId, startDate: $startDate, cancelDate: $cancelDate, contactDate: $contactDate, endDate: $endDate, createdDate: $createdDate, desiredLocation: $desiredLocation)';
   }
 
   @override
@@ -704,6 +720,9 @@ class _$ServiceRequestImpl implements _ServiceRequest {
                 other.completionDate == completionDate) &&
             (identical(other.workerId, workerId) ||
                 other.workerId == workerId) &&
+            (identical(
+                    other.hasWorkerLocationShared, hasWorkerLocationShared) ||
+                other.hasWorkerLocationShared == hasWorkerLocationShared) &&
             (identical(other.forWorkerId, forWorkerId) ||
                 other.forWorkerId == forWorkerId) &&
             (identical(other.issuePhotoUrl, issuePhotoUrl) ||
@@ -734,6 +753,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
       targetedCompetenceId,
       completionDate,
       workerId,
+      hasWorkerLocationShared,
       forWorkerId,
       issuePhotoUrl,
       clientId,
@@ -768,6 +788,7 @@ abstract class _ServiceRequest implements ServiceRequest {
       required final int? targetedCompetenceId,
       required final DateTime completionDate,
       required final int? workerId,
+      required final bool hasWorkerLocationShared,
       final int? forWorkerId,
       final String? issuePhotoUrl,
       required final int clientId,
@@ -795,6 +816,8 @@ abstract class _ServiceRequest implements ServiceRequest {
   DateTime get completionDate;
   @override
   int? get workerId;
+  @override
+  bool get hasWorkerLocationShared;
   @override
 
   /// Contains workerId to which that service is for
