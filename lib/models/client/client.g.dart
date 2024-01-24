@@ -52,6 +52,7 @@ _$ClientOutPutImpl _$$ClientOutPutImplFromJson(Map<String, dynamic> json) =>
       clientId: json['clientId'] as int,
       nom: json['nom'] as String,
       uuid: json['uuid'] as String,
+      photo: json['photo'] as String?,
       prenom: json['prenom'] as String,
     );
 
@@ -60,6 +61,7 @@ Map<String, dynamic> _$$ClientOutPutImplToJson(_$ClientOutPutImpl instance) =>
       'clientId': instance.clientId,
       'nom': instance.nom,
       'uuid': instance.uuid,
+      'photo': instance.photo,
       'prenom': instance.prenom,
     };
 
@@ -70,6 +72,7 @@ _$CreateClientRequestImpl _$$CreateClientRequestImplFromJson(
       prenom: json['prenom'] as String,
       clientTypeId: json['clientTypeId'] as int,
       location: Offset.fromJson(json['location'] as Map<String, dynamic>),
+      photo: json['photo'] as String?,
       telephone: json['telephone'] as String,
       motDePasse: json['motDePasse'] as String,
     );
@@ -81,6 +84,7 @@ Map<String, dynamic> _$$CreateClientRequestImplToJson(
       'prenom': instance.prenom,
       'clientTypeId': instance.clientTypeId,
       'location': instance.location,
+      'photo': instance.photo,
       'telephone': instance.telephone,
       'motDePasse': instance.motDePasse,
     };
@@ -92,6 +96,7 @@ _$UpdateClientRequestImpl _$$UpdateClientRequestImplFromJson(
       clientId: json['clientId'] as int,
       prenom: json['prenom'] as String?,
       clientTypeId: json['clientTypeId'] as int?,
+      photo: json['photo'] as String?,
       location: json['location'] == null
           ? null
           : Offset.fromJson(json['location'] as Map<String, dynamic>),
@@ -106,6 +111,7 @@ Map<String, dynamic> _$$UpdateClientRequestImplToJson(
       'clientId': instance.clientId,
       'prenom': instance.prenom,
       'clientTypeId': instance.clientTypeId,
+      'photo': instance.photo,
       'location': instance.location,
       'telephone': instance.telephone,
       'motDePasse': instance.motDePasse,

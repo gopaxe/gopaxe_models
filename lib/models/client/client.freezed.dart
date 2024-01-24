@@ -506,7 +506,8 @@ ClientOutPut _$ClientOutPutFromJson(Map<String, dynamic> json) {
 mixin _$ClientOutPut {
   int get clientId => throw _privateConstructorUsedError;
   String get nom => throw _privateConstructorUsedError;
-  String get uuid =>
+  String get uuid => throw _privateConstructorUsedError;
+  String? get photo =>
       throw _privateConstructorUsedError; // required String telephone,
   String get prenom => throw _privateConstructorUsedError;
 
@@ -522,7 +523,8 @@ abstract class $ClientOutPutCopyWith<$Res> {
           ClientOutPut value, $Res Function(ClientOutPut) then) =
       _$ClientOutPutCopyWithImpl<$Res, ClientOutPut>;
   @useResult
-  $Res call({int clientId, String nom, String uuid, String prenom});
+  $Res call(
+      {int clientId, String nom, String uuid, String? photo, String prenom});
 }
 
 /// @nodoc
@@ -541,6 +543,7 @@ class _$ClientOutPutCopyWithImpl<$Res, $Val extends ClientOutPut>
     Object? clientId = null,
     Object? nom = null,
     Object? uuid = null,
+    Object? photo = freezed,
     Object? prenom = null,
   }) {
     return _then(_value.copyWith(
@@ -556,6 +559,10 @@ class _$ClientOutPutCopyWithImpl<$Res, $Val extends ClientOutPut>
           ? _value.uuid
           : uuid // ignore: cast_nullable_to_non_nullable
               as String,
+      photo: freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String?,
       prenom: null == prenom
           ? _value.prenom
           : prenom // ignore: cast_nullable_to_non_nullable
@@ -572,7 +579,8 @@ abstract class _$$ClientOutPutImplCopyWith<$Res>
       __$$ClientOutPutImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int clientId, String nom, String uuid, String prenom});
+  $Res call(
+      {int clientId, String nom, String uuid, String? photo, String prenom});
 }
 
 /// @nodoc
@@ -589,6 +597,7 @@ class __$$ClientOutPutImplCopyWithImpl<$Res>
     Object? clientId = null,
     Object? nom = null,
     Object? uuid = null,
+    Object? photo = freezed,
     Object? prenom = null,
   }) {
     return _then(_$ClientOutPutImpl(
@@ -604,6 +613,10 @@ class __$$ClientOutPutImplCopyWithImpl<$Res>
           ? _value.uuid
           : uuid // ignore: cast_nullable_to_non_nullable
               as String,
+      photo: freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String?,
       prenom: null == prenom
           ? _value.prenom
           : prenom // ignore: cast_nullable_to_non_nullable
@@ -619,6 +632,7 @@ class _$ClientOutPutImpl implements _ClientOutPut {
       {required this.clientId,
       required this.nom,
       required this.uuid,
+      required this.photo,
       required this.prenom});
 
   factory _$ClientOutPutImpl.fromJson(Map<String, dynamic> json) =>
@@ -630,13 +644,15 @@ class _$ClientOutPutImpl implements _ClientOutPut {
   final String nom;
   @override
   final String uuid;
+  @override
+  final String? photo;
 // required String telephone,
   @override
   final String prenom;
 
   @override
   String toString() {
-    return 'ClientOutPut(clientId: $clientId, nom: $nom, uuid: $uuid, prenom: $prenom)';
+    return 'ClientOutPut(clientId: $clientId, nom: $nom, uuid: $uuid, photo: $photo, prenom: $prenom)';
   }
 
   @override
@@ -648,12 +664,14 @@ class _$ClientOutPutImpl implements _ClientOutPut {
                 other.clientId == clientId) &&
             (identical(other.nom, nom) || other.nom == nom) &&
             (identical(other.uuid, uuid) || other.uuid == uuid) &&
+            (identical(other.photo, photo) || other.photo == photo) &&
             (identical(other.prenom, prenom) || other.prenom == prenom));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, clientId, nom, uuid, prenom);
+  int get hashCode =>
+      Object.hash(runtimeType, clientId, nom, uuid, photo, prenom);
 
   @JsonKey(ignore: true)
   @override
@@ -674,6 +692,7 @@ abstract class _ClientOutPut implements ClientOutPut {
       {required final int clientId,
       required final String nom,
       required final String uuid,
+      required final String? photo,
       required final String prenom}) = _$ClientOutPutImpl;
 
   factory _ClientOutPut.fromJson(Map<String, dynamic> json) =
@@ -685,6 +704,8 @@ abstract class _ClientOutPut implements ClientOutPut {
   String get nom;
   @override
   String get uuid;
+  @override
+  String? get photo;
   @override // required String telephone,
   String get prenom;
   @override
@@ -703,6 +724,7 @@ mixin _$CreateClientRequest {
   String get prenom => throw _privateConstructorUsedError;
   int get clientTypeId => throw _privateConstructorUsedError;
   Offset get location => throw _privateConstructorUsedError;
+  String? get photo => throw _privateConstructorUsedError;
   String get telephone => throw _privateConstructorUsedError;
   String get motDePasse => throw _privateConstructorUsedError;
 
@@ -723,6 +745,7 @@ abstract class $CreateClientRequestCopyWith<$Res> {
       String prenom,
       int clientTypeId,
       Offset location,
+      String? photo,
       String telephone,
       String motDePasse});
 
@@ -746,6 +769,7 @@ class _$CreateClientRequestCopyWithImpl<$Res, $Val extends CreateClientRequest>
     Object? prenom = null,
     Object? clientTypeId = null,
     Object? location = null,
+    Object? photo = freezed,
     Object? telephone = null,
     Object? motDePasse = null,
   }) {
@@ -766,6 +790,10 @@ class _$CreateClientRequestCopyWithImpl<$Res, $Val extends CreateClientRequest>
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as Offset,
+      photo: freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String?,
       telephone: null == telephone
           ? _value.telephone
           : telephone // ignore: cast_nullable_to_non_nullable
@@ -799,6 +827,7 @@ abstract class _$$CreateClientRequestImplCopyWith<$Res>
       String prenom,
       int clientTypeId,
       Offset location,
+      String? photo,
       String telephone,
       String motDePasse});
 
@@ -821,6 +850,7 @@ class __$$CreateClientRequestImplCopyWithImpl<$Res>
     Object? prenom = null,
     Object? clientTypeId = null,
     Object? location = null,
+    Object? photo = freezed,
     Object? telephone = null,
     Object? motDePasse = null,
   }) {
@@ -841,6 +871,10 @@ class __$$CreateClientRequestImplCopyWithImpl<$Res>
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as Offset,
+      photo: freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String?,
       telephone: null == telephone
           ? _value.telephone
           : telephone // ignore: cast_nullable_to_non_nullable
@@ -861,6 +895,7 @@ class _$CreateClientRequestImpl implements _CreateClientRequest {
       required this.prenom,
       required this.clientTypeId,
       required this.location,
+      this.photo,
       required this.telephone,
       required this.motDePasse});
 
@@ -876,13 +911,15 @@ class _$CreateClientRequestImpl implements _CreateClientRequest {
   @override
   final Offset location;
   @override
+  final String? photo;
+  @override
   final String telephone;
   @override
   final String motDePasse;
 
   @override
   String toString() {
-    return 'CreateClientRequest(nom: $nom, prenom: $prenom, clientTypeId: $clientTypeId, location: $location, telephone: $telephone, motDePasse: $motDePasse)';
+    return 'CreateClientRequest(nom: $nom, prenom: $prenom, clientTypeId: $clientTypeId, location: $location, photo: $photo, telephone: $telephone, motDePasse: $motDePasse)';
   }
 
   @override
@@ -896,6 +933,7 @@ class _$CreateClientRequestImpl implements _CreateClientRequest {
                 other.clientTypeId == clientTypeId) &&
             (identical(other.location, location) ||
                 other.location == location) &&
+            (identical(other.photo, photo) || other.photo == photo) &&
             (identical(other.telephone, telephone) ||
                 other.telephone == telephone) &&
             (identical(other.motDePasse, motDePasse) ||
@@ -904,8 +942,8 @@ class _$CreateClientRequestImpl implements _CreateClientRequest {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, nom, prenom, clientTypeId, location, telephone, motDePasse);
+  int get hashCode => Object.hash(runtimeType, nom, prenom, clientTypeId,
+      location, photo, telephone, motDePasse);
 
   @JsonKey(ignore: true)
   @override
@@ -928,6 +966,7 @@ abstract class _CreateClientRequest implements CreateClientRequest {
       required final String prenom,
       required final int clientTypeId,
       required final Offset location,
+      final String? photo,
       required final String telephone,
       required final String motDePasse}) = _$CreateClientRequestImpl;
 
@@ -942,6 +981,8 @@ abstract class _CreateClientRequest implements CreateClientRequest {
   int get clientTypeId;
   @override
   Offset get location;
+  @override
+  String? get photo;
   @override
   String get telephone;
   @override
@@ -962,6 +1003,7 @@ mixin _$UpdateClientRequest {
   int get clientId => throw _privateConstructorUsedError;
   String? get prenom => throw _privateConstructorUsedError;
   int? get clientTypeId => throw _privateConstructorUsedError;
+  String? get photo => throw _privateConstructorUsedError;
   Offset? get location => throw _privateConstructorUsedError;
   String? get telephone => throw _privateConstructorUsedError;
   String? get motDePasse => throw _privateConstructorUsedError;
@@ -983,6 +1025,7 @@ abstract class $UpdateClientRequestCopyWith<$Res> {
       int clientId,
       String? prenom,
       int? clientTypeId,
+      String? photo,
       Offset? location,
       String? telephone,
       String? motDePasse});
@@ -1007,6 +1050,7 @@ class _$UpdateClientRequestCopyWithImpl<$Res, $Val extends UpdateClientRequest>
     Object? clientId = null,
     Object? prenom = freezed,
     Object? clientTypeId = freezed,
+    Object? photo = freezed,
     Object? location = freezed,
     Object? telephone = freezed,
     Object? motDePasse = freezed,
@@ -1028,6 +1072,10 @@ class _$UpdateClientRequestCopyWithImpl<$Res, $Val extends UpdateClientRequest>
           ? _value.clientTypeId
           : clientTypeId // ignore: cast_nullable_to_non_nullable
               as int?,
+      photo: freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String?,
       location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
@@ -1069,6 +1117,7 @@ abstract class _$$UpdateClientRequestImplCopyWith<$Res>
       int clientId,
       String? prenom,
       int? clientTypeId,
+      String? photo,
       Offset? location,
       String? telephone,
       String? motDePasse});
@@ -1092,6 +1141,7 @@ class __$$UpdateClientRequestImplCopyWithImpl<$Res>
     Object? clientId = null,
     Object? prenom = freezed,
     Object? clientTypeId = freezed,
+    Object? photo = freezed,
     Object? location = freezed,
     Object? telephone = freezed,
     Object? motDePasse = freezed,
@@ -1113,6 +1163,10 @@ class __$$UpdateClientRequestImplCopyWithImpl<$Res>
           ? _value.clientTypeId
           : clientTypeId // ignore: cast_nullable_to_non_nullable
               as int?,
+      photo: freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String?,
       location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
@@ -1137,6 +1191,7 @@ class _$UpdateClientRequestImpl implements _UpdateClientRequest {
       required this.clientId,
       this.prenom,
       this.clientTypeId,
+      this.photo,
       this.location,
       this.telephone,
       this.motDePasse});
@@ -1153,6 +1208,8 @@ class _$UpdateClientRequestImpl implements _UpdateClientRequest {
   @override
   final int? clientTypeId;
   @override
+  final String? photo;
+  @override
   final Offset? location;
   @override
   final String? telephone;
@@ -1161,7 +1218,7 @@ class _$UpdateClientRequestImpl implements _UpdateClientRequest {
 
   @override
   String toString() {
-    return 'UpdateClientRequest(nom: $nom, clientId: $clientId, prenom: $prenom, clientTypeId: $clientTypeId, location: $location, telephone: $telephone, motDePasse: $motDePasse)';
+    return 'UpdateClientRequest(nom: $nom, clientId: $clientId, prenom: $prenom, clientTypeId: $clientTypeId, photo: $photo, location: $location, telephone: $telephone, motDePasse: $motDePasse)';
   }
 
   @override
@@ -1175,6 +1232,7 @@ class _$UpdateClientRequestImpl implements _UpdateClientRequest {
             (identical(other.prenom, prenom) || other.prenom == prenom) &&
             (identical(other.clientTypeId, clientTypeId) ||
                 other.clientTypeId == clientTypeId) &&
+            (identical(other.photo, photo) || other.photo == photo) &&
             (identical(other.location, location) ||
                 other.location == location) &&
             (identical(other.telephone, telephone) ||
@@ -1186,7 +1244,7 @@ class _$UpdateClientRequestImpl implements _UpdateClientRequest {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, nom, clientId, prenom,
-      clientTypeId, location, telephone, motDePasse);
+      clientTypeId, photo, location, telephone, motDePasse);
 
   @JsonKey(ignore: true)
   @override
@@ -1209,6 +1267,7 @@ abstract class _UpdateClientRequest implements UpdateClientRequest {
       required final int clientId,
       final String? prenom,
       final int? clientTypeId,
+      final String? photo,
       final Offset? location,
       final String? telephone,
       final String? motDePasse}) = _$UpdateClientRequestImpl;
@@ -1224,6 +1283,8 @@ abstract class _UpdateClientRequest implements UpdateClientRequest {
   String? get prenom;
   @override
   int? get clientTypeId;
+  @override
+  String? get photo;
   @override
   Offset? get location;
   @override

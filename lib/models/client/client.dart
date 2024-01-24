@@ -39,6 +39,7 @@ class ClientOutPut with _$ClientOutPut {
     required int clientId,
     required String nom,
     required String uuid,
+    required String? photo,
     // required String telephone,
     required String prenom,
   }) = _ClientOutPut;
@@ -54,6 +55,7 @@ class CreateClientRequest with _$CreateClientRequest {
       required String prenom,
       required int clientTypeId,
       required Offset location,
+      String? photo,
       required String telephone,
       required String motDePasse}) = _CreateClientRequest;
 
@@ -68,6 +70,7 @@ class UpdateClientRequest with _$UpdateClientRequest {
       required int clientId,
       String? prenom,
       int? clientTypeId,
+      String? photo,
       Offset? location,
       String? telephone,
       String? motDePasse}) = _UpdateClientRequest;
