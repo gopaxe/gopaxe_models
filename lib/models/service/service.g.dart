@@ -13,6 +13,7 @@ _$CreateServiceRequestImpl _$$CreateServiceRequestImplFromJson(
       description: json['description'] as String,
       targetedMetierId: json['targetedMetierId'] as int?,
       targetedCompetenceId: json['targetedCompetenceId'] as int?,
+      issuePhotoUrl: json['issuePhotoUrl'] as String?,
       forWorkerId: json['forWorkerId'] as int?,
       completionDate: DateTime.parse(json['completionDate'] as String),
       desiredLocation:
@@ -26,6 +27,7 @@ Map<String, dynamic> _$$CreateServiceRequestImplToJson(
       'description': instance.description,
       'targetedMetierId': instance.targetedMetierId,
       'targetedCompetenceId': instance.targetedCompetenceId,
+      'issuePhotoUrl': instance.issuePhotoUrl,
       'forWorkerId': instance.forWorkerId,
       'completionDate': instance.completionDate.toIso8601String(),
       'desiredLocation': instance.desiredLocation,
@@ -41,6 +43,7 @@ _$ServiceRequestImpl _$$ServiceRequestImplFromJson(Map<String, dynamic> json) =>
       completionDate: DateTime.parse(json['completionDate'] as String),
       workerId: json['workerId'] as int?,
       forWorkerId: json['forWorkerId'] as int?,
+      issuePhotoUrl: json['issuePhotoUrl'] as String?,
       clientId: json['clientId'] as int,
       startDate: json['startDate'] == null
           ? null
@@ -72,6 +75,7 @@ Map<String, dynamic> _$$ServiceRequestImplToJson(
       'completionDate': instance.completionDate.toIso8601String(),
       'workerId': instance.workerId,
       'forWorkerId': instance.forWorkerId,
+      'issuePhotoUrl': instance.issuePhotoUrl,
       'clientId': instance.clientId,
       'startDate': instance.startDate?.toIso8601String(),
       'cancelDate': instance.cancelDate?.toIso8601String(),
