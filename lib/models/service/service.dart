@@ -60,3 +60,13 @@ class ServiceRequestWithClient with _$ServiceRequestWithClient {
   factory ServiceRequestWithClient.fromJson(Map<String, dynamic> json) =>
       _$ServiceRequestWithClientFromJson(json);
 }
+
+@freezed
+class ServiceRequestWithWorker with _$ServiceRequestWithWorker {
+  const factory ServiceRequestWithWorker(
+      {required WorkerServiceInfos? worker,
+      required ServiceRequest service}) = _ServiceRequestWithWorker;
+
+  factory ServiceRequestWithWorker.fromJson(Map<String, dynamic> json) =>
+      _$ServiceRequestWithWorkerFromJson(json);
+}

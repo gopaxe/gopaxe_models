@@ -101,3 +101,19 @@ Map<String, dynamic> _$$ServiceRequestWithClientImplToJson(
       'client': instance.client,
       'service': instance.service,
     };
+
+_$ServiceRequestWithWorkerImpl _$$ServiceRequestWithWorkerImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ServiceRequestWithWorkerImpl(
+      worker: json['worker'] == null
+          ? null
+          : WorkerServiceInfos.fromJson(json['worker'] as Map<String, dynamic>),
+      service: ServiceRequest.fromJson(json['service'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$ServiceRequestWithWorkerImplToJson(
+        _$ServiceRequestWithWorkerImpl instance) =>
+    <String, dynamic>{
+      'worker': instance.worker,
+      'service': instance.service,
+    };

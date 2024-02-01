@@ -1028,3 +1028,192 @@ abstract class _ServiceRequestWithClient implements ServiceRequestWithClient {
   _$$ServiceRequestWithClientImplCopyWith<_$ServiceRequestWithClientImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
+
+ServiceRequestWithWorker _$ServiceRequestWithWorkerFromJson(
+    Map<String, dynamic> json) {
+  return _ServiceRequestWithWorker.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ServiceRequestWithWorker {
+  WorkerServiceInfos? get worker => throw _privateConstructorUsedError;
+  ServiceRequest get service => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ServiceRequestWithWorkerCopyWith<ServiceRequestWithWorker> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ServiceRequestWithWorkerCopyWith<$Res> {
+  factory $ServiceRequestWithWorkerCopyWith(ServiceRequestWithWorker value,
+          $Res Function(ServiceRequestWithWorker) then) =
+      _$ServiceRequestWithWorkerCopyWithImpl<$Res, ServiceRequestWithWorker>;
+  @useResult
+  $Res call({WorkerServiceInfos? worker, ServiceRequest service});
+
+  $WorkerServiceInfosCopyWith<$Res>? get worker;
+  $ServiceRequestCopyWith<$Res> get service;
+}
+
+/// @nodoc
+class _$ServiceRequestWithWorkerCopyWithImpl<$Res,
+        $Val extends ServiceRequestWithWorker>
+    implements $ServiceRequestWithWorkerCopyWith<$Res> {
+  _$ServiceRequestWithWorkerCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? worker = freezed,
+    Object? service = null,
+  }) {
+    return _then(_value.copyWith(
+      worker: freezed == worker
+          ? _value.worker
+          : worker // ignore: cast_nullable_to_non_nullable
+              as WorkerServiceInfos?,
+      service: null == service
+          ? _value.service
+          : service // ignore: cast_nullable_to_non_nullable
+              as ServiceRequest,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WorkerServiceInfosCopyWith<$Res>? get worker {
+    if (_value.worker == null) {
+      return null;
+    }
+
+    return $WorkerServiceInfosCopyWith<$Res>(_value.worker!, (value) {
+      return _then(_value.copyWith(worker: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ServiceRequestCopyWith<$Res> get service {
+    return $ServiceRequestCopyWith<$Res>(_value.service, (value) {
+      return _then(_value.copyWith(service: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$ServiceRequestWithWorkerImplCopyWith<$Res>
+    implements $ServiceRequestWithWorkerCopyWith<$Res> {
+  factory _$$ServiceRequestWithWorkerImplCopyWith(
+          _$ServiceRequestWithWorkerImpl value,
+          $Res Function(_$ServiceRequestWithWorkerImpl) then) =
+      __$$ServiceRequestWithWorkerImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({WorkerServiceInfos? worker, ServiceRequest service});
+
+  @override
+  $WorkerServiceInfosCopyWith<$Res>? get worker;
+  @override
+  $ServiceRequestCopyWith<$Res> get service;
+}
+
+/// @nodoc
+class __$$ServiceRequestWithWorkerImplCopyWithImpl<$Res>
+    extends _$ServiceRequestWithWorkerCopyWithImpl<$Res,
+        _$ServiceRequestWithWorkerImpl>
+    implements _$$ServiceRequestWithWorkerImplCopyWith<$Res> {
+  __$$ServiceRequestWithWorkerImplCopyWithImpl(
+      _$ServiceRequestWithWorkerImpl _value,
+      $Res Function(_$ServiceRequestWithWorkerImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? worker = freezed,
+    Object? service = null,
+  }) {
+    return _then(_$ServiceRequestWithWorkerImpl(
+      worker: freezed == worker
+          ? _value.worker
+          : worker // ignore: cast_nullable_to_non_nullable
+              as WorkerServiceInfos?,
+      service: null == service
+          ? _value.service
+          : service // ignore: cast_nullable_to_non_nullable
+              as ServiceRequest,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ServiceRequestWithWorkerImpl implements _ServiceRequestWithWorker {
+  const _$ServiceRequestWithWorkerImpl(
+      {required this.worker, required this.service});
+
+  factory _$ServiceRequestWithWorkerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ServiceRequestWithWorkerImplFromJson(json);
+
+  @override
+  final WorkerServiceInfos? worker;
+  @override
+  final ServiceRequest service;
+
+  @override
+  String toString() {
+    return 'ServiceRequestWithWorker(worker: $worker, service: $service)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ServiceRequestWithWorkerImpl &&
+            (identical(other.worker, worker) || other.worker == worker) &&
+            (identical(other.service, service) || other.service == service));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, worker, service);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ServiceRequestWithWorkerImplCopyWith<_$ServiceRequestWithWorkerImpl>
+      get copyWith => __$$ServiceRequestWithWorkerImplCopyWithImpl<
+          _$ServiceRequestWithWorkerImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ServiceRequestWithWorkerImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ServiceRequestWithWorker implements ServiceRequestWithWorker {
+  const factory _ServiceRequestWithWorker(
+      {required final WorkerServiceInfos? worker,
+      required final ServiceRequest service}) = _$ServiceRequestWithWorkerImpl;
+
+  factory _ServiceRequestWithWorker.fromJson(Map<String, dynamic> json) =
+      _$ServiceRequestWithWorkerImpl.fromJson;
+
+  @override
+  WorkerServiceInfos? get worker;
+  @override
+  ServiceRequest get service;
+  @override
+  @JsonKey(ignore: true)
+  _$$ServiceRequestWithWorkerImplCopyWith<_$ServiceRequestWithWorkerImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}

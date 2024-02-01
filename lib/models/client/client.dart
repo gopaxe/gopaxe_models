@@ -11,7 +11,7 @@ class Client with _$Client {
     required int clientId,
     required String nom,
     String? photo,
-    required String prenom,
+    required String prenom, 
     required String motDePasse,
   }) = _Client;
 
