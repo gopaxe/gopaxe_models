@@ -1187,6 +1187,7 @@ mixin _$WorkerServiceInfos {
   String get nom => throw _privateConstructorUsedError;
   String get prenom => throw _privateConstructorUsedError;
   String get phone => throw _privateConstructorUsedError;
+  Offset get location => throw _privateConstructorUsedError;
   DateTime get registeredDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1207,7 +1208,10 @@ abstract class $WorkerServiceInfosCopyWith<$Res> {
       String nom,
       String prenom,
       String phone,
+      Offset location,
       DateTime registeredDate});
+
+  $OffsetCopyWith<$Res> get location;
 }
 
 /// @nodoc
@@ -1228,6 +1232,7 @@ class _$WorkerServiceInfosCopyWithImpl<$Res, $Val extends WorkerServiceInfos>
     Object? nom = null,
     Object? prenom = null,
     Object? phone = null,
+    Object? location = null,
     Object? registeredDate = null,
   }) {
     return _then(_value.copyWith(
@@ -1251,11 +1256,23 @@ class _$WorkerServiceInfosCopyWithImpl<$Res, $Val extends WorkerServiceInfos>
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
               as String,
+      location: null == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Offset,
       registeredDate: null == registeredDate
           ? _value.registeredDate
           : registeredDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $OffsetCopyWith<$Res> get location {
+    return $OffsetCopyWith<$Res>(_value.location, (value) {
+      return _then(_value.copyWith(location: value) as $Val);
+    });
   }
 }
 
@@ -1273,7 +1290,11 @@ abstract class _$$WorkerServiceInfosImplCopyWith<$Res>
       String nom,
       String prenom,
       String phone,
+      Offset location,
       DateTime registeredDate});
+
+  @override
+  $OffsetCopyWith<$Res> get location;
 }
 
 /// @nodoc
@@ -1292,6 +1313,7 @@ class __$$WorkerServiceInfosImplCopyWithImpl<$Res>
     Object? nom = null,
     Object? prenom = null,
     Object? phone = null,
+    Object? location = null,
     Object? registeredDate = null,
   }) {
     return _then(_$WorkerServiceInfosImpl(
@@ -1315,6 +1337,10 @@ class __$$WorkerServiceInfosImplCopyWithImpl<$Res>
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
               as String,
+      location: null == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Offset,
       registeredDate: null == registeredDate
           ? _value.registeredDate
           : registeredDate // ignore: cast_nullable_to_non_nullable
@@ -1332,6 +1358,7 @@ class _$WorkerServiceInfosImpl implements _WorkerServiceInfos {
       required this.nom,
       required this.prenom,
       required this.phone,
+      required this.location,
       required this.registeredDate});
 
   factory _$WorkerServiceInfosImpl.fromJson(Map<String, dynamic> json) =>
@@ -1348,11 +1375,13 @@ class _$WorkerServiceInfosImpl implements _WorkerServiceInfos {
   @override
   final String phone;
   @override
+  final Offset location;
+  @override
   final DateTime registeredDate;
 
   @override
   String toString() {
-    return 'WorkerServiceInfos(workerId: $workerId, photo: $photo, nom: $nom, prenom: $prenom, phone: $phone, registeredDate: $registeredDate)';
+    return 'WorkerServiceInfos(workerId: $workerId, photo: $photo, nom: $nom, prenom: $prenom, phone: $phone, location: $location, registeredDate: $registeredDate)';
   }
 
   @override
@@ -1366,14 +1395,16 @@ class _$WorkerServiceInfosImpl implements _WorkerServiceInfos {
             (identical(other.nom, nom) || other.nom == nom) &&
             (identical(other.prenom, prenom) || other.prenom == prenom) &&
             (identical(other.phone, phone) || other.phone == phone) &&
+            (identical(other.location, location) ||
+                other.location == location) &&
             (identical(other.registeredDate, registeredDate) ||
                 other.registeredDate == registeredDate));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, workerId, photo, nom, prenom, phone, registeredDate);
+  int get hashCode => Object.hash(runtimeType, workerId, photo, nom, prenom,
+      phone, location, registeredDate);
 
   @JsonKey(ignore: true)
   @override
@@ -1397,6 +1428,7 @@ abstract class _WorkerServiceInfos implements WorkerServiceInfos {
       required final String nom,
       required final String prenom,
       required final String phone,
+      required final Offset location,
       required final DateTime registeredDate}) = _$WorkerServiceInfosImpl;
 
   factory _WorkerServiceInfos.fromJson(Map<String, dynamic> json) =
@@ -1412,6 +1444,8 @@ abstract class _WorkerServiceInfos implements WorkerServiceInfos {
   String get prenom;
   @override
   String get phone;
+  @override
+  Offset get location;
   @override
   DateTime get registeredDate;
   @override
