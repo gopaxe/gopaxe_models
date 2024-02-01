@@ -1186,6 +1186,7 @@ mixin _$WorkerServiceInfos {
   String? get photo => throw _privateConstructorUsedError;
   String get nom => throw _privateConstructorUsedError;
   String get prenom => throw _privateConstructorUsedError;
+  String get phone => throw _privateConstructorUsedError;
   DateTime get registeredDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1205,6 +1206,7 @@ abstract class $WorkerServiceInfosCopyWith<$Res> {
       String? photo,
       String nom,
       String prenom,
+      String phone,
       DateTime registeredDate});
 }
 
@@ -1225,6 +1227,7 @@ class _$WorkerServiceInfosCopyWithImpl<$Res, $Val extends WorkerServiceInfos>
     Object? photo = freezed,
     Object? nom = null,
     Object? prenom = null,
+    Object? phone = null,
     Object? registeredDate = null,
   }) {
     return _then(_value.copyWith(
@@ -1243,6 +1246,10 @@ class _$WorkerServiceInfosCopyWithImpl<$Res, $Val extends WorkerServiceInfos>
       prenom: null == prenom
           ? _value.prenom
           : prenom // ignore: cast_nullable_to_non_nullable
+              as String,
+      phone: null == phone
+          ? _value.phone
+          : phone // ignore: cast_nullable_to_non_nullable
               as String,
       registeredDate: null == registeredDate
           ? _value.registeredDate
@@ -1265,6 +1272,7 @@ abstract class _$$WorkerServiceInfosImplCopyWith<$Res>
       String? photo,
       String nom,
       String prenom,
+      String phone,
       DateTime registeredDate});
 }
 
@@ -1283,6 +1291,7 @@ class __$$WorkerServiceInfosImplCopyWithImpl<$Res>
     Object? photo = freezed,
     Object? nom = null,
     Object? prenom = null,
+    Object? phone = null,
     Object? registeredDate = null,
   }) {
     return _then(_$WorkerServiceInfosImpl(
@@ -1302,6 +1311,10 @@ class __$$WorkerServiceInfosImplCopyWithImpl<$Res>
           ? _value.prenom
           : prenom // ignore: cast_nullable_to_non_nullable
               as String,
+      phone: null == phone
+          ? _value.phone
+          : phone // ignore: cast_nullable_to_non_nullable
+              as String,
       registeredDate: null == registeredDate
           ? _value.registeredDate
           : registeredDate // ignore: cast_nullable_to_non_nullable
@@ -1318,6 +1331,7 @@ class _$WorkerServiceInfosImpl implements _WorkerServiceInfos {
       this.photo,
       required this.nom,
       required this.prenom,
+      required this.phone,
       required this.registeredDate});
 
   factory _$WorkerServiceInfosImpl.fromJson(Map<String, dynamic> json) =>
@@ -1332,11 +1346,13 @@ class _$WorkerServiceInfosImpl implements _WorkerServiceInfos {
   @override
   final String prenom;
   @override
+  final String phone;
+  @override
   final DateTime registeredDate;
 
   @override
   String toString() {
-    return 'WorkerServiceInfos(workerId: $workerId, photo: $photo, nom: $nom, prenom: $prenom, registeredDate: $registeredDate)';
+    return 'WorkerServiceInfos(workerId: $workerId, photo: $photo, nom: $nom, prenom: $prenom, phone: $phone, registeredDate: $registeredDate)';
   }
 
   @override
@@ -1349,14 +1365,15 @@ class _$WorkerServiceInfosImpl implements _WorkerServiceInfos {
             (identical(other.photo, photo) || other.photo == photo) &&
             (identical(other.nom, nom) || other.nom == nom) &&
             (identical(other.prenom, prenom) || other.prenom == prenom) &&
+            (identical(other.phone, phone) || other.phone == phone) &&
             (identical(other.registeredDate, registeredDate) ||
                 other.registeredDate == registeredDate));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, workerId, photo, nom, prenom, registeredDate);
+  int get hashCode => Object.hash(
+      runtimeType, workerId, photo, nom, prenom, phone, registeredDate);
 
   @JsonKey(ignore: true)
   @override
@@ -1379,6 +1396,7 @@ abstract class _WorkerServiceInfos implements WorkerServiceInfos {
       final String? photo,
       required final String nom,
       required final String prenom,
+      required final String phone,
       required final DateTime registeredDate}) = _$WorkerServiceInfosImpl;
 
   factory _WorkerServiceInfos.fromJson(Map<String, dynamic> json) =
@@ -1392,6 +1410,8 @@ abstract class _WorkerServiceInfos implements WorkerServiceInfos {
   String get nom;
   @override
   String get prenom;
+  @override
+  String get phone;
   @override
   DateTime get registeredDate;
   @override

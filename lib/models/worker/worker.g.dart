@@ -105,6 +105,7 @@ _$WorkerServiceInfosImpl _$$WorkerServiceInfosImplFromJson(
       photo: json['photo'] as String?,
       nom: json['nom'] as String,
       prenom: json['prenom'] as String,
+      phone: json['phone'] as String,
       registeredDate: DateTime.parse(json['registeredDate'] as String),
     );
 
@@ -115,6 +116,7 @@ Map<String, dynamic> _$$WorkerServiceInfosImplToJson(
       'photo': instance.photo,
       'nom': instance.nom,
       'prenom': instance.prenom,
+      'phone': instance.phone,
       'registeredDate': instance.registeredDate.toIso8601String(),
     };
 
