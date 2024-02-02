@@ -348,7 +348,7 @@ CreateCommentRequest _$CreateCommentRequestFromJson(Map<String, dynamic> json) {
 mixin _$CreateCommentRequest {
   int get serviceId => throw _privateConstructorUsedError;
   String get comment => throw _privateConstructorUsedError;
-  int get score => throw _privateConstructorUsedError;
+  double get score => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -362,7 +362,7 @@ abstract class $CreateCommentRequestCopyWith<$Res> {
           $Res Function(CreateCommentRequest) then) =
       _$CreateCommentRequestCopyWithImpl<$Res, CreateCommentRequest>;
   @useResult
-  $Res call({int serviceId, String comment, int score});
+  $Res call({int serviceId, String comment, double score});
 }
 
 /// @nodoc
@@ -395,7 +395,7 @@ class _$CreateCommentRequestCopyWithImpl<$Res,
       score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
     ) as $Val);
   }
 }
@@ -408,7 +408,7 @@ abstract class _$$CreateCommentRequestImplCopyWith<$Res>
       __$$CreateCommentRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int serviceId, String comment, int score});
+  $Res call({int serviceId, String comment, double score});
 }
 
 /// @nodoc
@@ -438,7 +438,7 @@ class __$$CreateCommentRequestImplCopyWithImpl<$Res>
       score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
     ));
   }
 }
@@ -457,7 +457,7 @@ class _$CreateCommentRequestImpl implements _CreateCommentRequest {
   @override
   final String comment;
   @override
-  final int score;
+  final double score;
 
   @override
   String toString() {
@@ -499,7 +499,7 @@ abstract class _CreateCommentRequest implements CreateCommentRequest {
   const factory _CreateCommentRequest(
       {required final int serviceId,
       required final String comment,
-      required final int score}) = _$CreateCommentRequestImpl;
+      required final double score}) = _$CreateCommentRequestImpl;
 
   factory _CreateCommentRequest.fromJson(Map<String, dynamic> json) =
       _$CreateCommentRequestImpl.fromJson;
@@ -509,7 +509,7 @@ abstract class _CreateCommentRequest implements CreateCommentRequest {
   @override
   String get comment;
   @override
-  int get score;
+  double get score;
   @override
   @JsonKey(ignore: true)
   _$$CreateCommentRequestImplCopyWith<_$CreateCommentRequestImpl>

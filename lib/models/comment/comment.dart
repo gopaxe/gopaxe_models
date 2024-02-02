@@ -26,7 +26,7 @@ class CreateCommentRequest with _$CreateCommentRequest {
   const factory CreateCommentRequest(
       {required int serviceId,
       required String comment,
-      required int score}) = _CreateCommentRequest;
+      required double score}) = _CreateCommentRequest;
   factory CreateCommentRequest.fromJson(Map<String, dynamic> json) =>
       _$CreateCommentRequestFromJson(json);
 }

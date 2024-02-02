@@ -39,7 +39,7 @@ _$CreateCommentRequestImpl _$$CreateCommentRequestImplFromJson(
     _$CreateCommentRequestImpl(
       serviceId: json['serviceId'] as int,
       comment: json['comment'] as String,
-      score: json['score'] as int,
+      score: (json['score'] as num).toDouble(),
     );
 
 Map<String, dynamic> _$$CreateCommentRequestImplToJson(
