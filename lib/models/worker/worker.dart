@@ -76,6 +76,7 @@ class WorkerServiceInfos with _$WorkerServiceInfos {
       required String prenom,
       required String phone,
       required Offset location,
+      required double score,
       required DateTime registeredDate}) = _WorkerServiceInfos;
 
   factory WorkerServiceInfos.fromJson(Map<String, dynamic> json) =>

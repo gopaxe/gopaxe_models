@@ -107,6 +107,7 @@ _$WorkerServiceInfosImpl _$$WorkerServiceInfosImplFromJson(
       prenom: json['prenom'] as String,
       phone: json['phone'] as String,
       location: Offset.fromJson(json['location'] as Map<String, dynamic>),
+      score: (json['score'] as num).toDouble(),
       registeredDate: DateTime.parse(json['registeredDate'] as String),
     );
 
@@ -119,6 +120,7 @@ Map<String, dynamic> _$$WorkerServiceInfosImplToJson(
       'prenom': instance.prenom,
       'phone': instance.phone,
       'location': instance.location,
+      'score': instance.score,
       'registeredDate': instance.registeredDate.toIso8601String(),
     };
 
