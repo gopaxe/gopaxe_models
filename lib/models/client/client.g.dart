@@ -54,6 +54,8 @@ _$ClientOutPutImpl _$$ClientOutPutImplFromJson(Map<String, dynamic> json) =>
       uuid: json['uuid'] as String,
       photo: json['photo'] as String?,
       prenom: json['prenom'] as String,
+      createdDate: DateTime.parse(json['createdDate'] as String),
+      required: json['required'],
     );
 
 Map<String, dynamic> _$$ClientOutPutImplToJson(_$ClientOutPutImpl instance) =>
@@ -63,6 +65,8 @@ Map<String, dynamic> _$$ClientOutPutImplToJson(_$ClientOutPutImpl instance) =>
       'uuid': instance.uuid,
       'photo': instance.photo,
       'prenom': instance.prenom,
+      'createdDate': instance.createdDate.toIso8601String(),
+      'required': instance.required,
     };
 
 _$CreateClientRequestImpl _$$CreateClientRequestImplFromJson(

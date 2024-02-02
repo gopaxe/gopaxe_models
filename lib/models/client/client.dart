@@ -11,7 +11,7 @@ class Client with _$Client {
     required int clientId,
     required String nom,
     String? photo,
-    required String prenom, 
+    required String prenom,
     required String motDePasse,
   }) = _Client;
 
@@ -35,14 +35,15 @@ class ClientServiceInfos with _$ClientServiceInfos {
 
 @freezed
 class ClientOutPut with _$ClientOutPut {
-  const factory ClientOutPut({
-    required int clientId,
-    required String nom,
-    required String uuid,
-    required String? photo,
-    // required String telephone,
-    required String prenom,
-  }) = _ClientOutPut;
+  const factory ClientOutPut(
+      {required int clientId,
+      required String nom,
+      required String uuid,
+      required String? photo,
+      // required String telephone,
+      required String prenom,
+      required DateTime createdDate,
+      required}) = _ClientOutPut;
 
   factory ClientOutPut.fromJson(Map<String, dynamic> json) =>
       _$ClientOutPutFromJson(json);

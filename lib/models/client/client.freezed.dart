@@ -510,6 +510,8 @@ mixin _$ClientOutPut {
   String? get photo =>
       throw _privateConstructorUsedError; // required String telephone,
   String get prenom => throw _privateConstructorUsedError;
+  DateTime get createdDate => throw _privateConstructorUsedError;
+  dynamic get required => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -524,7 +526,13 @@ abstract class $ClientOutPutCopyWith<$Res> {
       _$ClientOutPutCopyWithImpl<$Res, ClientOutPut>;
   @useResult
   $Res call(
-      {int clientId, String nom, String uuid, String? photo, String prenom});
+      {int clientId,
+      String nom,
+      String uuid,
+      String? photo,
+      String prenom,
+      DateTime createdDate,
+      dynamic required});
 }
 
 /// @nodoc
@@ -545,6 +553,8 @@ class _$ClientOutPutCopyWithImpl<$Res, $Val extends ClientOutPut>
     Object? uuid = null,
     Object? photo = freezed,
     Object? prenom = null,
+    Object? createdDate = null,
+    Object? required = freezed,
   }) {
     return _then(_value.copyWith(
       clientId: null == clientId
@@ -567,6 +577,14 @@ class _$ClientOutPutCopyWithImpl<$Res, $Val extends ClientOutPut>
           ? _value.prenom
           : prenom // ignore: cast_nullable_to_non_nullable
               as String,
+      createdDate: null == createdDate
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      required: freezed == required
+          ? _value.required
+          : required // ignore: cast_nullable_to_non_nullable
+              as dynamic,
     ) as $Val);
   }
 }
@@ -580,7 +598,13 @@ abstract class _$$ClientOutPutImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int clientId, String nom, String uuid, String? photo, String prenom});
+      {int clientId,
+      String nom,
+      String uuid,
+      String? photo,
+      String prenom,
+      DateTime createdDate,
+      dynamic required});
 }
 
 /// @nodoc
@@ -599,6 +623,8 @@ class __$$ClientOutPutImplCopyWithImpl<$Res>
     Object? uuid = null,
     Object? photo = freezed,
     Object? prenom = null,
+    Object? createdDate = null,
+    Object? required = freezed,
   }) {
     return _then(_$ClientOutPutImpl(
       clientId: null == clientId
@@ -621,6 +647,11 @@ class __$$ClientOutPutImplCopyWithImpl<$Res>
           ? _value.prenom
           : prenom // ignore: cast_nullable_to_non_nullable
               as String,
+      createdDate: null == createdDate
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      required: freezed == required ? _value.required! : required,
     ));
   }
 }
@@ -633,7 +664,9 @@ class _$ClientOutPutImpl implements _ClientOutPut {
       required this.nom,
       required this.uuid,
       required this.photo,
-      required this.prenom});
+      required this.prenom,
+      required this.createdDate,
+      this.required});
 
   factory _$ClientOutPutImpl.fromJson(Map<String, dynamic> json) =>
       _$$ClientOutPutImplFromJson(json);
@@ -649,10 +682,14 @@ class _$ClientOutPutImpl implements _ClientOutPut {
 // required String telephone,
   @override
   final String prenom;
+  @override
+  final DateTime createdDate;
+  @override
+  final dynamic required;
 
   @override
   String toString() {
-    return 'ClientOutPut(clientId: $clientId, nom: $nom, uuid: $uuid, photo: $photo, prenom: $prenom)';
+    return 'ClientOutPut(clientId: $clientId, nom: $nom, uuid: $uuid, photo: $photo, prenom: $prenom, createdDate: $createdDate, required: $required)';
   }
 
   @override
@@ -665,13 +702,16 @@ class _$ClientOutPutImpl implements _ClientOutPut {
             (identical(other.nom, nom) || other.nom == nom) &&
             (identical(other.uuid, uuid) || other.uuid == uuid) &&
             (identical(other.photo, photo) || other.photo == photo) &&
-            (identical(other.prenom, prenom) || other.prenom == prenom));
+            (identical(other.prenom, prenom) || other.prenom == prenom) &&
+            (identical(other.createdDate, createdDate) ||
+                other.createdDate == createdDate) &&
+            const DeepCollectionEquality().equals(other.required, required));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, clientId, nom, uuid, photo, prenom);
+  int get hashCode => Object.hash(runtimeType, clientId, nom, uuid, photo,
+      prenom, createdDate, const DeepCollectionEquality().hash(required));
 
   @JsonKey(ignore: true)
   @override
@@ -693,7 +733,9 @@ abstract class _ClientOutPut implements ClientOutPut {
       required final String nom,
       required final String uuid,
       required final String? photo,
-      required final String prenom}) = _$ClientOutPutImpl;
+      required final String prenom,
+      required final DateTime createdDate,
+      final dynamic required}) = _$ClientOutPutImpl;
 
   factory _ClientOutPut.fromJson(Map<String, dynamic> json) =
       _$ClientOutPutImpl.fromJson;
@@ -708,6 +750,10 @@ abstract class _ClientOutPut implements ClientOutPut {
   String? get photo;
   @override // required String telephone,
   String get prenom;
+  @override
+  DateTime get createdDate;
+  @override
+  dynamic get required;
   @override
   @JsonKey(ignore: true)
   _$$ClientOutPutImplCopyWith<_$ClientOutPutImpl> get copyWith =>
