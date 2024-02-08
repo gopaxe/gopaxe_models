@@ -26,7 +26,7 @@ mixin _$Comment {
   WorkerServiceInfos get worker => throw _privateConstructorUsedError;
   ClientServiceInfos get client => throw _privateConstructorUsedError;
   bool get sendByWorker => throw _privateConstructorUsedError;
-  int get score => throw _privateConstructorUsedError;
+  double get score => throw _privateConstructorUsedError;
   String get content => throw _privateConstructorUsedError;
   DateTime get createdDate => throw _privateConstructorUsedError;
 
@@ -47,7 +47,7 @@ abstract class $CommentCopyWith<$Res> {
       WorkerServiceInfos worker,
       ClientServiceInfos client,
       bool sendByWorker,
-      int score,
+      double score,
       String content,
       DateTime createdDate});
 
@@ -106,7 +106,7 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
       score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
@@ -149,7 +149,7 @@ abstract class _$$CommentImplCopyWith<$Res> implements $CommentCopyWith<$Res> {
       WorkerServiceInfos worker,
       ClientServiceInfos client,
       bool sendByWorker,
-      int score,
+      double score,
       String content,
       DateTime createdDate});
 
@@ -208,7 +208,7 @@ class __$$CommentImplCopyWithImpl<$Res>
       score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
@@ -251,7 +251,7 @@ class _$CommentImpl implements _Comment {
   @override
   final bool sendByWorker;
   @override
-  final int score;
+  final double score;
   @override
   final String content;
   @override
@@ -310,7 +310,7 @@ abstract class _Comment implements Comment {
       required final WorkerServiceInfos worker,
       required final ClientServiceInfos client,
       required final bool sendByWorker,
-      required final int score,
+      required final double score,
       required final String content,
       required final DateTime createdDate}) = _$CommentImpl;
 
@@ -329,7 +329,7 @@ abstract class _Comment implements Comment {
   @override
   bool get sendByWorker;
   @override
-  int get score;
+  double get score;
   @override
   String get content;
   @override

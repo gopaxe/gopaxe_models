@@ -16,7 +16,7 @@ _$CommentImpl _$$CommentImplFromJson(Map<String, dynamic> json) =>
       client:
           ClientServiceInfos.fromJson(json['client'] as Map<String, dynamic>),
       sendByWorker: json['sendByWorker'] as bool,
-      score: json['score'] as int,
+      score: (json['score'] as num).toDouble(),
       content: json['content'] as String,
       createdDate: DateTime.parse(json['createdDate'] as String),
     );

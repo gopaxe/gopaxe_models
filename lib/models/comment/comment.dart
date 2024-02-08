@@ -13,7 +13,7 @@ class Comment with _$Comment {
     required WorkerServiceInfos worker,
     required ClientServiceInfos client,
     required bool sendByWorker,
-    required int score,
+    required double score,
     required String content,
     required DateTime createdDate,
   }) = _Comment;
