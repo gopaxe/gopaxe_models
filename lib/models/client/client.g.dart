@@ -12,6 +12,7 @@ _$ClientImpl _$$ClientImplFromJson(Map<String, dynamic> json) => _$ClientImpl(
       photo: json['photo'] as String?,
       prenom: json['prenom'] as String,
       motDePasse: json['motDePasse'] as String,
+      registeredDate: DateTime.parse(json['registeredDate'] as String),
     );
 
 Map<String, dynamic> _$$ClientImplToJson(_$ClientImpl instance) =>
@@ -21,6 +22,7 @@ Map<String, dynamic> _$$ClientImplToJson(_$ClientImpl instance) =>
       'photo': instance.photo,
       'prenom': instance.prenom,
       'motDePasse': instance.motDePasse,
+      'registeredDate': instance.registeredDate.toIso8601String(),
     };
 
 _$ClientServiceInfosImpl _$$ClientServiceInfosImplFromJson(

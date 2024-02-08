@@ -25,6 +25,7 @@ mixin _$Client {
   String? get photo => throw _privateConstructorUsedError;
   String get prenom => throw _privateConstructorUsedError;
   String get motDePasse => throw _privateConstructorUsedError;
+  DateTime get registeredDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,7 +42,8 @@ abstract class $ClientCopyWith<$Res> {
       String nom,
       String? photo,
       String prenom,
-      String motDePasse});
+      String motDePasse,
+      DateTime registeredDate});
 }
 
 /// @nodoc
@@ -62,6 +64,7 @@ class _$ClientCopyWithImpl<$Res, $Val extends Client>
     Object? photo = freezed,
     Object? prenom = null,
     Object? motDePasse = null,
+    Object? registeredDate = null,
   }) {
     return _then(_value.copyWith(
       clientId: null == clientId
@@ -84,6 +87,10 @@ class _$ClientCopyWithImpl<$Res, $Val extends Client>
           ? _value.motDePasse
           : motDePasse // ignore: cast_nullable_to_non_nullable
               as String,
+      registeredDate: null == registeredDate
+          ? _value.registeredDate
+          : registeredDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ) as $Val);
   }
 }
@@ -100,7 +107,8 @@ abstract class _$$ClientImplCopyWith<$Res> implements $ClientCopyWith<$Res> {
       String nom,
       String? photo,
       String prenom,
-      String motDePasse});
+      String motDePasse,
+      DateTime registeredDate});
 }
 
 /// @nodoc
@@ -119,6 +127,7 @@ class __$$ClientImplCopyWithImpl<$Res>
     Object? photo = freezed,
     Object? prenom = null,
     Object? motDePasse = null,
+    Object? registeredDate = null,
   }) {
     return _then(_$ClientImpl(
       clientId: null == clientId
@@ -141,6 +150,10 @@ class __$$ClientImplCopyWithImpl<$Res>
           ? _value.motDePasse
           : motDePasse // ignore: cast_nullable_to_non_nullable
               as String,
+      registeredDate: null == registeredDate
+          ? _value.registeredDate
+          : registeredDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -153,7 +166,8 @@ class _$ClientImpl implements _Client {
       required this.nom,
       this.photo,
       required this.prenom,
-      required this.motDePasse});
+      required this.motDePasse,
+      required this.registeredDate});
 
   factory _$ClientImpl.fromJson(Map<String, dynamic> json) =>
       _$$ClientImplFromJson(json);
@@ -168,10 +182,12 @@ class _$ClientImpl implements _Client {
   final String prenom;
   @override
   final String motDePasse;
+  @override
+  final DateTime registeredDate;
 
   @override
   String toString() {
-    return 'Client(clientId: $clientId, nom: $nom, photo: $photo, prenom: $prenom, motDePasse: $motDePasse)';
+    return 'Client(clientId: $clientId, nom: $nom, photo: $photo, prenom: $prenom, motDePasse: $motDePasse, registeredDate: $registeredDate)';
   }
 
   @override
@@ -185,13 +201,15 @@ class _$ClientImpl implements _Client {
             (identical(other.photo, photo) || other.photo == photo) &&
             (identical(other.prenom, prenom) || other.prenom == prenom) &&
             (identical(other.motDePasse, motDePasse) ||
-                other.motDePasse == motDePasse));
+                other.motDePasse == motDePasse) &&
+            (identical(other.registeredDate, registeredDate) ||
+                other.registeredDate == registeredDate));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, clientId, nom, photo, prenom, motDePasse);
+  int get hashCode => Object.hash(
+      runtimeType, clientId, nom, photo, prenom, motDePasse, registeredDate);
 
   @JsonKey(ignore: true)
   @override
@@ -213,7 +231,8 @@ abstract class _Client implements Client {
       required final String nom,
       final String? photo,
       required final String prenom,
-      required final String motDePasse}) = _$ClientImpl;
+      required final String motDePasse,
+      required final DateTime registeredDate}) = _$ClientImpl;
 
   factory _Client.fromJson(Map<String, dynamic> json) = _$ClientImpl.fromJson;
 
@@ -227,6 +246,8 @@ abstract class _Client implements Client {
   String get prenom;
   @override
   String get motDePasse;
+  @override
+  DateTime get registeredDate;
   @override
   @JsonKey(ignore: true)
   _$$ClientImplCopyWith<_$ClientImpl> get copyWith =>
