@@ -10,6 +10,7 @@ class Client with _$Client {
   const factory Client(
       {required int clientId,
       required String nom,
+      required String telephone,
       String? photo,
       required String prenom,
       required String motDePasse,

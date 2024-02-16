@@ -22,6 +22,7 @@ Client _$ClientFromJson(Map<String, dynamic> json) {
 mixin _$Client {
   int get clientId => throw _privateConstructorUsedError;
   String get nom => throw _privateConstructorUsedError;
+  String get telephone => throw _privateConstructorUsedError;
   String? get photo => throw _privateConstructorUsedError;
   String get prenom => throw _privateConstructorUsedError;
   String get motDePasse => throw _privateConstructorUsedError;
@@ -40,6 +41,7 @@ abstract class $ClientCopyWith<$Res> {
   $Res call(
       {int clientId,
       String nom,
+      String telephone,
       String? photo,
       String prenom,
       String motDePasse,
@@ -61,6 +63,7 @@ class _$ClientCopyWithImpl<$Res, $Val extends Client>
   $Res call({
     Object? clientId = null,
     Object? nom = null,
+    Object? telephone = null,
     Object? photo = freezed,
     Object? prenom = null,
     Object? motDePasse = null,
@@ -74,6 +77,10 @@ class _$ClientCopyWithImpl<$Res, $Val extends Client>
       nom: null == nom
           ? _value.nom
           : nom // ignore: cast_nullable_to_non_nullable
+              as String,
+      telephone: null == telephone
+          ? _value.telephone
+          : telephone // ignore: cast_nullable_to_non_nullable
               as String,
       photo: freezed == photo
           ? _value.photo
@@ -105,6 +112,7 @@ abstract class _$$ClientImplCopyWith<$Res> implements $ClientCopyWith<$Res> {
   $Res call(
       {int clientId,
       String nom,
+      String telephone,
       String? photo,
       String prenom,
       String motDePasse,
@@ -124,6 +132,7 @@ class __$$ClientImplCopyWithImpl<$Res>
   $Res call({
     Object? clientId = null,
     Object? nom = null,
+    Object? telephone = null,
     Object? photo = freezed,
     Object? prenom = null,
     Object? motDePasse = null,
@@ -137,6 +146,10 @@ class __$$ClientImplCopyWithImpl<$Res>
       nom: null == nom
           ? _value.nom
           : nom // ignore: cast_nullable_to_non_nullable
+              as String,
+      telephone: null == telephone
+          ? _value.telephone
+          : telephone // ignore: cast_nullable_to_non_nullable
               as String,
       photo: freezed == photo
           ? _value.photo
@@ -164,6 +177,7 @@ class _$ClientImpl implements _Client {
   const _$ClientImpl(
       {required this.clientId,
       required this.nom,
+      required this.telephone,
       this.photo,
       required this.prenom,
       required this.motDePasse,
@@ -177,6 +191,8 @@ class _$ClientImpl implements _Client {
   @override
   final String nom;
   @override
+  final String telephone;
+  @override
   final String? photo;
   @override
   final String prenom;
@@ -187,7 +203,7 @@ class _$ClientImpl implements _Client {
 
   @override
   String toString() {
-    return 'Client(clientId: $clientId, nom: $nom, photo: $photo, prenom: $prenom, motDePasse: $motDePasse, registeredDate: $registeredDate)';
+    return 'Client(clientId: $clientId, nom: $nom, telephone: $telephone, photo: $photo, prenom: $prenom, motDePasse: $motDePasse, registeredDate: $registeredDate)';
   }
 
   @override
@@ -198,6 +214,8 @@ class _$ClientImpl implements _Client {
             (identical(other.clientId, clientId) ||
                 other.clientId == clientId) &&
             (identical(other.nom, nom) || other.nom == nom) &&
+            (identical(other.telephone, telephone) ||
+                other.telephone == telephone) &&
             (identical(other.photo, photo) || other.photo == photo) &&
             (identical(other.prenom, prenom) || other.prenom == prenom) &&
             (identical(other.motDePasse, motDePasse) ||
@@ -208,8 +226,8 @@ class _$ClientImpl implements _Client {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, clientId, nom, photo, prenom, motDePasse, registeredDate);
+  int get hashCode => Object.hash(runtimeType, clientId, nom, telephone, photo,
+      prenom, motDePasse, registeredDate);
 
   @JsonKey(ignore: true)
   @override
@@ -229,6 +247,7 @@ abstract class _Client implements Client {
   const factory _Client(
       {required final int clientId,
       required final String nom,
+      required final String telephone,
       final String? photo,
       required final String prenom,
       required final String motDePasse,
@@ -240,6 +259,8 @@ abstract class _Client implements Client {
   int get clientId;
   @override
   String get nom;
+  @override
+  String get telephone;
   @override
   String? get photo;
   @override

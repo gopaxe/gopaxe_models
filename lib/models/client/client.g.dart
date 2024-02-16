@@ -9,6 +9,7 @@ part of 'client.dart';
 _$ClientImpl _$$ClientImplFromJson(Map<String, dynamic> json) => _$ClientImpl(
       clientId: json['clientId'] as int,
       nom: json['nom'] as String,
+      telephone: json['telephone'] as String,
       photo: json['photo'] as String?,
       prenom: json['prenom'] as String,
       motDePasse: json['motDePasse'] as String,
@@ -19,6 +20,7 @@ Map<String, dynamic> _$$ClientImplToJson(_$ClientImpl instance) =>
     <String, dynamic>{
       'clientId': instance.clientId,
       'nom': instance.nom,
+      'telephone': instance.telephone,
       'photo': instance.photo,
       'prenom': instance.prenom,
       'motDePasse': instance.motDePasse,
