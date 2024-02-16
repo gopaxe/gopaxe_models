@@ -40,7 +40,7 @@ class ClientOutPut with _$ClientOutPut {
       required String nom,
       required String uuid,
       required String? photo,
-      // required String telephone,
+      required String telephone,
       required String prenom,
       required DateTime createdDate,
       required}) = _ClientOutPut;

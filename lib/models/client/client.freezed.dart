@@ -528,8 +528,8 @@ mixin _$ClientOutPut {
   int get clientId => throw _privateConstructorUsedError;
   String get nom => throw _privateConstructorUsedError;
   String get uuid => throw _privateConstructorUsedError;
-  String? get photo =>
-      throw _privateConstructorUsedError; // required String telephone,
+  String? get photo => throw _privateConstructorUsedError;
+  String get telephone => throw _privateConstructorUsedError;
   String get prenom => throw _privateConstructorUsedError;
   DateTime get createdDate => throw _privateConstructorUsedError;
   dynamic get required => throw _privateConstructorUsedError;
@@ -551,6 +551,7 @@ abstract class $ClientOutPutCopyWith<$Res> {
       String nom,
       String uuid,
       String? photo,
+      String telephone,
       String prenom,
       DateTime createdDate,
       dynamic required});
@@ -573,6 +574,7 @@ class _$ClientOutPutCopyWithImpl<$Res, $Val extends ClientOutPut>
     Object? nom = null,
     Object? uuid = null,
     Object? photo = freezed,
+    Object? telephone = null,
     Object? prenom = null,
     Object? createdDate = null,
     Object? required = freezed,
@@ -594,6 +596,10 @@ class _$ClientOutPutCopyWithImpl<$Res, $Val extends ClientOutPut>
           ? _value.photo
           : photo // ignore: cast_nullable_to_non_nullable
               as String?,
+      telephone: null == telephone
+          ? _value.telephone
+          : telephone // ignore: cast_nullable_to_non_nullable
+              as String,
       prenom: null == prenom
           ? _value.prenom
           : prenom // ignore: cast_nullable_to_non_nullable
@@ -623,6 +629,7 @@ abstract class _$$ClientOutPutImplCopyWith<$Res>
       String nom,
       String uuid,
       String? photo,
+      String telephone,
       String prenom,
       DateTime createdDate,
       dynamic required});
@@ -643,6 +650,7 @@ class __$$ClientOutPutImplCopyWithImpl<$Res>
     Object? nom = null,
     Object? uuid = null,
     Object? photo = freezed,
+    Object? telephone = null,
     Object? prenom = null,
     Object? createdDate = null,
     Object? required = freezed,
@@ -664,6 +672,10 @@ class __$$ClientOutPutImplCopyWithImpl<$Res>
           ? _value.photo
           : photo // ignore: cast_nullable_to_non_nullable
               as String?,
+      telephone: null == telephone
+          ? _value.telephone
+          : telephone // ignore: cast_nullable_to_non_nullable
+              as String,
       prenom: null == prenom
           ? _value.prenom
           : prenom // ignore: cast_nullable_to_non_nullable
@@ -685,6 +697,7 @@ class _$ClientOutPutImpl implements _ClientOutPut {
       required this.nom,
       required this.uuid,
       required this.photo,
+      required this.telephone,
       required this.prenom,
       required this.createdDate,
       this.required});
@@ -700,7 +713,8 @@ class _$ClientOutPutImpl implements _ClientOutPut {
   final String uuid;
   @override
   final String? photo;
-// required String telephone,
+  @override
+  final String telephone;
   @override
   final String prenom;
   @override
@@ -710,7 +724,7 @@ class _$ClientOutPutImpl implements _ClientOutPut {
 
   @override
   String toString() {
-    return 'ClientOutPut(clientId: $clientId, nom: $nom, uuid: $uuid, photo: $photo, prenom: $prenom, createdDate: $createdDate, required: $required)';
+    return 'ClientOutPut(clientId: $clientId, nom: $nom, uuid: $uuid, photo: $photo, telephone: $telephone, prenom: $prenom, createdDate: $createdDate, required: $required)';
   }
 
   @override
@@ -723,6 +737,8 @@ class _$ClientOutPutImpl implements _ClientOutPut {
             (identical(other.nom, nom) || other.nom == nom) &&
             (identical(other.uuid, uuid) || other.uuid == uuid) &&
             (identical(other.photo, photo) || other.photo == photo) &&
+            (identical(other.telephone, telephone) ||
+                other.telephone == telephone) &&
             (identical(other.prenom, prenom) || other.prenom == prenom) &&
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
@@ -731,8 +747,16 @@ class _$ClientOutPutImpl implements _ClientOutPut {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, clientId, nom, uuid, photo,
-      prenom, createdDate, const DeepCollectionEquality().hash(required));
+  int get hashCode => Object.hash(
+      runtimeType,
+      clientId,
+      nom,
+      uuid,
+      photo,
+      telephone,
+      prenom,
+      createdDate,
+      const DeepCollectionEquality().hash(required));
 
   @JsonKey(ignore: true)
   @override
@@ -754,6 +778,7 @@ abstract class _ClientOutPut implements ClientOutPut {
       required final String nom,
       required final String uuid,
       required final String? photo,
+      required final String telephone,
       required final String prenom,
       required final DateTime createdDate,
       final dynamic required}) = _$ClientOutPutImpl;
@@ -769,7 +794,9 @@ abstract class _ClientOutPut implements ClientOutPut {
   String get uuid;
   @override
   String? get photo;
-  @override // required String telephone,
+  @override
+  String get telephone;
+  @override
   String get prenom;
   @override
   DateTime get createdDate;
