@@ -724,6 +724,7 @@ mixin _$Worker {
   Cni get cni => throw _privateConstructorUsedError;
   List<RhumaineSkill> get rhumaineSkills => throw _privateConstructorUsedError;
   int get villeId => throw _privateConstructorUsedError;
+  bool get isDeleted => throw _privateConstructorUsedError;
   DateTime get dateCreation => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -751,6 +752,7 @@ abstract class $WorkerCopyWith<$Res> {
       Cni cni,
       List<RhumaineSkill> rhumaineSkills,
       int villeId,
+      bool isDeleted,
       DateTime dateCreation});
 
   $OffsetCopyWith<$Res> get offset;
@@ -784,6 +786,7 @@ class _$WorkerCopyWithImpl<$Res, $Val extends Worker>
     Object? cni = null,
     Object? rhumaineSkills = null,
     Object? villeId = null,
+    Object? isDeleted = null,
     Object? dateCreation = null,
   }) {
     return _then(_value.copyWith(
@@ -843,6 +846,10 @@ class _$WorkerCopyWithImpl<$Res, $Val extends Worker>
           ? _value.villeId
           : villeId // ignore: cast_nullable_to_non_nullable
               as int,
+      isDeleted: null == isDeleted
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       dateCreation: null == dateCreation
           ? _value.dateCreation
           : dateCreation // ignore: cast_nullable_to_non_nullable
@@ -889,6 +896,7 @@ abstract class _$$WorkerImplCopyWith<$Res> implements $WorkerCopyWith<$Res> {
       Cni cni,
       List<RhumaineSkill> rhumaineSkills,
       int villeId,
+      bool isDeleted,
       DateTime dateCreation});
 
   @override
@@ -922,6 +930,7 @@ class __$$WorkerImplCopyWithImpl<$Res>
     Object? cni = null,
     Object? rhumaineSkills = null,
     Object? villeId = null,
+    Object? isDeleted = null,
     Object? dateCreation = null,
   }) {
     return _then(_$WorkerImpl(
@@ -981,6 +990,10 @@ class __$$WorkerImplCopyWithImpl<$Res>
           ? _value.villeId
           : villeId // ignore: cast_nullable_to_non_nullable
               as int,
+      isDeleted: null == isDeleted
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       dateCreation: null == dateCreation
           ? _value.dateCreation
           : dateCreation // ignore: cast_nullable_to_non_nullable
@@ -1007,6 +1020,7 @@ class _$WorkerImpl implements _Worker {
       required this.cni,
       required final List<RhumaineSkill> rhumaineSkills,
       required this.villeId,
+      required this.isDeleted,
       required this.dateCreation})
       : _rhumaineSkills = rhumaineSkills;
 
@@ -1049,11 +1063,13 @@ class _$WorkerImpl implements _Worker {
   @override
   final int villeId;
   @override
+  final bool isDeleted;
+  @override
   final DateTime dateCreation;
 
   @override
   String toString() {
-    return 'Worker(workerId: $workerId, uuid: $uuid, photo: $photo, firstName: $firstName, lastName: $lastName, qrCode: $qrCode, email: $email, offset: $offset, telephone: $telephone, hashedTelephone: $hashedTelephone, typeComptedId: $typeComptedId, cni: $cni, rhumaineSkills: $rhumaineSkills, villeId: $villeId, dateCreation: $dateCreation)';
+    return 'Worker(workerId: $workerId, uuid: $uuid, photo: $photo, firstName: $firstName, lastName: $lastName, qrCode: $qrCode, email: $email, offset: $offset, telephone: $telephone, hashedTelephone: $hashedTelephone, typeComptedId: $typeComptedId, cni: $cni, rhumaineSkills: $rhumaineSkills, villeId: $villeId, isDeleted: $isDeleted, dateCreation: $dateCreation)';
   }
 
   @override
@@ -1082,6 +1098,8 @@ class _$WorkerImpl implements _Worker {
             const DeepCollectionEquality()
                 .equals(other._rhumaineSkills, _rhumaineSkills) &&
             (identical(other.villeId, villeId) || other.villeId == villeId) &&
+            (identical(other.isDeleted, isDeleted) ||
+                other.isDeleted == isDeleted) &&
             (identical(other.dateCreation, dateCreation) ||
                 other.dateCreation == dateCreation));
   }
@@ -1104,6 +1122,7 @@ class _$WorkerImpl implements _Worker {
       cni,
       const DeepCollectionEquality().hash(_rhumaineSkills),
       villeId,
+      isDeleted,
       dateCreation);
 
   @JsonKey(ignore: true)
@@ -1136,6 +1155,7 @@ abstract class _Worker implements Worker {
       required final Cni cni,
       required final List<RhumaineSkill> rhumaineSkills,
       required final int villeId,
+      required final bool isDeleted,
       required final DateTime dateCreation}) = _$WorkerImpl;
 
   factory _Worker.fromJson(Map<String, dynamic> json) = _$WorkerImpl.fromJson;
@@ -1168,6 +1188,8 @@ abstract class _Worker implements Worker {
   List<RhumaineSkill> get rhumaineSkills;
   @override
   int get villeId;
+  @override
+  bool get isDeleted;
   @override
   DateTime get dateCreation;
   @override

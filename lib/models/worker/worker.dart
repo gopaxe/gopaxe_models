@@ -61,6 +61,7 @@ class Worker with _$Worker {
     required Cni cni,
     required List<RhumaineSkill> rhumaineSkills,
     required int villeId,
+    required bool isDeleted,
     required DateTime dateCreation,
   }) = _Worker;
 

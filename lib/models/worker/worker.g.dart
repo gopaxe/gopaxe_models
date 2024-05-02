@@ -76,6 +76,7 @@ _$WorkerImpl _$$WorkerImplFromJson(Map<String, dynamic> json) => _$WorkerImpl(
           .map((e) => RhumaineSkill.fromJson(e as Map<String, dynamic>))
           .toList(),
       villeId: json['villeId'] as int,
+      isDeleted: json['isDeleted'] as bool,
       dateCreation: DateTime.parse(json['dateCreation'] as String),
     );
 
@@ -95,6 +96,7 @@ Map<String, dynamic> _$$WorkerImplToJson(_$WorkerImpl instance) =>
       'cni': instance.cni,
       'rhumaineSkills': instance.rhumaineSkills,
       'villeId': instance.villeId,
+      'isDeleted': instance.isDeleted,
       'dateCreation': instance.dateCreation.toIso8601String(),
     };
 
