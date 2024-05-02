@@ -13,6 +13,7 @@ _$ClientImpl _$$ClientImplFromJson(Map<String, dynamic> json) => _$ClientImpl(
       photo: json['photo'] as String?,
       prenom: json['prenom'] as String,
       motDePasse: json['motDePasse'] as String,
+      isDeleted: json['isDeleted'] as bool,
       registeredDate: DateTime.parse(json['registeredDate'] as String),
     );
 
@@ -24,6 +25,7 @@ Map<String, dynamic> _$$ClientImplToJson(_$ClientImpl instance) =>
       'photo': instance.photo,
       'prenom': instance.prenom,
       'motDePasse': instance.motDePasse,
+      'isDeleted': instance.isDeleted,
       'registeredDate': instance.registeredDate.toIso8601String(),
     };
 
@@ -36,6 +38,7 @@ _$ClientServiceInfosImpl _$$ClientServiceInfosImplFromJson(
       prenom: json['prenom'] as String,
       score: (json['score'] as num).toDouble(),
       totalServicePosted: json['totalServicePosted'] as int,
+      isDeleted: json['isDeleted'] as bool,
       registeredDate: DateTime.parse(json['registeredDate'] as String),
     );
 
@@ -48,6 +51,7 @@ Map<String, dynamic> _$$ClientServiceInfosImplToJson(
       'prenom': instance.prenom,
       'score': instance.score,
       'totalServicePosted': instance.totalServicePosted,
+      'isDeleted': instance.isDeleted,
       'registeredDate': instance.registeredDate.toIso8601String(),
     };
 
@@ -60,6 +64,7 @@ _$ClientOutPutImpl _$$ClientOutPutImplFromJson(Map<String, dynamic> json) =>
       telephone: json['telephone'] as String,
       prenom: json['prenom'] as String,
       createdDate: DateTime.parse(json['createdDate'] as String),
+      isDeleted: json['isDeleted'] as bool,
       required: json['required'],
     );
 
@@ -72,6 +77,7 @@ Map<String, dynamic> _$$ClientOutPutImplToJson(_$ClientOutPutImpl instance) =>
       'telephone': instance.telephone,
       'prenom': instance.prenom,
       'createdDate': instance.createdDate.toIso8601String(),
+      'isDeleted': instance.isDeleted,
       'required': instance.required,
     };
 

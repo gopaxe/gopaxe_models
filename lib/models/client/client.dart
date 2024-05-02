@@ -14,6 +14,7 @@ class Client with _$Client {
       String? photo,
       required String prenom,
       required String motDePasse,
+      required bool isDeleted,
       required DateTime registeredDate}) = _Client;
 
   factory Client.fromJson(Map<String, dynamic> json) => _$ClientFromJson(json);
@@ -28,6 +29,7 @@ class ClientServiceInfos with _$ClientServiceInfos {
       required String prenom,
       required double score,
       required int totalServicePosted,
+      required bool isDeleted,
       required DateTime registeredDate}) = _ClientServiceInfos;
 
   factory ClientServiceInfos.fromJson(Map<String, dynamic> json) =>
@@ -44,6 +46,7 @@ class ClientOutPut with _$ClientOutPut {
       required String telephone,
       required String prenom,
       required DateTime createdDate,
+      required bool isDeleted,
       required}) = _ClientOutPut;
 
   factory ClientOutPut.fromJson(Map<String, dynamic> json) =>

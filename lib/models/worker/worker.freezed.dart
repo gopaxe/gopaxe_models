@@ -1189,6 +1189,7 @@ mixin _$WorkerServiceInfos {
   String get phone => throw _privateConstructorUsedError;
   Offset get location => throw _privateConstructorUsedError;
   double get score => throw _privateConstructorUsedError;
+  bool get isDeleted => throw _privateConstructorUsedError;
   DateTime get registeredDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1211,6 +1212,7 @@ abstract class $WorkerServiceInfosCopyWith<$Res> {
       String phone,
       Offset location,
       double score,
+      bool isDeleted,
       DateTime registeredDate});
 
   $OffsetCopyWith<$Res> get location;
@@ -1236,6 +1238,7 @@ class _$WorkerServiceInfosCopyWithImpl<$Res, $Val extends WorkerServiceInfos>
     Object? phone = null,
     Object? location = null,
     Object? score = null,
+    Object? isDeleted = null,
     Object? registeredDate = null,
   }) {
     return _then(_value.copyWith(
@@ -1267,6 +1270,10 @@ class _$WorkerServiceInfosCopyWithImpl<$Res, $Val extends WorkerServiceInfos>
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as double,
+      isDeleted: null == isDeleted
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       registeredDate: null == registeredDate
           ? _value.registeredDate
           : registeredDate // ignore: cast_nullable_to_non_nullable
@@ -1299,6 +1306,7 @@ abstract class _$$WorkerServiceInfosImplCopyWith<$Res>
       String phone,
       Offset location,
       double score,
+      bool isDeleted,
       DateTime registeredDate});
 
   @override
@@ -1323,6 +1331,7 @@ class __$$WorkerServiceInfosImplCopyWithImpl<$Res>
     Object? phone = null,
     Object? location = null,
     Object? score = null,
+    Object? isDeleted = null,
     Object? registeredDate = null,
   }) {
     return _then(_$WorkerServiceInfosImpl(
@@ -1354,6 +1363,10 @@ class __$$WorkerServiceInfosImplCopyWithImpl<$Res>
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as double,
+      isDeleted: null == isDeleted
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       registeredDate: null == registeredDate
           ? _value.registeredDate
           : registeredDate // ignore: cast_nullable_to_non_nullable
@@ -1373,6 +1386,7 @@ class _$WorkerServiceInfosImpl implements _WorkerServiceInfos {
       required this.phone,
       required this.location,
       required this.score,
+      required this.isDeleted,
       required this.registeredDate});
 
   factory _$WorkerServiceInfosImpl.fromJson(Map<String, dynamic> json) =>
@@ -1393,11 +1407,13 @@ class _$WorkerServiceInfosImpl implements _WorkerServiceInfos {
   @override
   final double score;
   @override
+  final bool isDeleted;
+  @override
   final DateTime registeredDate;
 
   @override
   String toString() {
-    return 'WorkerServiceInfos(workerId: $workerId, photo: $photo, nom: $nom, prenom: $prenom, phone: $phone, location: $location, score: $score, registeredDate: $registeredDate)';
+    return 'WorkerServiceInfos(workerId: $workerId, photo: $photo, nom: $nom, prenom: $prenom, phone: $phone, location: $location, score: $score, isDeleted: $isDeleted, registeredDate: $registeredDate)';
   }
 
   @override
@@ -1414,6 +1430,8 @@ class _$WorkerServiceInfosImpl implements _WorkerServiceInfos {
             (identical(other.location, location) ||
                 other.location == location) &&
             (identical(other.score, score) || other.score == score) &&
+            (identical(other.isDeleted, isDeleted) ||
+                other.isDeleted == isDeleted) &&
             (identical(other.registeredDate, registeredDate) ||
                 other.registeredDate == registeredDate));
   }
@@ -1421,7 +1439,7 @@ class _$WorkerServiceInfosImpl implements _WorkerServiceInfos {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, workerId, photo, nom, prenom,
-      phone, location, score, registeredDate);
+      phone, location, score, isDeleted, registeredDate);
 
   @JsonKey(ignore: true)
   @override
@@ -1447,6 +1465,7 @@ abstract class _WorkerServiceInfos implements WorkerServiceInfos {
       required final String phone,
       required final Offset location,
       required final double score,
+      required final bool isDeleted,
       required final DateTime registeredDate}) = _$WorkerServiceInfosImpl;
 
   factory _WorkerServiceInfos.fromJson(Map<String, dynamic> json) =
@@ -1466,6 +1485,8 @@ abstract class _WorkerServiceInfos implements WorkerServiceInfos {
   Offset get location;
   @override
   double get score;
+  @override
+  bool get isDeleted;
   @override
   DateTime get registeredDate;
   @override

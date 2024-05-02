@@ -26,6 +26,7 @@ mixin _$Client {
   String? get photo => throw _privateConstructorUsedError;
   String get prenom => throw _privateConstructorUsedError;
   String get motDePasse => throw _privateConstructorUsedError;
+  bool get isDeleted => throw _privateConstructorUsedError;
   DateTime get registeredDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -45,6 +46,7 @@ abstract class $ClientCopyWith<$Res> {
       String? photo,
       String prenom,
       String motDePasse,
+      bool isDeleted,
       DateTime registeredDate});
 }
 
@@ -67,6 +69,7 @@ class _$ClientCopyWithImpl<$Res, $Val extends Client>
     Object? photo = freezed,
     Object? prenom = null,
     Object? motDePasse = null,
+    Object? isDeleted = null,
     Object? registeredDate = null,
   }) {
     return _then(_value.copyWith(
@@ -94,6 +97,10 @@ class _$ClientCopyWithImpl<$Res, $Val extends Client>
           ? _value.motDePasse
           : motDePasse // ignore: cast_nullable_to_non_nullable
               as String,
+      isDeleted: null == isDeleted
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       registeredDate: null == registeredDate
           ? _value.registeredDate
           : registeredDate // ignore: cast_nullable_to_non_nullable
@@ -116,6 +123,7 @@ abstract class _$$ClientImplCopyWith<$Res> implements $ClientCopyWith<$Res> {
       String? photo,
       String prenom,
       String motDePasse,
+      bool isDeleted,
       DateTime registeredDate});
 }
 
@@ -136,6 +144,7 @@ class __$$ClientImplCopyWithImpl<$Res>
     Object? photo = freezed,
     Object? prenom = null,
     Object? motDePasse = null,
+    Object? isDeleted = null,
     Object? registeredDate = null,
   }) {
     return _then(_$ClientImpl(
@@ -163,6 +172,10 @@ class __$$ClientImplCopyWithImpl<$Res>
           ? _value.motDePasse
           : motDePasse // ignore: cast_nullable_to_non_nullable
               as String,
+      isDeleted: null == isDeleted
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       registeredDate: null == registeredDate
           ? _value.registeredDate
           : registeredDate // ignore: cast_nullable_to_non_nullable
@@ -181,6 +194,7 @@ class _$ClientImpl implements _Client {
       this.photo,
       required this.prenom,
       required this.motDePasse,
+      required this.isDeleted,
       required this.registeredDate});
 
   factory _$ClientImpl.fromJson(Map<String, dynamic> json) =>
@@ -199,11 +213,13 @@ class _$ClientImpl implements _Client {
   @override
   final String motDePasse;
   @override
+  final bool isDeleted;
+  @override
   final DateTime registeredDate;
 
   @override
   String toString() {
-    return 'Client(clientId: $clientId, nom: $nom, telephone: $telephone, photo: $photo, prenom: $prenom, motDePasse: $motDePasse, registeredDate: $registeredDate)';
+    return 'Client(clientId: $clientId, nom: $nom, telephone: $telephone, photo: $photo, prenom: $prenom, motDePasse: $motDePasse, isDeleted: $isDeleted, registeredDate: $registeredDate)';
   }
 
   @override
@@ -220,6 +236,8 @@ class _$ClientImpl implements _Client {
             (identical(other.prenom, prenom) || other.prenom == prenom) &&
             (identical(other.motDePasse, motDePasse) ||
                 other.motDePasse == motDePasse) &&
+            (identical(other.isDeleted, isDeleted) ||
+                other.isDeleted == isDeleted) &&
             (identical(other.registeredDate, registeredDate) ||
                 other.registeredDate == registeredDate));
   }
@@ -227,7 +245,7 @@ class _$ClientImpl implements _Client {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, clientId, nom, telephone, photo,
-      prenom, motDePasse, registeredDate);
+      prenom, motDePasse, isDeleted, registeredDate);
 
   @JsonKey(ignore: true)
   @override
@@ -251,6 +269,7 @@ abstract class _Client implements Client {
       final String? photo,
       required final String prenom,
       required final String motDePasse,
+      required final bool isDeleted,
       required final DateTime registeredDate}) = _$ClientImpl;
 
   factory _Client.fromJson(Map<String, dynamic> json) = _$ClientImpl.fromJson;
@@ -267,6 +286,8 @@ abstract class _Client implements Client {
   String get prenom;
   @override
   String get motDePasse;
+  @override
+  bool get isDeleted;
   @override
   DateTime get registeredDate;
   @override
@@ -287,6 +308,7 @@ mixin _$ClientServiceInfos {
   String get prenom => throw _privateConstructorUsedError;
   double get score => throw _privateConstructorUsedError;
   int get totalServicePosted => throw _privateConstructorUsedError;
+  bool get isDeleted => throw _privateConstructorUsedError;
   DateTime get registeredDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -308,6 +330,7 @@ abstract class $ClientServiceInfosCopyWith<$Res> {
       String prenom,
       double score,
       int totalServicePosted,
+      bool isDeleted,
       DateTime registeredDate});
 }
 
@@ -330,6 +353,7 @@ class _$ClientServiceInfosCopyWithImpl<$Res, $Val extends ClientServiceInfos>
     Object? prenom = null,
     Object? score = null,
     Object? totalServicePosted = null,
+    Object? isDeleted = null,
     Object? registeredDate = null,
   }) {
     return _then(_value.copyWith(
@@ -357,6 +381,10 @@ class _$ClientServiceInfosCopyWithImpl<$Res, $Val extends ClientServiceInfos>
           ? _value.totalServicePosted
           : totalServicePosted // ignore: cast_nullable_to_non_nullable
               as int,
+      isDeleted: null == isDeleted
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       registeredDate: null == registeredDate
           ? _value.registeredDate
           : registeredDate // ignore: cast_nullable_to_non_nullable
@@ -380,6 +408,7 @@ abstract class _$$ClientServiceInfosImplCopyWith<$Res>
       String prenom,
       double score,
       int totalServicePosted,
+      bool isDeleted,
       DateTime registeredDate});
 }
 
@@ -400,6 +429,7 @@ class __$$ClientServiceInfosImplCopyWithImpl<$Res>
     Object? prenom = null,
     Object? score = null,
     Object? totalServicePosted = null,
+    Object? isDeleted = null,
     Object? registeredDate = null,
   }) {
     return _then(_$ClientServiceInfosImpl(
@@ -427,6 +457,10 @@ class __$$ClientServiceInfosImplCopyWithImpl<$Res>
           ? _value.totalServicePosted
           : totalServicePosted // ignore: cast_nullable_to_non_nullable
               as int,
+      isDeleted: null == isDeleted
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       registeredDate: null == registeredDate
           ? _value.registeredDate
           : registeredDate // ignore: cast_nullable_to_non_nullable
@@ -445,6 +479,7 @@ class _$ClientServiceInfosImpl implements _ClientServiceInfos {
       required this.prenom,
       required this.score,
       required this.totalServicePosted,
+      required this.isDeleted,
       required this.registeredDate});
 
   factory _$ClientServiceInfosImpl.fromJson(Map<String, dynamic> json) =>
@@ -463,11 +498,13 @@ class _$ClientServiceInfosImpl implements _ClientServiceInfos {
   @override
   final int totalServicePosted;
   @override
+  final bool isDeleted;
+  @override
   final DateTime registeredDate;
 
   @override
   String toString() {
-    return 'ClientServiceInfos(clientId: $clientId, photo: $photo, nom: $nom, prenom: $prenom, score: $score, totalServicePosted: $totalServicePosted, registeredDate: $registeredDate)';
+    return 'ClientServiceInfos(clientId: $clientId, photo: $photo, nom: $nom, prenom: $prenom, score: $score, totalServicePosted: $totalServicePosted, isDeleted: $isDeleted, registeredDate: $registeredDate)';
   }
 
   @override
@@ -483,6 +520,8 @@ class _$ClientServiceInfosImpl implements _ClientServiceInfos {
             (identical(other.score, score) || other.score == score) &&
             (identical(other.totalServicePosted, totalServicePosted) ||
                 other.totalServicePosted == totalServicePosted) &&
+            (identical(other.isDeleted, isDeleted) ||
+                other.isDeleted == isDeleted) &&
             (identical(other.registeredDate, registeredDate) ||
                 other.registeredDate == registeredDate));
   }
@@ -490,7 +529,7 @@ class _$ClientServiceInfosImpl implements _ClientServiceInfos {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, clientId, photo, nom, prenom,
-      score, totalServicePosted, registeredDate);
+      score, totalServicePosted, isDeleted, registeredDate);
 
   @JsonKey(ignore: true)
   @override
@@ -515,6 +554,7 @@ abstract class _ClientServiceInfos implements ClientServiceInfos {
       required final String prenom,
       required final double score,
       required final int totalServicePosted,
+      required final bool isDeleted,
       required final DateTime registeredDate}) = _$ClientServiceInfosImpl;
 
   factory _ClientServiceInfos.fromJson(Map<String, dynamic> json) =
@@ -532,6 +572,8 @@ abstract class _ClientServiceInfos implements ClientServiceInfos {
   double get score;
   @override
   int get totalServicePosted;
+  @override
+  bool get isDeleted;
   @override
   DateTime get registeredDate;
   @override
@@ -553,6 +595,7 @@ mixin _$ClientOutPut {
   String get telephone => throw _privateConstructorUsedError;
   String get prenom => throw _privateConstructorUsedError;
   DateTime get createdDate => throw _privateConstructorUsedError;
+  bool get isDeleted => throw _privateConstructorUsedError;
   dynamic get required => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -575,6 +618,7 @@ abstract class $ClientOutPutCopyWith<$Res> {
       String telephone,
       String prenom,
       DateTime createdDate,
+      bool isDeleted,
       dynamic required});
 }
 
@@ -598,6 +642,7 @@ class _$ClientOutPutCopyWithImpl<$Res, $Val extends ClientOutPut>
     Object? telephone = null,
     Object? prenom = null,
     Object? createdDate = null,
+    Object? isDeleted = null,
     Object? required = freezed,
   }) {
     return _then(_value.copyWith(
@@ -629,6 +674,10 @@ class _$ClientOutPutCopyWithImpl<$Res, $Val extends ClientOutPut>
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      isDeleted: null == isDeleted
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       required: freezed == required
           ? _value.required
           : required // ignore: cast_nullable_to_non_nullable
@@ -653,6 +702,7 @@ abstract class _$$ClientOutPutImplCopyWith<$Res>
       String telephone,
       String prenom,
       DateTime createdDate,
+      bool isDeleted,
       dynamic required});
 }
 
@@ -674,6 +724,7 @@ class __$$ClientOutPutImplCopyWithImpl<$Res>
     Object? telephone = null,
     Object? prenom = null,
     Object? createdDate = null,
+    Object? isDeleted = null,
     Object? required = freezed,
   }) {
     return _then(_$ClientOutPutImpl(
@@ -705,6 +756,10 @@ class __$$ClientOutPutImplCopyWithImpl<$Res>
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      isDeleted: null == isDeleted
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       required: freezed == required ? _value.required! : required,
     ));
   }
@@ -721,6 +776,7 @@ class _$ClientOutPutImpl implements _ClientOutPut {
       required this.telephone,
       required this.prenom,
       required this.createdDate,
+      required this.isDeleted,
       this.required});
 
   factory _$ClientOutPutImpl.fromJson(Map<String, dynamic> json) =>
@@ -741,11 +797,13 @@ class _$ClientOutPutImpl implements _ClientOutPut {
   @override
   final DateTime createdDate;
   @override
+  final bool isDeleted;
+  @override
   final dynamic required;
 
   @override
   String toString() {
-    return 'ClientOutPut(clientId: $clientId, nom: $nom, uuid: $uuid, photo: $photo, telephone: $telephone, prenom: $prenom, createdDate: $createdDate, required: $required)';
+    return 'ClientOutPut(clientId: $clientId, nom: $nom, uuid: $uuid, photo: $photo, telephone: $telephone, prenom: $prenom, createdDate: $createdDate, isDeleted: $isDeleted, required: $required)';
   }
 
   @override
@@ -763,6 +821,8 @@ class _$ClientOutPutImpl implements _ClientOutPut {
             (identical(other.prenom, prenom) || other.prenom == prenom) &&
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
+            (identical(other.isDeleted, isDeleted) ||
+                other.isDeleted == isDeleted) &&
             const DeepCollectionEquality().equals(other.required, required));
   }
 
@@ -777,6 +837,7 @@ class _$ClientOutPutImpl implements _ClientOutPut {
       telephone,
       prenom,
       createdDate,
+      isDeleted,
       const DeepCollectionEquality().hash(required));
 
   @JsonKey(ignore: true)
@@ -802,6 +863,7 @@ abstract class _ClientOutPut implements ClientOutPut {
       required final String telephone,
       required final String prenom,
       required final DateTime createdDate,
+      required final bool isDeleted,
       final dynamic required}) = _$ClientOutPutImpl;
 
   factory _ClientOutPut.fromJson(Map<String, dynamic> json) =
@@ -821,6 +883,8 @@ abstract class _ClientOutPut implements ClientOutPut {
   String get prenom;
   @override
   DateTime get createdDate;
+  @override
+  bool get isDeleted;
   @override
   dynamic get required;
   @override
