@@ -12,17 +12,16 @@ dependencies:
   freezed_annotation: ^2.4.1
   json_annotation: ^4.8.1
 
-
 dev_dependencies:
   lints: ^2.1.0
   test: ^1.24.0
 
-  build_runner: ^2.3.3
+  build_runner: ^2.4.12
   freezed: ^2.4.5
   injectable_generator: ^2.1.6
   json_serializable: ^6.7.1
   auto_exporter: ^1.5.0
 
-scripts: 
+scripts:
   gen-build: 'dart run build_runner build && rm lib/gopaxe_models.dart && mv lib/export.dart lib/gopaxe_models.dart && git add . && git commit -m "Added new model" && git push'
-  gen-watch: 'dart run build_runner watch && rm lib/gopaxe_models.dart && mv lib/export.dart lib/gopaxe_models.dart'
+  gen-watch: "dart run build_runner watch && rm lib/gopaxe_models.dart && mv lib/export.dart lib/gopaxe_models.dart"
