@@ -35,7 +35,7 @@ class DevisLine with _$DevisLine {
       required String libelle,
       required int quantity,
       required double unitPrice,
-      required double lineDevis,
+      required double lineDevisTotal,
       required int numDevis}) = _DevisLine;
   factory DevisLine.fromJson(Map<String, dynamic> json) =>
       _$DevisLineFromJson(json);
@@ -44,11 +44,9 @@ class DevisLine with _$DevisLine {
 @freezed
 class DevisLineRequest with _$DevisLineRequest {
   const factory DevisLineRequest(
-      {required int lineDevisId,
-      required String libelle,
+      {required String libelle,
       required int quantity,
       required double unitPrice,
-      required double lineDevis,
       required int numDevis}) = _DevisLineRequest;
   factory DevisLineRequest.fromJson(Map<String, dynamic> json) =>
       _$DevisLineRequestFromJson(json);

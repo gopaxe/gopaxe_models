@@ -517,7 +517,7 @@ mixin _$DevisLine {
   String get libelle => throw _privateConstructorUsedError;
   int get quantity => throw _privateConstructorUsedError;
   double get unitPrice => throw _privateConstructorUsedError;
-  double get lineDevis => throw _privateConstructorUsedError;
+  double get lineDevisTotal => throw _privateConstructorUsedError;
   int get numDevis => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -536,7 +536,7 @@ abstract class $DevisLineCopyWith<$Res> {
       String libelle,
       int quantity,
       double unitPrice,
-      double lineDevis,
+      double lineDevisTotal,
       int numDevis});
 }
 
@@ -557,7 +557,7 @@ class _$DevisLineCopyWithImpl<$Res, $Val extends DevisLine>
     Object? libelle = null,
     Object? quantity = null,
     Object? unitPrice = null,
-    Object? lineDevis = null,
+    Object? lineDevisTotal = null,
     Object? numDevis = null,
   }) {
     return _then(_value.copyWith(
@@ -577,9 +577,9 @@ class _$DevisLineCopyWithImpl<$Res, $Val extends DevisLine>
           ? _value.unitPrice
           : unitPrice // ignore: cast_nullable_to_non_nullable
               as double,
-      lineDevis: null == lineDevis
-          ? _value.lineDevis
-          : lineDevis // ignore: cast_nullable_to_non_nullable
+      lineDevisTotal: null == lineDevisTotal
+          ? _value.lineDevisTotal
+          : lineDevisTotal // ignore: cast_nullable_to_non_nullable
               as double,
       numDevis: null == numDevis
           ? _value.numDevis
@@ -602,7 +602,7 @@ abstract class _$$DevisLineImplCopyWith<$Res>
       String libelle,
       int quantity,
       double unitPrice,
-      double lineDevis,
+      double lineDevisTotal,
       int numDevis});
 }
 
@@ -621,7 +621,7 @@ class __$$DevisLineImplCopyWithImpl<$Res>
     Object? libelle = null,
     Object? quantity = null,
     Object? unitPrice = null,
-    Object? lineDevis = null,
+    Object? lineDevisTotal = null,
     Object? numDevis = null,
   }) {
     return _then(_$DevisLineImpl(
@@ -641,9 +641,9 @@ class __$$DevisLineImplCopyWithImpl<$Res>
           ? _value.unitPrice
           : unitPrice // ignore: cast_nullable_to_non_nullable
               as double,
-      lineDevis: null == lineDevis
-          ? _value.lineDevis
-          : lineDevis // ignore: cast_nullable_to_non_nullable
+      lineDevisTotal: null == lineDevisTotal
+          ? _value.lineDevisTotal
+          : lineDevisTotal // ignore: cast_nullable_to_non_nullable
               as double,
       numDevis: null == numDevis
           ? _value.numDevis
@@ -661,7 +661,7 @@ class _$DevisLineImpl implements _DevisLine {
       required this.libelle,
       required this.quantity,
       required this.unitPrice,
-      required this.lineDevis,
+      required this.lineDevisTotal,
       required this.numDevis});
 
   factory _$DevisLineImpl.fromJson(Map<String, dynamic> json) =>
@@ -676,13 +676,13 @@ class _$DevisLineImpl implements _DevisLine {
   @override
   final double unitPrice;
   @override
-  final double lineDevis;
+  final double lineDevisTotal;
   @override
   final int numDevis;
 
   @override
   String toString() {
-    return 'DevisLine(lineDevisId: $lineDevisId, libelle: $libelle, quantity: $quantity, unitPrice: $unitPrice, lineDevis: $lineDevis, numDevis: $numDevis)';
+    return 'DevisLine(lineDevisId: $lineDevisId, libelle: $libelle, quantity: $quantity, unitPrice: $unitPrice, lineDevisTotal: $lineDevisTotal, numDevis: $numDevis)';
   }
 
   @override
@@ -697,8 +697,8 @@ class _$DevisLineImpl implements _DevisLine {
                 other.quantity == quantity) &&
             (identical(other.unitPrice, unitPrice) ||
                 other.unitPrice == unitPrice) &&
-            (identical(other.lineDevis, lineDevis) ||
-                other.lineDevis == lineDevis) &&
+            (identical(other.lineDevisTotal, lineDevisTotal) ||
+                other.lineDevisTotal == lineDevisTotal) &&
             (identical(other.numDevis, numDevis) ||
                 other.numDevis == numDevis));
   }
@@ -706,7 +706,7 @@ class _$DevisLineImpl implements _DevisLine {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, lineDevisId, libelle, quantity,
-      unitPrice, lineDevis, numDevis);
+      unitPrice, lineDevisTotal, numDevis);
 
   @JsonKey(ignore: true)
   @override
@@ -728,7 +728,7 @@ abstract class _DevisLine implements DevisLine {
       required final String libelle,
       required final int quantity,
       required final double unitPrice,
-      required final double lineDevis,
+      required final double lineDevisTotal,
       required final int numDevis}) = _$DevisLineImpl;
 
   factory _DevisLine.fromJson(Map<String, dynamic> json) =
@@ -743,7 +743,7 @@ abstract class _DevisLine implements DevisLine {
   @override
   double get unitPrice;
   @override
-  double get lineDevis;
+  double get lineDevisTotal;
   @override
   int get numDevis;
   @override
@@ -758,11 +758,9 @@ DevisLineRequest _$DevisLineRequestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DevisLineRequest {
-  int get lineDevisId => throw _privateConstructorUsedError;
   String get libelle => throw _privateConstructorUsedError;
   int get quantity => throw _privateConstructorUsedError;
   double get unitPrice => throw _privateConstructorUsedError;
-  double get lineDevis => throw _privateConstructorUsedError;
   int get numDevis => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -777,13 +775,7 @@ abstract class $DevisLineRequestCopyWith<$Res> {
           DevisLineRequest value, $Res Function(DevisLineRequest) then) =
       _$DevisLineRequestCopyWithImpl<$Res, DevisLineRequest>;
   @useResult
-  $Res call(
-      {int lineDevisId,
-      String libelle,
-      int quantity,
-      double unitPrice,
-      double lineDevis,
-      int numDevis});
+  $Res call({String libelle, int quantity, double unitPrice, int numDevis});
 }
 
 /// @nodoc
@@ -799,18 +791,12 @@ class _$DevisLineRequestCopyWithImpl<$Res, $Val extends DevisLineRequest>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? lineDevisId = null,
     Object? libelle = null,
     Object? quantity = null,
     Object? unitPrice = null,
-    Object? lineDevis = null,
     Object? numDevis = null,
   }) {
     return _then(_value.copyWith(
-      lineDevisId: null == lineDevisId
-          ? _value.lineDevisId
-          : lineDevisId // ignore: cast_nullable_to_non_nullable
-              as int,
       libelle: null == libelle
           ? _value.libelle
           : libelle // ignore: cast_nullable_to_non_nullable
@@ -822,10 +808,6 @@ class _$DevisLineRequestCopyWithImpl<$Res, $Val extends DevisLineRequest>
       unitPrice: null == unitPrice
           ? _value.unitPrice
           : unitPrice // ignore: cast_nullable_to_non_nullable
-              as double,
-      lineDevis: null == lineDevis
-          ? _value.lineDevis
-          : lineDevis // ignore: cast_nullable_to_non_nullable
               as double,
       numDevis: null == numDevis
           ? _value.numDevis
@@ -843,13 +825,7 @@ abstract class _$$DevisLineRequestImplCopyWith<$Res>
       __$$DevisLineRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int lineDevisId,
-      String libelle,
-      int quantity,
-      double unitPrice,
-      double lineDevis,
-      int numDevis});
+  $Res call({String libelle, int quantity, double unitPrice, int numDevis});
 }
 
 /// @nodoc
@@ -863,18 +839,12 @@ class __$$DevisLineRequestImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? lineDevisId = null,
     Object? libelle = null,
     Object? quantity = null,
     Object? unitPrice = null,
-    Object? lineDevis = null,
     Object? numDevis = null,
   }) {
     return _then(_$DevisLineRequestImpl(
-      lineDevisId: null == lineDevisId
-          ? _value.lineDevisId
-          : lineDevisId // ignore: cast_nullable_to_non_nullable
-              as int,
       libelle: null == libelle
           ? _value.libelle
           : libelle // ignore: cast_nullable_to_non_nullable
@@ -886,10 +856,6 @@ class __$$DevisLineRequestImplCopyWithImpl<$Res>
       unitPrice: null == unitPrice
           ? _value.unitPrice
           : unitPrice // ignore: cast_nullable_to_non_nullable
-              as double,
-      lineDevis: null == lineDevis
-          ? _value.lineDevis
-          : lineDevis // ignore: cast_nullable_to_non_nullable
               as double,
       numDevis: null == numDevis
           ? _value.numDevis
@@ -903,18 +869,14 @@ class __$$DevisLineRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$DevisLineRequestImpl implements _DevisLineRequest {
   const _$DevisLineRequestImpl(
-      {required this.lineDevisId,
-      required this.libelle,
+      {required this.libelle,
       required this.quantity,
       required this.unitPrice,
-      required this.lineDevis,
       required this.numDevis});
 
   factory _$DevisLineRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$DevisLineRequestImplFromJson(json);
 
-  @override
-  final int lineDevisId;
   @override
   final String libelle;
   @override
@@ -922,13 +884,11 @@ class _$DevisLineRequestImpl implements _DevisLineRequest {
   @override
   final double unitPrice;
   @override
-  final double lineDevis;
-  @override
   final int numDevis;
 
   @override
   String toString() {
-    return 'DevisLineRequest(lineDevisId: $lineDevisId, libelle: $libelle, quantity: $quantity, unitPrice: $unitPrice, lineDevis: $lineDevis, numDevis: $numDevis)';
+    return 'DevisLineRequest(libelle: $libelle, quantity: $quantity, unitPrice: $unitPrice, numDevis: $numDevis)';
   }
 
   @override
@@ -936,23 +896,19 @@ class _$DevisLineRequestImpl implements _DevisLineRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DevisLineRequestImpl &&
-            (identical(other.lineDevisId, lineDevisId) ||
-                other.lineDevisId == lineDevisId) &&
             (identical(other.libelle, libelle) || other.libelle == libelle) &&
             (identical(other.quantity, quantity) ||
                 other.quantity == quantity) &&
             (identical(other.unitPrice, unitPrice) ||
                 other.unitPrice == unitPrice) &&
-            (identical(other.lineDevis, lineDevis) ||
-                other.lineDevis == lineDevis) &&
             (identical(other.numDevis, numDevis) ||
                 other.numDevis == numDevis));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, lineDevisId, libelle, quantity,
-      unitPrice, lineDevis, numDevis);
+  int get hashCode =>
+      Object.hash(runtimeType, libelle, quantity, unitPrice, numDevis);
 
   @JsonKey(ignore: true)
   @override
@@ -971,26 +927,20 @@ class _$DevisLineRequestImpl implements _DevisLineRequest {
 
 abstract class _DevisLineRequest implements DevisLineRequest {
   const factory _DevisLineRequest(
-      {required final int lineDevisId,
-      required final String libelle,
+      {required final String libelle,
       required final int quantity,
       required final double unitPrice,
-      required final double lineDevis,
       required final int numDevis}) = _$DevisLineRequestImpl;
 
   factory _DevisLineRequest.fromJson(Map<String, dynamic> json) =
       _$DevisLineRequestImpl.fromJson;
 
   @override
-  int get lineDevisId;
-  @override
   String get libelle;
   @override
   int get quantity;
   @override
   double get unitPrice;
-  @override
-  double get lineDevis;
   @override
   int get numDevis;
   @override

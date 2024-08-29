@@ -55,7 +55,7 @@ _$DevisLineImpl _$$DevisLineImplFromJson(Map<String, dynamic> json) =>
       libelle: json['libelle'] as String,
       quantity: json['quantity'] as int,
       unitPrice: (json['unitPrice'] as num).toDouble(),
-      lineDevis: (json['lineDevis'] as num).toDouble(),
+      lineDevisTotal: (json['lineDevisTotal'] as num).toDouble(),
       numDevis: json['numDevis'] as int,
     );
 
@@ -65,28 +65,24 @@ Map<String, dynamic> _$$DevisLineImplToJson(_$DevisLineImpl instance) =>
       'libelle': instance.libelle,
       'quantity': instance.quantity,
       'unitPrice': instance.unitPrice,
-      'lineDevis': instance.lineDevis,
+      'lineDevisTotal': instance.lineDevisTotal,
       'numDevis': instance.numDevis,
     };
 
 _$DevisLineRequestImpl _$$DevisLineRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$DevisLineRequestImpl(
-      lineDevisId: json['lineDevisId'] as int,
       libelle: json['libelle'] as String,
       quantity: json['quantity'] as int,
       unitPrice: (json['unitPrice'] as num).toDouble(),
-      lineDevis: (json['lineDevis'] as num).toDouble(),
       numDevis: json['numDevis'] as int,
     );
 
 Map<String, dynamic> _$$DevisLineRequestImplToJson(
         _$DevisLineRequestImpl instance) =>
     <String, dynamic>{
-      'lineDevisId': instance.lineDevisId,
       'libelle': instance.libelle,
       'quantity': instance.quantity,
       'unitPrice': instance.unitPrice,
-      'lineDevis': instance.lineDevis,
       'numDevis': instance.numDevis,
     };
