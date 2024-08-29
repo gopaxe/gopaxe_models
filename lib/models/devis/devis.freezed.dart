@@ -28,6 +28,7 @@ mixin _$Devis {
   DateTime? get correctionDate => throw _privateConstructorUsedError;
   int get numClient => throw _privateConstructorUsedError;
   bool get isDone => throw _privateConstructorUsedError;
+  bool get isLock => throw _privateConstructorUsedError;
   List<DevisLine> get devisLine => throw _privateConstructorUsedError;
   double? get balanceForSeeingDevis => throw _privateConstructorUsedError;
 
@@ -50,6 +51,7 @@ abstract class $DevisCopyWith<$Res> {
       DateTime? correctionDate,
       int numClient,
       bool isDone,
+      bool isLock,
       List<DevisLine> devisLine,
       double? balanceForSeeingDevis});
 }
@@ -75,6 +77,7 @@ class _$DevisCopyWithImpl<$Res, $Val extends Devis>
     Object? correctionDate = freezed,
     Object? numClient = null,
     Object? isDone = null,
+    Object? isLock = null,
     Object? devisLine = null,
     Object? balanceForSeeingDevis = freezed,
   }) {
@@ -111,6 +114,10 @@ class _$DevisCopyWithImpl<$Res, $Val extends Devis>
           ? _value.isDone
           : isDone // ignore: cast_nullable_to_non_nullable
               as bool,
+      isLock: null == isLock
+          ? _value.isLock
+          : isLock // ignore: cast_nullable_to_non_nullable
+              as bool,
       devisLine: null == devisLine
           ? _value.devisLine
           : devisLine // ignore: cast_nullable_to_non_nullable
@@ -139,6 +146,7 @@ abstract class _$$DevisImplCopyWith<$Res> implements $DevisCopyWith<$Res> {
       DateTime? correctionDate,
       int numClient,
       bool isDone,
+      bool isLock,
       List<DevisLine> devisLine,
       double? balanceForSeeingDevis});
 }
@@ -162,6 +170,7 @@ class __$$DevisImplCopyWithImpl<$Res>
     Object? correctionDate = freezed,
     Object? numClient = null,
     Object? isDone = null,
+    Object? isLock = null,
     Object? devisLine = null,
     Object? balanceForSeeingDevis = freezed,
   }) {
@@ -198,6 +207,10 @@ class __$$DevisImplCopyWithImpl<$Res>
           ? _value.isDone
           : isDone // ignore: cast_nullable_to_non_nullable
               as bool,
+      isLock: null == isLock
+          ? _value.isLock
+          : isLock // ignore: cast_nullable_to_non_nullable
+              as bool,
       devisLine: null == devisLine
           ? _value._devisLine
           : devisLine // ignore: cast_nullable_to_non_nullable
@@ -222,6 +235,7 @@ class _$DevisImpl implements _Devis {
       this.correctionDate,
       required this.numClient,
       required this.isDone,
+      required this.isLock,
       required final List<DevisLine> devisLine,
       this.balanceForSeeingDevis})
       : _devisLine = devisLine;
@@ -245,6 +259,8 @@ class _$DevisImpl implements _Devis {
   final int numClient;
   @override
   final bool isDone;
+  @override
+  final bool isLock;
   final List<DevisLine> _devisLine;
   @override
   List<DevisLine> get devisLine {
@@ -258,7 +274,7 @@ class _$DevisImpl implements _Devis {
 
   @override
   String toString() {
-    return 'Devis(devisId: $devisId, montantDevis: $montantDevis, file: $file, libelle: $libelle, createdDate: $createdDate, correctionDate: $correctionDate, numClient: $numClient, isDone: $isDone, devisLine: $devisLine, balanceForSeeingDevis: $balanceForSeeingDevis)';
+    return 'Devis(devisId: $devisId, montantDevis: $montantDevis, file: $file, libelle: $libelle, createdDate: $createdDate, correctionDate: $correctionDate, numClient: $numClient, isDone: $isDone, isLock: $isLock, devisLine: $devisLine, balanceForSeeingDevis: $balanceForSeeingDevis)';
   }
 
   @override
@@ -278,6 +294,7 @@ class _$DevisImpl implements _Devis {
             (identical(other.numClient, numClient) ||
                 other.numClient == numClient) &&
             (identical(other.isDone, isDone) || other.isDone == isDone) &&
+            (identical(other.isLock, isLock) || other.isLock == isLock) &&
             const DeepCollectionEquality()
                 .equals(other._devisLine, _devisLine) &&
             (identical(other.balanceForSeeingDevis, balanceForSeeingDevis) ||
@@ -296,6 +313,7 @@ class _$DevisImpl implements _Devis {
       correctionDate,
       numClient,
       isDone,
+      isLock,
       const DeepCollectionEquality().hash(_devisLine),
       balanceForSeeingDevis);
 
@@ -323,6 +341,7 @@ abstract class _Devis implements Devis {
       final DateTime? correctionDate,
       required final int numClient,
       required final bool isDone,
+      required final bool isLock,
       required final List<DevisLine> devisLine,
       final double? balanceForSeeingDevis}) = _$DevisImpl;
 
@@ -344,6 +363,8 @@ abstract class _Devis implements Devis {
   int get numClient;
   @override
   bool get isDone;
+  @override
+  bool get isLock;
   @override
   List<DevisLine> get devisLine;
   @override

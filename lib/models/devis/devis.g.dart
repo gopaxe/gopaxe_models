@@ -17,6 +17,7 @@ _$DevisImpl _$$DevisImplFromJson(Map<String, dynamic> json) => _$DevisImpl(
           : DateTime.parse(json['correctionDate'] as String),
       numClient: json['numClient'] as int,
       isDone: json['isDone'] as bool,
+      isLock: json['isLock'] as bool,
       devisLine: (json['devisLine'] as List<dynamic>)
           .map((e) => DevisLine.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -34,6 +35,7 @@ Map<String, dynamic> _$$DevisImplToJson(_$DevisImpl instance) =>
       'correctionDate': instance.correctionDate?.toIso8601String(),
       'numClient': instance.numClient,
       'isDone': instance.isDone,
+      'isLock': instance.isLock,
       'devisLine': instance.devisLine,
       'balanceForSeeingDevis': instance.balanceForSeeingDevis,
     };
