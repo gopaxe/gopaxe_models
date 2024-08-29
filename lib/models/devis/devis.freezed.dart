@@ -28,7 +28,7 @@ mixin _$Devis {
   int get numClient => throw _privateConstructorUsedError;
   bool get isDone => throw _privateConstructorUsedError;
   List<DevisLine> get devisLine => throw _privateConstructorUsedError;
-  double get taxeDevis => throw _privateConstructorUsedError;
+  double get balanceForSeeingDevis => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -49,7 +49,7 @@ abstract class $DevisCopyWith<$Res> {
       int numClient,
       bool isDone,
       List<DevisLine> devisLine,
-      double taxeDevis});
+      double balanceForSeeingDevis});
 }
 
 /// @nodoc
@@ -73,7 +73,7 @@ class _$DevisCopyWithImpl<$Res, $Val extends Devis>
     Object? numClient = null,
     Object? isDone = null,
     Object? devisLine = null,
-    Object? taxeDevis = null,
+    Object? balanceForSeeingDevis = null,
   }) {
     return _then(_value.copyWith(
       devisId: null == devisId
@@ -108,9 +108,9 @@ class _$DevisCopyWithImpl<$Res, $Val extends Devis>
           ? _value.devisLine
           : devisLine // ignore: cast_nullable_to_non_nullable
               as List<DevisLine>,
-      taxeDevis: null == taxeDevis
-          ? _value.taxeDevis
-          : taxeDevis // ignore: cast_nullable_to_non_nullable
+      balanceForSeeingDevis: null == balanceForSeeingDevis
+          ? _value.balanceForSeeingDevis
+          : balanceForSeeingDevis // ignore: cast_nullable_to_non_nullable
               as double,
     ) as $Val);
   }
@@ -132,7 +132,7 @@ abstract class _$$DevisImplCopyWith<$Res> implements $DevisCopyWith<$Res> {
       int numClient,
       bool isDone,
       List<DevisLine> devisLine,
-      double taxeDevis});
+      double balanceForSeeingDevis});
 }
 
 /// @nodoc
@@ -154,7 +154,7 @@ class __$$DevisImplCopyWithImpl<$Res>
     Object? numClient = null,
     Object? isDone = null,
     Object? devisLine = null,
-    Object? taxeDevis = null,
+    Object? balanceForSeeingDevis = null,
   }) {
     return _then(_$DevisImpl(
       devisId: null == devisId
@@ -189,9 +189,9 @@ class __$$DevisImplCopyWithImpl<$Res>
           ? _value._devisLine
           : devisLine // ignore: cast_nullable_to_non_nullable
               as List<DevisLine>,
-      taxeDevis: null == taxeDevis
-          ? _value.taxeDevis
-          : taxeDevis // ignore: cast_nullable_to_non_nullable
+      balanceForSeeingDevis: null == balanceForSeeingDevis
+          ? _value.balanceForSeeingDevis
+          : balanceForSeeingDevis // ignore: cast_nullable_to_non_nullable
               as double,
     ));
   }
@@ -209,7 +209,7 @@ class _$DevisImpl implements _Devis {
       required this.numClient,
       required this.isDone,
       required final List<DevisLine> devisLine,
-      required this.taxeDevis})
+      required this.balanceForSeeingDevis})
       : _devisLine = devisLine;
 
   factory _$DevisImpl.fromJson(Map<String, dynamic> json) =>
@@ -238,11 +238,11 @@ class _$DevisImpl implements _Devis {
   }
 
   @override
-  final double taxeDevis;
+  final double balanceForSeeingDevis;
 
   @override
   String toString() {
-    return 'Devis(devisId: $devisId, montantDevis: $montantDevis, file: $file, createdDate: $createdDate, correctionDate: $correctionDate, numClient: $numClient, isDone: $isDone, devisLine: $devisLine, taxeDevis: $taxeDevis)';
+    return 'Devis(devisId: $devisId, montantDevis: $montantDevis, file: $file, createdDate: $createdDate, correctionDate: $correctionDate, numClient: $numClient, isDone: $isDone, devisLine: $devisLine, balanceForSeeingDevis: $balanceForSeeingDevis)';
   }
 
   @override
@@ -263,8 +263,8 @@ class _$DevisImpl implements _Devis {
             (identical(other.isDone, isDone) || other.isDone == isDone) &&
             const DeepCollectionEquality()
                 .equals(other._devisLine, _devisLine) &&
-            (identical(other.taxeDevis, taxeDevis) ||
-                other.taxeDevis == taxeDevis));
+            (identical(other.balanceForSeeingDevis, balanceForSeeingDevis) ||
+                other.balanceForSeeingDevis == balanceForSeeingDevis));
   }
 
   @JsonKey(ignore: true)
@@ -279,7 +279,7 @@ class _$DevisImpl implements _Devis {
       numClient,
       isDone,
       const DeepCollectionEquality().hash(_devisLine),
-      taxeDevis);
+      balanceForSeeingDevis);
 
   @JsonKey(ignore: true)
   @override
@@ -305,7 +305,7 @@ abstract class _Devis implements Devis {
       required final int numClient,
       required final bool isDone,
       required final List<DevisLine> devisLine,
-      required final double taxeDevis}) = _$DevisImpl;
+      required final double balanceForSeeingDevis}) = _$DevisImpl;
 
   factory _Devis.fromJson(Map<String, dynamic> json) = _$DevisImpl.fromJson;
 
@@ -326,7 +326,7 @@ abstract class _Devis implements Devis {
   @override
   List<DevisLine> get devisLine;
   @override
-  double get taxeDevis;
+  double get balanceForSeeingDevis;
   @override
   @JsonKey(ignore: true)
   _$$DevisImplCopyWith<_$DevisImpl> get copyWith =>

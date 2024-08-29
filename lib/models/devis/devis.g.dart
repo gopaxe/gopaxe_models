@@ -17,7 +17,7 @@ _$DevisImpl _$$DevisImplFromJson(Map<String, dynamic> json) => _$DevisImpl(
       devisLine: (json['devisLine'] as List<dynamic>)
           .map((e) => DevisLine.fromJson(e as Map<String, dynamic>))
           .toList(),
-      taxeDevis: (json['taxeDevis'] as num).toDouble(),
+      balanceForSeeingDevis: (json['balanceForSeeingDevis'] as num).toDouble(),
     );
 
 Map<String, dynamic> _$$DevisImplToJson(_$DevisImpl instance) =>
@@ -30,7 +30,7 @@ Map<String, dynamic> _$$DevisImplToJson(_$DevisImpl instance) =>
       'numClient': instance.numClient,
       'isDone': instance.isDone,
       'devisLine': instance.devisLine,
-      'taxeDevis': instance.taxeDevis,
+      'balanceForSeeingDevis': instance.balanceForSeeingDevis,
     };
 
 _$CreateDeviceRequestImpl _$$CreateDeviceRequestImplFromJson(
