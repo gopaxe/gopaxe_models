@@ -14,7 +14,7 @@ class Devis with _$Devis {
       required int numClient,
       required bool isDone,
       required List<DevisLine> devisLine,
-      required double taxeDevis}) = _Devis;
+      required double balanceForSeeingDevis}) = _Devis;
   factory Devis.fromJson(Map<String, dynamic> json) => _$DevisFromJson(json);
 }
 
