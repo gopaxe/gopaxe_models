@@ -27,6 +27,7 @@ mixin _$Devis {
   DateTime get correctionDate => throw _privateConstructorUsedError;
   int get numClient => throw _privateConstructorUsedError;
   bool get isDone => throw _privateConstructorUsedError;
+  List<DevisLine> get devisLine => throw _privateConstructorUsedError;
   double get taxeDevis => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -47,6 +48,7 @@ abstract class $DevisCopyWith<$Res> {
       DateTime correctionDate,
       int numClient,
       bool isDone,
+      List<DevisLine> devisLine,
       double taxeDevis});
 }
 
@@ -70,6 +72,7 @@ class _$DevisCopyWithImpl<$Res, $Val extends Devis>
     Object? correctionDate = null,
     Object? numClient = null,
     Object? isDone = null,
+    Object? devisLine = null,
     Object? taxeDevis = null,
   }) {
     return _then(_value.copyWith(
@@ -101,6 +104,10 @@ class _$DevisCopyWithImpl<$Res, $Val extends Devis>
           ? _value.isDone
           : isDone // ignore: cast_nullable_to_non_nullable
               as bool,
+      devisLine: null == devisLine
+          ? _value.devisLine
+          : devisLine // ignore: cast_nullable_to_non_nullable
+              as List<DevisLine>,
       taxeDevis: null == taxeDevis
           ? _value.taxeDevis
           : taxeDevis // ignore: cast_nullable_to_non_nullable
@@ -124,6 +131,7 @@ abstract class _$$DevisImplCopyWith<$Res> implements $DevisCopyWith<$Res> {
       DateTime correctionDate,
       int numClient,
       bool isDone,
+      List<DevisLine> devisLine,
       double taxeDevis});
 }
 
@@ -145,6 +153,7 @@ class __$$DevisImplCopyWithImpl<$Res>
     Object? correctionDate = null,
     Object? numClient = null,
     Object? isDone = null,
+    Object? devisLine = null,
     Object? taxeDevis = null,
   }) {
     return _then(_$DevisImpl(
@@ -176,6 +185,10 @@ class __$$DevisImplCopyWithImpl<$Res>
           ? _value.isDone
           : isDone // ignore: cast_nullable_to_non_nullable
               as bool,
+      devisLine: null == devisLine
+          ? _value._devisLine
+          : devisLine // ignore: cast_nullable_to_non_nullable
+              as List<DevisLine>,
       taxeDevis: null == taxeDevis
           ? _value.taxeDevis
           : taxeDevis // ignore: cast_nullable_to_non_nullable
@@ -195,7 +208,9 @@ class _$DevisImpl implements _Devis {
       required this.correctionDate,
       required this.numClient,
       required this.isDone,
-      required this.taxeDevis});
+      required final List<DevisLine> devisLine,
+      required this.taxeDevis})
+      : _devisLine = devisLine;
 
   factory _$DevisImpl.fromJson(Map<String, dynamic> json) =>
       _$$DevisImplFromJson(json);
@@ -214,12 +229,20 @@ class _$DevisImpl implements _Devis {
   final int numClient;
   @override
   final bool isDone;
+  final List<DevisLine> _devisLine;
+  @override
+  List<DevisLine> get devisLine {
+    if (_devisLine is EqualUnmodifiableListView) return _devisLine;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_devisLine);
+  }
+
   @override
   final double taxeDevis;
 
   @override
   String toString() {
-    return 'Devis(devisId: $devisId, montantDevis: $montantDevis, file: $file, createdDate: $createdDate, correctionDate: $correctionDate, numClient: $numClient, isDone: $isDone, taxeDevis: $taxeDevis)';
+    return 'Devis(devisId: $devisId, montantDevis: $montantDevis, file: $file, createdDate: $createdDate, correctionDate: $correctionDate, numClient: $numClient, isDone: $isDone, devisLine: $devisLine, taxeDevis: $taxeDevis)';
   }
 
   @override
@@ -238,14 +261,25 @@ class _$DevisImpl implements _Devis {
             (identical(other.numClient, numClient) ||
                 other.numClient == numClient) &&
             (identical(other.isDone, isDone) || other.isDone == isDone) &&
+            const DeepCollectionEquality()
+                .equals(other._devisLine, _devisLine) &&
             (identical(other.taxeDevis, taxeDevis) ||
                 other.taxeDevis == taxeDevis));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, devisId, montantDevis, file,
-      createdDate, correctionDate, numClient, isDone, taxeDevis);
+  int get hashCode => Object.hash(
+      runtimeType,
+      devisId,
+      montantDevis,
+      file,
+      createdDate,
+      correctionDate,
+      numClient,
+      isDone,
+      const DeepCollectionEquality().hash(_devisLine),
+      taxeDevis);
 
   @JsonKey(ignore: true)
   @override
@@ -270,6 +304,7 @@ abstract class _Devis implements Devis {
       required final DateTime correctionDate,
       required final int numClient,
       required final bool isDone,
+      required final List<DevisLine> devisLine,
       required final double taxeDevis}) = _$DevisImpl;
 
   factory _Devis.fromJson(Map<String, dynamic> json) = _$DevisImpl.fromJson;
@@ -289,10 +324,186 @@ abstract class _Devis implements Devis {
   @override
   bool get isDone;
   @override
+  List<DevisLine> get devisLine;
+  @override
   double get taxeDevis;
   @override
   @JsonKey(ignore: true)
   _$$DevisImplCopyWith<_$DevisImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CreateDeviceRequest _$CreateDeviceRequestFromJson(Map<String, dynamic> json) {
+  return _CreateDeviceRequest.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CreateDeviceRequest {
+  String get file => throw _privateConstructorUsedError;
+  String get libelle => throw _privateConstructorUsedError;
+  int get numClient => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CreateDeviceRequestCopyWith<CreateDeviceRequest> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CreateDeviceRequestCopyWith<$Res> {
+  factory $CreateDeviceRequestCopyWith(
+          CreateDeviceRequest value, $Res Function(CreateDeviceRequest) then) =
+      _$CreateDeviceRequestCopyWithImpl<$Res, CreateDeviceRequest>;
+  @useResult
+  $Res call({String file, String libelle, int numClient});
+}
+
+/// @nodoc
+class _$CreateDeviceRequestCopyWithImpl<$Res, $Val extends CreateDeviceRequest>
+    implements $CreateDeviceRequestCopyWith<$Res> {
+  _$CreateDeviceRequestCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? file = null,
+    Object? libelle = null,
+    Object? numClient = null,
+  }) {
+    return _then(_value.copyWith(
+      file: null == file
+          ? _value.file
+          : file // ignore: cast_nullable_to_non_nullable
+              as String,
+      libelle: null == libelle
+          ? _value.libelle
+          : libelle // ignore: cast_nullable_to_non_nullable
+              as String,
+      numClient: null == numClient
+          ? _value.numClient
+          : numClient // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$CreateDeviceRequestImplCopyWith<$Res>
+    implements $CreateDeviceRequestCopyWith<$Res> {
+  factory _$$CreateDeviceRequestImplCopyWith(_$CreateDeviceRequestImpl value,
+          $Res Function(_$CreateDeviceRequestImpl) then) =
+      __$$CreateDeviceRequestImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String file, String libelle, int numClient});
+}
+
+/// @nodoc
+class __$$CreateDeviceRequestImplCopyWithImpl<$Res>
+    extends _$CreateDeviceRequestCopyWithImpl<$Res, _$CreateDeviceRequestImpl>
+    implements _$$CreateDeviceRequestImplCopyWith<$Res> {
+  __$$CreateDeviceRequestImplCopyWithImpl(_$CreateDeviceRequestImpl _value,
+      $Res Function(_$CreateDeviceRequestImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? file = null,
+    Object? libelle = null,
+    Object? numClient = null,
+  }) {
+    return _then(_$CreateDeviceRequestImpl(
+      file: null == file
+          ? _value.file
+          : file // ignore: cast_nullable_to_non_nullable
+              as String,
+      libelle: null == libelle
+          ? _value.libelle
+          : libelle // ignore: cast_nullable_to_non_nullable
+              as String,
+      numClient: null == numClient
+          ? _value.numClient
+          : numClient // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$CreateDeviceRequestImpl implements _CreateDeviceRequest {
+  const _$CreateDeviceRequestImpl(
+      {required this.file, required this.libelle, required this.numClient});
+
+  factory _$CreateDeviceRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CreateDeviceRequestImplFromJson(json);
+
+  @override
+  final String file;
+  @override
+  final String libelle;
+  @override
+  final int numClient;
+
+  @override
+  String toString() {
+    return 'CreateDeviceRequest(file: $file, libelle: $libelle, numClient: $numClient)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateDeviceRequestImpl &&
+            (identical(other.file, file) || other.file == file) &&
+            (identical(other.libelle, libelle) || other.libelle == libelle) &&
+            (identical(other.numClient, numClient) ||
+                other.numClient == numClient));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, file, libelle, numClient);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateDeviceRequestImplCopyWith<_$CreateDeviceRequestImpl> get copyWith =>
+      __$$CreateDeviceRequestImplCopyWithImpl<_$CreateDeviceRequestImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CreateDeviceRequestImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _CreateDeviceRequest implements CreateDeviceRequest {
+  const factory _CreateDeviceRequest(
+      {required final String file,
+      required final String libelle,
+      required final int numClient}) = _$CreateDeviceRequestImpl;
+
+  factory _CreateDeviceRequest.fromJson(Map<String, dynamic> json) =
+      _$CreateDeviceRequestImpl.fromJson;
+
+  @override
+  String get file;
+  @override
+  String get libelle;
+  @override
+  int get numClient;
+  @override
+  @JsonKey(ignore: true)
+  _$$CreateDeviceRequestImplCopyWith<_$CreateDeviceRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -538,5 +749,252 @@ abstract class _DevisLine implements DevisLine {
   @override
   @JsonKey(ignore: true)
   _$$DevisLineImplCopyWith<_$DevisLineImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+DevisLineRequest _$DevisLineRequestFromJson(Map<String, dynamic> json) {
+  return _DevisLineRequest.fromJson(json);
+}
+
+/// @nodoc
+mixin _$DevisLineRequest {
+  int get lineDevisId => throw _privateConstructorUsedError;
+  String get libelle => throw _privateConstructorUsedError;
+  int get quantity => throw _privateConstructorUsedError;
+  double get unitPrice => throw _privateConstructorUsedError;
+  double get lineDevis => throw _privateConstructorUsedError;
+  int get numDevis => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DevisLineRequestCopyWith<DevisLineRequest> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DevisLineRequestCopyWith<$Res> {
+  factory $DevisLineRequestCopyWith(
+          DevisLineRequest value, $Res Function(DevisLineRequest) then) =
+      _$DevisLineRequestCopyWithImpl<$Res, DevisLineRequest>;
+  @useResult
+  $Res call(
+      {int lineDevisId,
+      String libelle,
+      int quantity,
+      double unitPrice,
+      double lineDevis,
+      int numDevis});
+}
+
+/// @nodoc
+class _$DevisLineRequestCopyWithImpl<$Res, $Val extends DevisLineRequest>
+    implements $DevisLineRequestCopyWith<$Res> {
+  _$DevisLineRequestCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? lineDevisId = null,
+    Object? libelle = null,
+    Object? quantity = null,
+    Object? unitPrice = null,
+    Object? lineDevis = null,
+    Object? numDevis = null,
+  }) {
+    return _then(_value.copyWith(
+      lineDevisId: null == lineDevisId
+          ? _value.lineDevisId
+          : lineDevisId // ignore: cast_nullable_to_non_nullable
+              as int,
+      libelle: null == libelle
+          ? _value.libelle
+          : libelle // ignore: cast_nullable_to_non_nullable
+              as String,
+      quantity: null == quantity
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as int,
+      unitPrice: null == unitPrice
+          ? _value.unitPrice
+          : unitPrice // ignore: cast_nullable_to_non_nullable
+              as double,
+      lineDevis: null == lineDevis
+          ? _value.lineDevis
+          : lineDevis // ignore: cast_nullable_to_non_nullable
+              as double,
+      numDevis: null == numDevis
+          ? _value.numDevis
+          : numDevis // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$DevisLineRequestImplCopyWith<$Res>
+    implements $DevisLineRequestCopyWith<$Res> {
+  factory _$$DevisLineRequestImplCopyWith(_$DevisLineRequestImpl value,
+          $Res Function(_$DevisLineRequestImpl) then) =
+      __$$DevisLineRequestImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int lineDevisId,
+      String libelle,
+      int quantity,
+      double unitPrice,
+      double lineDevis,
+      int numDevis});
+}
+
+/// @nodoc
+class __$$DevisLineRequestImplCopyWithImpl<$Res>
+    extends _$DevisLineRequestCopyWithImpl<$Res, _$DevisLineRequestImpl>
+    implements _$$DevisLineRequestImplCopyWith<$Res> {
+  __$$DevisLineRequestImplCopyWithImpl(_$DevisLineRequestImpl _value,
+      $Res Function(_$DevisLineRequestImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? lineDevisId = null,
+    Object? libelle = null,
+    Object? quantity = null,
+    Object? unitPrice = null,
+    Object? lineDevis = null,
+    Object? numDevis = null,
+  }) {
+    return _then(_$DevisLineRequestImpl(
+      lineDevisId: null == lineDevisId
+          ? _value.lineDevisId
+          : lineDevisId // ignore: cast_nullable_to_non_nullable
+              as int,
+      libelle: null == libelle
+          ? _value.libelle
+          : libelle // ignore: cast_nullable_to_non_nullable
+              as String,
+      quantity: null == quantity
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as int,
+      unitPrice: null == unitPrice
+          ? _value.unitPrice
+          : unitPrice // ignore: cast_nullable_to_non_nullable
+              as double,
+      lineDevis: null == lineDevis
+          ? _value.lineDevis
+          : lineDevis // ignore: cast_nullable_to_non_nullable
+              as double,
+      numDevis: null == numDevis
+          ? _value.numDevis
+          : numDevis // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$DevisLineRequestImpl implements _DevisLineRequest {
+  const _$DevisLineRequestImpl(
+      {required this.lineDevisId,
+      required this.libelle,
+      required this.quantity,
+      required this.unitPrice,
+      required this.lineDevis,
+      required this.numDevis});
+
+  factory _$DevisLineRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DevisLineRequestImplFromJson(json);
+
+  @override
+  final int lineDevisId;
+  @override
+  final String libelle;
+  @override
+  final int quantity;
+  @override
+  final double unitPrice;
+  @override
+  final double lineDevis;
+  @override
+  final int numDevis;
+
+  @override
+  String toString() {
+    return 'DevisLineRequest(lineDevisId: $lineDevisId, libelle: $libelle, quantity: $quantity, unitPrice: $unitPrice, lineDevis: $lineDevis, numDevis: $numDevis)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DevisLineRequestImpl &&
+            (identical(other.lineDevisId, lineDevisId) ||
+                other.lineDevisId == lineDevisId) &&
+            (identical(other.libelle, libelle) || other.libelle == libelle) &&
+            (identical(other.quantity, quantity) ||
+                other.quantity == quantity) &&
+            (identical(other.unitPrice, unitPrice) ||
+                other.unitPrice == unitPrice) &&
+            (identical(other.lineDevis, lineDevis) ||
+                other.lineDevis == lineDevis) &&
+            (identical(other.numDevis, numDevis) ||
+                other.numDevis == numDevis));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, lineDevisId, libelle, quantity,
+      unitPrice, lineDevis, numDevis);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DevisLineRequestImplCopyWith<_$DevisLineRequestImpl> get copyWith =>
+      __$$DevisLineRequestImplCopyWithImpl<_$DevisLineRequestImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DevisLineRequestImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _DevisLineRequest implements DevisLineRequest {
+  const factory _DevisLineRequest(
+      {required final int lineDevisId,
+      required final String libelle,
+      required final int quantity,
+      required final double unitPrice,
+      required final double lineDevis,
+      required final int numDevis}) = _$DevisLineRequestImpl;
+
+  factory _DevisLineRequest.fromJson(Map<String, dynamic> json) =
+      _$DevisLineRequestImpl.fromJson;
+
+  @override
+  int get lineDevisId;
+  @override
+  String get libelle;
+  @override
+  int get quantity;
+  @override
+  double get unitPrice;
+  @override
+  double get lineDevis;
+  @override
+  int get numDevis;
+  @override
+  @JsonKey(ignore: true)
+  _$$DevisLineRequestImplCopyWith<_$DevisLineRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
