@@ -23,6 +23,7 @@ mixin _$Devis {
   int get devisId => throw _privateConstructorUsedError;
   int? get montantDevis => throw _privateConstructorUsedError;
   String get file => throw _privateConstructorUsedError;
+  String get libelle => throw _privateConstructorUsedError;
   DateTime get createdDate => throw _privateConstructorUsedError;
   DateTime? get correctionDate => throw _privateConstructorUsedError;
   int get numClient => throw _privateConstructorUsedError;
@@ -44,6 +45,7 @@ abstract class $DevisCopyWith<$Res> {
       {int devisId,
       int? montantDevis,
       String file,
+      String libelle,
       DateTime createdDate,
       DateTime? correctionDate,
       int numClient,
@@ -68,6 +70,7 @@ class _$DevisCopyWithImpl<$Res, $Val extends Devis>
     Object? devisId = null,
     Object? montantDevis = freezed,
     Object? file = null,
+    Object? libelle = null,
     Object? createdDate = null,
     Object? correctionDate = freezed,
     Object? numClient = null,
@@ -87,6 +90,10 @@ class _$DevisCopyWithImpl<$Res, $Val extends Devis>
       file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
+              as String,
+      libelle: null == libelle
+          ? _value.libelle
+          : libelle // ignore: cast_nullable_to_non_nullable
               as String,
       createdDate: null == createdDate
           ? _value.createdDate
@@ -127,6 +134,7 @@ abstract class _$$DevisImplCopyWith<$Res> implements $DevisCopyWith<$Res> {
       {int devisId,
       int? montantDevis,
       String file,
+      String libelle,
       DateTime createdDate,
       DateTime? correctionDate,
       int numClient,
@@ -149,6 +157,7 @@ class __$$DevisImplCopyWithImpl<$Res>
     Object? devisId = null,
     Object? montantDevis = freezed,
     Object? file = null,
+    Object? libelle = null,
     Object? createdDate = null,
     Object? correctionDate = freezed,
     Object? numClient = null,
@@ -168,6 +177,10 @@ class __$$DevisImplCopyWithImpl<$Res>
       file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
+              as String,
+      libelle: null == libelle
+          ? _value.libelle
+          : libelle // ignore: cast_nullable_to_non_nullable
               as String,
       createdDate: null == createdDate
           ? _value.createdDate
@@ -204,6 +217,7 @@ class _$DevisImpl implements _Devis {
       {required this.devisId,
       required this.montantDevis,
       required this.file,
+      required this.libelle,
       required this.createdDate,
       this.correctionDate,
       required this.numClient,
@@ -221,6 +235,8 @@ class _$DevisImpl implements _Devis {
   final int? montantDevis;
   @override
   final String file;
+  @override
+  final String libelle;
   @override
   final DateTime createdDate;
   @override
@@ -242,7 +258,7 @@ class _$DevisImpl implements _Devis {
 
   @override
   String toString() {
-    return 'Devis(devisId: $devisId, montantDevis: $montantDevis, file: $file, createdDate: $createdDate, correctionDate: $correctionDate, numClient: $numClient, isDone: $isDone, devisLine: $devisLine, balanceForSeeingDevis: $balanceForSeeingDevis)';
+    return 'Devis(devisId: $devisId, montantDevis: $montantDevis, file: $file, libelle: $libelle, createdDate: $createdDate, correctionDate: $correctionDate, numClient: $numClient, isDone: $isDone, devisLine: $devisLine, balanceForSeeingDevis: $balanceForSeeingDevis)';
   }
 
   @override
@@ -254,6 +270,7 @@ class _$DevisImpl implements _Devis {
             (identical(other.montantDevis, montantDevis) ||
                 other.montantDevis == montantDevis) &&
             (identical(other.file, file) || other.file == file) &&
+            (identical(other.libelle, libelle) || other.libelle == libelle) &&
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
             (identical(other.correctionDate, correctionDate) ||
@@ -274,6 +291,7 @@ class _$DevisImpl implements _Devis {
       devisId,
       montantDevis,
       file,
+      libelle,
       createdDate,
       correctionDate,
       numClient,
@@ -300,6 +318,7 @@ abstract class _Devis implements Devis {
       {required final int devisId,
       required final int? montantDevis,
       required final String file,
+      required final String libelle,
       required final DateTime createdDate,
       final DateTime? correctionDate,
       required final int numClient,
@@ -315,6 +334,8 @@ abstract class _Devis implements Devis {
   int? get montantDevis;
   @override
   String get file;
+  @override
+  String get libelle;
   @override
   DateTime get createdDate;
   @override

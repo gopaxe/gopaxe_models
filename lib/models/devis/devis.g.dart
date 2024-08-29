@@ -10,6 +10,7 @@ _$DevisImpl _$$DevisImplFromJson(Map<String, dynamic> json) => _$DevisImpl(
       devisId: json['devisId'] as int,
       montantDevis: json['montantDevis'] as int?,
       file: json['file'] as String,
+      libelle: json['libelle'] as String,
       createdDate: DateTime.parse(json['createdDate'] as String),
       correctionDate: json['correctionDate'] == null
           ? null
@@ -28,6 +29,7 @@ Map<String, dynamic> _$$DevisImplToJson(_$DevisImpl instance) =>
       'devisId': instance.devisId,
       'montantDevis': instance.montantDevis,
       'file': instance.file,
+      'libelle': instance.libelle,
       'createdDate': instance.createdDate.toIso8601String(),
       'correctionDate': instance.correctionDate?.toIso8601String(),
       'numClient': instance.numClient,
