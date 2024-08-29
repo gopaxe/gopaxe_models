@@ -25,6 +25,7 @@ class Devis with _$Devis {
 class CreateDeviceRequest with _$CreateDeviceRequest {
   const factory CreateDeviceRequest({
     required String file,
+    required String description,
     required String libelle,
   }) = _CreateDeviceRequest;
   factory CreateDeviceRequest.fromJson(Map<String, dynamic> json) =>

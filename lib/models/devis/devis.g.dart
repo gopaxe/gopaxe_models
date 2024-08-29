@@ -46,6 +46,7 @@ _$CreateDeviceRequestImpl _$$CreateDeviceRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$CreateDeviceRequestImpl(
       file: json['file'] as String,
+      description: json['description'] as String,
       libelle: json['libelle'] as String,
     );
 
@@ -53,6 +54,7 @@ Map<String, dynamic> _$$CreateDeviceRequestImplToJson(
         _$CreateDeviceRequestImpl instance) =>
     <String, dynamic>{
       'file': instance.file,
+      'description': instance.description,
       'libelle': instance.libelle,
     };
 

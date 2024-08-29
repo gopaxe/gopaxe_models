@@ -404,6 +404,7 @@ CreateDeviceRequest _$CreateDeviceRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CreateDeviceRequest {
   String get file => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
   String get libelle => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -418,7 +419,7 @@ abstract class $CreateDeviceRequestCopyWith<$Res> {
           CreateDeviceRequest value, $Res Function(CreateDeviceRequest) then) =
       _$CreateDeviceRequestCopyWithImpl<$Res, CreateDeviceRequest>;
   @useResult
-  $Res call({String file, String libelle});
+  $Res call({String file, String description, String libelle});
 }
 
 /// @nodoc
@@ -435,12 +436,17 @@ class _$CreateDeviceRequestCopyWithImpl<$Res, $Val extends CreateDeviceRequest>
   @override
   $Res call({
     Object? file = null,
+    Object? description = null,
     Object? libelle = null,
   }) {
     return _then(_value.copyWith(
       file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       libelle: null == libelle
           ? _value.libelle
@@ -458,7 +464,7 @@ abstract class _$$CreateDeviceRequestImplCopyWith<$Res>
       __$$CreateDeviceRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String file, String libelle});
+  $Res call({String file, String description, String libelle});
 }
 
 /// @nodoc
@@ -473,12 +479,17 @@ class __$$CreateDeviceRequestImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? file = null,
+    Object? description = null,
     Object? libelle = null,
   }) {
     return _then(_$CreateDeviceRequestImpl(
       file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       libelle: null == libelle
           ? _value.libelle
@@ -491,7 +502,8 @@ class __$$CreateDeviceRequestImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$CreateDeviceRequestImpl implements _CreateDeviceRequest {
-  const _$CreateDeviceRequestImpl({required this.file, required this.libelle});
+  const _$CreateDeviceRequestImpl(
+      {required this.file, required this.description, required this.libelle});
 
   factory _$CreateDeviceRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$CreateDeviceRequestImplFromJson(json);
@@ -499,11 +511,13 @@ class _$CreateDeviceRequestImpl implements _CreateDeviceRequest {
   @override
   final String file;
   @override
+  final String description;
+  @override
   final String libelle;
 
   @override
   String toString() {
-    return 'CreateDeviceRequest(file: $file, libelle: $libelle)';
+    return 'CreateDeviceRequest(file: $file, description: $description, libelle: $libelle)';
   }
 
   @override
@@ -512,12 +526,14 @@ class _$CreateDeviceRequestImpl implements _CreateDeviceRequest {
         (other.runtimeType == runtimeType &&
             other is _$CreateDeviceRequestImpl &&
             (identical(other.file, file) || other.file == file) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             (identical(other.libelle, libelle) || other.libelle == libelle));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, file, libelle);
+  int get hashCode => Object.hash(runtimeType, file, description, libelle);
 
   @JsonKey(ignore: true)
   @override
@@ -537,6 +553,7 @@ class _$CreateDeviceRequestImpl implements _CreateDeviceRequest {
 abstract class _CreateDeviceRequest implements CreateDeviceRequest {
   const factory _CreateDeviceRequest(
       {required final String file,
+      required final String description,
       required final String libelle}) = _$CreateDeviceRequestImpl;
 
   factory _CreateDeviceRequest.fromJson(Map<String, dynamic> json) =
@@ -544,6 +561,8 @@ abstract class _CreateDeviceRequest implements CreateDeviceRequest {
 
   @override
   String get file;
+  @override
+  String get description;
   @override
   String get libelle;
   @override
