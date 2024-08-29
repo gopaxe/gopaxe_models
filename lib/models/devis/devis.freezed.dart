@@ -24,6 +24,7 @@ mixin _$Devis {
   int? get montantDevis => throw _privateConstructorUsedError;
   String get file => throw _privateConstructorUsedError;
   String get libelle => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
   DateTime get createdDate => throw _privateConstructorUsedError;
   DateTime? get correctionDate => throw _privateConstructorUsedError;
   int get numClient => throw _privateConstructorUsedError;
@@ -47,6 +48,7 @@ abstract class $DevisCopyWith<$Res> {
       int? montantDevis,
       String file,
       String libelle,
+      String description,
       DateTime createdDate,
       DateTime? correctionDate,
       int numClient,
@@ -73,6 +75,7 @@ class _$DevisCopyWithImpl<$Res, $Val extends Devis>
     Object? montantDevis = freezed,
     Object? file = null,
     Object? libelle = null,
+    Object? description = null,
     Object? createdDate = null,
     Object? correctionDate = freezed,
     Object? numClient = null,
@@ -97,6 +100,10 @@ class _$DevisCopyWithImpl<$Res, $Val extends Devis>
       libelle: null == libelle
           ? _value.libelle
           : libelle // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       createdDate: null == createdDate
           ? _value.createdDate
@@ -142,6 +149,7 @@ abstract class _$$DevisImplCopyWith<$Res> implements $DevisCopyWith<$Res> {
       int? montantDevis,
       String file,
       String libelle,
+      String description,
       DateTime createdDate,
       DateTime? correctionDate,
       int numClient,
@@ -166,6 +174,7 @@ class __$$DevisImplCopyWithImpl<$Res>
     Object? montantDevis = freezed,
     Object? file = null,
     Object? libelle = null,
+    Object? description = null,
     Object? createdDate = null,
     Object? correctionDate = freezed,
     Object? numClient = null,
@@ -190,6 +199,10 @@ class __$$DevisImplCopyWithImpl<$Res>
       libelle: null == libelle
           ? _value.libelle
           : libelle // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       createdDate: null == createdDate
           ? _value.createdDate
@@ -231,6 +244,7 @@ class _$DevisImpl implements _Devis {
       required this.montantDevis,
       required this.file,
       required this.libelle,
+      required this.description,
       required this.createdDate,
       this.correctionDate,
       required this.numClient,
@@ -251,6 +265,8 @@ class _$DevisImpl implements _Devis {
   final String file;
   @override
   final String libelle;
+  @override
+  final String description;
   @override
   final DateTime createdDate;
   @override
@@ -274,7 +290,7 @@ class _$DevisImpl implements _Devis {
 
   @override
   String toString() {
-    return 'Devis(devisId: $devisId, montantDevis: $montantDevis, file: $file, libelle: $libelle, createdDate: $createdDate, correctionDate: $correctionDate, numClient: $numClient, isDone: $isDone, isLock: $isLock, devisLine: $devisLine, balanceForSeeingDevis: $balanceForSeeingDevis)';
+    return 'Devis(devisId: $devisId, montantDevis: $montantDevis, file: $file, libelle: $libelle, description: $description, createdDate: $createdDate, correctionDate: $correctionDate, numClient: $numClient, isDone: $isDone, isLock: $isLock, devisLine: $devisLine, balanceForSeeingDevis: $balanceForSeeingDevis)';
   }
 
   @override
@@ -287,6 +303,8 @@ class _$DevisImpl implements _Devis {
                 other.montantDevis == montantDevis) &&
             (identical(other.file, file) || other.file == file) &&
             (identical(other.libelle, libelle) || other.libelle == libelle) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
             (identical(other.correctionDate, correctionDate) ||
@@ -309,6 +327,7 @@ class _$DevisImpl implements _Devis {
       montantDevis,
       file,
       libelle,
+      description,
       createdDate,
       correctionDate,
       numClient,
@@ -337,6 +356,7 @@ abstract class _Devis implements Devis {
       required final int? montantDevis,
       required final String file,
       required final String libelle,
+      required final String description,
       required final DateTime createdDate,
       final DateTime? correctionDate,
       required final int numClient,
@@ -355,6 +375,8 @@ abstract class _Devis implements Devis {
   String get file;
   @override
   String get libelle;
+  @override
+  String get description;
   @override
   DateTime get createdDate;
   @override

@@ -10,6 +10,7 @@ class Devis with _$Devis {
       required int? montantDevis,
       required String file,
       required String libelle,
+      required String description,
       required DateTime createdDate,
       DateTime? correctionDate,
       required int numClient,
