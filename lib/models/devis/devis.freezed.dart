@@ -24,11 +24,11 @@ mixin _$Devis {
   int? get montantDevis => throw _privateConstructorUsedError;
   String get file => throw _privateConstructorUsedError;
   DateTime get createdDate => throw _privateConstructorUsedError;
-  DateTime get correctionDate => throw _privateConstructorUsedError;
+  DateTime? get correctionDate => throw _privateConstructorUsedError;
   int get numClient => throw _privateConstructorUsedError;
   bool get isDone => throw _privateConstructorUsedError;
   List<DevisLine> get devisLine => throw _privateConstructorUsedError;
-  double get balanceForSeeingDevis => throw _privateConstructorUsedError;
+  double? get balanceForSeeingDevis => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,11 +45,11 @@ abstract class $DevisCopyWith<$Res> {
       int? montantDevis,
       String file,
       DateTime createdDate,
-      DateTime correctionDate,
+      DateTime? correctionDate,
       int numClient,
       bool isDone,
       List<DevisLine> devisLine,
-      double balanceForSeeingDevis});
+      double? balanceForSeeingDevis});
 }
 
 /// @nodoc
@@ -69,11 +69,11 @@ class _$DevisCopyWithImpl<$Res, $Val extends Devis>
     Object? montantDevis = freezed,
     Object? file = null,
     Object? createdDate = null,
-    Object? correctionDate = null,
+    Object? correctionDate = freezed,
     Object? numClient = null,
     Object? isDone = null,
     Object? devisLine = null,
-    Object? balanceForSeeingDevis = null,
+    Object? balanceForSeeingDevis = freezed,
   }) {
     return _then(_value.copyWith(
       devisId: null == devisId
@@ -92,10 +92,10 @@ class _$DevisCopyWithImpl<$Res, $Val extends Devis>
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      correctionDate: null == correctionDate
+      correctionDate: freezed == correctionDate
           ? _value.correctionDate
           : correctionDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       numClient: null == numClient
           ? _value.numClient
           : numClient // ignore: cast_nullable_to_non_nullable
@@ -108,10 +108,10 @@ class _$DevisCopyWithImpl<$Res, $Val extends Devis>
           ? _value.devisLine
           : devisLine // ignore: cast_nullable_to_non_nullable
               as List<DevisLine>,
-      balanceForSeeingDevis: null == balanceForSeeingDevis
+      balanceForSeeingDevis: freezed == balanceForSeeingDevis
           ? _value.balanceForSeeingDevis
           : balanceForSeeingDevis // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ) as $Val);
   }
 }
@@ -128,11 +128,11 @@ abstract class _$$DevisImplCopyWith<$Res> implements $DevisCopyWith<$Res> {
       int? montantDevis,
       String file,
       DateTime createdDate,
-      DateTime correctionDate,
+      DateTime? correctionDate,
       int numClient,
       bool isDone,
       List<DevisLine> devisLine,
-      double balanceForSeeingDevis});
+      double? balanceForSeeingDevis});
 }
 
 /// @nodoc
@@ -150,11 +150,11 @@ class __$$DevisImplCopyWithImpl<$Res>
     Object? montantDevis = freezed,
     Object? file = null,
     Object? createdDate = null,
-    Object? correctionDate = null,
+    Object? correctionDate = freezed,
     Object? numClient = null,
     Object? isDone = null,
     Object? devisLine = null,
-    Object? balanceForSeeingDevis = null,
+    Object? balanceForSeeingDevis = freezed,
   }) {
     return _then(_$DevisImpl(
       devisId: null == devisId
@@ -173,10 +173,10 @@ class __$$DevisImplCopyWithImpl<$Res>
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      correctionDate: null == correctionDate
+      correctionDate: freezed == correctionDate
           ? _value.correctionDate
           : correctionDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       numClient: null == numClient
           ? _value.numClient
           : numClient // ignore: cast_nullable_to_non_nullable
@@ -189,10 +189,10 @@ class __$$DevisImplCopyWithImpl<$Res>
           ? _value._devisLine
           : devisLine // ignore: cast_nullable_to_non_nullable
               as List<DevisLine>,
-      balanceForSeeingDevis: null == balanceForSeeingDevis
+      balanceForSeeingDevis: freezed == balanceForSeeingDevis
           ? _value.balanceForSeeingDevis
           : balanceForSeeingDevis // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ));
   }
 }
@@ -205,11 +205,11 @@ class _$DevisImpl implements _Devis {
       required this.montantDevis,
       required this.file,
       required this.createdDate,
-      required this.correctionDate,
+      this.correctionDate,
       required this.numClient,
       required this.isDone,
       required final List<DevisLine> devisLine,
-      required this.balanceForSeeingDevis})
+      this.balanceForSeeingDevis})
       : _devisLine = devisLine;
 
   factory _$DevisImpl.fromJson(Map<String, dynamic> json) =>
@@ -224,7 +224,7 @@ class _$DevisImpl implements _Devis {
   @override
   final DateTime createdDate;
   @override
-  final DateTime correctionDate;
+  final DateTime? correctionDate;
   @override
   final int numClient;
   @override
@@ -238,7 +238,7 @@ class _$DevisImpl implements _Devis {
   }
 
   @override
-  final double balanceForSeeingDevis;
+  final double? balanceForSeeingDevis;
 
   @override
   String toString() {
@@ -301,11 +301,11 @@ abstract class _Devis implements Devis {
       required final int? montantDevis,
       required final String file,
       required final DateTime createdDate,
-      required final DateTime correctionDate,
+      final DateTime? correctionDate,
       required final int numClient,
       required final bool isDone,
       required final List<DevisLine> devisLine,
-      required final double balanceForSeeingDevis}) = _$DevisImpl;
+      final double? balanceForSeeingDevis}) = _$DevisImpl;
 
   factory _Devis.fromJson(Map<String, dynamic> json) = _$DevisImpl.fromJson;
 
@@ -318,7 +318,7 @@ abstract class _Devis implements Devis {
   @override
   DateTime get createdDate;
   @override
-  DateTime get correctionDate;
+  DateTime? get correctionDate;
   @override
   int get numClient;
   @override
@@ -326,7 +326,7 @@ abstract class _Devis implements Devis {
   @override
   List<DevisLine> get devisLine;
   @override
-  double get balanceForSeeingDevis;
+  double? get balanceForSeeingDevis;
   @override
   @JsonKey(ignore: true)
   _$$DevisImplCopyWith<_$DevisImpl> get copyWith =>
@@ -341,7 +341,6 @@ CreateDeviceRequest _$CreateDeviceRequestFromJson(Map<String, dynamic> json) {
 mixin _$CreateDeviceRequest {
   String get file => throw _privateConstructorUsedError;
   String get libelle => throw _privateConstructorUsedError;
-  int get numClient => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -355,7 +354,7 @@ abstract class $CreateDeviceRequestCopyWith<$Res> {
           CreateDeviceRequest value, $Res Function(CreateDeviceRequest) then) =
       _$CreateDeviceRequestCopyWithImpl<$Res, CreateDeviceRequest>;
   @useResult
-  $Res call({String file, String libelle, int numClient});
+  $Res call({String file, String libelle});
 }
 
 /// @nodoc
@@ -373,7 +372,6 @@ class _$CreateDeviceRequestCopyWithImpl<$Res, $Val extends CreateDeviceRequest>
   $Res call({
     Object? file = null,
     Object? libelle = null,
-    Object? numClient = null,
   }) {
     return _then(_value.copyWith(
       file: null == file
@@ -384,10 +382,6 @@ class _$CreateDeviceRequestCopyWithImpl<$Res, $Val extends CreateDeviceRequest>
           ? _value.libelle
           : libelle // ignore: cast_nullable_to_non_nullable
               as String,
-      numClient: null == numClient
-          ? _value.numClient
-          : numClient // ignore: cast_nullable_to_non_nullable
-              as int,
     ) as $Val);
   }
 }
@@ -400,7 +394,7 @@ abstract class _$$CreateDeviceRequestImplCopyWith<$Res>
       __$$CreateDeviceRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String file, String libelle, int numClient});
+  $Res call({String file, String libelle});
 }
 
 /// @nodoc
@@ -416,7 +410,6 @@ class __$$CreateDeviceRequestImplCopyWithImpl<$Res>
   $Res call({
     Object? file = null,
     Object? libelle = null,
-    Object? numClient = null,
   }) {
     return _then(_$CreateDeviceRequestImpl(
       file: null == file
@@ -427,10 +420,6 @@ class __$$CreateDeviceRequestImplCopyWithImpl<$Res>
           ? _value.libelle
           : libelle // ignore: cast_nullable_to_non_nullable
               as String,
-      numClient: null == numClient
-          ? _value.numClient
-          : numClient // ignore: cast_nullable_to_non_nullable
-              as int,
     ));
   }
 }
@@ -438,8 +427,7 @@ class __$$CreateDeviceRequestImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$CreateDeviceRequestImpl implements _CreateDeviceRequest {
-  const _$CreateDeviceRequestImpl(
-      {required this.file, required this.libelle, required this.numClient});
+  const _$CreateDeviceRequestImpl({required this.file, required this.libelle});
 
   factory _$CreateDeviceRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$CreateDeviceRequestImplFromJson(json);
@@ -448,12 +436,10 @@ class _$CreateDeviceRequestImpl implements _CreateDeviceRequest {
   final String file;
   @override
   final String libelle;
-  @override
-  final int numClient;
 
   @override
   String toString() {
-    return 'CreateDeviceRequest(file: $file, libelle: $libelle, numClient: $numClient)';
+    return 'CreateDeviceRequest(file: $file, libelle: $libelle)';
   }
 
   @override
@@ -462,14 +448,12 @@ class _$CreateDeviceRequestImpl implements _CreateDeviceRequest {
         (other.runtimeType == runtimeType &&
             other is _$CreateDeviceRequestImpl &&
             (identical(other.file, file) || other.file == file) &&
-            (identical(other.libelle, libelle) || other.libelle == libelle) &&
-            (identical(other.numClient, numClient) ||
-                other.numClient == numClient));
+            (identical(other.libelle, libelle) || other.libelle == libelle));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, file, libelle, numClient);
+  int get hashCode => Object.hash(runtimeType, file, libelle);
 
   @JsonKey(ignore: true)
   @override
@@ -489,8 +473,7 @@ class _$CreateDeviceRequestImpl implements _CreateDeviceRequest {
 abstract class _CreateDeviceRequest implements CreateDeviceRequest {
   const factory _CreateDeviceRequest(
       {required final String file,
-      required final String libelle,
-      required final int numClient}) = _$CreateDeviceRequestImpl;
+      required final String libelle}) = _$CreateDeviceRequestImpl;
 
   factory _CreateDeviceRequest.fromJson(Map<String, dynamic> json) =
       _$CreateDeviceRequestImpl.fromJson;
@@ -499,8 +482,6 @@ abstract class _CreateDeviceRequest implements CreateDeviceRequest {
   String get file;
   @override
   String get libelle;
-  @override
-  int get numClient;
   @override
   @JsonKey(ignore: true)
   _$$CreateDeviceRequestImplCopyWith<_$CreateDeviceRequestImpl> get copyWith =>
@@ -761,7 +742,6 @@ mixin _$DevisLineRequest {
   String get libelle => throw _privateConstructorUsedError;
   int get quantity => throw _privateConstructorUsedError;
   double get unitPrice => throw _privateConstructorUsedError;
-  int get numDevis => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -775,7 +755,7 @@ abstract class $DevisLineRequestCopyWith<$Res> {
           DevisLineRequest value, $Res Function(DevisLineRequest) then) =
       _$DevisLineRequestCopyWithImpl<$Res, DevisLineRequest>;
   @useResult
-  $Res call({String libelle, int quantity, double unitPrice, int numDevis});
+  $Res call({String libelle, int quantity, double unitPrice});
 }
 
 /// @nodoc
@@ -794,7 +774,6 @@ class _$DevisLineRequestCopyWithImpl<$Res, $Val extends DevisLineRequest>
     Object? libelle = null,
     Object? quantity = null,
     Object? unitPrice = null,
-    Object? numDevis = null,
   }) {
     return _then(_value.copyWith(
       libelle: null == libelle
@@ -809,10 +788,6 @@ class _$DevisLineRequestCopyWithImpl<$Res, $Val extends DevisLineRequest>
           ? _value.unitPrice
           : unitPrice // ignore: cast_nullable_to_non_nullable
               as double,
-      numDevis: null == numDevis
-          ? _value.numDevis
-          : numDevis // ignore: cast_nullable_to_non_nullable
-              as int,
     ) as $Val);
   }
 }
@@ -825,7 +800,7 @@ abstract class _$$DevisLineRequestImplCopyWith<$Res>
       __$$DevisLineRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String libelle, int quantity, double unitPrice, int numDevis});
+  $Res call({String libelle, int quantity, double unitPrice});
 }
 
 /// @nodoc
@@ -842,7 +817,6 @@ class __$$DevisLineRequestImplCopyWithImpl<$Res>
     Object? libelle = null,
     Object? quantity = null,
     Object? unitPrice = null,
-    Object? numDevis = null,
   }) {
     return _then(_$DevisLineRequestImpl(
       libelle: null == libelle
@@ -857,10 +831,6 @@ class __$$DevisLineRequestImplCopyWithImpl<$Res>
           ? _value.unitPrice
           : unitPrice // ignore: cast_nullable_to_non_nullable
               as double,
-      numDevis: null == numDevis
-          ? _value.numDevis
-          : numDevis // ignore: cast_nullable_to_non_nullable
-              as int,
     ));
   }
 }
@@ -869,10 +839,7 @@ class __$$DevisLineRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$DevisLineRequestImpl implements _DevisLineRequest {
   const _$DevisLineRequestImpl(
-      {required this.libelle,
-      required this.quantity,
-      required this.unitPrice,
-      required this.numDevis});
+      {required this.libelle, required this.quantity, required this.unitPrice});
 
   factory _$DevisLineRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$DevisLineRequestImplFromJson(json);
@@ -883,12 +850,10 @@ class _$DevisLineRequestImpl implements _DevisLineRequest {
   final int quantity;
   @override
   final double unitPrice;
-  @override
-  final int numDevis;
 
   @override
   String toString() {
-    return 'DevisLineRequest(libelle: $libelle, quantity: $quantity, unitPrice: $unitPrice, numDevis: $numDevis)';
+    return 'DevisLineRequest(libelle: $libelle, quantity: $quantity, unitPrice: $unitPrice)';
   }
 
   @override
@@ -900,15 +865,12 @@ class _$DevisLineRequestImpl implements _DevisLineRequest {
             (identical(other.quantity, quantity) ||
                 other.quantity == quantity) &&
             (identical(other.unitPrice, unitPrice) ||
-                other.unitPrice == unitPrice) &&
-            (identical(other.numDevis, numDevis) ||
-                other.numDevis == numDevis));
+                other.unitPrice == unitPrice));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, libelle, quantity, unitPrice, numDevis);
+  int get hashCode => Object.hash(runtimeType, libelle, quantity, unitPrice);
 
   @JsonKey(ignore: true)
   @override
@@ -929,8 +891,7 @@ abstract class _DevisLineRequest implements DevisLineRequest {
   const factory _DevisLineRequest(
       {required final String libelle,
       required final int quantity,
-      required final double unitPrice,
-      required final int numDevis}) = _$DevisLineRequestImpl;
+      required final double unitPrice}) = _$DevisLineRequestImpl;
 
   factory _DevisLineRequest.fromJson(Map<String, dynamic> json) =
       _$DevisLineRequestImpl.fromJson;
@@ -941,8 +902,6 @@ abstract class _DevisLineRequest implements DevisLineRequest {
   int get quantity;
   @override
   double get unitPrice;
-  @override
-  int get numDevis;
   @override
   @JsonKey(ignore: true)
   _$$DevisLineRequestImplCopyWith<_$DevisLineRequestImpl> get copyWith =>

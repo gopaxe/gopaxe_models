@@ -10,20 +10,20 @@ class Devis with _$Devis {
       required int? montantDevis,
       required String file,
       required DateTime createdDate,
-      required DateTime correctionDate,
+      DateTime? correctionDate,
       required int numClient,
       required bool isDone,
       required List<DevisLine> devisLine,
-      required double balanceForSeeingDevis}) = _Devis;
+      double? balanceForSeeingDevis}) = _Devis;
   factory Devis.fromJson(Map<String, dynamic> json) => _$DevisFromJson(json);
 }
 
 @freezed
 class CreateDeviceRequest with _$CreateDeviceRequest {
-  const factory CreateDeviceRequest(
-      {required String file,
-      required String libelle,
-      required int numClient}) = _CreateDeviceRequest;
+  const factory CreateDeviceRequest({
+    required String file,
+    required String libelle,
+  }) = _CreateDeviceRequest;
   factory CreateDeviceRequest.fromJson(Map<String, dynamic> json) =>
       _$CreateDeviceRequestFromJson(json);
 }
@@ -43,11 +43,11 @@ class DevisLine with _$DevisLine {
 
 @freezed
 class DevisLineRequest with _$DevisLineRequest {
-  const factory DevisLineRequest(
-      {required String libelle,
-      required int quantity,
-      required double unitPrice,
-      required int numDevis}) = _DevisLineRequest;
+  const factory DevisLineRequest({
+    required String libelle,
+    required int quantity,
+    required double unitPrice,
+  }) = _DevisLineRequest;
   factory DevisLineRequest.fromJson(Map<String, dynamic> json) =>
       _$DevisLineRequestFromJson(json);
 }

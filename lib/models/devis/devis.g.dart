@@ -11,13 +11,16 @@ _$DevisImpl _$$DevisImplFromJson(Map<String, dynamic> json) => _$DevisImpl(
       montantDevis: json['montantDevis'] as int?,
       file: json['file'] as String,
       createdDate: DateTime.parse(json['createdDate'] as String),
-      correctionDate: DateTime.parse(json['correctionDate'] as String),
+      correctionDate: json['correctionDate'] == null
+          ? null
+          : DateTime.parse(json['correctionDate'] as String),
       numClient: json['numClient'] as int,
       isDone: json['isDone'] as bool,
       devisLine: (json['devisLine'] as List<dynamic>)
           .map((e) => DevisLine.fromJson(e as Map<String, dynamic>))
           .toList(),
-      balanceForSeeingDevis: (json['balanceForSeeingDevis'] as num).toDouble(),
+      balanceForSeeingDevis:
+          (json['balanceForSeeingDevis'] as num?)?.toDouble(),
     );
 
 Map<String, dynamic> _$$DevisImplToJson(_$DevisImpl instance) =>
@@ -26,7 +29,7 @@ Map<String, dynamic> _$$DevisImplToJson(_$DevisImpl instance) =>
       'montantDevis': instance.montantDevis,
       'file': instance.file,
       'createdDate': instance.createdDate.toIso8601String(),
-      'correctionDate': instance.correctionDate.toIso8601String(),
+      'correctionDate': instance.correctionDate?.toIso8601String(),
       'numClient': instance.numClient,
       'isDone': instance.isDone,
       'devisLine': instance.devisLine,
@@ -38,7 +41,6 @@ _$CreateDeviceRequestImpl _$$CreateDeviceRequestImplFromJson(
     _$CreateDeviceRequestImpl(
       file: json['file'] as String,
       libelle: json['libelle'] as String,
-      numClient: json['numClient'] as int,
     );
 
 Map<String, dynamic> _$$CreateDeviceRequestImplToJson(
@@ -46,7 +48,6 @@ Map<String, dynamic> _$$CreateDeviceRequestImplToJson(
     <String, dynamic>{
       'file': instance.file,
       'libelle': instance.libelle,
-      'numClient': instance.numClient,
     };
 
 _$DevisLineImpl _$$DevisLineImplFromJson(Map<String, dynamic> json) =>
@@ -75,7 +76,6 @@ _$DevisLineRequestImpl _$$DevisLineRequestImplFromJson(
       libelle: json['libelle'] as String,
       quantity: json['quantity'] as int,
       unitPrice: (json['unitPrice'] as num).toDouble(),
-      numDevis: json['numDevis'] as int,
     );
 
 Map<String, dynamic> _$$DevisLineRequestImplToJson(
@@ -84,5 +84,4 @@ Map<String, dynamic> _$$DevisLineRequestImplToJson(
       'libelle': instance.libelle,
       'quantity': instance.quantity,
       'unitPrice': instance.unitPrice,
-      'numDevis': instance.numDevis,
     };
