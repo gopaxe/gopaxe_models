@@ -9,16 +9,10 @@ part 'order.g.dart';
 class Order with _$Order {
   const factory Order({
     required int orderId,
-    required String libelle,
+    required List<OrderLine> orderLines,
     required DateTime createdDate,
-    required int totalOrder,
-    required int gopaxePart,
-    required String shippingAddress,
-    required DateTime shippingDate,
-    required String status,
-    required int? numOrderCommission,
+    required String? status,
     required int? userId,
-    required Client? client,
   }) = _Order;
   factory Order.fromJson(Map<String, dynamic> json) => _$OrderFromJson(json);
 }
@@ -34,4 +28,22 @@ class OrderLine with _$OrderLine {
       required int orderId}) = _OrderLine;
   factory OrderLine.fromJson(Map<String, dynamic> json) =>
       _$OrderLineFromJson(json);
+}
+
+@freezed
+class CreateOrderRequest with _$CreateOrderRequest {
+  const factory CreateOrderRequest({
+    required List<CreateOrderLineRequest> orderLines,
+  }) = _CreateOrderRequest;
+  factory CreateOrderRequest.fromJson(Map<String, dynamic> json) =>
+      _$CreateOrderRequestFromJson(json);
+}
+
+@freezed
+class CreateOrderLineRequest with _$CreateOrderLineRequest {
+  const factory CreateOrderLineRequest(
+      {required int fournirMaterialId,
+      required int quantity}) = _CreateOrderLineRequest;
+  factory CreateOrderLineRequest.fromJson(Map<String, dynamic> json) =>
+      _$CreateOrderLineRequestFromJson(json);
 }

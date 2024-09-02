@@ -21,16 +21,10 @@ Order _$OrderFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Order {
   int get orderId => throw _privateConstructorUsedError;
-  String get libelle => throw _privateConstructorUsedError;
+  List<OrderLine> get orderLines => throw _privateConstructorUsedError;
   DateTime get createdDate => throw _privateConstructorUsedError;
-  int get totalOrder => throw _privateConstructorUsedError;
-  int get gopaxePart => throw _privateConstructorUsedError;
-  String get shippingAddress => throw _privateConstructorUsedError;
-  DateTime get shippingDate => throw _privateConstructorUsedError;
-  String get status => throw _privateConstructorUsedError;
-  int? get numOrderCommission => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
   int? get userId => throw _privateConstructorUsedError;
-  Client? get client => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,18 +38,10 @@ abstract class $OrderCopyWith<$Res> {
   @useResult
   $Res call(
       {int orderId,
-      String libelle,
+      List<OrderLine> orderLines,
       DateTime createdDate,
-      int totalOrder,
-      int gopaxePart,
-      String shippingAddress,
-      DateTime shippingDate,
-      String status,
-      int? numOrderCommission,
-      int? userId,
-      Client? client});
-
-  $ClientCopyWith<$Res>? get client;
+      String? status,
+      int? userId});
 }
 
 /// @nodoc
@@ -72,75 +58,33 @@ class _$OrderCopyWithImpl<$Res, $Val extends Order>
   @override
   $Res call({
     Object? orderId = null,
-    Object? libelle = null,
+    Object? orderLines = null,
     Object? createdDate = null,
-    Object? totalOrder = null,
-    Object? gopaxePart = null,
-    Object? shippingAddress = null,
-    Object? shippingDate = null,
-    Object? status = null,
-    Object? numOrderCommission = freezed,
+    Object? status = freezed,
     Object? userId = freezed,
-    Object? client = freezed,
   }) {
     return _then(_value.copyWith(
       orderId: null == orderId
           ? _value.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
               as int,
-      libelle: null == libelle
-          ? _value.libelle
-          : libelle // ignore: cast_nullable_to_non_nullable
-              as String,
+      orderLines: null == orderLines
+          ? _value.orderLines
+          : orderLines // ignore: cast_nullable_to_non_nullable
+              as List<OrderLine>,
       createdDate: null == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      totalOrder: null == totalOrder
-          ? _value.totalOrder
-          : totalOrder // ignore: cast_nullable_to_non_nullable
-              as int,
-      gopaxePart: null == gopaxePart
-          ? _value.gopaxePart
-          : gopaxePart // ignore: cast_nullable_to_non_nullable
-              as int,
-      shippingAddress: null == shippingAddress
-          ? _value.shippingAddress
-          : shippingAddress // ignore: cast_nullable_to_non_nullable
-              as String,
-      shippingDate: null == shippingDate
-          ? _value.shippingDate
-          : shippingDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as String,
-      numOrderCommission: freezed == numOrderCommission
-          ? _value.numOrderCommission
-          : numOrderCommission // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       userId: freezed == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
               as int?,
-      client: freezed == client
-          ? _value.client
-          : client // ignore: cast_nullable_to_non_nullable
-              as Client?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ClientCopyWith<$Res>? get client {
-    if (_value.client == null) {
-      return null;
-    }
-
-    return $ClientCopyWith<$Res>(_value.client!, (value) {
-      return _then(_value.copyWith(client: value) as $Val);
-    });
   }
 }
 
@@ -153,19 +97,10 @@ abstract class _$$OrderImplCopyWith<$Res> implements $OrderCopyWith<$Res> {
   @useResult
   $Res call(
       {int orderId,
-      String libelle,
+      List<OrderLine> orderLines,
       DateTime createdDate,
-      int totalOrder,
-      int gopaxePart,
-      String shippingAddress,
-      DateTime shippingDate,
-      String status,
-      int? numOrderCommission,
-      int? userId,
-      Client? client});
-
-  @override
-  $ClientCopyWith<$Res>? get client;
+      String? status,
+      int? userId});
 }
 
 /// @nodoc
@@ -180,62 +115,32 @@ class __$$OrderImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? orderId = null,
-    Object? libelle = null,
+    Object? orderLines = null,
     Object? createdDate = null,
-    Object? totalOrder = null,
-    Object? gopaxePart = null,
-    Object? shippingAddress = null,
-    Object? shippingDate = null,
-    Object? status = null,
-    Object? numOrderCommission = freezed,
+    Object? status = freezed,
     Object? userId = freezed,
-    Object? client = freezed,
   }) {
     return _then(_$OrderImpl(
       orderId: null == orderId
           ? _value.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
               as int,
-      libelle: null == libelle
-          ? _value.libelle
-          : libelle // ignore: cast_nullable_to_non_nullable
-              as String,
+      orderLines: null == orderLines
+          ? _value._orderLines
+          : orderLines // ignore: cast_nullable_to_non_nullable
+              as List<OrderLine>,
       createdDate: null == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      totalOrder: null == totalOrder
-          ? _value.totalOrder
-          : totalOrder // ignore: cast_nullable_to_non_nullable
-              as int,
-      gopaxePart: null == gopaxePart
-          ? _value.gopaxePart
-          : gopaxePart // ignore: cast_nullable_to_non_nullable
-              as int,
-      shippingAddress: null == shippingAddress
-          ? _value.shippingAddress
-          : shippingAddress // ignore: cast_nullable_to_non_nullable
-              as String,
-      shippingDate: null == shippingDate
-          ? _value.shippingDate
-          : shippingDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as String,
-      numOrderCommission: freezed == numOrderCommission
-          ? _value.numOrderCommission
-          : numOrderCommission // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       userId: freezed == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
               as int?,
-      client: freezed == client
-          ? _value.client
-          : client // ignore: cast_nullable_to_non_nullable
-              as Client?,
     ));
   }
 }
@@ -245,46 +150,35 @@ class __$$OrderImplCopyWithImpl<$Res>
 class _$OrderImpl implements _Order {
   const _$OrderImpl(
       {required this.orderId,
-      required this.libelle,
+      required final List<OrderLine> orderLines,
       required this.createdDate,
-      required this.totalOrder,
-      required this.gopaxePart,
-      required this.shippingAddress,
-      required this.shippingDate,
       required this.status,
-      required this.numOrderCommission,
-      required this.userId,
-      required this.client});
+      required this.userId})
+      : _orderLines = orderLines;
 
   factory _$OrderImpl.fromJson(Map<String, dynamic> json) =>
       _$$OrderImplFromJson(json);
 
   @override
   final int orderId;
+  final List<OrderLine> _orderLines;
   @override
-  final String libelle;
+  List<OrderLine> get orderLines {
+    if (_orderLines is EqualUnmodifiableListView) return _orderLines;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_orderLines);
+  }
+
   @override
   final DateTime createdDate;
   @override
-  final int totalOrder;
-  @override
-  final int gopaxePart;
-  @override
-  final String shippingAddress;
-  @override
-  final DateTime shippingDate;
-  @override
-  final String status;
-  @override
-  final int? numOrderCommission;
+  final String? status;
   @override
   final int? userId;
-  @override
-  final Client? client;
 
   @override
   String toString() {
-    return 'Order(orderId: $orderId, libelle: $libelle, createdDate: $createdDate, totalOrder: $totalOrder, gopaxePart: $gopaxePart, shippingAddress: $shippingAddress, shippingDate: $shippingDate, status: $status, numOrderCommission: $numOrderCommission, userId: $userId, client: $client)';
+    return 'Order(orderId: $orderId, orderLines: $orderLines, createdDate: $createdDate, status: $status, userId: $userId)';
   }
 
   @override
@@ -293,22 +187,12 @@ class _$OrderImpl implements _Order {
         (other.runtimeType == runtimeType &&
             other is _$OrderImpl &&
             (identical(other.orderId, orderId) || other.orderId == orderId) &&
-            (identical(other.libelle, libelle) || other.libelle == libelle) &&
+            const DeepCollectionEquality()
+                .equals(other._orderLines, _orderLines) &&
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
-            (identical(other.totalOrder, totalOrder) ||
-                other.totalOrder == totalOrder) &&
-            (identical(other.gopaxePart, gopaxePart) ||
-                other.gopaxePart == gopaxePart) &&
-            (identical(other.shippingAddress, shippingAddress) ||
-                other.shippingAddress == shippingAddress) &&
-            (identical(other.shippingDate, shippingDate) ||
-                other.shippingDate == shippingDate) &&
             (identical(other.status, status) || other.status == status) &&
-            (identical(other.numOrderCommission, numOrderCommission) ||
-                other.numOrderCommission == numOrderCommission) &&
-            (identical(other.userId, userId) || other.userId == userId) &&
-            (identical(other.client, client) || other.client == client));
+            (identical(other.userId, userId) || other.userId == userId));
   }
 
   @JsonKey(ignore: true)
@@ -316,16 +200,10 @@ class _$OrderImpl implements _Order {
   int get hashCode => Object.hash(
       runtimeType,
       orderId,
-      libelle,
+      const DeepCollectionEquality().hash(_orderLines),
       createdDate,
-      totalOrder,
-      gopaxePart,
-      shippingAddress,
-      shippingDate,
       status,
-      numOrderCommission,
-      userId,
-      client);
+      userId);
 
   @JsonKey(ignore: true)
   @override
@@ -344,41 +222,23 @@ class _$OrderImpl implements _Order {
 abstract class _Order implements Order {
   const factory _Order(
       {required final int orderId,
-      required final String libelle,
+      required final List<OrderLine> orderLines,
       required final DateTime createdDate,
-      required final int totalOrder,
-      required final int gopaxePart,
-      required final String shippingAddress,
-      required final DateTime shippingDate,
-      required final String status,
-      required final int? numOrderCommission,
-      required final int? userId,
-      required final Client? client}) = _$OrderImpl;
+      required final String? status,
+      required final int? userId}) = _$OrderImpl;
 
   factory _Order.fromJson(Map<String, dynamic> json) = _$OrderImpl.fromJson;
 
   @override
   int get orderId;
   @override
-  String get libelle;
+  List<OrderLine> get orderLines;
   @override
   DateTime get createdDate;
   @override
-  int get totalOrder;
-  @override
-  int get gopaxePart;
-  @override
-  String get shippingAddress;
-  @override
-  DateTime get shippingDate;
-  @override
-  String get status;
-  @override
-  int? get numOrderCommission;
+  String? get status;
   @override
   int? get userId;
-  @override
-  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$OrderImplCopyWith<_$OrderImpl> get copyWith =>
@@ -626,4 +486,316 @@ abstract class _OrderLine implements OrderLine {
   @JsonKey(ignore: true)
   _$$OrderLineImplCopyWith<_$OrderLineImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+CreateOrderRequest _$CreateOrderRequestFromJson(Map<String, dynamic> json) {
+  return _CreateOrderRequest.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CreateOrderRequest {
+  List<CreateOrderLineRequest> get orderLines =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CreateOrderRequestCopyWith<CreateOrderRequest> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CreateOrderRequestCopyWith<$Res> {
+  factory $CreateOrderRequestCopyWith(
+          CreateOrderRequest value, $Res Function(CreateOrderRequest) then) =
+      _$CreateOrderRequestCopyWithImpl<$Res, CreateOrderRequest>;
+  @useResult
+  $Res call({List<CreateOrderLineRequest> orderLines});
+}
+
+/// @nodoc
+class _$CreateOrderRequestCopyWithImpl<$Res, $Val extends CreateOrderRequest>
+    implements $CreateOrderRequestCopyWith<$Res> {
+  _$CreateOrderRequestCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? orderLines = null,
+  }) {
+    return _then(_value.copyWith(
+      orderLines: null == orderLines
+          ? _value.orderLines
+          : orderLines // ignore: cast_nullable_to_non_nullable
+              as List<CreateOrderLineRequest>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$CreateOrderRequestImplCopyWith<$Res>
+    implements $CreateOrderRequestCopyWith<$Res> {
+  factory _$$CreateOrderRequestImplCopyWith(_$CreateOrderRequestImpl value,
+          $Res Function(_$CreateOrderRequestImpl) then) =
+      __$$CreateOrderRequestImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<CreateOrderLineRequest> orderLines});
+}
+
+/// @nodoc
+class __$$CreateOrderRequestImplCopyWithImpl<$Res>
+    extends _$CreateOrderRequestCopyWithImpl<$Res, _$CreateOrderRequestImpl>
+    implements _$$CreateOrderRequestImplCopyWith<$Res> {
+  __$$CreateOrderRequestImplCopyWithImpl(_$CreateOrderRequestImpl _value,
+      $Res Function(_$CreateOrderRequestImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? orderLines = null,
+  }) {
+    return _then(_$CreateOrderRequestImpl(
+      orderLines: null == orderLines
+          ? _value._orderLines
+          : orderLines // ignore: cast_nullable_to_non_nullable
+              as List<CreateOrderLineRequest>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$CreateOrderRequestImpl implements _CreateOrderRequest {
+  const _$CreateOrderRequestImpl(
+      {required final List<CreateOrderLineRequest> orderLines})
+      : _orderLines = orderLines;
+
+  factory _$CreateOrderRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CreateOrderRequestImplFromJson(json);
+
+  final List<CreateOrderLineRequest> _orderLines;
+  @override
+  List<CreateOrderLineRequest> get orderLines {
+    if (_orderLines is EqualUnmodifiableListView) return _orderLines;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_orderLines);
+  }
+
+  @override
+  String toString() {
+    return 'CreateOrderRequest(orderLines: $orderLines)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateOrderRequestImpl &&
+            const DeepCollectionEquality()
+                .equals(other._orderLines, _orderLines));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_orderLines));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateOrderRequestImplCopyWith<_$CreateOrderRequestImpl> get copyWith =>
+      __$$CreateOrderRequestImplCopyWithImpl<_$CreateOrderRequestImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CreateOrderRequestImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _CreateOrderRequest implements CreateOrderRequest {
+  const factory _CreateOrderRequest(
+          {required final List<CreateOrderLineRequest> orderLines}) =
+      _$CreateOrderRequestImpl;
+
+  factory _CreateOrderRequest.fromJson(Map<String, dynamic> json) =
+      _$CreateOrderRequestImpl.fromJson;
+
+  @override
+  List<CreateOrderLineRequest> get orderLines;
+  @override
+  @JsonKey(ignore: true)
+  _$$CreateOrderRequestImplCopyWith<_$CreateOrderRequestImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CreateOrderLineRequest _$CreateOrderLineRequestFromJson(
+    Map<String, dynamic> json) {
+  return _CreateOrderLineRequest.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CreateOrderLineRequest {
+  int get fournirMaterialId => throw _privateConstructorUsedError;
+  int get quantity => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CreateOrderLineRequestCopyWith<CreateOrderLineRequest> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CreateOrderLineRequestCopyWith<$Res> {
+  factory $CreateOrderLineRequestCopyWith(CreateOrderLineRequest value,
+          $Res Function(CreateOrderLineRequest) then) =
+      _$CreateOrderLineRequestCopyWithImpl<$Res, CreateOrderLineRequest>;
+  @useResult
+  $Res call({int fournirMaterialId, int quantity});
+}
+
+/// @nodoc
+class _$CreateOrderLineRequestCopyWithImpl<$Res,
+        $Val extends CreateOrderLineRequest>
+    implements $CreateOrderLineRequestCopyWith<$Res> {
+  _$CreateOrderLineRequestCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? fournirMaterialId = null,
+    Object? quantity = null,
+  }) {
+    return _then(_value.copyWith(
+      fournirMaterialId: null == fournirMaterialId
+          ? _value.fournirMaterialId
+          : fournirMaterialId // ignore: cast_nullable_to_non_nullable
+              as int,
+      quantity: null == quantity
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$CreateOrderLineRequestImplCopyWith<$Res>
+    implements $CreateOrderLineRequestCopyWith<$Res> {
+  factory _$$CreateOrderLineRequestImplCopyWith(
+          _$CreateOrderLineRequestImpl value,
+          $Res Function(_$CreateOrderLineRequestImpl) then) =
+      __$$CreateOrderLineRequestImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int fournirMaterialId, int quantity});
+}
+
+/// @nodoc
+class __$$CreateOrderLineRequestImplCopyWithImpl<$Res>
+    extends _$CreateOrderLineRequestCopyWithImpl<$Res,
+        _$CreateOrderLineRequestImpl>
+    implements _$$CreateOrderLineRequestImplCopyWith<$Res> {
+  __$$CreateOrderLineRequestImplCopyWithImpl(
+      _$CreateOrderLineRequestImpl _value,
+      $Res Function(_$CreateOrderLineRequestImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? fournirMaterialId = null,
+    Object? quantity = null,
+  }) {
+    return _then(_$CreateOrderLineRequestImpl(
+      fournirMaterialId: null == fournirMaterialId
+          ? _value.fournirMaterialId
+          : fournirMaterialId // ignore: cast_nullable_to_non_nullable
+              as int,
+      quantity: null == quantity
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$CreateOrderLineRequestImpl implements _CreateOrderLineRequest {
+  const _$CreateOrderLineRequestImpl(
+      {required this.fournirMaterialId, required this.quantity});
+
+  factory _$CreateOrderLineRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CreateOrderLineRequestImplFromJson(json);
+
+  @override
+  final int fournirMaterialId;
+  @override
+  final int quantity;
+
+  @override
+  String toString() {
+    return 'CreateOrderLineRequest(fournirMaterialId: $fournirMaterialId, quantity: $quantity)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateOrderLineRequestImpl &&
+            (identical(other.fournirMaterialId, fournirMaterialId) ||
+                other.fournirMaterialId == fournirMaterialId) &&
+            (identical(other.quantity, quantity) ||
+                other.quantity == quantity));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, fournirMaterialId, quantity);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateOrderLineRequestImplCopyWith<_$CreateOrderLineRequestImpl>
+      get copyWith => __$$CreateOrderLineRequestImplCopyWithImpl<
+          _$CreateOrderLineRequestImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CreateOrderLineRequestImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _CreateOrderLineRequest implements CreateOrderLineRequest {
+  const factory _CreateOrderLineRequest(
+      {required final int fournirMaterialId,
+      required final int quantity}) = _$CreateOrderLineRequestImpl;
+
+  factory _CreateOrderLineRequest.fromJson(Map<String, dynamic> json) =
+      _$CreateOrderLineRequestImpl.fromJson;
+
+  @override
+  int get fournirMaterialId;
+  @override
+  int get quantity;
+  @override
+  @JsonKey(ignore: true)
+  _$$CreateOrderLineRequestImplCopyWith<_$CreateOrderLineRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
