@@ -645,6 +645,7 @@ CreateOrderLineRequest _$CreateOrderLineRequestFromJson(
 /// @nodoc
 mixin _$CreateOrderLineRequest {
   int get fournirMaterialId => throw _privateConstructorUsedError;
+  int get unitPrice => throw _privateConstructorUsedError;
   int get quantity => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -659,7 +660,7 @@ abstract class $CreateOrderLineRequestCopyWith<$Res> {
           $Res Function(CreateOrderLineRequest) then) =
       _$CreateOrderLineRequestCopyWithImpl<$Res, CreateOrderLineRequest>;
   @useResult
-  $Res call({int fournirMaterialId, int quantity});
+  $Res call({int fournirMaterialId, int unitPrice, int quantity});
 }
 
 /// @nodoc
@@ -677,12 +678,17 @@ class _$CreateOrderLineRequestCopyWithImpl<$Res,
   @override
   $Res call({
     Object? fournirMaterialId = null,
+    Object? unitPrice = null,
     Object? quantity = null,
   }) {
     return _then(_value.copyWith(
       fournirMaterialId: null == fournirMaterialId
           ? _value.fournirMaterialId
           : fournirMaterialId // ignore: cast_nullable_to_non_nullable
+              as int,
+      unitPrice: null == unitPrice
+          ? _value.unitPrice
+          : unitPrice // ignore: cast_nullable_to_non_nullable
               as int,
       quantity: null == quantity
           ? _value.quantity
@@ -701,7 +707,7 @@ abstract class _$$CreateOrderLineRequestImplCopyWith<$Res>
       __$$CreateOrderLineRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int fournirMaterialId, int quantity});
+  $Res call({int fournirMaterialId, int unitPrice, int quantity});
 }
 
 /// @nodoc
@@ -718,12 +724,17 @@ class __$$CreateOrderLineRequestImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? fournirMaterialId = null,
+    Object? unitPrice = null,
     Object? quantity = null,
   }) {
     return _then(_$CreateOrderLineRequestImpl(
       fournirMaterialId: null == fournirMaterialId
           ? _value.fournirMaterialId
           : fournirMaterialId // ignore: cast_nullable_to_non_nullable
+              as int,
+      unitPrice: null == unitPrice
+          ? _value.unitPrice
+          : unitPrice // ignore: cast_nullable_to_non_nullable
               as int,
       quantity: null == quantity
           ? _value.quantity
@@ -737,7 +748,9 @@ class __$$CreateOrderLineRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CreateOrderLineRequestImpl implements _CreateOrderLineRequest {
   const _$CreateOrderLineRequestImpl(
-      {required this.fournirMaterialId, required this.quantity});
+      {required this.fournirMaterialId,
+      required this.unitPrice,
+      required this.quantity});
 
   factory _$CreateOrderLineRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$CreateOrderLineRequestImplFromJson(json);
@@ -745,11 +758,13 @@ class _$CreateOrderLineRequestImpl implements _CreateOrderLineRequest {
   @override
   final int fournirMaterialId;
   @override
+  final int unitPrice;
+  @override
   final int quantity;
 
   @override
   String toString() {
-    return 'CreateOrderLineRequest(fournirMaterialId: $fournirMaterialId, quantity: $quantity)';
+    return 'CreateOrderLineRequest(fournirMaterialId: $fournirMaterialId, unitPrice: $unitPrice, quantity: $quantity)';
   }
 
   @override
@@ -759,13 +774,16 @@ class _$CreateOrderLineRequestImpl implements _CreateOrderLineRequest {
             other is _$CreateOrderLineRequestImpl &&
             (identical(other.fournirMaterialId, fournirMaterialId) ||
                 other.fournirMaterialId == fournirMaterialId) &&
+            (identical(other.unitPrice, unitPrice) ||
+                other.unitPrice == unitPrice) &&
             (identical(other.quantity, quantity) ||
                 other.quantity == quantity));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, fournirMaterialId, quantity);
+  int get hashCode =>
+      Object.hash(runtimeType, fournirMaterialId, unitPrice, quantity);
 
   @JsonKey(ignore: true)
   @override
@@ -785,6 +803,7 @@ class _$CreateOrderLineRequestImpl implements _CreateOrderLineRequest {
 abstract class _CreateOrderLineRequest implements CreateOrderLineRequest {
   const factory _CreateOrderLineRequest(
       {required final int fournirMaterialId,
+      required final int unitPrice,
       required final int quantity}) = _$CreateOrderLineRequestImpl;
 
   factory _CreateOrderLineRequest.fromJson(Map<String, dynamic> json) =
@@ -792,6 +811,8 @@ abstract class _CreateOrderLineRequest implements CreateOrderLineRequest {
 
   @override
   int get fournirMaterialId;
+  @override
+  int get unitPrice;
   @override
   int get quantity;
   @override

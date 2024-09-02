@@ -43,6 +43,7 @@ class CreateOrderRequest with _$CreateOrderRequest {
 class CreateOrderLineRequest with _$CreateOrderLineRequest {
   const factory CreateOrderLineRequest(
       {required int fournirMaterialId,
+      required int unitPrice,
       required int quantity}) = _CreateOrderLineRequest;
   factory CreateOrderLineRequest.fromJson(Map<String, dynamic> json) =>
       _$CreateOrderLineRequestFromJson(json);

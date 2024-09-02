@@ -64,6 +64,7 @@ _$CreateOrderLineRequestImpl _$$CreateOrderLineRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$CreateOrderLineRequestImpl(
       fournirMaterialId: json['fournirMaterialId'] as int,
+      unitPrice: json['unitPrice'] as int,
       quantity: json['quantity'] as int,
     );
 
@@ -71,5 +72,6 @@ Map<String, dynamic> _$$CreateOrderLineRequestImplToJson(
         _$CreateOrderLineRequestImpl instance) =>
     <String, dynamic>{
       'fournirMaterialId': instance.fournirMaterialId,
+      'unitPrice': instance.unitPrice,
       'quantity': instance.quantity,
     };
