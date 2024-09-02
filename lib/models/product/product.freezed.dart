@@ -23,6 +23,7 @@ mixin _$Product {
   int get productId => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
+  String get provider => throw _privateConstructorUsedError;
   int get price => throw _privateConstructorUsedError;
   DateTime get createdDate => throw _privateConstructorUsedError;
   List<String> get images => throw _privateConstructorUsedError;
@@ -41,6 +42,7 @@ abstract class $ProductCopyWith<$Res> {
       {int productId,
       String name,
       String? description,
+      String provider,
       int price,
       DateTime createdDate,
       List<String> images});
@@ -62,6 +64,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
     Object? productId = null,
     Object? name = null,
     Object? description = freezed,
+    Object? provider = null,
     Object? price = null,
     Object? createdDate = null,
     Object? images = null,
@@ -79,6 +82,10 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
+      provider: null == provider
+          ? _value.provider
+          : provider // ignore: cast_nullable_to_non_nullable
+              as String,
       price: null == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
@@ -106,6 +113,7 @@ abstract class _$$ProductImplCopyWith<$Res> implements $ProductCopyWith<$Res> {
       {int productId,
       String name,
       String? description,
+      String provider,
       int price,
       DateTime createdDate,
       List<String> images});
@@ -125,6 +133,7 @@ class __$$ProductImplCopyWithImpl<$Res>
     Object? productId = null,
     Object? name = null,
     Object? description = freezed,
+    Object? provider = null,
     Object? price = null,
     Object? createdDate = null,
     Object? images = null,
@@ -142,6 +151,10 @@ class __$$ProductImplCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
+      provider: null == provider
+          ? _value.provider
+          : provider // ignore: cast_nullable_to_non_nullable
+              as String,
       price: null == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
@@ -165,6 +178,7 @@ class _$ProductImpl implements _Product {
       {required this.productId,
       required this.name,
       required this.description,
+      required this.provider,
       required this.price,
       required this.createdDate,
       required final List<String> images})
@@ -180,6 +194,8 @@ class _$ProductImpl implements _Product {
   @override
   final String? description;
   @override
+  final String provider;
+  @override
   final int price;
   @override
   final DateTime createdDate;
@@ -193,7 +209,7 @@ class _$ProductImpl implements _Product {
 
   @override
   String toString() {
-    return 'Product(productId: $productId, name: $name, description: $description, price: $price, createdDate: $createdDate, images: $images)';
+    return 'Product(productId: $productId, name: $name, description: $description, provider: $provider, price: $price, createdDate: $createdDate, images: $images)';
   }
 
   @override
@@ -206,6 +222,8 @@ class _$ProductImpl implements _Product {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.description, description) ||
                 other.description == description) &&
+            (identical(other.provider, provider) ||
+                other.provider == provider) &&
             (identical(other.price, price) || other.price == price) &&
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
@@ -214,8 +232,15 @@ class _$ProductImpl implements _Product {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, productId, name, description,
-      price, createdDate, const DeepCollectionEquality().hash(_images));
+  int get hashCode => Object.hash(
+      runtimeType,
+      productId,
+      name,
+      description,
+      provider,
+      price,
+      createdDate,
+      const DeepCollectionEquality().hash(_images));
 
   @JsonKey(ignore: true)
   @override
@@ -236,6 +261,7 @@ abstract class _Product implements Product {
       {required final int productId,
       required final String name,
       required final String? description,
+      required final String provider,
       required final int price,
       required final DateTime createdDate,
       required final List<String> images}) = _$ProductImpl;
@@ -248,6 +274,8 @@ abstract class _Product implements Product {
   String get name;
   @override
   String? get description;
+  @override
+  String get provider;
   @override
   int get price;
   @override
