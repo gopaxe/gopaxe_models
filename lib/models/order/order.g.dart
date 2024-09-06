@@ -29,6 +29,7 @@ _$OrderLineImpl _$$OrderLineImplFromJson(Map<String, dynamic> json) =>
     _$OrderLineImpl(
       orderLineId: json['orderLineId'] as int,
       libelle: json['libelle'] as String,
+      image: json['image'] as String,
       quantity: json['quantity'] as int,
       unitPrice: json['unitPrice'] as int,
       amount: json['amount'] as int,
@@ -39,6 +40,7 @@ Map<String, dynamic> _$$OrderLineImplToJson(_$OrderLineImpl instance) =>
     <String, dynamic>{
       'orderLineId': instance.orderLineId,
       'libelle': instance.libelle,
+      'image': instance.image,
       'quantity': instance.quantity,
       'unitPrice': instance.unitPrice,
       'amount': instance.amount,

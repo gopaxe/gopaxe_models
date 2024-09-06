@@ -253,6 +253,7 @@ OrderLine _$OrderLineFromJson(Map<String, dynamic> json) {
 mixin _$OrderLine {
   int get orderLineId => throw _privateConstructorUsedError;
   String get libelle => throw _privateConstructorUsedError;
+  String get image => throw _privateConstructorUsedError;
   int get quantity => throw _privateConstructorUsedError;
   int get unitPrice => throw _privateConstructorUsedError;
   int get amount => throw _privateConstructorUsedError;
@@ -272,6 +273,7 @@ abstract class $OrderLineCopyWith<$Res> {
   $Res call(
       {int orderLineId,
       String libelle,
+      String image,
       int quantity,
       int unitPrice,
       int amount,
@@ -293,6 +295,7 @@ class _$OrderLineCopyWithImpl<$Res, $Val extends OrderLine>
   $Res call({
     Object? orderLineId = null,
     Object? libelle = null,
+    Object? image = null,
     Object? quantity = null,
     Object? unitPrice = null,
     Object? amount = null,
@@ -306,6 +309,10 @@ class _$OrderLineCopyWithImpl<$Res, $Val extends OrderLine>
       libelle: null == libelle
           ? _value.libelle
           : libelle // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: null == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
               as String,
       quantity: null == quantity
           ? _value.quantity
@@ -338,6 +345,7 @@ abstract class _$$OrderLineImplCopyWith<$Res>
   $Res call(
       {int orderLineId,
       String libelle,
+      String image,
       int quantity,
       int unitPrice,
       int amount,
@@ -357,6 +365,7 @@ class __$$OrderLineImplCopyWithImpl<$Res>
   $Res call({
     Object? orderLineId = null,
     Object? libelle = null,
+    Object? image = null,
     Object? quantity = null,
     Object? unitPrice = null,
     Object? amount = null,
@@ -370,6 +379,10 @@ class __$$OrderLineImplCopyWithImpl<$Res>
       libelle: null == libelle
           ? _value.libelle
           : libelle // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: null == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
               as String,
       quantity: null == quantity
           ? _value.quantity
@@ -397,6 +410,7 @@ class _$OrderLineImpl implements _OrderLine {
   const _$OrderLineImpl(
       {required this.orderLineId,
       required this.libelle,
+      required this.image,
       required this.quantity,
       required this.unitPrice,
       required this.amount,
@@ -410,6 +424,8 @@ class _$OrderLineImpl implements _OrderLine {
   @override
   final String libelle;
   @override
+  final String image;
+  @override
   final int quantity;
   @override
   final int unitPrice;
@@ -420,7 +436,7 @@ class _$OrderLineImpl implements _OrderLine {
 
   @override
   String toString() {
-    return 'OrderLine(orderLineId: $orderLineId, libelle: $libelle, quantity: $quantity, unitPrice: $unitPrice, amount: $amount, orderId: $orderId)';
+    return 'OrderLine(orderLineId: $orderLineId, libelle: $libelle, image: $image, quantity: $quantity, unitPrice: $unitPrice, amount: $amount, orderId: $orderId)';
   }
 
   @override
@@ -431,6 +447,7 @@ class _$OrderLineImpl implements _OrderLine {
             (identical(other.orderLineId, orderLineId) ||
                 other.orderLineId == orderLineId) &&
             (identical(other.libelle, libelle) || other.libelle == libelle) &&
+            (identical(other.image, image) || other.image == image) &&
             (identical(other.quantity, quantity) ||
                 other.quantity == quantity) &&
             (identical(other.unitPrice, unitPrice) ||
@@ -441,8 +458,8 @@ class _$OrderLineImpl implements _OrderLine {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, orderLineId, libelle, quantity, unitPrice, amount, orderId);
+  int get hashCode => Object.hash(runtimeType, orderLineId, libelle, image,
+      quantity, unitPrice, amount, orderId);
 
   @JsonKey(ignore: true)
   @override
@@ -462,6 +479,7 @@ abstract class _OrderLine implements OrderLine {
   const factory _OrderLine(
       {required final int orderLineId,
       required final String libelle,
+      required final String image,
       required final int quantity,
       required final int unitPrice,
       required final int amount,
@@ -474,6 +492,8 @@ abstract class _OrderLine implements OrderLine {
   int get orderLineId;
   @override
   String get libelle;
+  @override
+  String get image;
   @override
   int get quantity;
   @override

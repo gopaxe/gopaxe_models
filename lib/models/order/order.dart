@@ -22,6 +22,7 @@ class OrderLine with _$OrderLine {
   const factory OrderLine(
       {required int orderLineId,
       required String libelle,
+      required String image,
       required int quantity,
       required int unitPrice,
       required int amount,
