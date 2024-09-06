@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../client/client.dart';
 part 'order.freezed.dart';
 
 part 'order.g.dart';
