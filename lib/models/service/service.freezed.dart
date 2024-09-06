@@ -342,7 +342,8 @@ mixin _$ServiceRequest {
   DateTime get completionDate => throw _privateConstructorUsedError;
   int? get workerId => throw _privateConstructorUsedError;
   bool get hasWorkerLocationShared => throw _privateConstructorUsedError;
-  bool get isPaid => throw _privateConstructorUsedError;
+  bool get hasTransportPaid => throw _privateConstructorUsedError;
+  bool get hasServicePaid => throw _privateConstructorUsedError;
 
   /// Contains workerId to which that service is for
   int? get forWorkerId => throw _privateConstructorUsedError; // Issue photo
@@ -377,7 +378,8 @@ abstract class $ServiceRequestCopyWith<$Res> {
       DateTime completionDate,
       int? workerId,
       bool hasWorkerLocationShared,
-      bool isPaid,
+      bool hasTransportPaid,
+      bool hasServicePaid,
       int? forWorkerId,
       String? issuePhotoUrl,
       int clientId,
@@ -412,7 +414,8 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
     Object? completionDate = null,
     Object? workerId = freezed,
     Object? hasWorkerLocationShared = null,
-    Object? isPaid = null,
+    Object? hasTransportPaid = null,
+    Object? hasServicePaid = null,
     Object? forWorkerId = freezed,
     Object? issuePhotoUrl = freezed,
     Object? clientId = null,
@@ -456,9 +459,13 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
           ? _value.hasWorkerLocationShared
           : hasWorkerLocationShared // ignore: cast_nullable_to_non_nullable
               as bool,
-      isPaid: null == isPaid
-          ? _value.isPaid
-          : isPaid // ignore: cast_nullable_to_non_nullable
+      hasTransportPaid: null == hasTransportPaid
+          ? _value.hasTransportPaid
+          : hasTransportPaid // ignore: cast_nullable_to_non_nullable
+              as bool,
+      hasServicePaid: null == hasServicePaid
+          ? _value.hasServicePaid
+          : hasServicePaid // ignore: cast_nullable_to_non_nullable
               as bool,
       forWorkerId: freezed == forWorkerId
           ? _value.forWorkerId
@@ -525,7 +532,8 @@ abstract class _$$ServiceRequestImplCopyWith<$Res>
       DateTime completionDate,
       int? workerId,
       bool hasWorkerLocationShared,
-      bool isPaid,
+      bool hasTransportPaid,
+      bool hasServicePaid,
       int? forWorkerId,
       String? issuePhotoUrl,
       int clientId,
@@ -559,7 +567,8 @@ class __$$ServiceRequestImplCopyWithImpl<$Res>
     Object? completionDate = null,
     Object? workerId = freezed,
     Object? hasWorkerLocationShared = null,
-    Object? isPaid = null,
+    Object? hasTransportPaid = null,
+    Object? hasServicePaid = null,
     Object? forWorkerId = freezed,
     Object? issuePhotoUrl = freezed,
     Object? clientId = null,
@@ -603,9 +612,13 @@ class __$$ServiceRequestImplCopyWithImpl<$Res>
           ? _value.hasWorkerLocationShared
           : hasWorkerLocationShared // ignore: cast_nullable_to_non_nullable
               as bool,
-      isPaid: null == isPaid
-          ? _value.isPaid
-          : isPaid // ignore: cast_nullable_to_non_nullable
+      hasTransportPaid: null == hasTransportPaid
+          ? _value.hasTransportPaid
+          : hasTransportPaid // ignore: cast_nullable_to_non_nullable
+              as bool,
+      hasServicePaid: null == hasServicePaid
+          ? _value.hasServicePaid
+          : hasServicePaid // ignore: cast_nullable_to_non_nullable
               as bool,
       forWorkerId: freezed == forWorkerId
           ? _value.forWorkerId
@@ -659,7 +672,8 @@ class _$ServiceRequestImpl implements _ServiceRequest {
       required this.completionDate,
       required this.workerId,
       required this.hasWorkerLocationShared,
-      required this.isPaid,
+      required this.hasTransportPaid,
+      required this.hasServicePaid,
       this.forWorkerId,
       this.issuePhotoUrl,
       required this.clientId,
@@ -690,7 +704,9 @@ class _$ServiceRequestImpl implements _ServiceRequest {
   @override
   final bool hasWorkerLocationShared;
   @override
-  final bool isPaid;
+  final bool hasTransportPaid;
+  @override
+  final bool hasServicePaid;
 
   /// Contains workerId to which that service is for
   @override
@@ -716,7 +732,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
 
   @override
   String toString() {
-    return 'ServiceRequest(id: $id, title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, workerId: $workerId, hasWorkerLocationShared: $hasWorkerLocationShared, isPaid: $isPaid, forWorkerId: $forWorkerId, issuePhotoUrl: $issuePhotoUrl, clientId: $clientId, startDate: $startDate, cancelDate: $cancelDate, contactDate: $contactDate, endDate: $endDate, createdDate: $createdDate, desiredLocation: $desiredLocation)';
+    return 'ServiceRequest(id: $id, title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, workerId: $workerId, hasWorkerLocationShared: $hasWorkerLocationShared, hasTransportPaid: $hasTransportPaid, hasServicePaid: $hasServicePaid, forWorkerId: $forWorkerId, issuePhotoUrl: $issuePhotoUrl, clientId: $clientId, startDate: $startDate, cancelDate: $cancelDate, contactDate: $contactDate, endDate: $endDate, createdDate: $createdDate, desiredLocation: $desiredLocation)';
   }
 
   @override
@@ -739,7 +755,10 @@ class _$ServiceRequestImpl implements _ServiceRequest {
             (identical(
                     other.hasWorkerLocationShared, hasWorkerLocationShared) ||
                 other.hasWorkerLocationShared == hasWorkerLocationShared) &&
-            (identical(other.isPaid, isPaid) || other.isPaid == isPaid) &&
+            (identical(other.hasTransportPaid, hasTransportPaid) ||
+                other.hasTransportPaid == hasTransportPaid) &&
+            (identical(other.hasServicePaid, hasServicePaid) ||
+                other.hasServicePaid == hasServicePaid) &&
             (identical(other.forWorkerId, forWorkerId) ||
                 other.forWorkerId == forWorkerId) &&
             (identical(other.issuePhotoUrl, issuePhotoUrl) ||
@@ -761,26 +780,28 @@ class _$ServiceRequestImpl implements _ServiceRequest {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      title,
-      description,
-      targetedMetierId,
-      targetedCompetenceId,
-      completionDate,
-      workerId,
-      hasWorkerLocationShared,
-      isPaid,
-      forWorkerId,
-      issuePhotoUrl,
-      clientId,
-      startDate,
-      cancelDate,
-      contactDate,
-      endDate,
-      createdDate,
-      desiredLocation);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        title,
+        description,
+        targetedMetierId,
+        targetedCompetenceId,
+        completionDate,
+        workerId,
+        hasWorkerLocationShared,
+        hasTransportPaid,
+        hasServicePaid,
+        forWorkerId,
+        issuePhotoUrl,
+        clientId,
+        startDate,
+        cancelDate,
+        contactDate,
+        endDate,
+        createdDate,
+        desiredLocation
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -807,7 +828,8 @@ abstract class _ServiceRequest implements ServiceRequest {
       required final DateTime completionDate,
       required final int? workerId,
       required final bool hasWorkerLocationShared,
-      required final bool isPaid,
+      required final bool hasTransportPaid,
+      required final bool hasServicePaid,
       final int? forWorkerId,
       final String? issuePhotoUrl,
       required final int clientId,
@@ -838,7 +860,9 @@ abstract class _ServiceRequest implements ServiceRequest {
   @override
   bool get hasWorkerLocationShared;
   @override
-  bool get isPaid;
+  bool get hasTransportPaid;
+  @override
+  bool get hasServicePaid;
   @override
 
   /// Contains workerId to which that service is for
