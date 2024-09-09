@@ -35,6 +35,7 @@ class ServiceRequest with _$ServiceRequest {
     required bool hasWorkerLocationShared,
     required bool hasTransportPaid,
     required bool hasServicePaid,
+    int? serviceFees,
 
     /// Contains workerId to which that service is for
     int? forWorkerId,
