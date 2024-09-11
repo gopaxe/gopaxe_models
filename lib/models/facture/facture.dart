@@ -12,7 +12,7 @@ class Facture with _$Facture {
     required int initialPrice,
     required int? finalPrice,
     required int? serviceId,
-    required int? subscriptionId,
+    required String? subscriptionId,
   }) = _Facture;
 
   factory Facture.fromJson(Map<String, dynamic> json) =>

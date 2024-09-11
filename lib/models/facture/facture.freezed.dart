@@ -26,7 +26,7 @@ mixin _$Facture {
   int get initialPrice => throw _privateConstructorUsedError;
   int? get finalPrice => throw _privateConstructorUsedError;
   int? get serviceId => throw _privateConstructorUsedError;
-  int? get subscriptionId => throw _privateConstructorUsedError;
+  String? get subscriptionId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,7 +45,7 @@ abstract class $FactureCopyWith<$Res> {
       int initialPrice,
       int? finalPrice,
       int? serviceId,
-      int? subscriptionId});
+      String? subscriptionId});
 }
 
 /// @nodoc
@@ -97,7 +97,7 @@ class _$FactureCopyWithImpl<$Res, $Val extends Facture>
       subscriptionId: freezed == subscriptionId
           ? _value.subscriptionId
           : subscriptionId // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
     ) as $Val);
   }
 }
@@ -116,7 +116,7 @@ abstract class _$$FactureImplCopyWith<$Res> implements $FactureCopyWith<$Res> {
       int initialPrice,
       int? finalPrice,
       int? serviceId,
-      int? subscriptionId});
+      String? subscriptionId});
 }
 
 /// @nodoc
@@ -166,7 +166,7 @@ class __$$FactureImplCopyWithImpl<$Res>
       subscriptionId: freezed == subscriptionId
           ? _value.subscriptionId
           : subscriptionId // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
     ));
   }
 }
@@ -199,7 +199,7 @@ class _$FactureImpl implements _Facture {
   @override
   final int? serviceId;
   @override
-  final int? subscriptionId;
+  final String? subscriptionId;
 
   @override
   String toString() {
@@ -254,7 +254,7 @@ abstract class _Facture implements Facture {
       required final int initialPrice,
       required final int? finalPrice,
       required final int? serviceId,
-      required final int? subscriptionId}) = _$FactureImpl;
+      required final String? subscriptionId}) = _$FactureImpl;
 
   factory _Facture.fromJson(Map<String, dynamic> json) = _$FactureImpl.fromJson;
 
@@ -271,7 +271,7 @@ abstract class _Facture implements Facture {
   @override
   int? get serviceId;
   @override
-  int? get subscriptionId;
+  String? get subscriptionId;
   @override
   @JsonKey(ignore: true)
   _$$FactureImplCopyWith<_$FactureImpl> get copyWith =>

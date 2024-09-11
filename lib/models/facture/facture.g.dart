@@ -16,7 +16,7 @@ _$FactureImpl _$$FactureImplFromJson(Map<String, dynamic> json) =>
       initialPrice: json['initialPrice'] as int,
       finalPrice: json['finalPrice'] as int?,
       serviceId: json['serviceId'] as int?,
-      subscriptionId: json['subscriptionId'] as int?,
+      subscriptionId: json['subscriptionId'] as String?,
     );
 
 Map<String, dynamic> _$$FactureImplToJson(_$FactureImpl instance) =>
