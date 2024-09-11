@@ -31,3 +31,4 @@ export 'package:gopaxe_models/models/jwt_role/role.dart';
 export 'package:gopaxe_models/models/domain/domain.dart';
 export 'package:gopaxe_models/models/profile_base/profile_base.dart';
 export 'package:gopaxe_models/models/client/client.dart';
+export 'package:gopaxe_models/models/facture/facture.dart';
