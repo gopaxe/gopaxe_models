@@ -8,7 +8,7 @@ class Facture with _$Facture {
   const factory Facture({
     required int factureId,
     required DateTime createdDate,
-    required DateTime resolveDate,
+    required DateTime? resolveDate,
     required int initialPrice,
     required int? finalPrice,
     required int? serviceId,

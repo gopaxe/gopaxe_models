@@ -22,7 +22,7 @@ Facture _$FactureFromJson(Map<String, dynamic> json) {
 mixin _$Facture {
   int get factureId => throw _privateConstructorUsedError;
   DateTime get createdDate => throw _privateConstructorUsedError;
-  DateTime get resolveDate => throw _privateConstructorUsedError;
+  DateTime? get resolveDate => throw _privateConstructorUsedError;
   int get initialPrice => throw _privateConstructorUsedError;
   int? get finalPrice => throw _privateConstructorUsedError;
   int? get serviceId => throw _privateConstructorUsedError;
@@ -41,7 +41,7 @@ abstract class $FactureCopyWith<$Res> {
   $Res call(
       {int factureId,
       DateTime createdDate,
-      DateTime resolveDate,
+      DateTime? resolveDate,
       int initialPrice,
       int? finalPrice,
       int? serviceId,
@@ -63,7 +63,7 @@ class _$FactureCopyWithImpl<$Res, $Val extends Facture>
   $Res call({
     Object? factureId = null,
     Object? createdDate = null,
-    Object? resolveDate = null,
+    Object? resolveDate = freezed,
     Object? initialPrice = null,
     Object? finalPrice = freezed,
     Object? serviceId = freezed,
@@ -78,10 +78,10 @@ class _$FactureCopyWithImpl<$Res, $Val extends Facture>
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      resolveDate: null == resolveDate
+      resolveDate: freezed == resolveDate
           ? _value.resolveDate
           : resolveDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       initialPrice: null == initialPrice
           ? _value.initialPrice
           : initialPrice // ignore: cast_nullable_to_non_nullable
@@ -112,7 +112,7 @@ abstract class _$$FactureImplCopyWith<$Res> implements $FactureCopyWith<$Res> {
   $Res call(
       {int factureId,
       DateTime createdDate,
-      DateTime resolveDate,
+      DateTime? resolveDate,
       int initialPrice,
       int? finalPrice,
       int? serviceId,
@@ -132,7 +132,7 @@ class __$$FactureImplCopyWithImpl<$Res>
   $Res call({
     Object? factureId = null,
     Object? createdDate = null,
-    Object? resolveDate = null,
+    Object? resolveDate = freezed,
     Object? initialPrice = null,
     Object? finalPrice = freezed,
     Object? serviceId = freezed,
@@ -147,10 +147,10 @@ class __$$FactureImplCopyWithImpl<$Res>
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      resolveDate: null == resolveDate
+      resolveDate: freezed == resolveDate
           ? _value.resolveDate
           : resolveDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       initialPrice: null == initialPrice
           ? _value.initialPrice
           : initialPrice // ignore: cast_nullable_to_non_nullable
@@ -191,7 +191,7 @@ class _$FactureImpl implements _Facture {
   @override
   final DateTime createdDate;
   @override
-  final DateTime resolveDate;
+  final DateTime? resolveDate;
   @override
   final int initialPrice;
   @override
@@ -250,7 +250,7 @@ abstract class _Facture implements Facture {
   const factory _Facture(
       {required final int factureId,
       required final DateTime createdDate,
-      required final DateTime resolveDate,
+      required final DateTime? resolveDate,
       required final int initialPrice,
       required final int? finalPrice,
       required final int? serviceId,
@@ -263,7 +263,7 @@ abstract class _Facture implements Facture {
   @override
   DateTime get createdDate;
   @override
-  DateTime get resolveDate;
+  DateTime? get resolveDate;
   @override
   int get initialPrice;
   @override
