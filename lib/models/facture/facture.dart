@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'Facture.freezed.dart';
-part 'Facture.g.dart';
+part 'facture.freezed.dart';
+part 'facture.g.dart';
 
 @freezed
 class Facture with _$Facture {
