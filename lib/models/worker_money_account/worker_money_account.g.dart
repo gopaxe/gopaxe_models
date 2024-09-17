@@ -21,11 +21,25 @@ Map<String, dynamic> _$$WorkerMoneyAccountImplToJson(
 _$WorkerWithdrawalRequestImpl _$$WorkerWithdrawalRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$WorkerWithdrawalRequestImpl(
-      currentBalance: json['currentBalance'] as int,
+      amount: json['amount'] as int,
     );
 
 Map<String, dynamic> _$$WorkerWithdrawalRequestImplToJson(
         _$WorkerWithdrawalRequestImpl instance) =>
     <String, dynamic>{
-      'currentBalance': instance.currentBalance,
+      'amount': instance.amount,
+    };
+
+_$WorkerWithdrawalTransactionImpl _$$WorkerWithdrawalTransactionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$WorkerWithdrawalTransactionImpl(
+      amount: json['amount'] as int,
+      requestedAt: DateTime.parse(json['requestedAt'] as String),
+    );
+
+Map<String, dynamic> _$$WorkerWithdrawalTransactionImplToJson(
+        _$WorkerWithdrawalTransactionImpl instance) =>
+    <String, dynamic>{
+      'amount': instance.amount,
+      'requestedAt': instance.requestedAt.toIso8601String(),
     };

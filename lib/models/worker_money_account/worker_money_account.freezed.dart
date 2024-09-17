@@ -160,7 +160,7 @@ WorkerWithdrawalRequest _$WorkerWithdrawalRequestFromJson(
 
 /// @nodoc
 mixin _$WorkerWithdrawalRequest {
-  int get currentBalance => throw _privateConstructorUsedError;
+  int get amount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -174,7 +174,7 @@ abstract class $WorkerWithdrawalRequestCopyWith<$Res> {
           $Res Function(WorkerWithdrawalRequest) then) =
       _$WorkerWithdrawalRequestCopyWithImpl<$Res, WorkerWithdrawalRequest>;
   @useResult
-  $Res call({int currentBalance});
+  $Res call({int amount});
 }
 
 /// @nodoc
@@ -191,12 +191,12 @@ class _$WorkerWithdrawalRequestCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? currentBalance = null,
+    Object? amount = null,
   }) {
     return _then(_value.copyWith(
-      currentBalance: null == currentBalance
-          ? _value.currentBalance
-          : currentBalance // ignore: cast_nullable_to_non_nullable
+      amount: null == amount
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
               as int,
     ) as $Val);
   }
@@ -211,7 +211,7 @@ abstract class _$$WorkerWithdrawalRequestImplCopyWith<$Res>
       __$$WorkerWithdrawalRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int currentBalance});
+  $Res call({int amount});
 }
 
 /// @nodoc
@@ -227,12 +227,12 @@ class __$$WorkerWithdrawalRequestImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? currentBalance = null,
+    Object? amount = null,
   }) {
     return _then(_$WorkerWithdrawalRequestImpl(
-      currentBalance: null == currentBalance
-          ? _value.currentBalance
-          : currentBalance // ignore: cast_nullable_to_non_nullable
+      amount: null == amount
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -241,17 +241,17 @@ class __$$WorkerWithdrawalRequestImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$WorkerWithdrawalRequestImpl implements _WorkerWithdrawalRequest {
-  const _$WorkerWithdrawalRequestImpl({required this.currentBalance});
+  const _$WorkerWithdrawalRequestImpl({required this.amount});
 
   factory _$WorkerWithdrawalRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$WorkerWithdrawalRequestImplFromJson(json);
 
   @override
-  final int currentBalance;
+  final int amount;
 
   @override
   String toString() {
-    return 'WorkerWithdrawalRequest(currentBalance: $currentBalance)';
+    return 'WorkerWithdrawalRequest(amount: $amount)';
   }
 
   @override
@@ -259,13 +259,12 @@ class _$WorkerWithdrawalRequestImpl implements _WorkerWithdrawalRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WorkerWithdrawalRequestImpl &&
-            (identical(other.currentBalance, currentBalance) ||
-                other.currentBalance == currentBalance));
+            (identical(other.amount, amount) || other.amount == amount));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, currentBalance);
+  int get hashCode => Object.hash(runtimeType, amount);
 
   @JsonKey(ignore: true)
   @override
@@ -283,16 +282,183 @@ class _$WorkerWithdrawalRequestImpl implements _WorkerWithdrawalRequest {
 }
 
 abstract class _WorkerWithdrawalRequest implements WorkerWithdrawalRequest {
-  const factory _WorkerWithdrawalRequest({required final int currentBalance}) =
+  const factory _WorkerWithdrawalRequest({required final int amount}) =
       _$WorkerWithdrawalRequestImpl;
 
   factory _WorkerWithdrawalRequest.fromJson(Map<String, dynamic> json) =
       _$WorkerWithdrawalRequestImpl.fromJson;
 
   @override
-  int get currentBalance;
+  int get amount;
   @override
   @JsonKey(ignore: true)
   _$$WorkerWithdrawalRequestImplCopyWith<_$WorkerWithdrawalRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+WorkerWithdrawalTransaction _$WorkerWithdrawalTransactionFromJson(
+    Map<String, dynamic> json) {
+  return _WorkerWithdrawalTransaction.fromJson(json);
+}
+
+/// @nodoc
+mixin _$WorkerWithdrawalTransaction {
+  int get amount => throw _privateConstructorUsedError;
+  DateTime get requestedAt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $WorkerWithdrawalTransactionCopyWith<WorkerWithdrawalTransaction>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $WorkerWithdrawalTransactionCopyWith<$Res> {
+  factory $WorkerWithdrawalTransactionCopyWith(
+          WorkerWithdrawalTransaction value,
+          $Res Function(WorkerWithdrawalTransaction) then) =
+      _$WorkerWithdrawalTransactionCopyWithImpl<$Res,
+          WorkerWithdrawalTransaction>;
+  @useResult
+  $Res call({int amount, DateTime requestedAt});
+}
+
+/// @nodoc
+class _$WorkerWithdrawalTransactionCopyWithImpl<$Res,
+        $Val extends WorkerWithdrawalTransaction>
+    implements $WorkerWithdrawalTransactionCopyWith<$Res> {
+  _$WorkerWithdrawalTransactionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? amount = null,
+    Object? requestedAt = null,
+  }) {
+    return _then(_value.copyWith(
+      amount: null == amount
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as int,
+      requestedAt: null == requestedAt
+          ? _value.requestedAt
+          : requestedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$WorkerWithdrawalTransactionImplCopyWith<$Res>
+    implements $WorkerWithdrawalTransactionCopyWith<$Res> {
+  factory _$$WorkerWithdrawalTransactionImplCopyWith(
+          _$WorkerWithdrawalTransactionImpl value,
+          $Res Function(_$WorkerWithdrawalTransactionImpl) then) =
+      __$$WorkerWithdrawalTransactionImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int amount, DateTime requestedAt});
+}
+
+/// @nodoc
+class __$$WorkerWithdrawalTransactionImplCopyWithImpl<$Res>
+    extends _$WorkerWithdrawalTransactionCopyWithImpl<$Res,
+        _$WorkerWithdrawalTransactionImpl>
+    implements _$$WorkerWithdrawalTransactionImplCopyWith<$Res> {
+  __$$WorkerWithdrawalTransactionImplCopyWithImpl(
+      _$WorkerWithdrawalTransactionImpl _value,
+      $Res Function(_$WorkerWithdrawalTransactionImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? amount = null,
+    Object? requestedAt = null,
+  }) {
+    return _then(_$WorkerWithdrawalTransactionImpl(
+      amount: null == amount
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as int,
+      requestedAt: null == requestedAt
+          ? _value.requestedAt
+          : requestedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$WorkerWithdrawalTransactionImpl
+    implements _WorkerWithdrawalTransaction {
+  const _$WorkerWithdrawalTransactionImpl(
+      {required this.amount, required this.requestedAt});
+
+  factory _$WorkerWithdrawalTransactionImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$WorkerWithdrawalTransactionImplFromJson(json);
+
+  @override
+  final int amount;
+  @override
+  final DateTime requestedAt;
+
+  @override
+  String toString() {
+    return 'WorkerWithdrawalTransaction(amount: $amount, requestedAt: $requestedAt)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WorkerWithdrawalTransactionImpl &&
+            (identical(other.amount, amount) || other.amount == amount) &&
+            (identical(other.requestedAt, requestedAt) ||
+                other.requestedAt == requestedAt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, amount, requestedAt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WorkerWithdrawalTransactionImplCopyWith<_$WorkerWithdrawalTransactionImpl>
+      get copyWith => __$$WorkerWithdrawalTransactionImplCopyWithImpl<
+          _$WorkerWithdrawalTransactionImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$WorkerWithdrawalTransactionImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _WorkerWithdrawalTransaction
+    implements WorkerWithdrawalTransaction {
+  const factory _WorkerWithdrawalTransaction(
+      {required final int amount,
+      required final DateTime requestedAt}) = _$WorkerWithdrawalTransactionImpl;
+
+  factory _WorkerWithdrawalTransaction.fromJson(Map<String, dynamic> json) =
+      _$WorkerWithdrawalTransactionImpl.fromJson;
+
+  @override
+  int get amount;
+  @override
+  DateTime get requestedAt;
+  @override
+  @JsonKey(ignore: true)
+  _$$WorkerWithdrawalTransactionImplCopyWith<_$WorkerWithdrawalTransactionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
