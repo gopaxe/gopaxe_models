@@ -26,6 +26,7 @@ class WorkerWithdrawalRequest with _$WorkerWithdrawalRequest {
 class WorkerWithdrawalTransaction with _$WorkerWithdrawalTransaction {
   const factory WorkerWithdrawalTransaction({
     required int amount,
+    required int transactionId,
     required DateTime requestedAt,
   }) = _WorkerWithdrawalTransaction;
   factory WorkerWithdrawalTransaction.fromJson(Map<String, dynamic> json) =>

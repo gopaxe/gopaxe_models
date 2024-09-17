@@ -304,6 +304,7 @@ WorkerWithdrawalTransaction _$WorkerWithdrawalTransactionFromJson(
 /// @nodoc
 mixin _$WorkerWithdrawalTransaction {
   int get amount => throw _privateConstructorUsedError;
+  int get transactionId => throw _privateConstructorUsedError;
   DateTime get requestedAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -320,7 +321,7 @@ abstract class $WorkerWithdrawalTransactionCopyWith<$Res> {
       _$WorkerWithdrawalTransactionCopyWithImpl<$Res,
           WorkerWithdrawalTransaction>;
   @useResult
-  $Res call({int amount, DateTime requestedAt});
+  $Res call({int amount, int transactionId, DateTime requestedAt});
 }
 
 /// @nodoc
@@ -338,12 +339,17 @@ class _$WorkerWithdrawalTransactionCopyWithImpl<$Res,
   @override
   $Res call({
     Object? amount = null,
+    Object? transactionId = null,
     Object? requestedAt = null,
   }) {
     return _then(_value.copyWith(
       amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
+              as int,
+      transactionId: null == transactionId
+          ? _value.transactionId
+          : transactionId // ignore: cast_nullable_to_non_nullable
               as int,
       requestedAt: null == requestedAt
           ? _value.requestedAt
@@ -362,7 +368,7 @@ abstract class _$$WorkerWithdrawalTransactionImplCopyWith<$Res>
       __$$WorkerWithdrawalTransactionImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int amount, DateTime requestedAt});
+  $Res call({int amount, int transactionId, DateTime requestedAt});
 }
 
 /// @nodoc
@@ -379,12 +385,17 @@ class __$$WorkerWithdrawalTransactionImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? amount = null,
+    Object? transactionId = null,
     Object? requestedAt = null,
   }) {
     return _then(_$WorkerWithdrawalTransactionImpl(
       amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
+              as int,
+      transactionId: null == transactionId
+          ? _value.transactionId
+          : transactionId // ignore: cast_nullable_to_non_nullable
               as int,
       requestedAt: null == requestedAt
           ? _value.requestedAt
@@ -399,7 +410,9 @@ class __$$WorkerWithdrawalTransactionImplCopyWithImpl<$Res>
 class _$WorkerWithdrawalTransactionImpl
     implements _WorkerWithdrawalTransaction {
   const _$WorkerWithdrawalTransactionImpl(
-      {required this.amount, required this.requestedAt});
+      {required this.amount,
+      required this.transactionId,
+      required this.requestedAt});
 
   factory _$WorkerWithdrawalTransactionImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -408,11 +421,13 @@ class _$WorkerWithdrawalTransactionImpl
   @override
   final int amount;
   @override
+  final int transactionId;
+  @override
   final DateTime requestedAt;
 
   @override
   String toString() {
-    return 'WorkerWithdrawalTransaction(amount: $amount, requestedAt: $requestedAt)';
+    return 'WorkerWithdrawalTransaction(amount: $amount, transactionId: $transactionId, requestedAt: $requestedAt)';
   }
 
   @override
@@ -421,13 +436,16 @@ class _$WorkerWithdrawalTransactionImpl
         (other.runtimeType == runtimeType &&
             other is _$WorkerWithdrawalTransactionImpl &&
             (identical(other.amount, amount) || other.amount == amount) &&
+            (identical(other.transactionId, transactionId) ||
+                other.transactionId == transactionId) &&
             (identical(other.requestedAt, requestedAt) ||
                 other.requestedAt == requestedAt));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, amount, requestedAt);
+  int get hashCode =>
+      Object.hash(runtimeType, amount, transactionId, requestedAt);
 
   @JsonKey(ignore: true)
   @override
@@ -448,6 +466,7 @@ abstract class _WorkerWithdrawalTransaction
     implements WorkerWithdrawalTransaction {
   const factory _WorkerWithdrawalTransaction(
       {required final int amount,
+      required final int transactionId,
       required final DateTime requestedAt}) = _$WorkerWithdrawalTransactionImpl;
 
   factory _WorkerWithdrawalTransaction.fromJson(Map<String, dynamic> json) =
@@ -455,6 +474,8 @@ abstract class _WorkerWithdrawalTransaction
 
   @override
   int get amount;
+  @override
+  int get transactionId;
   @override
   DateTime get requestedAt;
   @override

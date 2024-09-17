@@ -34,6 +34,7 @@ _$WorkerWithdrawalTransactionImpl _$$WorkerWithdrawalTransactionImplFromJson(
         Map<String, dynamic> json) =>
     _$WorkerWithdrawalTransactionImpl(
       amount: json['amount'] as int,
+      transactionId: json['transactionId'] as int,
       requestedAt: DateTime.parse(json['requestedAt'] as String),
     );
 
@@ -41,5 +42,6 @@ Map<String, dynamic> _$$WorkerWithdrawalTransactionImplToJson(
         _$WorkerWithdrawalTransactionImpl instance) =>
     <String, dynamic>{
       'amount': instance.amount,
+      'transactionId': instance.transactionId,
       'requestedAt': instance.requestedAt.toIso8601String(),
     };
