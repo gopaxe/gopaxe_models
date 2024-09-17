@@ -12,3 +12,12 @@ class WorkerMoneyAccount with _$WorkerMoneyAccount {
   factory WorkerMoneyAccount.fromJson(Map<String, dynamic> json) =>
       _$WorkerMoneyAccountFromJson(json);
 }
+
+@freezed
+class WorkerWithdrawalRequest with _$WorkerWithdrawalRequest {
+  const factory WorkerWithdrawalRequest({
+    required int currentBalance,
+  }) = _WorkerWithdrawalRequest;
+  factory WorkerWithdrawalRequest.fromJson(Map<String, dynamic> json) =>
+      _$WorkerWithdrawalRequestFromJson(json);
+}
