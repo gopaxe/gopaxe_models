@@ -35,6 +35,7 @@ _$WorkerWithdrawalTransactionImpl _$$WorkerWithdrawalTransactionImplFromJson(
     _$WorkerWithdrawalTransactionImpl(
       amount: json['amount'] as int,
       transactionId: json['transactionId'] as int,
+      status: $enumDecode(_$WithdrawalStatusEnumMap, json['status']),
       requestedAt: DateTime.parse(json['requestedAt'] as String),
     );
 
@@ -43,5 +44,12 @@ Map<String, dynamic> _$$WorkerWithdrawalTransactionImplToJson(
     <String, dynamic>{
       'amount': instance.amount,
       'transactionId': instance.transactionId,
+      'status': _$WithdrawalStatusEnumMap[instance.status]!,
       'requestedAt': instance.requestedAt.toIso8601String(),
     };
+
+const _$WithdrawalStatusEnumMap = {
+  WithdrawalStatus.inProgress: 'inProgress',
+  WithdrawalStatus.fail: 'fail',
+  WithdrawalStatus.done: 'done',
+};

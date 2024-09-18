@@ -305,6 +305,7 @@ WorkerWithdrawalTransaction _$WorkerWithdrawalTransactionFromJson(
 mixin _$WorkerWithdrawalTransaction {
   int get amount => throw _privateConstructorUsedError;
   int get transactionId => throw _privateConstructorUsedError;
+  WithdrawalStatus get status => throw _privateConstructorUsedError;
   DateTime get requestedAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -321,7 +322,11 @@ abstract class $WorkerWithdrawalTransactionCopyWith<$Res> {
       _$WorkerWithdrawalTransactionCopyWithImpl<$Res,
           WorkerWithdrawalTransaction>;
   @useResult
-  $Res call({int amount, int transactionId, DateTime requestedAt});
+  $Res call(
+      {int amount,
+      int transactionId,
+      WithdrawalStatus status,
+      DateTime requestedAt});
 }
 
 /// @nodoc
@@ -340,6 +345,7 @@ class _$WorkerWithdrawalTransactionCopyWithImpl<$Res,
   $Res call({
     Object? amount = null,
     Object? transactionId = null,
+    Object? status = null,
     Object? requestedAt = null,
   }) {
     return _then(_value.copyWith(
@@ -351,6 +357,10 @@ class _$WorkerWithdrawalTransactionCopyWithImpl<$Res,
           ? _value.transactionId
           : transactionId // ignore: cast_nullable_to_non_nullable
               as int,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as WithdrawalStatus,
       requestedAt: null == requestedAt
           ? _value.requestedAt
           : requestedAt // ignore: cast_nullable_to_non_nullable
@@ -368,7 +378,11 @@ abstract class _$$WorkerWithdrawalTransactionImplCopyWith<$Res>
       __$$WorkerWithdrawalTransactionImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int amount, int transactionId, DateTime requestedAt});
+  $Res call(
+      {int amount,
+      int transactionId,
+      WithdrawalStatus status,
+      DateTime requestedAt});
 }
 
 /// @nodoc
@@ -386,6 +400,7 @@ class __$$WorkerWithdrawalTransactionImplCopyWithImpl<$Res>
   $Res call({
     Object? amount = null,
     Object? transactionId = null,
+    Object? status = null,
     Object? requestedAt = null,
   }) {
     return _then(_$WorkerWithdrawalTransactionImpl(
@@ -397,6 +412,10 @@ class __$$WorkerWithdrawalTransactionImplCopyWithImpl<$Res>
           ? _value.transactionId
           : transactionId // ignore: cast_nullable_to_non_nullable
               as int,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as WithdrawalStatus,
       requestedAt: null == requestedAt
           ? _value.requestedAt
           : requestedAt // ignore: cast_nullable_to_non_nullable
@@ -412,6 +431,7 @@ class _$WorkerWithdrawalTransactionImpl
   const _$WorkerWithdrawalTransactionImpl(
       {required this.amount,
       required this.transactionId,
+      required this.status,
       required this.requestedAt});
 
   factory _$WorkerWithdrawalTransactionImpl.fromJson(
@@ -423,11 +443,13 @@ class _$WorkerWithdrawalTransactionImpl
   @override
   final int transactionId;
   @override
+  final WithdrawalStatus status;
+  @override
   final DateTime requestedAt;
 
   @override
   String toString() {
-    return 'WorkerWithdrawalTransaction(amount: $amount, transactionId: $transactionId, requestedAt: $requestedAt)';
+    return 'WorkerWithdrawalTransaction(amount: $amount, transactionId: $transactionId, status: $status, requestedAt: $requestedAt)';
   }
 
   @override
@@ -438,6 +460,7 @@ class _$WorkerWithdrawalTransactionImpl
             (identical(other.amount, amount) || other.amount == amount) &&
             (identical(other.transactionId, transactionId) ||
                 other.transactionId == transactionId) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.requestedAt, requestedAt) ||
                 other.requestedAt == requestedAt));
   }
@@ -445,7 +468,7 @@ class _$WorkerWithdrawalTransactionImpl
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, amount, transactionId, requestedAt);
+      Object.hash(runtimeType, amount, transactionId, status, requestedAt);
 
   @JsonKey(ignore: true)
   @override
@@ -467,6 +490,7 @@ abstract class _WorkerWithdrawalTransaction
   const factory _WorkerWithdrawalTransaction(
       {required final int amount,
       required final int transactionId,
+      required final WithdrawalStatus status,
       required final DateTime requestedAt}) = _$WorkerWithdrawalTransactionImpl;
 
   factory _WorkerWithdrawalTransaction.fromJson(Map<String, dynamic> json) =
@@ -476,6 +500,8 @@ abstract class _WorkerWithdrawalTransaction
   int get amount;
   @override
   int get transactionId;
+  @override
+  WithdrawalStatus get status;
   @override
   DateTime get requestedAt;
   @override
