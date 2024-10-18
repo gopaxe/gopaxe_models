@@ -138,7 +138,6 @@ _$SaveWorkerImpl _$$SaveWorkerImplFromJson(Map<String, dynamic> json) =>
       versoUrl: json['versoUrl'] as String,
       villeId: json['villeId'] as int,
       typeCompteId: json['typeCompteId'] as int,
-      gps: Offset.fromJson(json['gps'] as Map<String, dynamic>),
       rhumaineSkills: (json['rhumaineSkills'] as List<dynamic>)
           .map((e) => RhumaineSkill.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -155,7 +154,6 @@ Map<String, dynamic> _$$SaveWorkerImplToJson(_$SaveWorkerImpl instance) =>
       'versoUrl': instance.versoUrl,
       'villeId': instance.villeId,
       'typeCompteId': instance.typeCompteId,
-      'gps': instance.gps,
       'rhumaineSkills': instance.rhumaineSkills,
       'photo': instance.photo,
     };
