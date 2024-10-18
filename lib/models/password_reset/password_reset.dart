@@ -13,3 +13,13 @@ class PasswordResetRequest with _$PasswordResetRequest {
   factory PasswordResetRequest.fromJson(Map<String, dynamic> json) =>
       _$PasswordResetRequestFromJson(json);
 }
+
+@freezed
+class PasswordResetResponse with _$PasswordResetResponse {
+  const factory PasswordResetResponse({
+    required bool exist,
+  }) = _PasswordResetResponse;
+
+  factory PasswordResetResponse.fromJson(Map<String, dynamic> json) =>
+      _$PasswordResetResponseFromJson(json);
+}
