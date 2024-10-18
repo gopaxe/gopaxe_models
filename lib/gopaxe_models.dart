@@ -33,3 +33,4 @@ export 'package:gopaxe_models/models/transaction/transaction.dart';
 export 'package:gopaxe_models/models/competence/competence.dart';
 export 'package:gopaxe_models/models/worker_money_account/worker_money_account.dart';
 export 'package:gopaxe_models/models/facture/facture.dart';
+export 'package:gopaxe_models/models/password_reset/password_reset.dart';
