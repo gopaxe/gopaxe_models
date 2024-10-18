@@ -20,14 +20,14 @@ Map<String, dynamic> _$$PasswordResetRequestImplToJson(
       'password': instance.password,
     };
 
-_$PasswordResetResponseImpl _$$PasswordResetResponseImplFromJson(
+_$PhoneExistenceResponseImpl _$$PhoneExistenceResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$PasswordResetResponseImpl(
+    _$PhoneExistenceResponseImpl(
       exist: json['exist'] as bool,
     );
 
-Map<String, dynamic> _$$PasswordResetResponseImplToJson(
-        _$PasswordResetResponseImpl instance) =>
+Map<String, dynamic> _$$PhoneExistenceResponseImplToJson(
+        _$PhoneExistenceResponseImpl instance) =>
     <String, dynamic>{
       'exist': instance.exist,
     };

@@ -15,11 +15,11 @@ class PasswordResetRequest with _$PasswordResetRequest {
 }
 
 @freezed
-class PasswordResetResponse with _$PasswordResetResponse {
-  const factory PasswordResetResponse({
+class PhoneExistenceResponse with _$PhoneExistenceResponse {
+  const factory PhoneExistenceResponse({
     required bool exist,
-  }) = _PasswordResetResponse;
+  }) = _PhoneExistenceResponse;
 
-  factory PasswordResetResponse.fromJson(Map<String, dynamic> json) =>
-      _$PasswordResetResponseFromJson(json);
+  factory PhoneExistenceResponse.fromJson(Map<String, dynamic> json) =>
+      _$PhoneExistenceResponseFromJson(json);
 }
