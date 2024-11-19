@@ -4,6 +4,8 @@ part 'worker_money_account.freezed.dart';
 
 part 'worker_money_account.g.dart';
 
+enum OperationDirection { input, output }
+
 enum WithdrawalStatus {
   inProgress("en attente"),
   fail("echoué"),
@@ -37,6 +39,7 @@ class WorkerWithdrawalTransaction with _$WorkerWithdrawalTransaction {
     required int amount,
     required int transactionId,
     required WithdrawalStatus status,
+    required OperationDirection operationDirection,
     required DateTime requestedAt,
   }) = _WorkerWithdrawalTransaction;
   factory WorkerWithdrawalTransaction.fromJson(Map<String, dynamic> json) =>

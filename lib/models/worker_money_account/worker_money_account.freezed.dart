@@ -306,6 +306,8 @@ mixin _$WorkerWithdrawalTransaction {
   int get amount => throw _privateConstructorUsedError;
   int get transactionId => throw _privateConstructorUsedError;
   WithdrawalStatus get status => throw _privateConstructorUsedError;
+  OperationDirection get operationDirection =>
+      throw _privateConstructorUsedError;
   DateTime get requestedAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -326,6 +328,7 @@ abstract class $WorkerWithdrawalTransactionCopyWith<$Res> {
       {int amount,
       int transactionId,
       WithdrawalStatus status,
+      OperationDirection operationDirection,
       DateTime requestedAt});
 }
 
@@ -346,6 +349,7 @@ class _$WorkerWithdrawalTransactionCopyWithImpl<$Res,
     Object? amount = null,
     Object? transactionId = null,
     Object? status = null,
+    Object? operationDirection = null,
     Object? requestedAt = null,
   }) {
     return _then(_value.copyWith(
@@ -361,6 +365,10 @@ class _$WorkerWithdrawalTransactionCopyWithImpl<$Res,
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as WithdrawalStatus,
+      operationDirection: null == operationDirection
+          ? _value.operationDirection
+          : operationDirection // ignore: cast_nullable_to_non_nullable
+              as OperationDirection,
       requestedAt: null == requestedAt
           ? _value.requestedAt
           : requestedAt // ignore: cast_nullable_to_non_nullable
@@ -382,6 +390,7 @@ abstract class _$$WorkerWithdrawalTransactionImplCopyWith<$Res>
       {int amount,
       int transactionId,
       WithdrawalStatus status,
+      OperationDirection operationDirection,
       DateTime requestedAt});
 }
 
@@ -401,6 +410,7 @@ class __$$WorkerWithdrawalTransactionImplCopyWithImpl<$Res>
     Object? amount = null,
     Object? transactionId = null,
     Object? status = null,
+    Object? operationDirection = null,
     Object? requestedAt = null,
   }) {
     return _then(_$WorkerWithdrawalTransactionImpl(
@@ -416,6 +426,10 @@ class __$$WorkerWithdrawalTransactionImplCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as WithdrawalStatus,
+      operationDirection: null == operationDirection
+          ? _value.operationDirection
+          : operationDirection // ignore: cast_nullable_to_non_nullable
+              as OperationDirection,
       requestedAt: null == requestedAt
           ? _value.requestedAt
           : requestedAt // ignore: cast_nullable_to_non_nullable
@@ -432,6 +446,7 @@ class _$WorkerWithdrawalTransactionImpl
       {required this.amount,
       required this.transactionId,
       required this.status,
+      required this.operationDirection,
       required this.requestedAt});
 
   factory _$WorkerWithdrawalTransactionImpl.fromJson(
@@ -445,11 +460,13 @@ class _$WorkerWithdrawalTransactionImpl
   @override
   final WithdrawalStatus status;
   @override
+  final OperationDirection operationDirection;
+  @override
   final DateTime requestedAt;
 
   @override
   String toString() {
-    return 'WorkerWithdrawalTransaction(amount: $amount, transactionId: $transactionId, status: $status, requestedAt: $requestedAt)';
+    return 'WorkerWithdrawalTransaction(amount: $amount, transactionId: $transactionId, status: $status, operationDirection: $operationDirection, requestedAt: $requestedAt)';
   }
 
   @override
@@ -461,14 +478,16 @@ class _$WorkerWithdrawalTransactionImpl
             (identical(other.transactionId, transactionId) ||
                 other.transactionId == transactionId) &&
             (identical(other.status, status) || other.status == status) &&
+            (identical(other.operationDirection, operationDirection) ||
+                other.operationDirection == operationDirection) &&
             (identical(other.requestedAt, requestedAt) ||
                 other.requestedAt == requestedAt));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, amount, transactionId, status, requestedAt);
+  int get hashCode => Object.hash(runtimeType, amount, transactionId, status,
+      operationDirection, requestedAt);
 
   @JsonKey(ignore: true)
   @override
@@ -491,6 +510,7 @@ abstract class _WorkerWithdrawalTransaction
       {required final int amount,
       required final int transactionId,
       required final WithdrawalStatus status,
+      required final OperationDirection operationDirection,
       required final DateTime requestedAt}) = _$WorkerWithdrawalTransactionImpl;
 
   factory _WorkerWithdrawalTransaction.fromJson(Map<String, dynamic> json) =
@@ -502,6 +522,8 @@ abstract class _WorkerWithdrawalTransaction
   int get transactionId;
   @override
   WithdrawalStatus get status;
+  @override
+  OperationDirection get operationDirection;
   @override
   DateTime get requestedAt;
   @override
