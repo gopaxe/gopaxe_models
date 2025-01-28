@@ -12,7 +12,7 @@ part of 'service.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CreateServiceRequest _$CreateServiceRequestFromJson(Map<String, dynamic> json) {
   return _CreateServiceRequest.fromJson(json);
@@ -30,8 +30,12 @@ mixin _$CreateServiceRequest {
       throw _privateConstructorUsedError; // Date a laquelle le client aimerais que son travaille soit terminer au plus tart
   Offset get desiredLocation => throw _privateConstructorUsedError;
 
+  /// Serializes this CreateServiceRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreateServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreateServiceRequestCopyWith<CreateServiceRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -66,6 +70,8 @@ class _$CreateServiceRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreateServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class _$CreateServiceRequestCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of CreateServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $OffsetCopyWith<$Res> get desiredLocation {
@@ -153,6 +161,8 @@ class __$$CreateServiceRequestImplCopyWithImpl<$Res>
       $Res Function(_$CreateServiceRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreateServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -242,7 +252,7 @@ class _$CreateServiceRequestImpl implements _CreateServiceRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateServiceRequestImpl &&
@@ -263,7 +273,7 @@ class _$CreateServiceRequestImpl implements _CreateServiceRequest {
                 other.desiredLocation == desiredLocation));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -276,7 +286,9 @@ class _$CreateServiceRequestImpl implements _CreateServiceRequest {
       completionDate,
       desiredLocation);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreateServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateServiceRequestImplCopyWith<_$CreateServiceRequestImpl>
@@ -319,11 +331,15 @@ abstract class _CreateServiceRequest implements CreateServiceRequest {
   @override
   int? get forWorkerId;
   @override
-  DateTime get completionDate;
-  @override // Date a laquelle le client aimerais que son travaille soit terminer au plus tart
-  Offset get desiredLocation;
+  DateTime
+      get completionDate; // Date a laquelle le client aimerais que son travaille soit terminer au plus tart
   @override
-  @JsonKey(ignore: true)
+  Offset get desiredLocation;
+
+  /// Create a copy of CreateServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateServiceRequestImplCopyWith<_$CreateServiceRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -358,8 +374,12 @@ mixin _$ServiceRequest {
   DateTime? get createdDate => throw _privateConstructorUsedError;
   Offset get desiredLocation => throw _privateConstructorUsedError;
 
+  /// Serializes this ServiceRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ServiceRequestCopyWith<ServiceRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -405,6 +425,8 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -513,6 +535,8 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
     ) as $Val);
   }
 
+  /// Create a copy of ServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $OffsetCopyWith<$Res> get desiredLocation {
@@ -564,6 +588,8 @@ class __$$ServiceRequestImplCopyWithImpl<$Res>
       _$ServiceRequestImpl _value, $Res Function(_$ServiceRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -752,7 +778,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ServiceRequestImpl &&
@@ -796,7 +822,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
                 other.desiredLocation == desiredLocation));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -822,7 +848,9 @@ class _$ServiceRequestImpl implements _ServiceRequest {
         desiredLocation
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ServiceRequestImplCopyWith<_$ServiceRequestImpl> get copyWith =>
@@ -885,11 +913,11 @@ abstract class _ServiceRequest implements ServiceRequest {
   bool get hasServicePaid;
   @override
   int? get factureId;
-  @override
 
   /// Contains workerId to which that service is for
-  int? get forWorkerId;
-  @override // Issue photo
+  @override
+  int? get forWorkerId; // Issue photo
+  @override
   String? get issuePhotoUrl;
   @override
   int get clientId;
@@ -898,15 +926,18 @@ abstract class _ServiceRequest implements ServiceRequest {
   @override
   DateTime? get cancelDate;
   @override
-  DateTime? get contactDate;
-  @override // Date which client and worker meet
+  DateTime? get contactDate; // Date which client and worker meet
+  @override
   DateTime? get endDate;
   @override
   DateTime? get createdDate;
   @override
   Offset get desiredLocation;
+
+  /// Create a copy of ServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ServiceRequestImplCopyWith<_$ServiceRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -921,8 +952,12 @@ mixin _$ServiceRequestWithClient {
   ClientServiceInfos get client => throw _privateConstructorUsedError;
   ServiceRequest get service => throw _privateConstructorUsedError;
 
+  /// Serializes this ServiceRequestWithClient to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ServiceRequestWithClient
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ServiceRequestWithClientCopyWith<ServiceRequestWithClient> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -950,6 +985,8 @@ class _$ServiceRequestWithClientCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ServiceRequestWithClient
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -968,6 +1005,8 @@ class _$ServiceRequestWithClientCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ServiceRequestWithClient
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ClientServiceInfosCopyWith<$Res> get client {
@@ -976,6 +1015,8 @@ class _$ServiceRequestWithClientCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ServiceRequestWithClient
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ServiceRequestCopyWith<$Res> get service {
@@ -1012,6 +1053,8 @@ class __$$ServiceRequestWithClientImplCopyWithImpl<$Res>
       $Res Function(_$ServiceRequestWithClientImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ServiceRequestWithClient
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1051,7 +1094,7 @@ class _$ServiceRequestWithClientImpl implements _ServiceRequestWithClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ServiceRequestWithClientImpl &&
@@ -1059,11 +1102,13 @@ class _$ServiceRequestWithClientImpl implements _ServiceRequestWithClient {
             (identical(other.service, service) || other.service == service));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, client, service);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServiceRequestWithClient
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ServiceRequestWithClientImplCopyWith<_$ServiceRequestWithClientImpl>
@@ -1090,8 +1135,11 @@ abstract class _ServiceRequestWithClient implements ServiceRequestWithClient {
   ClientServiceInfos get client;
   @override
   ServiceRequest get service;
+
+  /// Create a copy of ServiceRequestWithClient
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ServiceRequestWithClientImplCopyWith<_$ServiceRequestWithClientImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1106,8 +1154,12 @@ mixin _$ServiceRequestWithWorker {
   WorkerServiceInfos? get worker => throw _privateConstructorUsedError;
   ServiceRequest get service => throw _privateConstructorUsedError;
 
+  /// Serializes this ServiceRequestWithWorker to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ServiceRequestWithWorker
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ServiceRequestWithWorkerCopyWith<ServiceRequestWithWorker> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1135,6 +1187,8 @@ class _$ServiceRequestWithWorkerCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ServiceRequestWithWorker
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1153,6 +1207,8 @@ class _$ServiceRequestWithWorkerCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ServiceRequestWithWorker
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $WorkerServiceInfosCopyWith<$Res>? get worker {
@@ -1165,6 +1221,8 @@ class _$ServiceRequestWithWorkerCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ServiceRequestWithWorker
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ServiceRequestCopyWith<$Res> get service {
@@ -1201,6 +1259,8 @@ class __$$ServiceRequestWithWorkerImplCopyWithImpl<$Res>
       $Res Function(_$ServiceRequestWithWorkerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ServiceRequestWithWorker
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1240,7 +1300,7 @@ class _$ServiceRequestWithWorkerImpl implements _ServiceRequestWithWorker {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ServiceRequestWithWorkerImpl &&
@@ -1248,11 +1308,13 @@ class _$ServiceRequestWithWorkerImpl implements _ServiceRequestWithWorker {
             (identical(other.service, service) || other.service == service));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, worker, service);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServiceRequestWithWorker
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ServiceRequestWithWorkerImplCopyWith<_$ServiceRequestWithWorkerImpl>
@@ -1279,8 +1341,11 @@ abstract class _ServiceRequestWithWorker implements ServiceRequestWithWorker {
   WorkerServiceInfos? get worker;
   @override
   ServiceRequest get service;
+
+  /// Create a copy of ServiceRequestWithWorker
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ServiceRequestWithWorkerImplCopyWith<_$ServiceRequestWithWorkerImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

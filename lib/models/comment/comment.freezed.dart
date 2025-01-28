@@ -12,7 +12,7 @@ part of 'comment.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Comment _$CommentFromJson(Map<String, dynamic> json) {
   return _Comment.fromJson(json);
@@ -30,8 +30,12 @@ mixin _$Comment {
   String get content => throw _privateConstructorUsedError;
   DateTime get createdDate => throw _privateConstructorUsedError;
 
+  /// Serializes this Comment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommentCopyWith<Comment> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -65,6 +69,8 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,6 +124,8 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
     ) as $Val);
   }
 
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $WorkerServiceInfosCopyWith<$Res> get worker {
@@ -126,6 +134,8 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
     });
   }
 
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ClientServiceInfosCopyWith<$Res> get client {
@@ -167,6 +177,8 @@ class __$$CommentImplCopyWithImpl<$Res>
       _$CommentImpl _value, $Res Function(_$CommentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -263,7 +275,7 @@ class _$CommentImpl implements _Comment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommentImpl &&
@@ -283,12 +295,14 @@ class _$CommentImpl implements _Comment {
                 other.createdDate == createdDate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, commentId, serviceId, workerId,
       worker, client, sendByWorker, score, content, createdDate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommentImplCopyWith<_$CommentImpl> get copyWith =>
@@ -334,8 +348,11 @@ abstract class _Comment implements Comment {
   String get content;
   @override
   DateTime get createdDate;
+
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommentImplCopyWith<_$CommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -350,8 +367,12 @@ mixin _$CreateCommentRequest {
   String get comment => throw _privateConstructorUsedError;
   double get score => throw _privateConstructorUsedError;
 
+  /// Serializes this CreateCommentRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreateCommentRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreateCommentRequestCopyWith<CreateCommentRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -376,6 +397,8 @@ class _$CreateCommentRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreateCommentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -419,6 +442,8 @@ class __$$CreateCommentRequestImplCopyWithImpl<$Res>
       $Res Function(_$CreateCommentRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreateCommentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -465,7 +490,7 @@ class _$CreateCommentRequestImpl implements _CreateCommentRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateCommentRequestImpl &&
@@ -475,11 +500,13 @@ class _$CreateCommentRequestImpl implements _CreateCommentRequest {
             (identical(other.score, score) || other.score == score));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, serviceId, comment, score);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreateCommentRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateCommentRequestImplCopyWith<_$CreateCommentRequestImpl>
@@ -510,8 +537,11 @@ abstract class _CreateCommentRequest implements CreateCommentRequest {
   String get comment;
   @override
   double get score;
+
+  /// Create a copy of CreateCommentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateCommentRequestImplCopyWith<_$CreateCommentRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

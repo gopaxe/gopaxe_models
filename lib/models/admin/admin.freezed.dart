@@ -12,7 +12,7 @@ part of 'admin.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Admin _$AdminFromJson(Map<String, dynamic> json) {
   return _Admin.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$Admin {
   String get adminName => throw _privateConstructorUsedError;
   String get motDePasse => throw _privateConstructorUsedError;
 
+  /// Serializes this Admin to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Admin
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminCopyWith<Admin> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -47,6 +51,8 @@ class _$AdminCopyWithImpl<$Res, $Val extends Admin>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Admin
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -89,6 +95,8 @@ class __$$AdminImplCopyWithImpl<$Res>
       _$AdminImpl _value, $Res Function(_$AdminImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Admin
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -137,7 +145,7 @@ class _$AdminImpl implements _Admin {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdminImpl &&
@@ -148,11 +156,13 @@ class _$AdminImpl implements _Admin {
                 other.motDePasse == motDePasse));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, adminId, adminName, motDePasse);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Admin
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminImplCopyWith<_$AdminImpl> get copyWith =>
@@ -180,8 +190,11 @@ abstract class _Admin implements Admin {
   String get adminName;
   @override
   String get motDePasse;
+
+  /// Create a copy of Admin
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminImplCopyWith<_$AdminImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -195,8 +208,12 @@ mixin _$AdminOutPut {
   int get adminId => throw _privateConstructorUsedError;
   String get adminName => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminOutPut to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminOutPut
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminOutPutCopyWith<AdminOutPut> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -220,6 +237,8 @@ class _$AdminOutPutCopyWithImpl<$Res, $Val extends AdminOutPut>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminOutPut
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -258,6 +277,8 @@ class __$$AdminOutPutImplCopyWithImpl<$Res>
       _$AdminOutPutImpl _value, $Res Function(_$AdminOutPutImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminOutPut
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -296,7 +317,7 @@ class _$AdminOutPutImpl implements _AdminOutPut {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdminOutPutImpl &&
@@ -305,11 +326,13 @@ class _$AdminOutPutImpl implements _AdminOutPut {
                 other.adminName == adminName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, adminId, adminName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminOutPut
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminOutPutImplCopyWith<_$AdminOutPutImpl> get copyWith =>
@@ -335,8 +358,11 @@ abstract class _AdminOutPut implements AdminOutPut {
   int get adminId;
   @override
   String get adminName;
+
+  /// Create a copy of AdminOutPut
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminOutPutImplCopyWith<_$AdminOutPutImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -352,8 +378,12 @@ mixin _$CreateAdmin {
   String get telephone => throw _privateConstructorUsedError;
   String get motDePasse => throw _privateConstructorUsedError;
 
+  /// Serializes this CreateAdmin to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreateAdmin
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreateAdminCopyWith<CreateAdmin> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -377,6 +407,8 @@ class _$CreateAdminCopyWithImpl<$Res, $Val extends CreateAdmin>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreateAdmin
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -425,6 +457,8 @@ class __$$CreateAdminImplCopyWithImpl<$Res>
       _$CreateAdminImpl _value, $Res Function(_$CreateAdminImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreateAdmin
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -481,7 +515,7 @@ class _$CreateAdminImpl implements _CreateAdmin {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateAdminImpl &&
@@ -493,12 +527,14 @@ class _$CreateAdminImpl implements _CreateAdmin {
                 other.motDePasse == motDePasse));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, nom, prenom, telephone, motDePasse);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreateAdmin
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateAdminImplCopyWith<_$CreateAdminImpl> get copyWith =>
@@ -530,8 +566,11 @@ abstract class _CreateAdmin implements CreateAdmin {
   String get telephone;
   @override
   String get motDePasse;
+
+  /// Create a copy of CreateAdmin
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateAdminImplCopyWith<_$CreateAdminImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

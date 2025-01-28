@@ -8,11 +8,11 @@ part of 'product.dart';
 
 _$ProductImpl _$$ProductImplFromJson(Map<String, dynamic> json) =>
     _$ProductImpl(
-      productId: json['productId'] as int,
+      productId: (json['productId'] as num).toInt(),
       name: json['name'] as String,
       description: json['description'] as String?,
       provider: json['provider'] as String,
-      price: json['price'] as int,
+      price: (json['price'] as num).toInt(),
       createdDate: DateTime.parse(json['createdDate'] as String),
       images:
           (json['images'] as List<dynamic>).map((e) => e as String).toList(),

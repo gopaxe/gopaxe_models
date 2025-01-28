@@ -12,7 +12,7 @@ part of 'subscription.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SubscriptionValidity _$SubscriptionValidityFromJson(Map<String, dynamic> json) {
   return _SubscriptionValidity.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$SubscriptionValidity {
   bool get isValid => throw _privateConstructorUsedError;
   DateTime get transactionValidityDate => throw _privateConstructorUsedError;
 
+  /// Serializes this SubscriptionValidity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SubscriptionValidity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SubscriptionValidityCopyWith<SubscriptionValidity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$SubscriptionValidityCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SubscriptionValidity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +101,8 @@ class __$$SubscriptionValidityImplCopyWithImpl<$Res>
       $Res Function(_$SubscriptionValidityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SubscriptionValidity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -143,7 +151,7 @@ class _$SubscriptionValidityImpl implements _SubscriptionValidity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionValidityImpl &&
@@ -155,12 +163,14 @@ class _$SubscriptionValidityImpl implements _SubscriptionValidity {
                 other.transactionValidityDate == transactionValidityDate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, transactionId, isValid, transactionValidityDate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SubscriptionValidity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SubscriptionValidityImplCopyWith<_$SubscriptionValidityImpl>
@@ -192,8 +202,11 @@ abstract class _SubscriptionValidity implements SubscriptionValidity {
   bool get isValid;
   @override
   DateTime get transactionValidityDate;
+
+  /// Create a copy of SubscriptionValidity
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SubscriptionValidityImplCopyWith<_$SubscriptionValidityImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

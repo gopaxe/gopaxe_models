@@ -7,7 +7,7 @@ part of 'pubs.dart';
 // **************************************************************************
 
 _$PubsImpl _$$PubsImplFromJson(Map<String, dynamic> json) => _$PubsImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       title: json['title'] as String,
       content: json['content'] as String,
     );

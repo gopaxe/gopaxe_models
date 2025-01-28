@@ -12,7 +12,7 @@ part of 'type_compte.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 TypeCompte _$TypeCompteFromJson(Map<String, dynamic> json) {
   return _TypeCompte.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$TypeCompte {
   int get typeCompteId => throw _privateConstructorUsedError;
   String get libelle => throw _privateConstructorUsedError;
 
+  /// Serializes this TypeCompte to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TypeCompte
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TypeCompteCopyWith<TypeCompte> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$TypeCompteCopyWithImpl<$Res, $Val extends TypeCompte>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TypeCompte
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$TypeCompteImplCopyWithImpl<$Res>
       _$TypeCompteImpl _value, $Res Function(_$TypeCompteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TypeCompte
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,7 +132,7 @@ class _$TypeCompteImpl implements _TypeCompte {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TypeCompteImpl &&
@@ -133,11 +141,13 @@ class _$TypeCompteImpl implements _TypeCompte {
             (identical(other.libelle, libelle) || other.libelle == libelle));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, typeCompteId, libelle);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TypeCompte
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TypeCompteImplCopyWith<_$TypeCompteImpl> get copyWith =>
@@ -163,8 +173,11 @@ abstract class _TypeCompte implements TypeCompte {
   int get typeCompteId;
   @override
   String get libelle;
+
+  /// Create a copy of TypeCompte
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TypeCompteImplCopyWith<_$TypeCompteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

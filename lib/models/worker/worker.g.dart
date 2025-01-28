@@ -21,7 +21,7 @@ Map<String, dynamic> _$$OffsetImplToJson(_$OffsetImpl instance) =>
 
 _$UserOffsetImpl _$$UserOffsetImplFromJson(Map<String, dynamic> json) =>
     _$UserOffsetImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       offset: Offset.fromJson(json['offset'] as Map<String, dynamic>),
       isClient: json['isClient'] as bool,
       locationHash: json['locationHash'] as String?,
@@ -48,9 +48,9 @@ Map<String, dynamic> _$$CniImplToJson(_$CniImpl instance) => <String, dynamic>{
 _$RhumaineSkillImpl _$$RhumaineSkillImplFromJson(Map<String, dynamic> json) =>
     _$RhumaineSkillImpl(
       competencesIds: (json['competencesIds'] as List<dynamic>)
-          .map((e) => e as int)
+          .map((e) => (e as num).toInt())
           .toList(),
-      metierId: json['metierId'] as int,
+      metierId: (json['metierId'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$RhumaineSkillImplToJson(_$RhumaineSkillImpl instance) =>
@@ -60,7 +60,7 @@ Map<String, dynamic> _$$RhumaineSkillImplToJson(_$RhumaineSkillImpl instance) =>
     };
 
 _$WorkerImpl _$$WorkerImplFromJson(Map<String, dynamic> json) => _$WorkerImpl(
-      workerId: json['workerId'] as int,
+      workerId: (json['workerId'] as num).toInt(),
       uuid: json['uuid'] as String,
       photo: json['photo'] as String,
       firstName: json['firstName'] as String,
@@ -70,12 +70,12 @@ _$WorkerImpl _$$WorkerImplFromJson(Map<String, dynamic> json) => _$WorkerImpl(
       offset: Offset.fromJson(json['offset'] as Map<String, dynamic>),
       telephone: json['telephone'] as String,
       hashedTelephone: json['hashedTelephone'] as String? ?? '',
-      typeComptedId: json['typeComptedId'] as int,
+      typeComptedId: (json['typeComptedId'] as num).toInt(),
       cni: Cni.fromJson(json['cni'] as Map<String, dynamic>),
       rhumaineSkills: (json['rhumaineSkills'] as List<dynamic>)
           .map((e) => RhumaineSkill.fromJson(e as Map<String, dynamic>))
           .toList(),
-      villeId: json['villeId'] as int,
+      villeId: (json['villeId'] as num).toInt(),
       isDeleted: json['isDeleted'] as bool,
       dateCreation: DateTime.parse(json['dateCreation'] as String),
     );
@@ -103,7 +103,7 @@ Map<String, dynamic> _$$WorkerImplToJson(_$WorkerImpl instance) =>
 _$WorkerServiceInfosImpl _$$WorkerServiceInfosImplFromJson(
         Map<String, dynamic> json) =>
     _$WorkerServiceInfosImpl(
-      workerId: json['workerId'] as int,
+      workerId: (json['workerId'] as num).toInt(),
       photo: json['photo'] as String?,
       nom: json['nom'] as String,
       prenom: json['prenom'] as String,
@@ -136,8 +136,8 @@ _$SaveWorkerImpl _$$SaveWorkerImplFromJson(Map<String, dynamic> json) =>
       email: json['email'] as String,
       rectoUrl: json['rectoUrl'] as String,
       versoUrl: json['versoUrl'] as String,
-      villeId: json['villeId'] as int,
-      typeCompteId: json['typeCompteId'] as int,
+      villeId: (json['villeId'] as num).toInt(),
+      typeCompteId: (json['typeCompteId'] as num).toInt(),
       rhumaineSkills: (json['rhumaineSkills'] as List<dynamic>)
           .map((e) => RhumaineSkill.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -167,8 +167,8 @@ _$SaveWorkerWithPasswordImpl _$$SaveWorkerWithPasswordImplFromJson(
       email: json['email'] as String,
       rectoUrl: json['rectoUrl'] as String,
       versoUrl: json['versoUrl'] as String,
-      villeId: json['villeId'] as int,
-      typeCompteId: json['typeCompteId'] as int,
+      villeId: (json['villeId'] as num).toInt(),
+      typeCompteId: (json['typeCompteId'] as num).toInt(),
       gps: Offset.fromJson(json['gps'] as Map<String, dynamic>),
       rhumaineSkills: (json['rhumaineSkills'] as List<dynamic>)
           .map((e) => RhumaineSkill.fromJson(e as Map<String, dynamic>))
@@ -192,4 +192,20 @@ Map<String, dynamic> _$$SaveWorkerWithPasswordImplToJson(
       'rhumaineSkills': instance.rhumaineSkills,
       'photo': instance.photo,
       'password': instance.password,
+    };
+
+_$UpdateWorkerRequestImpl _$$UpdateWorkerRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$UpdateWorkerRequestImpl(
+      nom: json['nom'] as String?,
+      prenom: json['prenom'] as String?,
+      photo: json['photo'] as String?,
+    );
+
+Map<String, dynamic> _$$UpdateWorkerRequestImplToJson(
+        _$UpdateWorkerRequestImpl instance) =>
+    <String, dynamic>{
+      'nom': instance.nom,
+      'prenom': instance.prenom,
+      'photo': instance.photo,
     };

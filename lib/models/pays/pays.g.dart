@@ -7,7 +7,7 @@ part of 'pays.dart';
 // **************************************************************************
 
 _$PaysImpl _$$PaysImplFromJson(Map<String, dynamic> json) => _$PaysImpl(
-      paysId: json['paysId'] as int,
+      paysId: (json['paysId'] as num).toInt(),
       libelle: json['libelle'] as String,
     );
 

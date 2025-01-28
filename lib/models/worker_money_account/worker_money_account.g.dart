@@ -9,7 +9,7 @@ part of 'worker_money_account.dart';
 _$WorkerMoneyAccountImpl _$$WorkerMoneyAccountImplFromJson(
         Map<String, dynamic> json) =>
     _$WorkerMoneyAccountImpl(
-      currentBalance: json['currentBalance'] as int,
+      currentBalance: (json['currentBalance'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$WorkerMoneyAccountImplToJson(
@@ -21,7 +21,7 @@ Map<String, dynamic> _$$WorkerMoneyAccountImplToJson(
 _$WorkerWithdrawalRequestImpl _$$WorkerWithdrawalRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$WorkerWithdrawalRequestImpl(
-      amount: json['amount'] as int,
+      amount: (json['amount'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$WorkerWithdrawalRequestImplToJson(
@@ -33,8 +33,8 @@ Map<String, dynamic> _$$WorkerWithdrawalRequestImplToJson(
 _$WorkerWithdrawalTransactionImpl _$$WorkerWithdrawalTransactionImplFromJson(
         Map<String, dynamic> json) =>
     _$WorkerWithdrawalTransactionImpl(
-      amount: json['amount'] as int,
-      transactionId: json['transactionId'] as int,
+      amount: (json['amount'] as num).toInt(),
+      transactionId: (json['transactionId'] as num).toInt(),
       status: $enumDecode(_$WithdrawalStatusEnumMap, json['status']),
       operationDirection:
           $enumDecode(_$OperationDirectionEnumMap, json['operationDirection']),

@@ -12,7 +12,7 @@ part of 'image_uploaded.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ImageUploaded _$ImageUploadedFromJson(Map<String, dynamic> json) {
   return _ImageUploaded.fromJson(json);
@@ -22,8 +22,12 @@ ImageUploaded _$ImageUploadedFromJson(Map<String, dynamic> json) {
 mixin _$ImageUploaded {
   String get url => throw _privateConstructorUsedError;
 
+  /// Serializes this ImageUploaded to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ImageUploaded
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ImageUploadedCopyWith<ImageUploaded> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$ImageUploadedCopyWithImpl<$Res, $Val extends ImageUploaded>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ImageUploaded
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$ImageUploadedImplCopyWithImpl<$Res>
       _$ImageUploadedImpl _value, $Res Function(_$ImageUploadedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ImageUploaded
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -111,18 +119,20 @@ class _$ImageUploadedImpl implements _ImageUploaded {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ImageUploadedImpl &&
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ImageUploaded
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ImageUploadedImplCopyWith<_$ImageUploadedImpl> get copyWith =>
@@ -145,8 +155,11 @@ abstract class _ImageUploaded implements ImageUploaded {
 
   @override
   String get url;
+
+  /// Create a copy of ImageUploaded
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ImageUploadedImplCopyWith<_$ImageUploadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

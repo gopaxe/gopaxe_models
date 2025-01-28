@@ -12,7 +12,7 @@ part of 'password_reset.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PasswordResetRequest _$PasswordResetRequestFromJson(Map<String, dynamic> json) {
   return _PasswordResetRequest.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$PasswordResetRequest {
   String get phone => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
 
+  /// Serializes this PasswordResetRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PasswordResetRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PasswordResetRequestCopyWith<PasswordResetRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$PasswordResetRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PasswordResetRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$PasswordResetRequestImplCopyWithImpl<$Res>
       $Res Function(_$PasswordResetRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PasswordResetRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -126,7 +134,7 @@ class _$PasswordResetRequestImpl implements _PasswordResetRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PasswordResetRequestImpl &&
@@ -135,11 +143,13 @@ class _$PasswordResetRequestImpl implements _PasswordResetRequest {
                 other.password == password));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, phone, password);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PasswordResetRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PasswordResetRequestImplCopyWith<_$PasswordResetRequestImpl>
@@ -167,8 +177,11 @@ abstract class _PasswordResetRequest implements PasswordResetRequest {
   String get phone;
   @override
   String get password;
+
+  /// Create a copy of PasswordResetRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PasswordResetRequestImplCopyWith<_$PasswordResetRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -182,8 +195,12 @@ PhoneExistenceResponse _$PhoneExistenceResponseFromJson(
 mixin _$PhoneExistenceResponse {
   bool get exist => throw _privateConstructorUsedError;
 
+  /// Serializes this PhoneExistenceResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PhoneExistenceResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PhoneExistenceResponseCopyWith<PhoneExistenceResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -208,6 +225,8 @@ class _$PhoneExistenceResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PhoneExistenceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -244,6 +263,8 @@ class __$$PhoneExistenceResponseImplCopyWithImpl<$Res>
       $Res Function(_$PhoneExistenceResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PhoneExistenceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -275,18 +296,20 @@ class _$PhoneExistenceResponseImpl implements _PhoneExistenceResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PhoneExistenceResponseImpl &&
             (identical(other.exist, exist) || other.exist == exist));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, exist);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PhoneExistenceResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PhoneExistenceResponseImplCopyWith<_$PhoneExistenceResponseImpl>
@@ -310,8 +333,11 @@ abstract class _PhoneExistenceResponse implements PhoneExistenceResponse {
 
   @override
   bool get exist;
+
+  /// Create a copy of PhoneExistenceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PhoneExistenceResponseImplCopyWith<_$PhoneExistenceResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

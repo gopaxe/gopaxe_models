@@ -12,7 +12,7 @@ part of 'route.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RouteModel _$RouteModelFromJson(Map<String, dynamic> json) {
   return _RouteModel.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$RouteModel {
   List<Routes>? get routes => throw _privateConstructorUsedError;
   String? get code => throw _privateConstructorUsedError;
 
+  /// Serializes this RouteModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RouteModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RouteModelCopyWith<RouteModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$RouteModelCopyWithImpl<$Res, $Val extends RouteModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RouteModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$RouteModelImplCopyWithImpl<$Res>
       _$RouteModelImpl _value, $Res Function(_$RouteModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RouteModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -156,7 +164,7 @@ class _$RouteModelImpl implements _RouteModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RouteModelImpl &&
@@ -166,7 +174,7 @@ class _$RouteModelImpl implements _RouteModel {
             (identical(other.code, code) || other.code == code));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -174,7 +182,9 @@ class _$RouteModelImpl implements _RouteModel {
       const DeepCollectionEquality().hash(_routes),
       code);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RouteModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RouteModelImplCopyWith<_$RouteModelImpl> get copyWith =>
@@ -203,8 +213,11 @@ abstract class _RouteModel implements RouteModel {
   List<Routes>? get routes;
   @override
   String? get code;
+
+  /// Create a copy of RouteModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RouteModelImplCopyWith<_$RouteModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -218,8 +231,12 @@ mixin _$Waypoints {
   List<double>? get location => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
 
+  /// Serializes this Waypoints to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Waypoints
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $WaypointsCopyWith<Waypoints> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -242,6 +259,8 @@ class _$WaypointsCopyWithImpl<$Res, $Val extends Waypoints>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Waypoints
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -280,6 +299,8 @@ class __$$WaypointsImplCopyWithImpl<$Res>
       _$WaypointsImpl _value, $Res Function(_$WaypointsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Waypoints
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -327,7 +348,7 @@ class _$WaypointsImpl implements _Waypoints {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WaypointsImpl &&
@@ -335,12 +356,14 @@ class _$WaypointsImpl implements _Waypoints {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_location), name);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Waypoints
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WaypointsImplCopyWith<_$WaypointsImpl> get copyWith =>
@@ -365,8 +388,11 @@ abstract class _Waypoints implements Waypoints {
   List<double>? get location;
   @override
   String? get name;
+
+  /// Create a copy of Waypoints
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WaypointsImplCopyWith<_$WaypointsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -384,8 +410,12 @@ mixin _$Routes {
   double? get distance => throw _privateConstructorUsedError;
   double? get duration => throw _privateConstructorUsedError;
 
+  /// Serializes this Routes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Routes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RoutesCopyWith<Routes> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -415,6 +445,8 @@ class _$RoutesCopyWithImpl<$Res, $Val extends Routes>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Routes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -453,6 +485,8 @@ class _$RoutesCopyWithImpl<$Res, $Val extends Routes>
     ) as $Val);
   }
 
+  /// Create a copy of Routes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $GeometryCopyWith<$Res>? get geometry {
@@ -493,6 +527,8 @@ class __$$RoutesImplCopyWithImpl<$Res>
       _$RoutesImpl _value, $Res Function(_$RoutesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Routes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -574,7 +610,7 @@ class _$RoutesImpl implements _Routes {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RoutesImpl &&
@@ -590,7 +626,7 @@ class _$RoutesImpl implements _Routes {
                 other.duration == duration));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -601,7 +637,9 @@ class _$RoutesImpl implements _Routes {
       distance,
       duration);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Routes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RoutesImplCopyWith<_$RoutesImpl> get copyWith =>
@@ -638,8 +676,11 @@ abstract class _Routes implements Routes {
   double? get distance;
   @override
   double? get duration;
+
+  /// Create a copy of Routes
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RoutesImplCopyWith<_$RoutesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -656,8 +697,12 @@ mixin _$Legs {
   String? get summary => throw _privateConstructorUsedError;
   double? get duration => throw _privateConstructorUsedError;
 
+  /// Serializes this Legs to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Legs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LegsCopyWith<Legs> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -684,6 +729,8 @@ class _$LegsCopyWithImpl<$Res, $Val extends Legs>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Legs
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -740,6 +787,8 @@ class __$$LegsImplCopyWithImpl<$Res>
   __$$LegsImplCopyWithImpl(_$LegsImpl _value, $Res Function(_$LegsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Legs
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -813,7 +862,7 @@ class _$LegsImpl implements _Legs {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LegsImpl &&
@@ -826,7 +875,7 @@ class _$LegsImpl implements _Legs {
                 other.duration == duration));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -836,7 +885,9 @@ class _$LegsImpl implements _Legs {
       summary,
       duration);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Legs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LegsImplCopyWith<_$LegsImpl> get copyWith =>
@@ -870,8 +921,11 @@ abstract class _Legs implements Legs {
   String? get summary;
   @override
   double? get duration;
+
+  /// Create a copy of Legs
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LegsImplCopyWith<_$LegsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -885,8 +939,12 @@ mixin _$Geometry {
   List<List>? get coordinates => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
 
+  /// Serializes this Geometry to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Geometry
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GeometryCopyWith<Geometry> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -909,6 +967,8 @@ class _$GeometryCopyWithImpl<$Res, $Val extends Geometry>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Geometry
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -947,6 +1007,8 @@ class __$$GeometryImplCopyWithImpl<$Res>
       _$GeometryImpl _value, $Res Function(_$GeometryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Geometry
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -994,7 +1056,7 @@ class _$GeometryImpl implements _Geometry {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GeometryImpl &&
@@ -1003,12 +1065,14 @@ class _$GeometryImpl implements _Geometry {
             (identical(other.type, type) || other.type == type));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_coordinates), type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Geometry
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GeometryImplCopyWith<_$GeometryImpl> get copyWith =>
@@ -1033,8 +1097,11 @@ abstract class _Geometry implements Geometry {
   List<List>? get coordinates;
   @override
   String? get type;
+
+  /// Create a copy of Geometry
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GeometryImplCopyWith<_$GeometryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

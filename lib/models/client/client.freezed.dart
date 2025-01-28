@@ -12,7 +12,7 @@ part of 'client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Client _$ClientFromJson(Map<String, dynamic> json) {
   return _Client.fromJson(json);
@@ -29,8 +29,12 @@ mixin _$Client {
   bool get isDeleted => throw _privateConstructorUsedError;
   DateTime get registeredDate => throw _privateConstructorUsedError;
 
+  /// Serializes this Client to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Client
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ClientCopyWith<Client> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -60,6 +64,8 @@ class _$ClientCopyWithImpl<$Res, $Val extends Client>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Client
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,6 +141,8 @@ class __$$ClientImplCopyWithImpl<$Res>
       _$ClientImpl _value, $Res Function(_$ClientImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Client
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -223,7 +231,7 @@ class _$ClientImpl implements _Client {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClientImpl &&
@@ -242,12 +250,14 @@ class _$ClientImpl implements _Client {
                 other.registeredDate == registeredDate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, clientId, nom, telephone, photo,
       prenom, motDePasse, isDeleted, registeredDate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Client
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ClientImplCopyWith<_$ClientImpl> get copyWith =>
@@ -290,8 +300,11 @@ abstract class _Client implements Client {
   bool get isDeleted;
   @override
   DateTime get registeredDate;
+
+  /// Create a copy of Client
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ClientImplCopyWith<_$ClientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -311,8 +324,12 @@ mixin _$ClientServiceInfos {
   bool get isDeleted => throw _privateConstructorUsedError;
   DateTime get registeredDate => throw _privateConstructorUsedError;
 
+  /// Serializes this ClientServiceInfos to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ClientServiceInfos
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ClientServiceInfosCopyWith<ClientServiceInfos> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -344,6 +361,8 @@ class _$ClientServiceInfosCopyWithImpl<$Res, $Val extends ClientServiceInfos>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ClientServiceInfos
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -420,6 +439,8 @@ class __$$ClientServiceInfosImplCopyWithImpl<$Res>
       $Res Function(_$ClientServiceInfosImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ClientServiceInfos
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -508,7 +529,7 @@ class _$ClientServiceInfosImpl implements _ClientServiceInfos {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClientServiceInfosImpl &&
@@ -526,12 +547,14 @@ class _$ClientServiceInfosImpl implements _ClientServiceInfos {
                 other.registeredDate == registeredDate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, clientId, photo, nom, prenom,
       score, totalServicePosted, isDeleted, registeredDate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ClientServiceInfos
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ClientServiceInfosImplCopyWith<_$ClientServiceInfosImpl> get copyWith =>
@@ -576,8 +599,11 @@ abstract class _ClientServiceInfos implements ClientServiceInfos {
   bool get isDeleted;
   @override
   DateTime get registeredDate;
+
+  /// Create a copy of ClientServiceInfos
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ClientServiceInfosImplCopyWith<_$ClientServiceInfosImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -598,8 +624,12 @@ mixin _$ClientOutPut {
   bool get isDeleted => throw _privateConstructorUsedError;
   dynamic get required => throw _privateConstructorUsedError;
 
+  /// Serializes this ClientOutPut to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ClientOutPut
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ClientOutPutCopyWith<ClientOutPut> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -632,6 +662,8 @@ class _$ClientOutPutCopyWithImpl<$Res, $Val extends ClientOutPut>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ClientOutPut
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -714,6 +746,8 @@ class __$$ClientOutPutImplCopyWithImpl<$Res>
       _$ClientOutPutImpl _value, $Res Function(_$ClientOutPutImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ClientOutPut
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -807,7 +841,7 @@ class _$ClientOutPutImpl implements _ClientOutPut {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClientOutPutImpl &&
@@ -826,7 +860,7 @@ class _$ClientOutPutImpl implements _ClientOutPut {
             const DeepCollectionEquality().equals(other.required, required));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -840,7 +874,9 @@ class _$ClientOutPutImpl implements _ClientOutPut {
       isDeleted,
       const DeepCollectionEquality().hash(required));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ClientOutPut
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ClientOutPutImplCopyWith<_$ClientOutPutImpl> get copyWith =>
@@ -887,8 +923,11 @@ abstract class _ClientOutPut implements ClientOutPut {
   bool get isDeleted;
   @override
   dynamic get required;
+
+  /// Create a copy of ClientOutPut
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ClientOutPutImplCopyWith<_$ClientOutPutImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -907,8 +946,12 @@ mixin _$CreateClientRequest {
   String get telephone => throw _privateConstructorUsedError;
   String get motDePasse => throw _privateConstructorUsedError;
 
+  /// Serializes this CreateClientRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreateClientRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreateClientRequestCopyWith<CreateClientRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -941,6 +984,8 @@ class _$CreateClientRequestCopyWithImpl<$Res, $Val extends CreateClientRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreateClientRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -984,6 +1029,8 @@ class _$CreateClientRequestCopyWithImpl<$Res, $Val extends CreateClientRequest>
     ) as $Val);
   }
 
+  /// Create a copy of CreateClientRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $OffsetCopyWith<$Res> get location {
@@ -1022,6 +1069,8 @@ class __$$CreateClientRequestImplCopyWithImpl<$Res>
       $Res Function(_$CreateClientRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreateClientRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1102,7 +1151,7 @@ class _$CreateClientRequestImpl implements _CreateClientRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateClientRequestImpl &&
@@ -1119,12 +1168,14 @@ class _$CreateClientRequestImpl implements _CreateClientRequest {
                 other.motDePasse == motDePasse));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, nom, prenom, clientTypeId,
       location, photo, telephone, motDePasse);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreateClientRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateClientRequestImplCopyWith<_$CreateClientRequestImpl> get copyWith =>
@@ -1166,8 +1217,11 @@ abstract class _CreateClientRequest implements CreateClientRequest {
   String get telephone;
   @override
   String get motDePasse;
+
+  /// Create a copy of CreateClientRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateClientRequestImplCopyWith<_$CreateClientRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1187,8 +1241,12 @@ mixin _$UpdateClientRequest {
   String? get telephone => throw _privateConstructorUsedError;
   String? get motDePasse => throw _privateConstructorUsedError;
 
+  /// Serializes this UpdateClientRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateClientRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UpdateClientRequestCopyWith<UpdateClientRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1222,6 +1280,8 @@ class _$UpdateClientRequestCopyWithImpl<$Res, $Val extends UpdateClientRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UpdateClientRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1270,6 +1330,8 @@ class _$UpdateClientRequestCopyWithImpl<$Res, $Val extends UpdateClientRequest>
     ) as $Val);
   }
 
+  /// Create a copy of UpdateClientRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $OffsetCopyWith<$Res>? get location {
@@ -1313,6 +1375,8 @@ class __$$UpdateClientRequestImplCopyWithImpl<$Res>
       $Res Function(_$UpdateClientRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateClientRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1401,7 +1465,7 @@ class _$UpdateClientRequestImpl implements _UpdateClientRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UpdateClientRequestImpl &&
@@ -1420,12 +1484,14 @@ class _$UpdateClientRequestImpl implements _UpdateClientRequest {
                 other.motDePasse == motDePasse));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, nom, clientId, prenom,
       clientTypeId, photo, location, telephone, motDePasse);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateClientRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateClientRequestImplCopyWith<_$UpdateClientRequestImpl> get copyWith =>
@@ -1470,8 +1536,11 @@ abstract class _UpdateClientRequest implements UpdateClientRequest {
   String? get telephone;
   @override
   String? get motDePasse;
+
+  /// Create a copy of UpdateClientRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateClientRequestImplCopyWith<_$UpdateClientRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

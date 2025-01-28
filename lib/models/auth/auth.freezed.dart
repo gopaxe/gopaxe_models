@@ -12,7 +12,7 @@ part of 'auth.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AdminLoginRequest _$AdminLoginRequestFromJson(Map<String, dynamic> json) {
   return _AdminLoginRequest.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$AdminLoginRequest {
   String get telephone => throw _privateConstructorUsedError;
   String get motDePasse => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminLoginRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminLoginRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminLoginRequestCopyWith<AdminLoginRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$AdminLoginRequestCopyWithImpl<$Res, $Val extends AdminLoginRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminLoginRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$AdminLoginRequestImplCopyWithImpl<$Res>
       $Res Function(_$AdminLoginRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminLoginRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -125,7 +133,7 @@ class _$AdminLoginRequestImpl implements _AdminLoginRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdminLoginRequestImpl &&
@@ -135,11 +143,13 @@ class _$AdminLoginRequestImpl implements _AdminLoginRequest {
                 other.motDePasse == motDePasse));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, telephone, motDePasse);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminLoginRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminLoginRequestImplCopyWith<_$AdminLoginRequestImpl> get copyWith =>
@@ -166,8 +176,11 @@ abstract class _AdminLoginRequest implements AdminLoginRequest {
   String get telephone;
   @override
   String get motDePasse;
+
+  /// Create a copy of AdminLoginRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminLoginRequestImplCopyWith<_$AdminLoginRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

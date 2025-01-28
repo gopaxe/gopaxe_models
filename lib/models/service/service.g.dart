@@ -11,10 +11,10 @@ _$CreateServiceRequestImpl _$$CreateServiceRequestImplFromJson(
     _$CreateServiceRequestImpl(
       title: json['title'] as String,
       description: json['description'] as String,
-      targetedMetierId: json['targetedMetierId'] as int?,
-      targetedCompetenceId: json['targetedCompetenceId'] as int?,
+      targetedMetierId: (json['targetedMetierId'] as num?)?.toInt(),
+      targetedCompetenceId: (json['targetedCompetenceId'] as num?)?.toInt(),
       issuePhotoUrl: json['issuePhotoUrl'] as String?,
-      forWorkerId: json['forWorkerId'] as int?,
+      forWorkerId: (json['forWorkerId'] as num?)?.toInt(),
       completionDate: DateTime.parse(json['completionDate'] as String),
       desiredLocation:
           Offset.fromJson(json['desiredLocation'] as Map<String, dynamic>),
@@ -35,20 +35,20 @@ Map<String, dynamic> _$$CreateServiceRequestImplToJson(
 
 _$ServiceRequestImpl _$$ServiceRequestImplFromJson(Map<String, dynamic> json) =>
     _$ServiceRequestImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       title: json['title'] as String,
       description: json['description'] as String,
-      targetedMetierId: json['targetedMetierId'] as int?,
-      targetedCompetenceId: json['targetedCompetenceId'] as int?,
+      targetedMetierId: (json['targetedMetierId'] as num?)?.toInt(),
+      targetedCompetenceId: (json['targetedCompetenceId'] as num?)?.toInt(),
       completionDate: DateTime.parse(json['completionDate'] as String),
-      workerId: json['workerId'] as int?,
+      workerId: (json['workerId'] as num?)?.toInt(),
       hasWorkerLocationShared: json['hasWorkerLocationShared'] as bool,
       hasTransportPaid: json['hasTransportPaid'] as bool,
       hasServicePaid: json['hasServicePaid'] as bool,
-      factureId: json['factureId'] as int?,
-      forWorkerId: json['forWorkerId'] as int?,
+      factureId: (json['factureId'] as num?)?.toInt(),
+      forWorkerId: (json['forWorkerId'] as num?)?.toInt(),
       issuePhotoUrl: json['issuePhotoUrl'] as String?,
-      clientId: json['clientId'] as int,
+      clientId: (json['clientId'] as num).toInt(),
       startDate: json['startDate'] == null
           ? null
           : DateTime.parse(json['startDate'] as String),

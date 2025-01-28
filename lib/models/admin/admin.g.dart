@@ -7,7 +7,7 @@ part of 'admin.dart';
 // **************************************************************************
 
 _$AdminImpl _$$AdminImplFromJson(Map<String, dynamic> json) => _$AdminImpl(
-      adminId: json['adminId'] as int,
+      adminId: (json['adminId'] as num).toInt(),
       adminName: json['adminName'] as String,
       motDePasse: json['motDePasse'] as String,
     );
@@ -21,7 +21,7 @@ Map<String, dynamic> _$$AdminImplToJson(_$AdminImpl instance) =>
 
 _$AdminOutPutImpl _$$AdminOutPutImplFromJson(Map<String, dynamic> json) =>
     _$AdminOutPutImpl(
-      adminId: json['adminId'] as int,
+      adminId: (json['adminId'] as num).toInt(),
       adminName: json['adminName'] as String,
     );
 

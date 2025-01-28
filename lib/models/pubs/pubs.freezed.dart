@@ -12,7 +12,7 @@ part of 'pubs.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Pubs _$PubsFromJson(Map<String, dynamic> json) {
   return _Pubs.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$Pubs {
   String get title => throw _privateConstructorUsedError;
   String get content => throw _privateConstructorUsedError;
 
+  /// Serializes this Pubs to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Pubs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PubsCopyWith<Pubs> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -47,6 +51,8 @@ class _$PubsCopyWithImpl<$Res, $Val extends Pubs>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Pubs
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -88,6 +94,8 @@ class __$$PubsImplCopyWithImpl<$Res>
   __$$PubsImplCopyWithImpl(_$PubsImpl _value, $Res Function(_$PubsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Pubs
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,7 +142,7 @@ class _$PubsImpl implements _Pubs {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PubsImpl &&
@@ -143,11 +151,13 @@ class _$PubsImpl implements _Pubs {
             (identical(other.content, content) || other.content == content));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, title, content);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Pubs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PubsImplCopyWith<_$PubsImpl> get copyWith =>
@@ -175,8 +185,11 @@ abstract class _Pubs implements Pubs {
   String get title;
   @override
   String get content;
+
+  /// Create a copy of Pubs
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PubsImplCopyWith<_$PubsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -12,7 +12,7 @@ part of 'devis.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Devis _$DevisFromJson(Map<String, dynamic> json) {
   return _Devis.fromJson(json);
@@ -33,8 +33,12 @@ mixin _$Devis {
   List<DevisLine> get devisLine => throw _privateConstructorUsedError;
   double? get balanceForSeeingDevis => throw _privateConstructorUsedError;
 
+  /// Serializes this Devis to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Devis
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DevisCopyWith<Devis> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -68,6 +72,8 @@ class _$DevisCopyWithImpl<$Res, $Val extends Devis>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Devis
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -167,6 +173,8 @@ class __$$DevisImplCopyWithImpl<$Res>
       _$DevisImpl _value, $Res Function(_$DevisImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Devis
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -294,7 +302,7 @@ class _$DevisImpl implements _Devis {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DevisImpl &&
@@ -319,7 +327,7 @@ class _$DevisImpl implements _Devis {
                 other.balanceForSeeingDevis == balanceForSeeingDevis));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -336,7 +344,9 @@ class _$DevisImpl implements _Devis {
       const DeepCollectionEquality().hash(_devisLine),
       balanceForSeeingDevis);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Devis
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DevisImplCopyWith<_$DevisImpl> get copyWith =>
@@ -391,8 +401,11 @@ abstract class _Devis implements Devis {
   List<DevisLine> get devisLine;
   @override
   double? get balanceForSeeingDevis;
+
+  /// Create a copy of Devis
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DevisImplCopyWith<_$DevisImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -407,8 +420,12 @@ mixin _$CreateDeviceRequest {
   String get description => throw _privateConstructorUsedError;
   String get libelle => throw _privateConstructorUsedError;
 
+  /// Serializes this CreateDeviceRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreateDeviceRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreateDeviceRequestCopyWith<CreateDeviceRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -432,6 +449,8 @@ class _$CreateDeviceRequestCopyWithImpl<$Res, $Val extends CreateDeviceRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreateDeviceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -475,6 +494,8 @@ class __$$CreateDeviceRequestImplCopyWithImpl<$Res>
       $Res Function(_$CreateDeviceRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreateDeviceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -521,7 +542,7 @@ class _$CreateDeviceRequestImpl implements _CreateDeviceRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateDeviceRequestImpl &&
@@ -531,11 +552,13 @@ class _$CreateDeviceRequestImpl implements _CreateDeviceRequest {
             (identical(other.libelle, libelle) || other.libelle == libelle));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, file, description, libelle);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreateDeviceRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateDeviceRequestImplCopyWith<_$CreateDeviceRequestImpl> get copyWith =>
@@ -565,8 +588,11 @@ abstract class _CreateDeviceRequest implements CreateDeviceRequest {
   String get description;
   @override
   String get libelle;
+
+  /// Create a copy of CreateDeviceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateDeviceRequestImplCopyWith<_$CreateDeviceRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -584,8 +610,12 @@ mixin _$DevisLine {
   double get lineDevisTotal => throw _privateConstructorUsedError;
   int get numDevis => throw _privateConstructorUsedError;
 
+  /// Serializes this DevisLine to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DevisLine
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DevisLineCopyWith<DevisLine> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -614,6 +644,8 @@ class _$DevisLineCopyWithImpl<$Res, $Val extends DevisLine>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DevisLine
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -678,6 +710,8 @@ class __$$DevisLineImplCopyWithImpl<$Res>
       _$DevisLineImpl _value, $Res Function(_$DevisLineImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DevisLine
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -750,7 +784,7 @@ class _$DevisLineImpl implements _DevisLine {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DevisLineImpl &&
@@ -767,12 +801,14 @@ class _$DevisLineImpl implements _DevisLine {
                 other.numDevis == numDevis));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, lineDevisId, libelle, quantity,
       unitPrice, lineDevisTotal, numDevis);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DevisLine
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DevisLineImplCopyWith<_$DevisLineImpl> get copyWith =>
@@ -810,8 +846,11 @@ abstract class _DevisLine implements DevisLine {
   double get lineDevisTotal;
   @override
   int get numDevis;
+
+  /// Create a copy of DevisLine
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DevisLineImplCopyWith<_$DevisLineImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -826,8 +865,12 @@ mixin _$DevisLineRequest {
   int get quantity => throw _privateConstructorUsedError;
   double get unitPrice => throw _privateConstructorUsedError;
 
+  /// Serializes this DevisLineRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DevisLineRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DevisLineRequestCopyWith<DevisLineRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -851,6 +894,8 @@ class _$DevisLineRequestCopyWithImpl<$Res, $Val extends DevisLineRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DevisLineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -894,6 +939,8 @@ class __$$DevisLineRequestImplCopyWithImpl<$Res>
       $Res Function(_$DevisLineRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DevisLineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -940,7 +987,7 @@ class _$DevisLineRequestImpl implements _DevisLineRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DevisLineRequestImpl &&
@@ -951,11 +998,13 @@ class _$DevisLineRequestImpl implements _DevisLineRequest {
                 other.unitPrice == unitPrice));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, libelle, quantity, unitPrice);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DevisLineRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DevisLineRequestImplCopyWith<_$DevisLineRequestImpl> get copyWith =>
@@ -985,8 +1034,11 @@ abstract class _DevisLineRequest implements DevisLineRequest {
   int get quantity;
   @override
   double get unitPrice;
+
+  /// Create a copy of DevisLineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DevisLineRequestImplCopyWith<_$DevisLineRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

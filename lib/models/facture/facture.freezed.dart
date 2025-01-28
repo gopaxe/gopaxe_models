@@ -12,7 +12,7 @@ part of 'facture.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Facture _$FactureFromJson(Map<String, dynamic> json) {
   return _Facture.fromJson(json);
@@ -28,8 +28,12 @@ mixin _$Facture {
   int? get serviceId => throw _privateConstructorUsedError;
   String? get subscriptionId => throw _privateConstructorUsedError;
 
+  /// Serializes this Facture to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Facture
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FactureCopyWith<Facture> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -58,6 +62,8 @@ class _$FactureCopyWithImpl<$Res, $Val extends Facture>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Facture
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,6 +133,8 @@ class __$$FactureImplCopyWithImpl<$Res>
       _$FactureImpl _value, $Res Function(_$FactureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Facture
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -207,7 +215,7 @@ class _$FactureImpl implements _Facture {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FactureImpl &&
@@ -227,12 +235,14 @@ class _$FactureImpl implements _Facture {
                 other.subscriptionId == subscriptionId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, factureId, createdDate,
       resolveDate, initialPrice, finalPrice, serviceId, subscriptionId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Facture
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FactureImplCopyWith<_$FactureImpl> get copyWith =>
@@ -272,8 +282,11 @@ abstract class _Facture implements Facture {
   int? get serviceId;
   @override
   String? get subscriptionId;
+
+  /// Create a copy of Facture
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FactureImplCopyWith<_$FactureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

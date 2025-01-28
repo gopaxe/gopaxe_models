@@ -8,9 +8,9 @@ part of 'competence.dart';
 
 _$CompetenceImpl _$$CompetenceImplFromJson(Map<String, dynamic> json) =>
     _$CompetenceImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       libelle: json['libelle'] as String,
-      metierId: json['metierId'] as int,
+      metierId: (json['metierId'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$CompetenceImplToJson(_$CompetenceImpl instance) =>
@@ -23,7 +23,7 @@ Map<String, dynamic> _$$CompetenceImplToJson(_$CompetenceImpl instance) =>
 _$CreateCompetenceImpl _$$CreateCompetenceImplFromJson(
         Map<String, dynamic> json) =>
     _$CreateCompetenceImpl(
-      metierId: json['metierId'] as int,
+      metierId: (json['metierId'] as num).toInt(),
       competences: (json['competences'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),

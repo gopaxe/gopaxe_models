@@ -7,13 +7,13 @@ part of 'order.dart';
 // **************************************************************************
 
 _$OrderImpl _$$OrderImplFromJson(Map<String, dynamic> json) => _$OrderImpl(
-      orderId: json['orderId'] as int,
+      orderId: (json['orderId'] as num).toInt(),
       orderLines: (json['orderLines'] as List<dynamic>)
           .map((e) => OrderLine.fromJson(e as Map<String, dynamic>))
           .toList(),
       createdDate: DateTime.parse(json['createdDate'] as String),
       status: json['status'] as String?,
-      userId: json['userId'] as int?,
+      userId: (json['userId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$OrderImplToJson(_$OrderImpl instance) =>
@@ -27,13 +27,13 @@ Map<String, dynamic> _$$OrderImplToJson(_$OrderImpl instance) =>
 
 _$OrderLineImpl _$$OrderLineImplFromJson(Map<String, dynamic> json) =>
     _$OrderLineImpl(
-      orderLineId: json['orderLineId'] as int,
+      orderLineId: (json['orderLineId'] as num).toInt(),
       libelle: json['libelle'] as String,
       image: json['image'] as String,
-      quantity: json['quantity'] as int,
-      unitPrice: json['unitPrice'] as int,
-      amount: json['amount'] as int,
-      orderId: json['orderId'] as int,
+      quantity: (json['quantity'] as num).toInt(),
+      unitPrice: (json['unitPrice'] as num).toInt(),
+      amount: (json['amount'] as num).toInt(),
+      orderId: (json['orderId'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$OrderLineImplToJson(_$OrderLineImpl instance) =>
@@ -65,9 +65,9 @@ Map<String, dynamic> _$$CreateOrderRequestImplToJson(
 _$CreateOrderLineRequestImpl _$$CreateOrderLineRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$CreateOrderLineRequestImpl(
-      fournirMaterialId: json['fournirMaterialId'] as int,
-      unitPrice: json['unitPrice'] as int,
-      quantity: json['quantity'] as int,
+      fournirMaterialId: (json['fournirMaterialId'] as num).toInt(),
+      unitPrice: (json['unitPrice'] as num).toInt(),
+      quantity: (json['quantity'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$CreateOrderLineRequestImplToJson(

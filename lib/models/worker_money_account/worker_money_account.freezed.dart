@@ -12,7 +12,7 @@ part of 'worker_money_account.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 WorkerMoneyAccount _$WorkerMoneyAccountFromJson(Map<String, dynamic> json) {
   return _WorkerMoneyAccount.fromJson(json);
@@ -22,8 +22,12 @@ WorkerMoneyAccount _$WorkerMoneyAccountFromJson(Map<String, dynamic> json) {
 mixin _$WorkerMoneyAccount {
   int get currentBalance => throw _privateConstructorUsedError;
 
+  /// Serializes this WorkerMoneyAccount to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of WorkerMoneyAccount
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $WorkerMoneyAccountCopyWith<WorkerMoneyAccount> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$WorkerMoneyAccountCopyWithImpl<$Res, $Val extends WorkerMoneyAccount>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of WorkerMoneyAccount
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$WorkerMoneyAccountImplCopyWithImpl<$Res>
       $Res Function(_$WorkerMoneyAccountImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of WorkerMoneyAccount
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -111,7 +119,7 @@ class _$WorkerMoneyAccountImpl implements _WorkerMoneyAccount {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WorkerMoneyAccountImpl &&
@@ -119,11 +127,13 @@ class _$WorkerMoneyAccountImpl implements _WorkerMoneyAccount {
                 other.currentBalance == currentBalance));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, currentBalance);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of WorkerMoneyAccount
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WorkerMoneyAccountImplCopyWith<_$WorkerMoneyAccountImpl> get copyWith =>
@@ -147,8 +157,11 @@ abstract class _WorkerMoneyAccount implements WorkerMoneyAccount {
 
   @override
   int get currentBalance;
+
+  /// Create a copy of WorkerMoneyAccount
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WorkerMoneyAccountImplCopyWith<_$WorkerMoneyAccountImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -162,8 +175,12 @@ WorkerWithdrawalRequest _$WorkerWithdrawalRequestFromJson(
 mixin _$WorkerWithdrawalRequest {
   int get amount => throw _privateConstructorUsedError;
 
+  /// Serializes this WorkerWithdrawalRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of WorkerWithdrawalRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $WorkerWithdrawalRequestCopyWith<WorkerWithdrawalRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -188,6 +205,8 @@ class _$WorkerWithdrawalRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of WorkerWithdrawalRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -224,6 +243,8 @@ class __$$WorkerWithdrawalRequestImplCopyWithImpl<$Res>
       $Res Function(_$WorkerWithdrawalRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of WorkerWithdrawalRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -255,18 +276,20 @@ class _$WorkerWithdrawalRequestImpl implements _WorkerWithdrawalRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WorkerWithdrawalRequestImpl &&
             (identical(other.amount, amount) || other.amount == amount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, amount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of WorkerWithdrawalRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WorkerWithdrawalRequestImplCopyWith<_$WorkerWithdrawalRequestImpl>
@@ -290,8 +313,11 @@ abstract class _WorkerWithdrawalRequest implements WorkerWithdrawalRequest {
 
   @override
   int get amount;
+
+  /// Create a copy of WorkerWithdrawalRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WorkerWithdrawalRequestImplCopyWith<_$WorkerWithdrawalRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -310,8 +336,12 @@ mixin _$WorkerWithdrawalTransaction {
       throw _privateConstructorUsedError;
   DateTime get requestedAt => throw _privateConstructorUsedError;
 
+  /// Serializes this WorkerWithdrawalTransaction to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of WorkerWithdrawalTransaction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $WorkerWithdrawalTransactionCopyWith<WorkerWithdrawalTransaction>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -343,6 +373,8 @@ class _$WorkerWithdrawalTransactionCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of WorkerWithdrawalTransaction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -404,6 +436,8 @@ class __$$WorkerWithdrawalTransactionImplCopyWithImpl<$Res>
       $Res Function(_$WorkerWithdrawalTransactionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of WorkerWithdrawalTransaction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -470,7 +504,7 @@ class _$WorkerWithdrawalTransactionImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WorkerWithdrawalTransactionImpl &&
@@ -484,12 +518,14 @@ class _$WorkerWithdrawalTransactionImpl
                 other.requestedAt == requestedAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, amount, transactionId, status,
       operationDirection, requestedAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of WorkerWithdrawalTransaction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WorkerWithdrawalTransactionImplCopyWith<_$WorkerWithdrawalTransactionImpl>
@@ -526,8 +562,11 @@ abstract class _WorkerWithdrawalTransaction
   OperationDirection get operationDirection;
   @override
   DateTime get requestedAt;
+
+  /// Create a copy of WorkerWithdrawalTransaction
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WorkerWithdrawalTransactionImplCopyWith<_$WorkerWithdrawalTransactionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

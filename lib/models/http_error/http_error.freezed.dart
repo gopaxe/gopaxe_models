@@ -12,7 +12,7 @@ part of 'http_error.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 HttpError _$HttpErrorFromJson(Map<String, dynamic> json) {
   return _HttpError.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$HttpError {
   dynamic get required => throw _privateConstructorUsedError;
   HttpErrorContent get error => throw _privateConstructorUsedError;
 
+  /// Serializes this HttpError to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HttpError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HttpErrorCopyWith<HttpError> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$HttpErrorCopyWithImpl<$Res, $Val extends HttpError>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HttpError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -67,6 +73,8 @@ class _$HttpErrorCopyWithImpl<$Res, $Val extends HttpError>
     ) as $Val);
   }
 
+  /// Create a copy of HttpError
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $HttpErrorContentCopyWith<$Res> get error {
@@ -98,6 +106,8 @@ class __$$HttpErrorImplCopyWithImpl<$Res>
       _$HttpErrorImpl _value, $Res Function(_$HttpErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HttpError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -133,7 +143,7 @@ class _$HttpErrorImpl implements _HttpError {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HttpErrorImpl &&
@@ -141,12 +151,14 @@ class _$HttpErrorImpl implements _HttpError {
             (identical(other.error, error) || other.error == error));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(required), error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HttpError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HttpErrorImplCopyWith<_$HttpErrorImpl> get copyWith =>
@@ -172,8 +184,11 @@ abstract class _HttpError implements HttpError {
   dynamic get required;
   @override
   HttpErrorContent get error;
+
+  /// Create a copy of HttpError
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HttpErrorImplCopyWith<_$HttpErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -188,8 +203,12 @@ mixin _$HttpErrorContent {
   String get devMessage => throw _privateConstructorUsedError;
   String get userFriendlyMessage => throw _privateConstructorUsedError;
 
+  /// Serializes this HttpErrorContent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HttpErrorContent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HttpErrorContentCopyWith<HttpErrorContent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -213,6 +232,8 @@ class _$HttpErrorContentCopyWithImpl<$Res, $Val extends HttpErrorContent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HttpErrorContent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -256,6 +277,8 @@ class __$$HttpErrorContentImplCopyWithImpl<$Res>
       $Res Function(_$HttpErrorContentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HttpErrorContent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -301,7 +324,7 @@ class _$HttpErrorContentImpl implements _HttpErrorContent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HttpErrorContentImpl &&
@@ -312,7 +335,7 @@ class _$HttpErrorContentImpl implements _HttpErrorContent {
                 other.userFriendlyMessage == userFriendlyMessage));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -320,7 +343,9 @@ class _$HttpErrorContentImpl implements _HttpErrorContent {
       devMessage,
       userFriendlyMessage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HttpErrorContent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HttpErrorContentImplCopyWith<_$HttpErrorContentImpl> get copyWith =>
@@ -350,8 +375,11 @@ abstract class _HttpErrorContent implements HttpErrorContent {
   String get devMessage;
   @override
   String get userFriendlyMessage;
+
+  /// Create a copy of HttpErrorContent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HttpErrorContentImplCopyWith<_$HttpErrorContentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

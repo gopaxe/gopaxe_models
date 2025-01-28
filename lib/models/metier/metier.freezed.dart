@@ -12,7 +12,7 @@ part of 'metier.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Metier _$MetierFromJson(Map<String, dynamic> json) {
   return _Metier.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$Metier {
   String get metierLibelle => throw _privateConstructorUsedError;
   int get domaineId => throw _privateConstructorUsedError;
 
+  /// Serializes this Metier to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Metier
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MetierCopyWith<Metier> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -47,6 +51,8 @@ class _$MetierCopyWithImpl<$Res, $Val extends Metier>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Metier
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -89,6 +95,8 @@ class __$$MetierImplCopyWithImpl<$Res>
       _$MetierImpl _value, $Res Function(_$MetierImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Metier
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -137,7 +145,7 @@ class _$MetierImpl implements _Metier {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MetierImpl &&
@@ -149,12 +157,14 @@ class _$MetierImpl implements _Metier {
                 other.domaineId == domaineId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, metierId, metierLibelle, domaineId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Metier
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MetierImplCopyWith<_$MetierImpl> get copyWith =>
@@ -182,8 +192,11 @@ abstract class _Metier implements Metier {
   String get metierLibelle;
   @override
   int get domaineId;
+
+  /// Create a copy of Metier
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MetierImplCopyWith<_$MetierImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -197,8 +210,12 @@ mixin _$CreateMetier {
   int get groupeMetierId => throw _privateConstructorUsedError;
   List<String> get metiers => throw _privateConstructorUsedError;
 
+  /// Serializes this CreateMetier to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreateMetier
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreateMetierCopyWith<CreateMetier> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -222,6 +239,8 @@ class _$CreateMetierCopyWithImpl<$Res, $Val extends CreateMetier>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreateMetier
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -260,6 +279,8 @@ class __$$CreateMetierImplCopyWithImpl<$Res>
       _$CreateMetierImpl _value, $Res Function(_$CreateMetierImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreateMetier
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -305,7 +326,7 @@ class _$CreateMetierImpl implements _CreateMetier {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateMetierImpl &&
@@ -314,12 +335,14 @@ class _$CreateMetierImpl implements _CreateMetier {
             const DeepCollectionEquality().equals(other._metiers, _metiers));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, groupeMetierId,
       const DeepCollectionEquality().hash(_metiers));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreateMetier
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateMetierImplCopyWith<_$CreateMetierImpl> get copyWith =>
@@ -345,8 +368,11 @@ abstract class _CreateMetier implements CreateMetier {
   int get groupeMetierId;
   @override
   List<String> get metiers;
+
+  /// Create a copy of CreateMetier
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateMetierImplCopyWith<_$CreateMetierImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

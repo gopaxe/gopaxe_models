@@ -12,7 +12,7 @@ part of 'ville.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Ville _$VilleFromJson(Map<String, dynamic> json) {
   return _Ville.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$Ville {
   String get libelle => throw _privateConstructorUsedError;
   int get paysId => throw _privateConstructorUsedError;
 
+  /// Serializes this Ville to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Ville
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $VilleCopyWith<Ville> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -47,6 +51,8 @@ class _$VilleCopyWithImpl<$Res, $Val extends Ville>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Ville
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -89,6 +95,8 @@ class __$$VilleImplCopyWithImpl<$Res>
       _$VilleImpl _value, $Res Function(_$VilleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Ville
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,7 +143,7 @@ class _$VilleImpl implements _Ville {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$VilleImpl &&
@@ -144,11 +152,13 @@ class _$VilleImpl implements _Ville {
             (identical(other.paysId, paysId) || other.paysId == paysId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, villeId, libelle, paysId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Ville
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VilleImplCopyWith<_$VilleImpl> get copyWith =>
@@ -176,8 +186,11 @@ abstract class _Ville implements Ville {
   String get libelle;
   @override
   int get paysId;
+
+  /// Create a copy of Ville
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VilleImplCopyWith<_$VilleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -191,8 +204,12 @@ mixin _$CreateVilles {
   int get paysId => throw _privateConstructorUsedError;
   List<String> get villes => throw _privateConstructorUsedError;
 
+  /// Serializes this CreateVilles to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreateVilles
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreateVillesCopyWith<CreateVilles> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -216,6 +233,8 @@ class _$CreateVillesCopyWithImpl<$Res, $Val extends CreateVilles>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreateVilles
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -254,6 +273,8 @@ class __$$CreateVillesImplCopyWithImpl<$Res>
       _$CreateVillesImpl _value, $Res Function(_$CreateVillesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreateVilles
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -299,7 +320,7 @@ class _$CreateVillesImpl implements _CreateVilles {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateVillesImpl &&
@@ -307,12 +328,14 @@ class _$CreateVillesImpl implements _CreateVilles {
             const DeepCollectionEquality().equals(other._villes, _villes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, paysId, const DeepCollectionEquality().hash(_villes));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreateVilles
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateVillesImplCopyWith<_$CreateVillesImpl> get copyWith =>
@@ -338,8 +361,11 @@ abstract class _CreateVilles implements CreateVilles {
   int get paysId;
   @override
   List<String> get villes;
+
+  /// Create a copy of CreateVilles
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateVillesImplCopyWith<_$CreateVillesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

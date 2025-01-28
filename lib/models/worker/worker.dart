@@ -123,3 +123,12 @@ class SaveWorkerWithPassword with _$SaveWorkerWithPassword {
   factory SaveWorkerWithPassword.fromJson(Map<String, dynamic> json) =>
       _$SaveWorkerWithPasswordFromJson(json);
 }
+
+@freezed
+class UpdateWorkerRequest with _$UpdateWorkerRequest {
+  const factory UpdateWorkerRequest(
+      {String? nom, String? prenom, String? photo}) = _UpdateWorkerRequest;
+
+  factory UpdateWorkerRequest.fromJson(Map<String, dynamic> json) =>
+      _$UpdateWorkerRequestFromJson(json);
+}

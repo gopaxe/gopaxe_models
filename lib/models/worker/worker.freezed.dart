@@ -12,7 +12,7 @@ part of 'worker.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Offset _$OffsetFromJson(Map<String, dynamic> json) {
   return _Offset.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$Offset {
   double get long => throw _privateConstructorUsedError;
   String? get locationHash => throw _privateConstructorUsedError;
 
+  /// Serializes this Offset to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Offset
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $OffsetCopyWith<Offset> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -47,6 +51,8 @@ class _$OffsetCopyWithImpl<$Res, $Val extends Offset>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Offset
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -89,6 +95,8 @@ class __$$OffsetImplCopyWithImpl<$Res>
       _$OffsetImpl _value, $Res Function(_$OffsetImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Offset
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,7 +143,7 @@ class _$OffsetImpl implements _Offset {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OffsetImpl &&
@@ -145,11 +153,13 @@ class _$OffsetImpl implements _Offset {
                 other.locationHash == locationHash));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, lat, long, locationHash);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Offset
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OffsetImplCopyWith<_$OffsetImpl> get copyWith =>
@@ -177,8 +187,11 @@ abstract class _Offset implements Offset {
   double get long;
   @override
   String? get locationHash;
+
+  /// Create a copy of Offset
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OffsetImplCopyWith<_$OffsetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -194,8 +207,12 @@ mixin _$UserOffset {
   bool get isClient => throw _privateConstructorUsedError;
   String? get locationHash => throw _privateConstructorUsedError;
 
+  /// Serializes this UserOffset to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserOffset
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserOffsetCopyWith<UserOffset> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -221,6 +238,8 @@ class _$UserOffsetCopyWithImpl<$Res, $Val extends UserOffset>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UserOffset
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -249,6 +268,8 @@ class _$UserOffsetCopyWithImpl<$Res, $Val extends UserOffset>
     ) as $Val);
   }
 
+  /// Create a copy of UserOffset
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $OffsetCopyWith<$Res> get offset {
@@ -280,6 +301,8 @@ class __$$UserOffsetImplCopyWithImpl<$Res>
       _$UserOffsetImpl _value, $Res Function(_$UserOffsetImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserOffset
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -336,7 +359,7 @@ class _$UserOffsetImpl implements _UserOffset {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UserOffsetImpl &&
@@ -348,12 +371,14 @@ class _$UserOffsetImpl implements _UserOffset {
                 other.locationHash == locationHash));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, offset, isClient, locationHash);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserOffset
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserOffsetImplCopyWith<_$UserOffsetImpl> get copyWith =>
@@ -385,8 +410,11 @@ abstract class _UserOffset implements UserOffset {
   bool get isClient;
   @override
   String? get locationHash;
+
+  /// Create a copy of UserOffset
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserOffsetImplCopyWith<_$UserOffsetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -400,8 +428,12 @@ mixin _$Cni {
   String get versoUrl => throw _privateConstructorUsedError;
   String get rectoUrl => throw _privateConstructorUsedError;
 
+  /// Serializes this Cni to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Cni
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CniCopyWith<Cni> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -422,6 +454,8 @@ class _$CniCopyWithImpl<$Res, $Val extends Cni> implements $CniCopyWith<$Res> {
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Cni
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -456,6 +490,8 @@ class __$$CniImplCopyWithImpl<$Res> extends _$CniCopyWithImpl<$Res, _$CniImpl>
   __$$CniImplCopyWithImpl(_$CniImpl _value, $Res Function(_$CniImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Cni
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -494,7 +530,7 @@ class _$CniImpl implements _Cni {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CniImpl &&
@@ -504,11 +540,13 @@ class _$CniImpl implements _Cni {
                 other.rectoUrl == rectoUrl));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, versoUrl, rectoUrl);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Cni
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CniImplCopyWith<_$CniImpl> get copyWith =>
@@ -533,8 +571,11 @@ abstract class _Cni implements Cni {
   String get versoUrl;
   @override
   String get rectoUrl;
+
+  /// Create a copy of Cni
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CniImplCopyWith<_$CniImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -548,8 +589,12 @@ mixin _$RhumaineSkill {
   List<int> get competencesIds => throw _privateConstructorUsedError;
   int get metierId => throw _privateConstructorUsedError;
 
+  /// Serializes this RhumaineSkill to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RhumaineSkill
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RhumaineSkillCopyWith<RhumaineSkill> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -573,6 +618,8 @@ class _$RhumaineSkillCopyWithImpl<$Res, $Val extends RhumaineSkill>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RhumaineSkill
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -611,6 +658,8 @@ class __$$RhumaineSkillImplCopyWithImpl<$Res>
       _$RhumaineSkillImpl _value, $Res Function(_$RhumaineSkillImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RhumaineSkill
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -657,7 +706,7 @@ class _$RhumaineSkillImpl implements _RhumaineSkill {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RhumaineSkillImpl &&
@@ -667,12 +716,14 @@ class _$RhumaineSkillImpl implements _RhumaineSkill {
                 other.metierId == metierId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_competencesIds), metierId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RhumaineSkill
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RhumaineSkillImplCopyWith<_$RhumaineSkillImpl> get copyWith =>
@@ -698,8 +749,11 @@ abstract class _RhumaineSkill implements RhumaineSkill {
   List<int> get competencesIds;
   @override
   int get metierId;
+
+  /// Create a copy of RhumaineSkill
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RhumaineSkillImplCopyWith<_$RhumaineSkillImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -727,8 +781,12 @@ mixin _$Worker {
   bool get isDeleted => throw _privateConstructorUsedError;
   DateTime get dateCreation => throw _privateConstructorUsedError;
 
+  /// Serializes this Worker to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Worker
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $WorkerCopyWith<Worker> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -769,6 +827,8 @@ class _$WorkerCopyWithImpl<$Res, $Val extends Worker>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Worker
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -857,6 +917,8 @@ class _$WorkerCopyWithImpl<$Res, $Val extends Worker>
     ) as $Val);
   }
 
+  /// Create a copy of Worker
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $OffsetCopyWith<$Res> get offset {
@@ -865,6 +927,8 @@ class _$WorkerCopyWithImpl<$Res, $Val extends Worker>
     });
   }
 
+  /// Create a copy of Worker
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CniCopyWith<$Res> get cni {
@@ -913,6 +977,8 @@ class __$$WorkerImplCopyWithImpl<$Res>
       _$WorkerImpl _value, $Res Function(_$WorkerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Worker
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1073,7 +1139,7 @@ class _$WorkerImpl implements _Worker {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WorkerImpl &&
@@ -1104,7 +1170,7 @@ class _$WorkerImpl implements _Worker {
                 other.dateCreation == dateCreation));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1125,7 +1191,9 @@ class _$WorkerImpl implements _Worker {
       isDeleted,
       dateCreation);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Worker
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WorkerImplCopyWith<_$WorkerImpl> get copyWith =>
@@ -1192,8 +1260,11 @@ abstract class _Worker implements Worker {
   bool get isDeleted;
   @override
   DateTime get dateCreation;
+
+  /// Create a copy of Worker
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WorkerImplCopyWith<_$WorkerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1214,8 +1285,12 @@ mixin _$WorkerServiceInfos {
   bool get isDeleted => throw _privateConstructorUsedError;
   DateTime get registeredDate => throw _privateConstructorUsedError;
 
+  /// Serializes this WorkerServiceInfos to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of WorkerServiceInfos
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $WorkerServiceInfosCopyWith<WorkerServiceInfos> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1250,6 +1325,8 @@ class _$WorkerServiceInfosCopyWithImpl<$Res, $Val extends WorkerServiceInfos>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of WorkerServiceInfos
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1303,6 +1380,8 @@ class _$WorkerServiceInfosCopyWithImpl<$Res, $Val extends WorkerServiceInfos>
     ) as $Val);
   }
 
+  /// Create a copy of WorkerServiceInfos
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $OffsetCopyWith<$Res> get location {
@@ -1343,6 +1422,8 @@ class __$$WorkerServiceInfosImplCopyWithImpl<$Res>
       $Res Function(_$WorkerServiceInfosImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of WorkerServiceInfos
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1439,7 +1520,7 @@ class _$WorkerServiceInfosImpl implements _WorkerServiceInfos {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WorkerServiceInfosImpl &&
@@ -1458,12 +1539,14 @@ class _$WorkerServiceInfosImpl implements _WorkerServiceInfos {
                 other.registeredDate == registeredDate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, workerId, photo, nom, prenom,
       phone, location, score, isDeleted, registeredDate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of WorkerServiceInfos
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WorkerServiceInfosImplCopyWith<_$WorkerServiceInfosImpl> get copyWith =>
@@ -1511,8 +1594,11 @@ abstract class _WorkerServiceInfos implements WorkerServiceInfos {
   bool get isDeleted;
   @override
   DateTime get registeredDate;
+
+  /// Create a copy of WorkerServiceInfos
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WorkerServiceInfosImplCopyWith<_$WorkerServiceInfosImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1534,8 +1620,12 @@ mixin _$SaveWorker {
   List<RhumaineSkill> get rhumaineSkills => throw _privateConstructorUsedError;
   String get photo => throw _privateConstructorUsedError;
 
+  /// Serializes this SaveWorker to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SaveWorker
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SaveWorkerCopyWith<SaveWorker> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1569,6 +1659,8 @@ class _$SaveWorkerCopyWithImpl<$Res, $Val extends SaveWorker>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SaveWorker
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1657,6 +1749,8 @@ class __$$SaveWorkerImplCopyWithImpl<$Res>
       _$SaveWorkerImpl _value, $Res Function(_$SaveWorkerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SaveWorker
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1768,7 +1862,7 @@ class _$SaveWorkerImpl implements _SaveWorker {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SaveWorkerImpl &&
@@ -1791,7 +1885,7 @@ class _$SaveWorkerImpl implements _SaveWorker {
             (identical(other.photo, photo) || other.photo == photo));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1806,7 +1900,9 @@ class _$SaveWorkerImpl implements _SaveWorker {
       const DeepCollectionEquality().hash(_rhumaineSkills),
       photo);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SaveWorker
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SaveWorkerImplCopyWith<_$SaveWorkerImpl> get copyWith =>
@@ -1856,8 +1952,11 @@ abstract class _SaveWorker implements SaveWorker {
   List<RhumaineSkill> get rhumaineSkills;
   @override
   String get photo;
+
+  /// Create a copy of SaveWorker
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SaveWorkerImplCopyWith<_$SaveWorkerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1882,8 +1981,12 @@ mixin _$SaveWorkerWithPassword {
   String get photo => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
 
+  /// Serializes this SaveWorkerWithPassword to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SaveWorkerWithPassword
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SaveWorkerWithPasswordCopyWith<SaveWorkerWithPassword> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1922,6 +2025,8 @@ class _$SaveWorkerWithPasswordCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SaveWorkerWithPassword
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1990,6 +2095,8 @@ class _$SaveWorkerWithPasswordCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of SaveWorkerWithPassword
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $OffsetCopyWith<$Res> get gps {
@@ -2036,6 +2143,8 @@ class __$$SaveWorkerWithPasswordImplCopyWithImpl<$Res>
       $Res Function(_$SaveWorkerWithPasswordImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SaveWorkerWithPassword
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2163,7 +2272,7 @@ class _$SaveWorkerWithPasswordImpl implements _SaveWorkerWithPassword {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SaveWorkerWithPasswordImpl &&
@@ -2189,7 +2298,7 @@ class _$SaveWorkerWithPasswordImpl implements _SaveWorkerWithPassword {
                 other.password == password));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2206,7 +2315,9 @@ class _$SaveWorkerWithPasswordImpl implements _SaveWorkerWithPassword {
       photo,
       password);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SaveWorkerWithPassword
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SaveWorkerWithPasswordImplCopyWith<_$SaveWorkerWithPasswordImpl>
@@ -2263,8 +2374,196 @@ abstract class _SaveWorkerWithPassword implements SaveWorkerWithPassword {
   String get photo;
   @override
   String get password;
+
+  /// Create a copy of SaveWorkerWithPassword
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SaveWorkerWithPasswordImplCopyWith<_$SaveWorkerWithPasswordImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+UpdateWorkerRequest _$UpdateWorkerRequestFromJson(Map<String, dynamic> json) {
+  return _UpdateWorkerRequest.fromJson(json);
+}
+
+/// @nodoc
+mixin _$UpdateWorkerRequest {
+  String? get nom => throw _privateConstructorUsedError;
+  String? get prenom => throw _privateConstructorUsedError;
+  String? get photo => throw _privateConstructorUsedError;
+
+  /// Serializes this UpdateWorkerRequest to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of UpdateWorkerRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $UpdateWorkerRequestCopyWith<UpdateWorkerRequest> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UpdateWorkerRequestCopyWith<$Res> {
+  factory $UpdateWorkerRequestCopyWith(
+          UpdateWorkerRequest value, $Res Function(UpdateWorkerRequest) then) =
+      _$UpdateWorkerRequestCopyWithImpl<$Res, UpdateWorkerRequest>;
+  @useResult
+  $Res call({String? nom, String? prenom, String? photo});
+}
+
+/// @nodoc
+class _$UpdateWorkerRequestCopyWithImpl<$Res, $Val extends UpdateWorkerRequest>
+    implements $UpdateWorkerRequestCopyWith<$Res> {
+  _$UpdateWorkerRequestCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of UpdateWorkerRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? nom = freezed,
+    Object? prenom = freezed,
+    Object? photo = freezed,
+  }) {
+    return _then(_value.copyWith(
+      nom: freezed == nom
+          ? _value.nom
+          : nom // ignore: cast_nullable_to_non_nullable
+              as String?,
+      prenom: freezed == prenom
+          ? _value.prenom
+          : prenom // ignore: cast_nullable_to_non_nullable
+              as String?,
+      photo: freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$UpdateWorkerRequestImplCopyWith<$Res>
+    implements $UpdateWorkerRequestCopyWith<$Res> {
+  factory _$$UpdateWorkerRequestImplCopyWith(_$UpdateWorkerRequestImpl value,
+          $Res Function(_$UpdateWorkerRequestImpl) then) =
+      __$$UpdateWorkerRequestImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? nom, String? prenom, String? photo});
+}
+
+/// @nodoc
+class __$$UpdateWorkerRequestImplCopyWithImpl<$Res>
+    extends _$UpdateWorkerRequestCopyWithImpl<$Res, _$UpdateWorkerRequestImpl>
+    implements _$$UpdateWorkerRequestImplCopyWith<$Res> {
+  __$$UpdateWorkerRequestImplCopyWithImpl(_$UpdateWorkerRequestImpl _value,
+      $Res Function(_$UpdateWorkerRequestImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of UpdateWorkerRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? nom = freezed,
+    Object? prenom = freezed,
+    Object? photo = freezed,
+  }) {
+    return _then(_$UpdateWorkerRequestImpl(
+      nom: freezed == nom
+          ? _value.nom
+          : nom // ignore: cast_nullable_to_non_nullable
+              as String?,
+      prenom: freezed == prenom
+          ? _value.prenom
+          : prenom // ignore: cast_nullable_to_non_nullable
+              as String?,
+      photo: freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$UpdateWorkerRequestImpl implements _UpdateWorkerRequest {
+  const _$UpdateWorkerRequestImpl({this.nom, this.prenom, this.photo});
+
+  factory _$UpdateWorkerRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UpdateWorkerRequestImplFromJson(json);
+
+  @override
+  final String? nom;
+  @override
+  final String? prenom;
+  @override
+  final String? photo;
+
+  @override
+  String toString() {
+    return 'UpdateWorkerRequest(nom: $nom, prenom: $prenom, photo: $photo)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateWorkerRequestImpl &&
+            (identical(other.nom, nom) || other.nom == nom) &&
+            (identical(other.prenom, prenom) || other.prenom == prenom) &&
+            (identical(other.photo, photo) || other.photo == photo));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, nom, prenom, photo);
+
+  /// Create a copy of UpdateWorkerRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateWorkerRequestImplCopyWith<_$UpdateWorkerRequestImpl> get copyWith =>
+      __$$UpdateWorkerRequestImplCopyWithImpl<_$UpdateWorkerRequestImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$UpdateWorkerRequestImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _UpdateWorkerRequest implements UpdateWorkerRequest {
+  const factory _UpdateWorkerRequest(
+      {final String? nom,
+      final String? prenom,
+      final String? photo}) = _$UpdateWorkerRequestImpl;
+
+  factory _UpdateWorkerRequest.fromJson(Map<String, dynamic> json) =
+      _$UpdateWorkerRequestImpl.fromJson;
+
+  @override
+  String? get nom;
+  @override
+  String? get prenom;
+  @override
+  String? get photo;
+
+  /// Create a copy of UpdateWorkerRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$UpdateWorkerRequestImplCopyWith<_$UpdateWorkerRequestImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

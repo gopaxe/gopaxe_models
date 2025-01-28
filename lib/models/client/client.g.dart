@@ -7,7 +7,7 @@ part of 'client.dart';
 // **************************************************************************
 
 _$ClientImpl _$$ClientImplFromJson(Map<String, dynamic> json) => _$ClientImpl(
-      clientId: json['clientId'] as int,
+      clientId: (json['clientId'] as num).toInt(),
       nom: json['nom'] as String,
       telephone: json['telephone'] as String,
       photo: json['photo'] as String?,
@@ -32,12 +32,12 @@ Map<String, dynamic> _$$ClientImplToJson(_$ClientImpl instance) =>
 _$ClientServiceInfosImpl _$$ClientServiceInfosImplFromJson(
         Map<String, dynamic> json) =>
     _$ClientServiceInfosImpl(
-      clientId: json['clientId'] as int,
+      clientId: (json['clientId'] as num).toInt(),
       photo: json['photo'] as String?,
       nom: json['nom'] as String,
       prenom: json['prenom'] as String,
       score: (json['score'] as num).toDouble(),
-      totalServicePosted: json['totalServicePosted'] as int,
+      totalServicePosted: (json['totalServicePosted'] as num).toInt(),
       isDeleted: json['isDeleted'] as bool,
       registeredDate: DateTime.parse(json['registeredDate'] as String),
     );
@@ -57,7 +57,7 @@ Map<String, dynamic> _$$ClientServiceInfosImplToJson(
 
 _$ClientOutPutImpl _$$ClientOutPutImplFromJson(Map<String, dynamic> json) =>
     _$ClientOutPutImpl(
-      clientId: json['clientId'] as int,
+      clientId: (json['clientId'] as num).toInt(),
       nom: json['nom'] as String,
       uuid: json['uuid'] as String,
       photo: json['photo'] as String?,
@@ -86,7 +86,7 @@ _$CreateClientRequestImpl _$$CreateClientRequestImplFromJson(
     _$CreateClientRequestImpl(
       nom: json['nom'] as String,
       prenom: json['prenom'] as String,
-      clientTypeId: json['clientTypeId'] as int,
+      clientTypeId: (json['clientTypeId'] as num).toInt(),
       location: Offset.fromJson(json['location'] as Map<String, dynamic>),
       photo: json['photo'] as String?,
       telephone: json['telephone'] as String,
@@ -109,9 +109,9 @@ _$UpdateClientRequestImpl _$$UpdateClientRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$UpdateClientRequestImpl(
       nom: json['nom'] as String?,
-      clientId: json['clientId'] as int,
+      clientId: (json['clientId'] as num).toInt(),
       prenom: json['prenom'] as String?,
-      clientTypeId: json['clientTypeId'] as int?,
+      clientTypeId: (json['clientTypeId'] as num?)?.toInt(),
       photo: json['photo'] as String?,
       location: json['location'] == null
           ? null

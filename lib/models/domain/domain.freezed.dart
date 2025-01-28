@@ -12,7 +12,7 @@ part of 'domain.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Domain _$DomainFromJson(Map<String, dynamic> json) {
   return _Domain.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$Domain {
   int get domainId => throw _privateConstructorUsedError;
   String get domainLibelle => throw _privateConstructorUsedError;
 
+  /// Serializes this Domain to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Domain
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DomainCopyWith<Domain> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -46,6 +50,8 @@ class _$DomainCopyWithImpl<$Res, $Val extends Domain>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Domain
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -83,6 +89,8 @@ class __$$DomainImplCopyWithImpl<$Res>
       _$DomainImpl _value, $Res Function(_$DomainImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Domain
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -121,7 +129,7 @@ class _$DomainImpl implements _Domain {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DomainImpl &&
@@ -131,11 +139,13 @@ class _$DomainImpl implements _Domain {
                 other.domainLibelle == domainLibelle));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, domainId, domainLibelle);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Domain
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DomainImplCopyWith<_$DomainImpl> get copyWith =>
@@ -160,8 +170,11 @@ abstract class _Domain implements Domain {
   int get domainId;
   @override
   String get domainLibelle;
+
+  /// Create a copy of Domain
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DomainImplCopyWith<_$DomainImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -174,8 +187,12 @@ CreateDomain _$CreateDomainFromJson(Map<String, dynamic> json) {
 mixin _$CreateDomain {
   String get domainLibelle => throw _privateConstructorUsedError;
 
+  /// Serializes this CreateDomain to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreateDomain
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreateDomainCopyWith<CreateDomain> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -199,6 +216,8 @@ class _$CreateDomainCopyWithImpl<$Res, $Val extends CreateDomain>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreateDomain
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -232,6 +251,8 @@ class __$$CreateDomainImplCopyWithImpl<$Res>
       _$CreateDomainImpl _value, $Res Function(_$CreateDomainImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreateDomain
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -263,7 +284,7 @@ class _$CreateDomainImpl implements _CreateDomain {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateDomainImpl &&
@@ -271,11 +292,13 @@ class _$CreateDomainImpl implements _CreateDomain {
                 other.domainLibelle == domainLibelle));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, domainLibelle);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreateDomain
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateDomainImplCopyWith<_$CreateDomainImpl> get copyWith =>
@@ -298,8 +321,11 @@ abstract class _CreateDomain implements CreateDomain {
 
   @override
   String get domainLibelle;
+
+  /// Create a copy of CreateDomain
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateDomainImplCopyWith<_$CreateDomainImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

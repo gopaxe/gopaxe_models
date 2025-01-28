@@ -7,7 +7,7 @@ part of 'domain.dart';
 // **************************************************************************
 
 _$DomainImpl _$$DomainImplFromJson(Map<String, dynamic> json) => _$DomainImpl(
-      domainId: json['domainId'] as int,
+      domainId: (json['domainId'] as num).toInt(),
       domainLibelle: json['domainLibelle'] as String,
     );
 

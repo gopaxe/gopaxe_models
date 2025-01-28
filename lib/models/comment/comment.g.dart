@@ -8,9 +8,9 @@ part of 'comment.dart';
 
 _$CommentImpl _$$CommentImplFromJson(Map<String, dynamic> json) =>
     _$CommentImpl(
-      commentId: json['commentId'] as int,
-      serviceId: json['serviceId'] as int,
-      workerId: json['workerId'] as int,
+      commentId: (json['commentId'] as num).toInt(),
+      serviceId: (json['serviceId'] as num).toInt(),
+      workerId: (json['workerId'] as num).toInt(),
       worker:
           WorkerServiceInfos.fromJson(json['worker'] as Map<String, dynamic>),
       client:
@@ -37,7 +37,7 @@ Map<String, dynamic> _$$CommentImplToJson(_$CommentImpl instance) =>
 _$CreateCommentRequestImpl _$$CreateCommentRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$CreateCommentRequestImpl(
-      serviceId: json['serviceId'] as int,
+      serviceId: (json['serviceId'] as num).toInt(),
       comment: json['comment'] as String,
       score: (json['score'] as num).toDouble(),
     );

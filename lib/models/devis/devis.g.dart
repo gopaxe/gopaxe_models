@@ -7,8 +7,8 @@ part of 'devis.dart';
 // **************************************************************************
 
 _$DevisImpl _$$DevisImplFromJson(Map<String, dynamic> json) => _$DevisImpl(
-      devisId: json['devisId'] as int,
-      montantDevis: json['montantDevis'] as int?,
+      devisId: (json['devisId'] as num).toInt(),
+      montantDevis: (json['montantDevis'] as num?)?.toInt(),
       file: json['file'] as String,
       libelle: json['libelle'] as String,
       description: json['description'] as String,
@@ -16,7 +16,7 @@ _$DevisImpl _$$DevisImplFromJson(Map<String, dynamic> json) => _$DevisImpl(
       correctionDate: json['correctionDate'] == null
           ? null
           : DateTime.parse(json['correctionDate'] as String),
-      numClient: json['numClient'] as int,
+      numClient: (json['numClient'] as num).toInt(),
       isDone: json['isDone'] as bool,
       isLock: json['isLock'] as bool,
       devisLine: (json['devisLine'] as List<dynamic>)
@@ -60,12 +60,12 @@ Map<String, dynamic> _$$CreateDeviceRequestImplToJson(
 
 _$DevisLineImpl _$$DevisLineImplFromJson(Map<String, dynamic> json) =>
     _$DevisLineImpl(
-      lineDevisId: json['lineDevisId'] as int,
+      lineDevisId: (json['lineDevisId'] as num).toInt(),
       libelle: json['libelle'] as String,
-      quantity: json['quantity'] as int,
+      quantity: (json['quantity'] as num).toInt(),
       unitPrice: (json['unitPrice'] as num).toDouble(),
       lineDevisTotal: (json['lineDevisTotal'] as num).toDouble(),
-      numDevis: json['numDevis'] as int,
+      numDevis: (json['numDevis'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$DevisLineImplToJson(_$DevisLineImpl instance) =>
@@ -82,7 +82,7 @@ _$DevisLineRequestImpl _$$DevisLineRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$DevisLineRequestImpl(
       libelle: json['libelle'] as String,
-      quantity: json['quantity'] as int,
+      quantity: (json['quantity'] as num).toInt(),
       unitPrice: (json['unitPrice'] as num).toDouble(),
     );
 

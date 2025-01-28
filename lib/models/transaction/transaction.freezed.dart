@@ -12,7 +12,7 @@ part of 'transaction.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 TransactionId _$TransactionIdFromJson(Map<String, dynamic> json) {
   return _TransactionId.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$TransactionId {
   String get transactionId => throw _privateConstructorUsedError;
   double get price => throw _privateConstructorUsedError;
 
+  /// Serializes this TransactionId to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TransactionId
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TransactionIdCopyWith<TransactionId> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$TransactionIdCopyWithImpl<$Res, $Val extends TransactionId>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TransactionId
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$TransactionIdImplCopyWithImpl<$Res>
       _$TransactionIdImpl _value, $Res Function(_$TransactionIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TransactionId
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,7 +132,7 @@ class _$TransactionIdImpl implements _TransactionId {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TransactionIdImpl &&
@@ -133,11 +141,13 @@ class _$TransactionIdImpl implements _TransactionId {
             (identical(other.price, price) || other.price == price));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, transactionId, price);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TransactionId
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TransactionIdImplCopyWith<_$TransactionIdImpl> get copyWith =>
@@ -163,8 +173,11 @@ abstract class _TransactionId implements TransactionId {
   String get transactionId;
   @override
   double get price;
+
+  /// Create a copy of TransactionId
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TransactionIdImplCopyWith<_$TransactionIdImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -179,8 +192,12 @@ mixin _$Transaction {
   int get forfaitId => throw _privateConstructorUsedError;
   DateTime get transactionDate => throw _privateConstructorUsedError;
 
+  /// Serializes this Transaction to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Transaction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TransactionCopyWith<Transaction> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -204,6 +221,8 @@ class _$TransactionCopyWithImpl<$Res, $Val extends Transaction>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Transaction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -247,6 +266,8 @@ class __$$TransactionImplCopyWithImpl<$Res>
       _$TransactionImpl _value, $Res Function(_$TransactionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Transaction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -295,7 +316,7 @@ class _$TransactionImpl implements _Transaction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TransactionImpl &&
@@ -307,12 +328,14 @@ class _$TransactionImpl implements _Transaction {
                 other.transactionDate == transactionDate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, transactionId, forfaitId, transactionDate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Transaction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TransactionImplCopyWith<_$TransactionImpl> get copyWith =>
@@ -341,8 +364,11 @@ abstract class _Transaction implements Transaction {
   int get forfaitId;
   @override
   DateTime get transactionDate;
+
+  /// Create a copy of Transaction
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TransactionImplCopyWith<_$TransactionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

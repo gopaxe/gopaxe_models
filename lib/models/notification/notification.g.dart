@@ -9,7 +9,7 @@ part of 'notification.dart';
 _$NotificationResponseImpl _$$NotificationResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$NotificationResponseImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       message: json['message'] as String,
       isRead: json['isRead'] as bool,
       dateEnvoi: DateTime.parse(json['dateEnvoi'] as String),

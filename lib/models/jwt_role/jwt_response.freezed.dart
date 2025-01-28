@@ -12,7 +12,7 @@ part of 'jwt_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 JWTResponse _$JWTResponseFromJson(Map<String, dynamic> json) {
   return _JWTResponse.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$JWTResponse {
   String get token => throw _privateConstructorUsedError;
   String get refreshToken => throw _privateConstructorUsedError;
 
+  /// Serializes this JWTResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of JWTResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $JWTResponseCopyWith<JWTResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$JWTResponseCopyWithImpl<$Res, $Val extends JWTResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of JWTResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$JWTResponseImplCopyWithImpl<$Res>
       _$JWTResponseImpl _value, $Res Function(_$JWTResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of JWTResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,7 +132,7 @@ class _$JWTResponseImpl implements _JWTResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$JWTResponseImpl &&
@@ -133,11 +141,13 @@ class _$JWTResponseImpl implements _JWTResponse {
                 other.refreshToken == refreshToken));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, token, refreshToken);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of JWTResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$JWTResponseImplCopyWith<_$JWTResponseImpl> get copyWith =>
@@ -163,8 +173,11 @@ abstract class _JWTResponse implements JWTResponse {
   String get token;
   @override
   String get refreshToken;
+
+  /// Create a copy of JWTResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JWTResponseImplCopyWith<_$JWTResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -178,8 +191,12 @@ mixin _$ClientErrorResponse {
   String get title => throw _privateConstructorUsedError;
   String get content => throw _privateConstructorUsedError;
 
+  /// Serializes this ClientErrorResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ClientErrorResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ClientErrorResponseCopyWith<ClientErrorResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -203,6 +220,8 @@ class _$ClientErrorResponseCopyWithImpl<$Res, $Val extends ClientErrorResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ClientErrorResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -241,6 +260,8 @@ class __$$ClientErrorResponseImplCopyWithImpl<$Res>
       $Res Function(_$ClientErrorResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ClientErrorResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -279,7 +300,7 @@ class _$ClientErrorResponseImpl implements _ClientErrorResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClientErrorResponseImpl &&
@@ -287,11 +308,13 @@ class _$ClientErrorResponseImpl implements _ClientErrorResponse {
             (identical(other.content, content) || other.content == content));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, title, content);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ClientErrorResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ClientErrorResponseImplCopyWith<_$ClientErrorResponseImpl> get copyWith =>
@@ -318,8 +341,11 @@ abstract class _ClientErrorResponse implements ClientErrorResponse {
   String get title;
   @override
   String get content;
+
+  /// Create a copy of ClientErrorResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ClientErrorResponseImplCopyWith<_$ClientErrorResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -332,8 +358,12 @@ RefreshTokenRequest _$RefreshTokenRequestFromJson(Map<String, dynamic> json) {
 mixin _$RefreshTokenRequest {
   String get refreshToken => throw _privateConstructorUsedError;
 
+  /// Serializes this RefreshTokenRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RefreshTokenRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RefreshTokenRequestCopyWith<RefreshTokenRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -357,6 +387,8 @@ class _$RefreshTokenRequestCopyWithImpl<$Res, $Val extends RefreshTokenRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RefreshTokenRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -390,6 +422,8 @@ class __$$RefreshTokenRequestImplCopyWithImpl<$Res>
       $Res Function(_$RefreshTokenRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RefreshTokenRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -421,7 +455,7 @@ class _$RefreshTokenRequestImpl implements _RefreshTokenRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RefreshTokenRequestImpl &&
@@ -429,11 +463,13 @@ class _$RefreshTokenRequestImpl implements _RefreshTokenRequest {
                 other.refreshToken == refreshToken));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, refreshToken);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RefreshTokenRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RefreshTokenRequestImplCopyWith<_$RefreshTokenRequestImpl> get copyWith =>
@@ -457,8 +493,11 @@ abstract class _RefreshTokenRequest implements RefreshTokenRequest {
 
   @override
   String get refreshToken;
+
+  /// Create a copy of RefreshTokenRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RefreshTokenRequestImplCopyWith<_$RefreshTokenRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -471,8 +510,12 @@ ServerError _$ServerErrorFromJson(Map<String, dynamic> json) {
 mixin _$ServerError {
   String get error => throw _privateConstructorUsedError;
 
+  /// Serializes this ServerError to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ServerError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ServerErrorCopyWith<ServerError> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -496,6 +539,8 @@ class _$ServerErrorCopyWithImpl<$Res, $Val extends ServerError>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ServerError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -529,6 +574,8 @@ class __$$ServerErrorImplCopyWithImpl<$Res>
       _$ServerErrorImpl _value, $Res Function(_$ServerErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ServerError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -560,18 +607,20 @@ class _$ServerErrorImpl implements _ServerError {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ServerErrorImpl &&
             (identical(other.error, error) || other.error == error));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServerError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ServerErrorImplCopyWith<_$ServerErrorImpl> get copyWith =>
@@ -593,8 +642,11 @@ abstract class _ServerError implements ServerError {
 
   @override
   String get error;
+
+  /// Create a copy of ServerError
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ServerErrorImplCopyWith<_$ServerErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -607,8 +659,12 @@ SuccessResponse _$SuccessResponseFromJson(Map<String, dynamic> json) {
 mixin _$SuccessResponse {
   String get error => throw _privateConstructorUsedError;
 
+  /// Serializes this SuccessResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SuccessResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SuccessResponseCopyWith<SuccessResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -632,6 +688,8 @@ class _$SuccessResponseCopyWithImpl<$Res, $Val extends SuccessResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SuccessResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -665,6 +723,8 @@ class __$$SuccessResponseImplCopyWithImpl<$Res>
       _$SuccessResponseImpl _value, $Res Function(_$SuccessResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SuccessResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -696,18 +756,20 @@ class _$SuccessResponseImpl implements _SuccessResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessResponseImpl &&
             (identical(other.error, error) || other.error == error));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SuccessResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessResponseImplCopyWith<_$SuccessResponseImpl> get copyWith =>
@@ -731,8 +793,11 @@ abstract class _SuccessResponse implements SuccessResponse {
 
   @override
   String get error;
+
+  /// Create a copy of SuccessResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuccessResponseImplCopyWith<_$SuccessResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -745,8 +810,12 @@ UnAuthorizedResponse _$UnAuthorizedResponseFromJson(Map<String, dynamic> json) {
 mixin _$UnAuthorizedResponse {
   String get error => throw _privateConstructorUsedError;
 
+  /// Serializes this UnAuthorizedResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UnAuthorizedResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UnAuthorizedResponseCopyWith<UnAuthorizedResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -771,6 +840,8 @@ class _$UnAuthorizedResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UnAuthorizedResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -804,6 +875,8 @@ class __$$UnAuthorizedResponseImplCopyWithImpl<$Res>
       $Res Function(_$UnAuthorizedResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UnAuthorizedResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -835,18 +908,20 @@ class _$UnAuthorizedResponseImpl implements _UnAuthorizedResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UnAuthorizedResponseImpl &&
             (identical(other.error, error) || other.error == error));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UnAuthorizedResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UnAuthorizedResponseImplCopyWith<_$UnAuthorizedResponseImpl>
@@ -871,8 +946,11 @@ abstract class _UnAuthorizedResponse implements UnAuthorizedResponse {
 
   @override
   String get error;
+
+  /// Create a copy of UnAuthorizedResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UnAuthorizedResponseImplCopyWith<_$UnAuthorizedResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -886,8 +964,12 @@ mixin _$BaseLoginRequest {
   String get telephone => throw _privateConstructorUsedError;
   String get motDePasse => throw _privateConstructorUsedError;
 
+  /// Serializes this BaseLoginRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BaseLoginRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BaseLoginRequestCopyWith<BaseLoginRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -911,6 +993,8 @@ class _$BaseLoginRequestCopyWithImpl<$Res, $Val extends BaseLoginRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BaseLoginRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -949,6 +1033,8 @@ class __$$BaseLoginRequestImplCopyWithImpl<$Res>
       $Res Function(_$BaseLoginRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BaseLoginRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -988,7 +1074,7 @@ class _$BaseLoginRequestImpl implements _BaseLoginRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BaseLoginRequestImpl &&
@@ -998,11 +1084,13 @@ class _$BaseLoginRequestImpl implements _BaseLoginRequest {
                 other.motDePasse == motDePasse));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, telephone, motDePasse);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BaseLoginRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BaseLoginRequestImplCopyWith<_$BaseLoginRequestImpl> get copyWith =>
@@ -1029,8 +1117,11 @@ abstract class _BaseLoginRequest implements BaseLoginRequest {
   String get telephone;
   @override
   String get motDePasse;
+
+  /// Create a copy of BaseLoginRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BaseLoginRequestImplCopyWith<_$BaseLoginRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

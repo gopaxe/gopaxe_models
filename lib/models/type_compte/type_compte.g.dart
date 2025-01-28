@@ -8,7 +8,7 @@ part of 'type_compte.dart';
 
 _$TypeCompteImpl _$$TypeCompteImplFromJson(Map<String, dynamic> json) =>
     _$TypeCompteImpl(
-      typeCompteId: json['typeCompteId'] as int,
+      typeCompteId: (json['typeCompteId'] as num).toInt(),
       libelle: json['libelle'] as String,
     );
 
