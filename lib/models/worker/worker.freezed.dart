@@ -2390,6 +2390,7 @@ UpdateWorkerRequest _$UpdateWorkerRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$UpdateWorkerRequest {
   String? get nom => throw _privateConstructorUsedError;
+  int get workerId => throw _privateConstructorUsedError;
   String? get prenom => throw _privateConstructorUsedError;
   String? get photo => throw _privateConstructorUsedError;
 
@@ -2409,7 +2410,7 @@ abstract class $UpdateWorkerRequestCopyWith<$Res> {
           UpdateWorkerRequest value, $Res Function(UpdateWorkerRequest) then) =
       _$UpdateWorkerRequestCopyWithImpl<$Res, UpdateWorkerRequest>;
   @useResult
-  $Res call({String? nom, String? prenom, String? photo});
+  $Res call({String? nom, int workerId, String? prenom, String? photo});
 }
 
 /// @nodoc
@@ -2428,6 +2429,7 @@ class _$UpdateWorkerRequestCopyWithImpl<$Res, $Val extends UpdateWorkerRequest>
   @override
   $Res call({
     Object? nom = freezed,
+    Object? workerId = null,
     Object? prenom = freezed,
     Object? photo = freezed,
   }) {
@@ -2436,6 +2438,10 @@ class _$UpdateWorkerRequestCopyWithImpl<$Res, $Val extends UpdateWorkerRequest>
           ? _value.nom
           : nom // ignore: cast_nullable_to_non_nullable
               as String?,
+      workerId: null == workerId
+          ? _value.workerId
+          : workerId // ignore: cast_nullable_to_non_nullable
+              as int,
       prenom: freezed == prenom
           ? _value.prenom
           : prenom // ignore: cast_nullable_to_non_nullable
@@ -2456,7 +2462,7 @@ abstract class _$$UpdateWorkerRequestImplCopyWith<$Res>
       __$$UpdateWorkerRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? nom, String? prenom, String? photo});
+  $Res call({String? nom, int workerId, String? prenom, String? photo});
 }
 
 /// @nodoc
@@ -2473,6 +2479,7 @@ class __$$UpdateWorkerRequestImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? nom = freezed,
+    Object? workerId = null,
     Object? prenom = freezed,
     Object? photo = freezed,
   }) {
@@ -2481,6 +2488,10 @@ class __$$UpdateWorkerRequestImplCopyWithImpl<$Res>
           ? _value.nom
           : nom // ignore: cast_nullable_to_non_nullable
               as String?,
+      workerId: null == workerId
+          ? _value.workerId
+          : workerId // ignore: cast_nullable_to_non_nullable
+              as int,
       prenom: freezed == prenom
           ? _value.prenom
           : prenom // ignore: cast_nullable_to_non_nullable
@@ -2496,7 +2507,8 @@ class __$$UpdateWorkerRequestImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$UpdateWorkerRequestImpl implements _UpdateWorkerRequest {
-  const _$UpdateWorkerRequestImpl({this.nom, this.prenom, this.photo});
+  const _$UpdateWorkerRequestImpl(
+      {this.nom, required this.workerId, this.prenom, this.photo});
 
   factory _$UpdateWorkerRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$UpdateWorkerRequestImplFromJson(json);
@@ -2504,13 +2516,15 @@ class _$UpdateWorkerRequestImpl implements _UpdateWorkerRequest {
   @override
   final String? nom;
   @override
+  final int workerId;
+  @override
   final String? prenom;
   @override
   final String? photo;
 
   @override
   String toString() {
-    return 'UpdateWorkerRequest(nom: $nom, prenom: $prenom, photo: $photo)';
+    return 'UpdateWorkerRequest(nom: $nom, workerId: $workerId, prenom: $prenom, photo: $photo)';
   }
 
   @override
@@ -2519,13 +2533,15 @@ class _$UpdateWorkerRequestImpl implements _UpdateWorkerRequest {
         (other.runtimeType == runtimeType &&
             other is _$UpdateWorkerRequestImpl &&
             (identical(other.nom, nom) || other.nom == nom) &&
+            (identical(other.workerId, workerId) ||
+                other.workerId == workerId) &&
             (identical(other.prenom, prenom) || other.prenom == prenom) &&
             (identical(other.photo, photo) || other.photo == photo));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, nom, prenom, photo);
+  int get hashCode => Object.hash(runtimeType, nom, workerId, prenom, photo);
 
   /// Create a copy of UpdateWorkerRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -2547,6 +2563,7 @@ class _$UpdateWorkerRequestImpl implements _UpdateWorkerRequest {
 abstract class _UpdateWorkerRequest implements UpdateWorkerRequest {
   const factory _UpdateWorkerRequest(
       {final String? nom,
+      required final int workerId,
       final String? prenom,
       final String? photo}) = _$UpdateWorkerRequestImpl;
 
@@ -2555,6 +2572,8 @@ abstract class _UpdateWorkerRequest implements UpdateWorkerRequest {
 
   @override
   String? get nom;
+  @override
+  int get workerId;
   @override
   String? get prenom;
   @override

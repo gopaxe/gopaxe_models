@@ -198,6 +198,7 @@ _$UpdateWorkerRequestImpl _$$UpdateWorkerRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$UpdateWorkerRequestImpl(
       nom: json['nom'] as String?,
+      workerId: (json['workerId'] as num).toInt(),
       prenom: json['prenom'] as String?,
       photo: json['photo'] as String?,
     );
@@ -206,6 +207,7 @@ Map<String, dynamic> _$$UpdateWorkerRequestImplToJson(
         _$UpdateWorkerRequestImpl instance) =>
     <String, dynamic>{
       'nom': instance.nom,
+      'workerId': instance.workerId,
       'prenom': instance.prenom,
       'photo': instance.photo,
     };
