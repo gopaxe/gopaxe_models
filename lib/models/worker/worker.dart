@@ -136,3 +136,23 @@ class UpdateWorkerRequest with _$UpdateWorkerRequest {
   factory UpdateWorkerRequest.fromJson(Map<String, dynamic> json) =>
       _$UpdateWorkerRequestFromJson(json);
 }
+
+enum PayementMethod {
+  wave('WAVECI');
+
+  const PayementMethod(this.name);
+  final String name;
+}
+
+@freezed
+class WorkerWithdrawalRequest with _$WorkerWithdrawalRequest {
+  const factory WorkerWithdrawalRequest(
+      {required int amount,
+      required Worker worker,
+      PayementMethod? paymentMethod,
+      required int numDemande,
+      required int numOperation}) = _WorkerWithdrawalRequest;
+
+  factory WorkerWithdrawalRequest.fromJson(Map<String, dynamic> json) =>
+      _$WorkerWithdrawalRequestFromJson(json);
+}

@@ -2586,3 +2586,261 @@ abstract class _UpdateWorkerRequest implements UpdateWorkerRequest {
   _$$UpdateWorkerRequestImplCopyWith<_$UpdateWorkerRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+WorkerWithdrawalRequest _$WorkerWithdrawalRequestFromJson(
+    Map<String, dynamic> json) {
+  return _WorkerWithdrawalRequest.fromJson(json);
+}
+
+/// @nodoc
+mixin _$WorkerWithdrawalRequest {
+  int get amount => throw _privateConstructorUsedError;
+  Worker get worker => throw _privateConstructorUsedError;
+  PayementMethod? get paymentMethod => throw _privateConstructorUsedError;
+  int get numDemande => throw _privateConstructorUsedError;
+  int get numOperation => throw _privateConstructorUsedError;
+
+  /// Serializes this WorkerWithdrawalRequest to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of WorkerWithdrawalRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $WorkerWithdrawalRequestCopyWith<WorkerWithdrawalRequest> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $WorkerWithdrawalRequestCopyWith<$Res> {
+  factory $WorkerWithdrawalRequestCopyWith(WorkerWithdrawalRequest value,
+          $Res Function(WorkerWithdrawalRequest) then) =
+      _$WorkerWithdrawalRequestCopyWithImpl<$Res, WorkerWithdrawalRequest>;
+  @useResult
+  $Res call(
+      {int amount,
+      Worker worker,
+      PayementMethod? paymentMethod,
+      int numDemande,
+      int numOperation});
+
+  $WorkerCopyWith<$Res> get worker;
+}
+
+/// @nodoc
+class _$WorkerWithdrawalRequestCopyWithImpl<$Res,
+        $Val extends WorkerWithdrawalRequest>
+    implements $WorkerWithdrawalRequestCopyWith<$Res> {
+  _$WorkerWithdrawalRequestCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of WorkerWithdrawalRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? amount = null,
+    Object? worker = null,
+    Object? paymentMethod = freezed,
+    Object? numDemande = null,
+    Object? numOperation = null,
+  }) {
+    return _then(_value.copyWith(
+      amount: null == amount
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as int,
+      worker: null == worker
+          ? _value.worker
+          : worker // ignore: cast_nullable_to_non_nullable
+              as Worker,
+      paymentMethod: freezed == paymentMethod
+          ? _value.paymentMethod
+          : paymentMethod // ignore: cast_nullable_to_non_nullable
+              as PayementMethod?,
+      numDemande: null == numDemande
+          ? _value.numDemande
+          : numDemande // ignore: cast_nullable_to_non_nullable
+              as int,
+      numOperation: null == numOperation
+          ? _value.numOperation
+          : numOperation // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+
+  /// Create a copy of WorkerWithdrawalRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $WorkerCopyWith<$Res> get worker {
+    return $WorkerCopyWith<$Res>(_value.worker, (value) {
+      return _then(_value.copyWith(worker: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$WorkerWithdrawalRequestImplCopyWith<$Res>
+    implements $WorkerWithdrawalRequestCopyWith<$Res> {
+  factory _$$WorkerWithdrawalRequestImplCopyWith(
+          _$WorkerWithdrawalRequestImpl value,
+          $Res Function(_$WorkerWithdrawalRequestImpl) then) =
+      __$$WorkerWithdrawalRequestImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int amount,
+      Worker worker,
+      PayementMethod? paymentMethod,
+      int numDemande,
+      int numOperation});
+
+  @override
+  $WorkerCopyWith<$Res> get worker;
+}
+
+/// @nodoc
+class __$$WorkerWithdrawalRequestImplCopyWithImpl<$Res>
+    extends _$WorkerWithdrawalRequestCopyWithImpl<$Res,
+        _$WorkerWithdrawalRequestImpl>
+    implements _$$WorkerWithdrawalRequestImplCopyWith<$Res> {
+  __$$WorkerWithdrawalRequestImplCopyWithImpl(
+      _$WorkerWithdrawalRequestImpl _value,
+      $Res Function(_$WorkerWithdrawalRequestImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of WorkerWithdrawalRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? amount = null,
+    Object? worker = null,
+    Object? paymentMethod = freezed,
+    Object? numDemande = null,
+    Object? numOperation = null,
+  }) {
+    return _then(_$WorkerWithdrawalRequestImpl(
+      amount: null == amount
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as int,
+      worker: null == worker
+          ? _value.worker
+          : worker // ignore: cast_nullable_to_non_nullable
+              as Worker,
+      paymentMethod: freezed == paymentMethod
+          ? _value.paymentMethod
+          : paymentMethod // ignore: cast_nullable_to_non_nullable
+              as PayementMethod?,
+      numDemande: null == numDemande
+          ? _value.numDemande
+          : numDemande // ignore: cast_nullable_to_non_nullable
+              as int,
+      numOperation: null == numOperation
+          ? _value.numOperation
+          : numOperation // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$WorkerWithdrawalRequestImpl implements _WorkerWithdrawalRequest {
+  const _$WorkerWithdrawalRequestImpl(
+      {required this.amount,
+      required this.worker,
+      this.paymentMethod,
+      required this.numDemande,
+      required this.numOperation});
+
+  factory _$WorkerWithdrawalRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$WorkerWithdrawalRequestImplFromJson(json);
+
+  @override
+  final int amount;
+  @override
+  final Worker worker;
+  @override
+  final PayementMethod? paymentMethod;
+  @override
+  final int numDemande;
+  @override
+  final int numOperation;
+
+  @override
+  String toString() {
+    return 'WorkerWithdrawalRequest(amount: $amount, worker: $worker, paymentMethod: $paymentMethod, numDemande: $numDemande, numOperation: $numOperation)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WorkerWithdrawalRequestImpl &&
+            (identical(other.amount, amount) || other.amount == amount) &&
+            (identical(other.worker, worker) || other.worker == worker) &&
+            (identical(other.paymentMethod, paymentMethod) ||
+                other.paymentMethod == paymentMethod) &&
+            (identical(other.numDemande, numDemande) ||
+                other.numDemande == numDemande) &&
+            (identical(other.numOperation, numOperation) ||
+                other.numOperation == numOperation));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, amount, worker, paymentMethod, numDemande, numOperation);
+
+  /// Create a copy of WorkerWithdrawalRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WorkerWithdrawalRequestImplCopyWith<_$WorkerWithdrawalRequestImpl>
+      get copyWith => __$$WorkerWithdrawalRequestImplCopyWithImpl<
+          _$WorkerWithdrawalRequestImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$WorkerWithdrawalRequestImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _WorkerWithdrawalRequest implements WorkerWithdrawalRequest {
+  const factory _WorkerWithdrawalRequest(
+      {required final int amount,
+      required final Worker worker,
+      final PayementMethod? paymentMethod,
+      required final int numDemande,
+      required final int numOperation}) = _$WorkerWithdrawalRequestImpl;
+
+  factory _WorkerWithdrawalRequest.fromJson(Map<String, dynamic> json) =
+      _$WorkerWithdrawalRequestImpl.fromJson;
+
+  @override
+  int get amount;
+  @override
+  Worker get worker;
+  @override
+  PayementMethod? get paymentMethod;
+  @override
+  int get numDemande;
+  @override
+  int get numOperation;
+
+  /// Create a copy of WorkerWithdrawalRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$WorkerWithdrawalRequestImplCopyWith<_$WorkerWithdrawalRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
