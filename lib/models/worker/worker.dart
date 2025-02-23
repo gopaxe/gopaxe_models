@@ -148,10 +148,7 @@ enum PayementMethod {
 class WorkerWithdrawalRequest with _$WorkerWithdrawalRequest {
   const factory WorkerWithdrawalRequest(
       {required int amount,
-      required Worker worker,
-      PayementMethod? paymentMethod,
-      required int numDemande,
-      required int numOperation}) = _WorkerWithdrawalRequest;
+      PayementMethod? paymentMethod}) = _WorkerWithdrawalRequest;
 
   factory WorkerWithdrawalRequest.fromJson(Map<String, dynamic> json) =>
       _$WorkerWithdrawalRequestFromJson(json);

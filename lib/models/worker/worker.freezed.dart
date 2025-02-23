@@ -2595,10 +2595,7 @@ WorkerWithdrawalRequest _$WorkerWithdrawalRequestFromJson(
 /// @nodoc
 mixin _$WorkerWithdrawalRequest {
   int get amount => throw _privateConstructorUsedError;
-  Worker get worker => throw _privateConstructorUsedError;
   PayementMethod? get paymentMethod => throw _privateConstructorUsedError;
-  int get numDemande => throw _privateConstructorUsedError;
-  int get numOperation => throw _privateConstructorUsedError;
 
   /// Serializes this WorkerWithdrawalRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2616,14 +2613,7 @@ abstract class $WorkerWithdrawalRequestCopyWith<$Res> {
           $Res Function(WorkerWithdrawalRequest) then) =
       _$WorkerWithdrawalRequestCopyWithImpl<$Res, WorkerWithdrawalRequest>;
   @useResult
-  $Res call(
-      {int amount,
-      Worker worker,
-      PayementMethod? paymentMethod,
-      int numDemande,
-      int numOperation});
-
-  $WorkerCopyWith<$Res> get worker;
+  $Res call({int amount, PayementMethod? paymentMethod});
 }
 
 /// @nodoc
@@ -2643,43 +2633,18 @@ class _$WorkerWithdrawalRequestCopyWithImpl<$Res,
   @override
   $Res call({
     Object? amount = null,
-    Object? worker = null,
     Object? paymentMethod = freezed,
-    Object? numDemande = null,
-    Object? numOperation = null,
   }) {
     return _then(_value.copyWith(
       amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as int,
-      worker: null == worker
-          ? _value.worker
-          : worker // ignore: cast_nullable_to_non_nullable
-              as Worker,
       paymentMethod: freezed == paymentMethod
           ? _value.paymentMethod
           : paymentMethod // ignore: cast_nullable_to_non_nullable
               as PayementMethod?,
-      numDemande: null == numDemande
-          ? _value.numDemande
-          : numDemande // ignore: cast_nullable_to_non_nullable
-              as int,
-      numOperation: null == numOperation
-          ? _value.numOperation
-          : numOperation // ignore: cast_nullable_to_non_nullable
-              as int,
     ) as $Val);
-  }
-
-  /// Create a copy of WorkerWithdrawalRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $WorkerCopyWith<$Res> get worker {
-    return $WorkerCopyWith<$Res>(_value.worker, (value) {
-      return _then(_value.copyWith(worker: value) as $Val);
-    });
   }
 }
 
@@ -2692,15 +2657,7 @@ abstract class _$$WorkerWithdrawalRequestImplCopyWith<$Res>
       __$$WorkerWithdrawalRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int amount,
-      Worker worker,
-      PayementMethod? paymentMethod,
-      int numDemande,
-      int numOperation});
-
-  @override
-  $WorkerCopyWith<$Res> get worker;
+  $Res call({int amount, PayementMethod? paymentMethod});
 }
 
 /// @nodoc
@@ -2719,32 +2676,17 @@ class __$$WorkerWithdrawalRequestImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? amount = null,
-    Object? worker = null,
     Object? paymentMethod = freezed,
-    Object? numDemande = null,
-    Object? numOperation = null,
   }) {
     return _then(_$WorkerWithdrawalRequestImpl(
       amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as int,
-      worker: null == worker
-          ? _value.worker
-          : worker // ignore: cast_nullable_to_non_nullable
-              as Worker,
       paymentMethod: freezed == paymentMethod
           ? _value.paymentMethod
           : paymentMethod // ignore: cast_nullable_to_non_nullable
               as PayementMethod?,
-      numDemande: null == numDemande
-          ? _value.numDemande
-          : numDemande // ignore: cast_nullable_to_non_nullable
-              as int,
-      numOperation: null == numOperation
-          ? _value.numOperation
-          : numOperation // ignore: cast_nullable_to_non_nullable
-              as int,
     ));
   }
 }
@@ -2753,11 +2695,7 @@ class __$$WorkerWithdrawalRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$WorkerWithdrawalRequestImpl implements _WorkerWithdrawalRequest {
   const _$WorkerWithdrawalRequestImpl(
-      {required this.amount,
-      required this.worker,
-      this.paymentMethod,
-      required this.numDemande,
-      required this.numOperation});
+      {required this.amount, this.paymentMethod});
 
   factory _$WorkerWithdrawalRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$WorkerWithdrawalRequestImplFromJson(json);
@@ -2765,17 +2703,11 @@ class _$WorkerWithdrawalRequestImpl implements _WorkerWithdrawalRequest {
   @override
   final int amount;
   @override
-  final Worker worker;
-  @override
   final PayementMethod? paymentMethod;
-  @override
-  final int numDemande;
-  @override
-  final int numOperation;
 
   @override
   String toString() {
-    return 'WorkerWithdrawalRequest(amount: $amount, worker: $worker, paymentMethod: $paymentMethod, numDemande: $numDemande, numOperation: $numOperation)';
+    return 'WorkerWithdrawalRequest(amount: $amount, paymentMethod: $paymentMethod)';
   }
 
   @override
@@ -2784,19 +2716,13 @@ class _$WorkerWithdrawalRequestImpl implements _WorkerWithdrawalRequest {
         (other.runtimeType == runtimeType &&
             other is _$WorkerWithdrawalRequestImpl &&
             (identical(other.amount, amount) || other.amount == amount) &&
-            (identical(other.worker, worker) || other.worker == worker) &&
             (identical(other.paymentMethod, paymentMethod) ||
-                other.paymentMethod == paymentMethod) &&
-            (identical(other.numDemande, numDemande) ||
-                other.numDemande == numDemande) &&
-            (identical(other.numOperation, numOperation) ||
-                other.numOperation == numOperation));
+                other.paymentMethod == paymentMethod));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, amount, worker, paymentMethod, numDemande, numOperation);
+  int get hashCode => Object.hash(runtimeType, amount, paymentMethod);
 
   /// Create a copy of WorkerWithdrawalRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -2818,10 +2744,7 @@ class _$WorkerWithdrawalRequestImpl implements _WorkerWithdrawalRequest {
 abstract class _WorkerWithdrawalRequest implements WorkerWithdrawalRequest {
   const factory _WorkerWithdrawalRequest(
       {required final int amount,
-      required final Worker worker,
-      final PayementMethod? paymentMethod,
-      required final int numDemande,
-      required final int numOperation}) = _$WorkerWithdrawalRequestImpl;
+      final PayementMethod? paymentMethod}) = _$WorkerWithdrawalRequestImpl;
 
   factory _WorkerWithdrawalRequest.fromJson(Map<String, dynamic> json) =
       _$WorkerWithdrawalRequestImpl.fromJson;
@@ -2829,13 +2752,7 @@ abstract class _WorkerWithdrawalRequest implements WorkerWithdrawalRequest {
   @override
   int get amount;
   @override
-  Worker get worker;
-  @override
   PayementMethod? get paymentMethod;
-  @override
-  int get numDemande;
-  @override
-  int get numOperation;
 
   /// Create a copy of WorkerWithdrawalRequest
   /// with the given fields replaced by the non-null parameter values.

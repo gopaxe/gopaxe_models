@@ -216,21 +216,15 @@ _$WorkerWithdrawalRequestImpl _$$WorkerWithdrawalRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$WorkerWithdrawalRequestImpl(
       amount: (json['amount'] as num).toInt(),
-      worker: Worker.fromJson(json['worker'] as Map<String, dynamic>),
       paymentMethod:
           $enumDecodeNullable(_$PayementMethodEnumMap, json['paymentMethod']),
-      numDemande: (json['numDemande'] as num).toInt(),
-      numOperation: (json['numOperation'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$WorkerWithdrawalRequestImplToJson(
         _$WorkerWithdrawalRequestImpl instance) =>
     <String, dynamic>{
       'amount': instance.amount,
-      'worker': instance.worker,
       'paymentMethod': _$PayementMethodEnumMap[instance.paymentMethod],
-      'numDemande': instance.numDemande,
-      'numOperation': instance.numOperation,
     };
 
 const _$PayementMethodEnumMap = {
