@@ -30,7 +30,7 @@ class ServiceRequest with _$ServiceRequest {
     required String description,
     required int? targetedMetierId,
     required int? targetedCompetenceId,
-    required DateTime completionDate,
+    required DateTime? completionDate,
     required int? workerId,
     required bool hasWorkerLocationShared,
     required bool hasTransportPaid,
