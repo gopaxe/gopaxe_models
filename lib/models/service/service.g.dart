@@ -40,9 +40,7 @@ _$ServiceRequestImpl _$$ServiceRequestImplFromJson(Map<String, dynamic> json) =>
       description: json['description'] as String,
       targetedMetierId: (json['targetedMetierId'] as num?)?.toInt(),
       targetedCompetenceId: (json['targetedCompetenceId'] as num?)?.toInt(),
-      completionDate: json['completionDate'] == null
-          ? null
-          : DateTime.parse(json['completionDate'] as String),
+      completionDate: DateTime.parse(json['completionDate'] as String),
       workerId: (json['workerId'] as num?)?.toInt(),
       hasWorkerLocationShared: json['hasWorkerLocationShared'] as bool,
       hasTransportPaid: json['hasTransportPaid'] as bool,
@@ -78,7 +76,7 @@ Map<String, dynamic> _$$ServiceRequestImplToJson(
       'description': instance.description,
       'targetedMetierId': instance.targetedMetierId,
       'targetedCompetenceId': instance.targetedCompetenceId,
-      'completionDate': instance.completionDate?.toIso8601String(),
+      'completionDate': instance.completionDate.toIso8601String(),
       'workerId': instance.workerId,
       'hasWorkerLocationShared': instance.hasWorkerLocationShared,
       'hasTransportPaid': instance.hasTransportPaid,

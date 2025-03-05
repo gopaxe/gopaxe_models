@@ -355,7 +355,7 @@ mixin _$ServiceRequest {
   String get description => throw _privateConstructorUsedError;
   int? get targetedMetierId => throw _privateConstructorUsedError;
   int? get targetedCompetenceId => throw _privateConstructorUsedError;
-  DateTime? get completionDate => throw _privateConstructorUsedError;
+  DateTime get completionDate => throw _privateConstructorUsedError;
   int? get workerId => throw _privateConstructorUsedError;
   bool get hasWorkerLocationShared => throw _privateConstructorUsedError;
   bool get hasTransportPaid => throw _privateConstructorUsedError;
@@ -396,7 +396,7 @@ abstract class $ServiceRequestCopyWith<$Res> {
       String description,
       int? targetedMetierId,
       int? targetedCompetenceId,
-      DateTime? completionDate,
+      DateTime completionDate,
       int? workerId,
       bool hasWorkerLocationShared,
       bool hasTransportPaid,
@@ -435,7 +435,7 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
     Object? description = null,
     Object? targetedMetierId = freezed,
     Object? targetedCompetenceId = freezed,
-    Object? completionDate = freezed,
+    Object? completionDate = null,
     Object? workerId = freezed,
     Object? hasWorkerLocationShared = null,
     Object? hasTransportPaid = null,
@@ -472,10 +472,10 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
           ? _value.targetedCompetenceId
           : targetedCompetenceId // ignore: cast_nullable_to_non_nullable
               as int?,
-      completionDate: freezed == completionDate
+      completionDate: null == completionDate
           ? _value.completionDate
           : completionDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as DateTime,
       workerId: freezed == workerId
           ? _value.workerId
           : workerId // ignore: cast_nullable_to_non_nullable
@@ -560,7 +560,7 @@ abstract class _$$ServiceRequestImplCopyWith<$Res>
       String description,
       int? targetedMetierId,
       int? targetedCompetenceId,
-      DateTime? completionDate,
+      DateTime completionDate,
       int? workerId,
       bool hasWorkerLocationShared,
       bool hasTransportPaid,
@@ -598,7 +598,7 @@ class __$$ServiceRequestImplCopyWithImpl<$Res>
     Object? description = null,
     Object? targetedMetierId = freezed,
     Object? targetedCompetenceId = freezed,
-    Object? completionDate = freezed,
+    Object? completionDate = null,
     Object? workerId = freezed,
     Object? hasWorkerLocationShared = null,
     Object? hasTransportPaid = null,
@@ -635,10 +635,10 @@ class __$$ServiceRequestImplCopyWithImpl<$Res>
           ? _value.targetedCompetenceId
           : targetedCompetenceId // ignore: cast_nullable_to_non_nullable
               as int?,
-      completionDate: freezed == completionDate
+      completionDate: null == completionDate
           ? _value.completionDate
           : completionDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as DateTime,
       workerId: freezed == workerId
           ? _value.workerId
           : workerId // ignore: cast_nullable_to_non_nullable
@@ -738,7 +738,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
   @override
   final int? targetedCompetenceId;
   @override
-  final DateTime? completionDate;
+  final DateTime completionDate;
   @override
   final int? workerId;
   @override
@@ -872,7 +872,7 @@ abstract class _ServiceRequest implements ServiceRequest {
       required final String description,
       required final int? targetedMetierId,
       required final int? targetedCompetenceId,
-      required final DateTime? completionDate,
+      required final DateTime completionDate,
       required final int? workerId,
       required final bool hasWorkerLocationShared,
       required final bool hasTransportPaid,
@@ -902,7 +902,7 @@ abstract class _ServiceRequest implements ServiceRequest {
   @override
   int? get targetedCompetenceId;
   @override
-  DateTime? get completionDate;
+  DateTime get completionDate;
   @override
   int? get workerId;
   @override
