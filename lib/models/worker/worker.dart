@@ -95,6 +95,7 @@ class SaveWorker with _$SaveWorker {
     required String rectoUrl,
     required String versoUrl,
     required int villeId,
+    required Offset? baseLocation,
     required int typeCompteId,
     required List<RhumaineSkill> rhumaineSkills,
     required String photo,

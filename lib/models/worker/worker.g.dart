@@ -137,6 +137,9 @@ _$SaveWorkerImpl _$$SaveWorkerImplFromJson(Map<String, dynamic> json) =>
       rectoUrl: json['rectoUrl'] as String,
       versoUrl: json['versoUrl'] as String,
       villeId: (json['villeId'] as num).toInt(),
+      baseLocation: json['baseLocation'] == null
+          ? null
+          : Offset.fromJson(json['baseLocation'] as Map<String, dynamic>),
       typeCompteId: (json['typeCompteId'] as num).toInt(),
       rhumaineSkills: (json['rhumaineSkills'] as List<dynamic>)
           .map((e) => RhumaineSkill.fromJson(e as Map<String, dynamic>))
@@ -153,6 +156,7 @@ Map<String, dynamic> _$$SaveWorkerImplToJson(_$SaveWorkerImpl instance) =>
       'rectoUrl': instance.rectoUrl,
       'versoUrl': instance.versoUrl,
       'villeId': instance.villeId,
+      'baseLocation': instance.baseLocation,
       'typeCompteId': instance.typeCompteId,
       'rhumaineSkills': instance.rhumaineSkills,
       'photo': instance.photo,

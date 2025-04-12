@@ -1616,6 +1616,7 @@ mixin _$SaveWorker {
   String get rectoUrl => throw _privateConstructorUsedError;
   String get versoUrl => throw _privateConstructorUsedError;
   int get villeId => throw _privateConstructorUsedError;
+  Offset? get baseLocation => throw _privateConstructorUsedError;
   int get typeCompteId => throw _privateConstructorUsedError;
   List<RhumaineSkill> get rhumaineSkills => throw _privateConstructorUsedError;
   String get photo => throw _privateConstructorUsedError;
@@ -1644,9 +1645,12 @@ abstract class $SaveWorkerCopyWith<$Res> {
       String rectoUrl,
       String versoUrl,
       int villeId,
+      Offset? baseLocation,
       int typeCompteId,
       List<RhumaineSkill> rhumaineSkills,
       String photo});
+
+  $OffsetCopyWith<$Res>? get baseLocation;
 }
 
 /// @nodoc
@@ -1671,6 +1675,7 @@ class _$SaveWorkerCopyWithImpl<$Res, $Val extends SaveWorker>
     Object? rectoUrl = null,
     Object? versoUrl = null,
     Object? villeId = null,
+    Object? baseLocation = freezed,
     Object? typeCompteId = null,
     Object? rhumaineSkills = null,
     Object? photo = null,
@@ -1704,6 +1709,10 @@ class _$SaveWorkerCopyWithImpl<$Res, $Val extends SaveWorker>
           ? _value.villeId
           : villeId // ignore: cast_nullable_to_non_nullable
               as int,
+      baseLocation: freezed == baseLocation
+          ? _value.baseLocation
+          : baseLocation // ignore: cast_nullable_to_non_nullable
+              as Offset?,
       typeCompteId: null == typeCompteId
           ? _value.typeCompteId
           : typeCompteId // ignore: cast_nullable_to_non_nullable
@@ -1717,6 +1726,20 @@ class _$SaveWorkerCopyWithImpl<$Res, $Val extends SaveWorker>
           : photo // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
+  }
+
+  /// Create a copy of SaveWorker
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $OffsetCopyWith<$Res>? get baseLocation {
+    if (_value.baseLocation == null) {
+      return null;
+    }
+
+    return $OffsetCopyWith<$Res>(_value.baseLocation!, (value) {
+      return _then(_value.copyWith(baseLocation: value) as $Val);
+    });
   }
 }
 
@@ -1736,9 +1759,13 @@ abstract class _$$SaveWorkerImplCopyWith<$Res>
       String rectoUrl,
       String versoUrl,
       int villeId,
+      Offset? baseLocation,
       int typeCompteId,
       List<RhumaineSkill> rhumaineSkills,
       String photo});
+
+  @override
+  $OffsetCopyWith<$Res>? get baseLocation;
 }
 
 /// @nodoc
@@ -1761,6 +1788,7 @@ class __$$SaveWorkerImplCopyWithImpl<$Res>
     Object? rectoUrl = null,
     Object? versoUrl = null,
     Object? villeId = null,
+    Object? baseLocation = freezed,
     Object? typeCompteId = null,
     Object? rhumaineSkills = null,
     Object? photo = null,
@@ -1794,6 +1822,10 @@ class __$$SaveWorkerImplCopyWithImpl<$Res>
           ? _value.villeId
           : villeId // ignore: cast_nullable_to_non_nullable
               as int,
+      baseLocation: freezed == baseLocation
+          ? _value.baseLocation
+          : baseLocation // ignore: cast_nullable_to_non_nullable
+              as Offset?,
       typeCompteId: null == typeCompteId
           ? _value.typeCompteId
           : typeCompteId // ignore: cast_nullable_to_non_nullable
@@ -1821,6 +1853,7 @@ class _$SaveWorkerImpl implements _SaveWorker {
       required this.rectoUrl,
       required this.versoUrl,
       required this.villeId,
+      required this.baseLocation,
       required this.typeCompteId,
       required final List<RhumaineSkill> rhumaineSkills,
       required this.photo})
@@ -1844,6 +1877,8 @@ class _$SaveWorkerImpl implements _SaveWorker {
   @override
   final int villeId;
   @override
+  final Offset? baseLocation;
+  @override
   final int typeCompteId;
   final List<RhumaineSkill> _rhumaineSkills;
   @override
@@ -1858,7 +1893,7 @@ class _$SaveWorkerImpl implements _SaveWorker {
 
   @override
   String toString() {
-    return 'SaveWorker(firstName: $firstName, lastName: $lastName, telephone: $telephone, email: $email, rectoUrl: $rectoUrl, versoUrl: $versoUrl, villeId: $villeId, typeCompteId: $typeCompteId, rhumaineSkills: $rhumaineSkills, photo: $photo)';
+    return 'SaveWorker(firstName: $firstName, lastName: $lastName, telephone: $telephone, email: $email, rectoUrl: $rectoUrl, versoUrl: $versoUrl, villeId: $villeId, baseLocation: $baseLocation, typeCompteId: $typeCompteId, rhumaineSkills: $rhumaineSkills, photo: $photo)';
   }
 
   @override
@@ -1878,6 +1913,8 @@ class _$SaveWorkerImpl implements _SaveWorker {
             (identical(other.versoUrl, versoUrl) ||
                 other.versoUrl == versoUrl) &&
             (identical(other.villeId, villeId) || other.villeId == villeId) &&
+            (identical(other.baseLocation, baseLocation) ||
+                other.baseLocation == baseLocation) &&
             (identical(other.typeCompteId, typeCompteId) ||
                 other.typeCompteId == typeCompteId) &&
             const DeepCollectionEquality()
@@ -1896,6 +1933,7 @@ class _$SaveWorkerImpl implements _SaveWorker {
       rectoUrl,
       versoUrl,
       villeId,
+      baseLocation,
       typeCompteId,
       const DeepCollectionEquality().hash(_rhumaineSkills),
       photo);
@@ -1925,6 +1963,7 @@ abstract class _SaveWorker implements SaveWorker {
       required final String rectoUrl,
       required final String versoUrl,
       required final int villeId,
+      required final Offset? baseLocation,
       required final int typeCompteId,
       required final List<RhumaineSkill> rhumaineSkills,
       required final String photo}) = _$SaveWorkerImpl;
@@ -1946,6 +1985,8 @@ abstract class _SaveWorker implements SaveWorker {
   String get versoUrl;
   @override
   int get villeId;
+  @override
+  Offset? get baseLocation;
   @override
   int get typeCompteId;
   @override
