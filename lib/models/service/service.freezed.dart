@@ -361,6 +361,7 @@ mixin _$ServiceRequest {
   bool get hasTransportPaid => throw _privateConstructorUsedError;
   bool get hasServicePaid => throw _privateConstructorUsedError;
   int? get factureId => throw _privateConstructorUsedError;
+  int? get serviceCancelationReasonId => throw _privateConstructorUsedError;
 
   /// Contains workerId to which that service is for
   int? get forWorkerId => throw _privateConstructorUsedError; // Issue photo
@@ -402,6 +403,7 @@ abstract class $ServiceRequestCopyWith<$Res> {
       bool hasTransportPaid,
       bool hasServicePaid,
       int? factureId,
+      int? serviceCancelationReasonId,
       int? forWorkerId,
       String? issuePhotoUrl,
       int clientId,
@@ -441,6 +443,7 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
     Object? hasTransportPaid = null,
     Object? hasServicePaid = null,
     Object? factureId = freezed,
+    Object? serviceCancelationReasonId = freezed,
     Object? forWorkerId = freezed,
     Object? issuePhotoUrl = freezed,
     Object? clientId = null,
@@ -495,6 +498,10 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
       factureId: freezed == factureId
           ? _value.factureId
           : factureId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      serviceCancelationReasonId: freezed == serviceCancelationReasonId
+          ? _value.serviceCancelationReasonId
+          : serviceCancelationReasonId // ignore: cast_nullable_to_non_nullable
               as int?,
       forWorkerId: freezed == forWorkerId
           ? _value.forWorkerId
@@ -566,6 +573,7 @@ abstract class _$$ServiceRequestImplCopyWith<$Res>
       bool hasTransportPaid,
       bool hasServicePaid,
       int? factureId,
+      int? serviceCancelationReasonId,
       int? forWorkerId,
       String? issuePhotoUrl,
       int clientId,
@@ -604,6 +612,7 @@ class __$$ServiceRequestImplCopyWithImpl<$Res>
     Object? hasTransportPaid = null,
     Object? hasServicePaid = null,
     Object? factureId = freezed,
+    Object? serviceCancelationReasonId = freezed,
     Object? forWorkerId = freezed,
     Object? issuePhotoUrl = freezed,
     Object? clientId = null,
@@ -658,6 +667,10 @@ class __$$ServiceRequestImplCopyWithImpl<$Res>
       factureId: freezed == factureId
           ? _value.factureId
           : factureId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      serviceCancelationReasonId: freezed == serviceCancelationReasonId
+          ? _value.serviceCancelationReasonId
+          : serviceCancelationReasonId // ignore: cast_nullable_to_non_nullable
               as int?,
       forWorkerId: freezed == forWorkerId
           ? _value.forWorkerId
@@ -714,6 +727,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
       required this.hasTransportPaid,
       required this.hasServicePaid,
       this.factureId,
+      this.serviceCancelationReasonId,
       this.forWorkerId,
       this.issuePhotoUrl,
       required this.clientId,
@@ -749,6 +763,8 @@ class _$ServiceRequestImpl implements _ServiceRequest {
   final bool hasServicePaid;
   @override
   final int? factureId;
+  @override
+  final int? serviceCancelationReasonId;
 
   /// Contains workerId to which that service is for
   @override
@@ -774,7 +790,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
 
   @override
   String toString() {
-    return 'ServiceRequest(id: $id, title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, workerId: $workerId, hasWorkerLocationShared: $hasWorkerLocationShared, hasTransportPaid: $hasTransportPaid, hasServicePaid: $hasServicePaid, factureId: $factureId, forWorkerId: $forWorkerId, issuePhotoUrl: $issuePhotoUrl, clientId: $clientId, startDate: $startDate, cancelDate: $cancelDate, contactDate: $contactDate, endDate: $endDate, createdDate: $createdDate, desiredLocation: $desiredLocation)';
+    return 'ServiceRequest(id: $id, title: $title, description: $description, targetedMetierId: $targetedMetierId, targetedCompetenceId: $targetedCompetenceId, completionDate: $completionDate, workerId: $workerId, hasWorkerLocationShared: $hasWorkerLocationShared, hasTransportPaid: $hasTransportPaid, hasServicePaid: $hasServicePaid, factureId: $factureId, serviceCancelationReasonId: $serviceCancelationReasonId, forWorkerId: $forWorkerId, issuePhotoUrl: $issuePhotoUrl, clientId: $clientId, startDate: $startDate, cancelDate: $cancelDate, contactDate: $contactDate, endDate: $endDate, createdDate: $createdDate, desiredLocation: $desiredLocation)';
   }
 
   @override
@@ -803,6 +819,10 @@ class _$ServiceRequestImpl implements _ServiceRequest {
                 other.hasServicePaid == hasServicePaid) &&
             (identical(other.factureId, factureId) ||
                 other.factureId == factureId) &&
+            (identical(other.serviceCancelationReasonId,
+                    serviceCancelationReasonId) ||
+                other.serviceCancelationReasonId ==
+                    serviceCancelationReasonId) &&
             (identical(other.forWorkerId, forWorkerId) ||
                 other.forWorkerId == forWorkerId) &&
             (identical(other.issuePhotoUrl, issuePhotoUrl) ||
@@ -837,6 +857,7 @@ class _$ServiceRequestImpl implements _ServiceRequest {
         hasTransportPaid,
         hasServicePaid,
         factureId,
+        serviceCancelationReasonId,
         forWorkerId,
         issuePhotoUrl,
         clientId,
@@ -878,6 +899,7 @@ abstract class _ServiceRequest implements ServiceRequest {
       required final bool hasTransportPaid,
       required final bool hasServicePaid,
       final int? factureId,
+      final int? serviceCancelationReasonId,
       final int? forWorkerId,
       final String? issuePhotoUrl,
       required final int clientId,
@@ -913,6 +935,8 @@ abstract class _ServiceRequest implements ServiceRequest {
   bool get hasServicePaid;
   @override
   int? get factureId;
+  @override
+  int? get serviceCancelationReasonId;
 
   /// Contains workerId to which that service is for
   @override
@@ -1347,5 +1371,200 @@ abstract class _ServiceRequestWithWorker implements ServiceRequestWithWorker {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ServiceRequestWithWorkerImplCopyWith<_$ServiceRequestWithWorkerImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+ServiceCancelationReason _$ServiceCancelationReasonFromJson(
+    Map<String, dynamic> json) {
+  return _ServiceCancelationReason.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ServiceCancelationReason {
+  int? get idMotifA => throw _privateConstructorUsedError;
+  String? get textMotifA => throw _privateConstructorUsedError;
+  String? get explication => throw _privateConstructorUsedError;
+
+  /// Serializes this ServiceCancelationReason to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of ServiceCancelationReason
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ServiceCancelationReasonCopyWith<ServiceCancelationReason> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ServiceCancelationReasonCopyWith<$Res> {
+  factory $ServiceCancelationReasonCopyWith(ServiceCancelationReason value,
+          $Res Function(ServiceCancelationReason) then) =
+      _$ServiceCancelationReasonCopyWithImpl<$Res, ServiceCancelationReason>;
+  @useResult
+  $Res call({int? idMotifA, String? textMotifA, String? explication});
+}
+
+/// @nodoc
+class _$ServiceCancelationReasonCopyWithImpl<$Res,
+        $Val extends ServiceCancelationReason>
+    implements $ServiceCancelationReasonCopyWith<$Res> {
+  _$ServiceCancelationReasonCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of ServiceCancelationReason
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? idMotifA = freezed,
+    Object? textMotifA = freezed,
+    Object? explication = freezed,
+  }) {
+    return _then(_value.copyWith(
+      idMotifA: freezed == idMotifA
+          ? _value.idMotifA
+          : idMotifA // ignore: cast_nullable_to_non_nullable
+              as int?,
+      textMotifA: freezed == textMotifA
+          ? _value.textMotifA
+          : textMotifA // ignore: cast_nullable_to_non_nullable
+              as String?,
+      explication: freezed == explication
+          ? _value.explication
+          : explication // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ServiceCancelationReasonImplCopyWith<$Res>
+    implements $ServiceCancelationReasonCopyWith<$Res> {
+  factory _$$ServiceCancelationReasonImplCopyWith(
+          _$ServiceCancelationReasonImpl value,
+          $Res Function(_$ServiceCancelationReasonImpl) then) =
+      __$$ServiceCancelationReasonImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int? idMotifA, String? textMotifA, String? explication});
+}
+
+/// @nodoc
+class __$$ServiceCancelationReasonImplCopyWithImpl<$Res>
+    extends _$ServiceCancelationReasonCopyWithImpl<$Res,
+        _$ServiceCancelationReasonImpl>
+    implements _$$ServiceCancelationReasonImplCopyWith<$Res> {
+  __$$ServiceCancelationReasonImplCopyWithImpl(
+      _$ServiceCancelationReasonImpl _value,
+      $Res Function(_$ServiceCancelationReasonImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ServiceCancelationReason
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? idMotifA = freezed,
+    Object? textMotifA = freezed,
+    Object? explication = freezed,
+  }) {
+    return _then(_$ServiceCancelationReasonImpl(
+      idMotifA: freezed == idMotifA
+          ? _value.idMotifA
+          : idMotifA // ignore: cast_nullable_to_non_nullable
+              as int?,
+      textMotifA: freezed == textMotifA
+          ? _value.textMotifA
+          : textMotifA // ignore: cast_nullable_to_non_nullable
+              as String?,
+      explication: freezed == explication
+          ? _value.explication
+          : explication // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ServiceCancelationReasonImpl implements _ServiceCancelationReason {
+  const _$ServiceCancelationReasonImpl(
+      {this.idMotifA, this.textMotifA, this.explication});
+
+  factory _$ServiceCancelationReasonImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ServiceCancelationReasonImplFromJson(json);
+
+  @override
+  final int? idMotifA;
+  @override
+  final String? textMotifA;
+  @override
+  final String? explication;
+
+  @override
+  String toString() {
+    return 'ServiceCancelationReason(idMotifA: $idMotifA, textMotifA: $textMotifA, explication: $explication)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ServiceCancelationReasonImpl &&
+            (identical(other.idMotifA, idMotifA) ||
+                other.idMotifA == idMotifA) &&
+            (identical(other.textMotifA, textMotifA) ||
+                other.textMotifA == textMotifA) &&
+            (identical(other.explication, explication) ||
+                other.explication == explication));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, idMotifA, textMotifA, explication);
+
+  /// Create a copy of ServiceCancelationReason
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ServiceCancelationReasonImplCopyWith<_$ServiceCancelationReasonImpl>
+      get copyWith => __$$ServiceCancelationReasonImplCopyWithImpl<
+          _$ServiceCancelationReasonImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ServiceCancelationReasonImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ServiceCancelationReason implements ServiceCancelationReason {
+  const factory _ServiceCancelationReason(
+      {final int? idMotifA,
+      final String? textMotifA,
+      final String? explication}) = _$ServiceCancelationReasonImpl;
+
+  factory _ServiceCancelationReason.fromJson(Map<String, dynamic> json) =
+      _$ServiceCancelationReasonImpl.fromJson;
+
+  @override
+  int? get idMotifA;
+  @override
+  String? get textMotifA;
+  @override
+  String? get explication;
+
+  /// Create a copy of ServiceCancelationReason
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ServiceCancelationReasonImplCopyWith<_$ServiceCancelationReasonImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

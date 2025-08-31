@@ -82,7 +82,7 @@ _$BaseLoginRequestImpl _$$BaseLoginRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$BaseLoginRequestImpl(
       telephone: json['telephone'] as String,
-      motDePasse: json['motDePasse'] as String,
+      motDePasse: json['motDePasse'] as String?,
     );
 
 Map<String, dynamic> _$$BaseLoginRequestImplToJson(

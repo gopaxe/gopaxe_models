@@ -5,6 +5,13 @@ import '../worker/worker.dart';
 part 'client.freezed.dart';
 part 'client.g.dart';
 
+enum ClientType { 
+  individual(2),
+  company(1);
+  const ClientType(this.id);
+  final int id;
+ }
+
 @freezed
 class Client with _$Client {
   const factory Client(
@@ -59,10 +66,10 @@ class CreateClientRequest with _$CreateClientRequest {
       {required String nom,
       required String prenom,
       required int clientTypeId,
-      required Offset location,
+      Offset? location,
       String? photo,
-      required String telephone,
-      required String motDePasse}) = _CreateClientRequest;
+      required String telephone
+      }) = _CreateClientRequest;
 
   factory CreateClientRequest.fromJson(Map<String, dynamic> json) =>
       _$CreateClientRequestFromJson(json);

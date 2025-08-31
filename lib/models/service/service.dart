@@ -36,6 +36,7 @@ class ServiceRequest with _$ServiceRequest {
     required bool hasTransportPaid,
     required bool hasServicePaid,
     int? factureId,
+    int? serviceCancelationReasonId,
 
     /// Contains workerId to which that service is for
     int? forWorkerId,
@@ -73,3 +74,17 @@ class ServiceRequestWithWorker with _$ServiceRequestWithWorker {
   factory ServiceRequestWithWorker.fromJson(Map<String, dynamic> json) =>
       _$ServiceRequestWithWorkerFromJson(json);
 }
+
+
+
+@freezed
+class ServiceCancelationReason with _$ServiceCancelationReason {
+  const factory ServiceCancelationReason(
+      {int? idMotifA,
+      String? textMotifA, String? explication}) = _ServiceCancelationReason;
+
+  factory ServiceCancelationReason.fromJson(Map<String, dynamic> json) =>
+      _$ServiceCancelationReasonFromJson(json);
+}
+
+

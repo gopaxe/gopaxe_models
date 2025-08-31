@@ -941,10 +941,9 @@ mixin _$CreateClientRequest {
   String get nom => throw _privateConstructorUsedError;
   String get prenom => throw _privateConstructorUsedError;
   int get clientTypeId => throw _privateConstructorUsedError;
-  Offset get location => throw _privateConstructorUsedError;
+  Offset? get location => throw _privateConstructorUsedError;
   String? get photo => throw _privateConstructorUsedError;
   String get telephone => throw _privateConstructorUsedError;
-  String get motDePasse => throw _privateConstructorUsedError;
 
   /// Serializes this CreateClientRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -966,12 +965,11 @@ abstract class $CreateClientRequestCopyWith<$Res> {
       {String nom,
       String prenom,
       int clientTypeId,
-      Offset location,
+      Offset? location,
       String? photo,
-      String telephone,
-      String motDePasse});
+      String telephone});
 
-  $OffsetCopyWith<$Res> get location;
+  $OffsetCopyWith<$Res>? get location;
 }
 
 /// @nodoc
@@ -992,10 +990,9 @@ class _$CreateClientRequestCopyWithImpl<$Res, $Val extends CreateClientRequest>
     Object? nom = null,
     Object? prenom = null,
     Object? clientTypeId = null,
-    Object? location = null,
+    Object? location = freezed,
     Object? photo = freezed,
     Object? telephone = null,
-    Object? motDePasse = null,
   }) {
     return _then(_value.copyWith(
       nom: null == nom
@@ -1010,10 +1007,10 @@ class _$CreateClientRequestCopyWithImpl<$Res, $Val extends CreateClientRequest>
           ? _value.clientTypeId
           : clientTypeId // ignore: cast_nullable_to_non_nullable
               as int,
-      location: null == location
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
-              as Offset,
+              as Offset?,
       photo: freezed == photo
           ? _value.photo
           : photo // ignore: cast_nullable_to_non_nullable
@@ -1022,10 +1019,6 @@ class _$CreateClientRequestCopyWithImpl<$Res, $Val extends CreateClientRequest>
           ? _value.telephone
           : telephone // ignore: cast_nullable_to_non_nullable
               as String,
-      motDePasse: null == motDePasse
-          ? _value.motDePasse
-          : motDePasse // ignore: cast_nullable_to_non_nullable
-              as String,
     ) as $Val);
   }
 
@@ -1033,8 +1026,12 @@ class _$CreateClientRequestCopyWithImpl<$Res, $Val extends CreateClientRequest>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $OffsetCopyWith<$Res> get location {
-    return $OffsetCopyWith<$Res>(_value.location, (value) {
+  $OffsetCopyWith<$Res>? get location {
+    if (_value.location == null) {
+      return null;
+    }
+
+    return $OffsetCopyWith<$Res>(_value.location!, (value) {
       return _then(_value.copyWith(location: value) as $Val);
     });
   }
@@ -1052,13 +1049,12 @@ abstract class _$$CreateClientRequestImplCopyWith<$Res>
       {String nom,
       String prenom,
       int clientTypeId,
-      Offset location,
+      Offset? location,
       String? photo,
-      String telephone,
-      String motDePasse});
+      String telephone});
 
   @override
-  $OffsetCopyWith<$Res> get location;
+  $OffsetCopyWith<$Res>? get location;
 }
 
 /// @nodoc
@@ -1077,10 +1073,9 @@ class __$$CreateClientRequestImplCopyWithImpl<$Res>
     Object? nom = null,
     Object? prenom = null,
     Object? clientTypeId = null,
-    Object? location = null,
+    Object? location = freezed,
     Object? photo = freezed,
     Object? telephone = null,
-    Object? motDePasse = null,
   }) {
     return _then(_$CreateClientRequestImpl(
       nom: null == nom
@@ -1095,10 +1090,10 @@ class __$$CreateClientRequestImplCopyWithImpl<$Res>
           ? _value.clientTypeId
           : clientTypeId // ignore: cast_nullable_to_non_nullable
               as int,
-      location: null == location
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
-              as Offset,
+              as Offset?,
       photo: freezed == photo
           ? _value.photo
           : photo // ignore: cast_nullable_to_non_nullable
@@ -1106,10 +1101,6 @@ class __$$CreateClientRequestImplCopyWithImpl<$Res>
       telephone: null == telephone
           ? _value.telephone
           : telephone // ignore: cast_nullable_to_non_nullable
-              as String,
-      motDePasse: null == motDePasse
-          ? _value.motDePasse
-          : motDePasse // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -1122,10 +1113,9 @@ class _$CreateClientRequestImpl implements _CreateClientRequest {
       {required this.nom,
       required this.prenom,
       required this.clientTypeId,
-      required this.location,
+      this.location,
       this.photo,
-      required this.telephone,
-      required this.motDePasse});
+      required this.telephone});
 
   factory _$CreateClientRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$CreateClientRequestImplFromJson(json);
@@ -1137,17 +1127,15 @@ class _$CreateClientRequestImpl implements _CreateClientRequest {
   @override
   final int clientTypeId;
   @override
-  final Offset location;
+  final Offset? location;
   @override
   final String? photo;
   @override
   final String telephone;
-  @override
-  final String motDePasse;
 
   @override
   String toString() {
-    return 'CreateClientRequest(nom: $nom, prenom: $prenom, clientTypeId: $clientTypeId, location: $location, photo: $photo, telephone: $telephone, motDePasse: $motDePasse)';
+    return 'CreateClientRequest(nom: $nom, prenom: $prenom, clientTypeId: $clientTypeId, location: $location, photo: $photo, telephone: $telephone)';
   }
 
   @override
@@ -1163,15 +1151,13 @@ class _$CreateClientRequestImpl implements _CreateClientRequest {
                 other.location == location) &&
             (identical(other.photo, photo) || other.photo == photo) &&
             (identical(other.telephone, telephone) ||
-                other.telephone == telephone) &&
-            (identical(other.motDePasse, motDePasse) ||
-                other.motDePasse == motDePasse));
+                other.telephone == telephone));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, nom, prenom, clientTypeId,
-      location, photo, telephone, motDePasse);
+  int get hashCode => Object.hash(
+      runtimeType, nom, prenom, clientTypeId, location, photo, telephone);
 
   /// Create a copy of CreateClientRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -1195,10 +1181,9 @@ abstract class _CreateClientRequest implements CreateClientRequest {
       {required final String nom,
       required final String prenom,
       required final int clientTypeId,
-      required final Offset location,
+      final Offset? location,
       final String? photo,
-      required final String telephone,
-      required final String motDePasse}) = _$CreateClientRequestImpl;
+      required final String telephone}) = _$CreateClientRequestImpl;
 
   factory _CreateClientRequest.fromJson(Map<String, dynamic> json) =
       _$CreateClientRequestImpl.fromJson;
@@ -1210,13 +1195,11 @@ abstract class _CreateClientRequest implements CreateClientRequest {
   @override
   int get clientTypeId;
   @override
-  Offset get location;
+  Offset? get location;
   @override
   String? get photo;
   @override
   String get telephone;
-  @override
-  String get motDePasse;
 
   /// Create a copy of CreateClientRequest
   /// with the given fields replaced by the non-null parameter values.

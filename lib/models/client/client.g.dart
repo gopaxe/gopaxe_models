@@ -87,10 +87,11 @@ _$CreateClientRequestImpl _$$CreateClientRequestImplFromJson(
       nom: json['nom'] as String,
       prenom: json['prenom'] as String,
       clientTypeId: (json['clientTypeId'] as num).toInt(),
-      location: Offset.fromJson(json['location'] as Map<String, dynamic>),
+      location: json['location'] == null
+          ? null
+          : Offset.fromJson(json['location'] as Map<String, dynamic>),
       photo: json['photo'] as String?,
       telephone: json['telephone'] as String,
-      motDePasse: json['motDePasse'] as String,
     );
 
 Map<String, dynamic> _$$CreateClientRequestImplToJson(
@@ -102,7 +103,6 @@ Map<String, dynamic> _$$CreateClientRequestImplToJson(
       'location': instance.location,
       'photo': instance.photo,
       'telephone': instance.telephone,
-      'motDePasse': instance.motDePasse,
     };
 
 _$UpdateClientRequestImpl _$$UpdateClientRequestImplFromJson(

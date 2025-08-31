@@ -962,7 +962,7 @@ BaseLoginRequest _$BaseLoginRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$BaseLoginRequest {
   String get telephone => throw _privateConstructorUsedError;
-  String get motDePasse => throw _privateConstructorUsedError;
+  String? get motDePasse => throw _privateConstructorUsedError;
 
   /// Serializes this BaseLoginRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -980,7 +980,7 @@ abstract class $BaseLoginRequestCopyWith<$Res> {
           BaseLoginRequest value, $Res Function(BaseLoginRequest) then) =
       _$BaseLoginRequestCopyWithImpl<$Res, BaseLoginRequest>;
   @useResult
-  $Res call({String telephone, String motDePasse});
+  $Res call({String telephone, String? motDePasse});
 }
 
 /// @nodoc
@@ -999,17 +999,17 @@ class _$BaseLoginRequestCopyWithImpl<$Res, $Val extends BaseLoginRequest>
   @override
   $Res call({
     Object? telephone = null,
-    Object? motDePasse = null,
+    Object? motDePasse = freezed,
   }) {
     return _then(_value.copyWith(
       telephone: null == telephone
           ? _value.telephone
           : telephone // ignore: cast_nullable_to_non_nullable
               as String,
-      motDePasse: null == motDePasse
+      motDePasse: freezed == motDePasse
           ? _value.motDePasse
           : motDePasse // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -1022,7 +1022,7 @@ abstract class _$$BaseLoginRequestImplCopyWith<$Res>
       __$$BaseLoginRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String telephone, String motDePasse});
+  $Res call({String telephone, String? motDePasse});
 }
 
 /// @nodoc
@@ -1039,17 +1039,17 @@ class __$$BaseLoginRequestImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? telephone = null,
-    Object? motDePasse = null,
+    Object? motDePasse = freezed,
   }) {
     return _then(_$BaseLoginRequestImpl(
       telephone: null == telephone
           ? _value.telephone
           : telephone // ignore: cast_nullable_to_non_nullable
               as String,
-      motDePasse: null == motDePasse
+      motDePasse: freezed == motDePasse
           ? _value.motDePasse
           : motDePasse // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -1057,8 +1057,7 @@ class __$$BaseLoginRequestImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$BaseLoginRequestImpl implements _BaseLoginRequest {
-  const _$BaseLoginRequestImpl(
-      {required this.telephone, required this.motDePasse});
+  const _$BaseLoginRequestImpl({required this.telephone, this.motDePasse});
 
   factory _$BaseLoginRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$BaseLoginRequestImplFromJson(json);
@@ -1066,7 +1065,7 @@ class _$BaseLoginRequestImpl implements _BaseLoginRequest {
   @override
   final String telephone;
   @override
-  final String motDePasse;
+  final String? motDePasse;
 
   @override
   String toString() {
@@ -1108,7 +1107,7 @@ class _$BaseLoginRequestImpl implements _BaseLoginRequest {
 abstract class _BaseLoginRequest implements BaseLoginRequest {
   const factory _BaseLoginRequest(
       {required final String telephone,
-      required final String motDePasse}) = _$BaseLoginRequestImpl;
+      final String? motDePasse}) = _$BaseLoginRequestImpl;
 
   factory _BaseLoginRequest.fromJson(Map<String, dynamic> json) =
       _$BaseLoginRequestImpl.fromJson;
@@ -1116,7 +1115,7 @@ abstract class _BaseLoginRequest implements BaseLoginRequest {
   @override
   String get telephone;
   @override
-  String get motDePasse;
+  String? get motDePasse;
 
   /// Create a copy of BaseLoginRequest
   /// with the given fields replaced by the non-null parameter values.

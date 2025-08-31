@@ -62,7 +62,7 @@ class UnAuthorizedResponse with _$UnAuthorizedResponse {
 class BaseLoginRequest with _$BaseLoginRequest {
   const factory BaseLoginRequest(
       {required String telephone,
-      required String motDePasse}) = _BaseLoginRequest;
+      String? motDePasse}) = _BaseLoginRequest;
 
   factory BaseLoginRequest.fromJson(Map<String, dynamic> json) =>
       _$BaseLoginRequestFromJson(json);

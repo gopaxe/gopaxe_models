@@ -46,6 +46,8 @@ _$ServiceRequestImpl _$$ServiceRequestImplFromJson(Map<String, dynamic> json) =>
       hasTransportPaid: json['hasTransportPaid'] as bool,
       hasServicePaid: json['hasServicePaid'] as bool,
       factureId: (json['factureId'] as num?)?.toInt(),
+      serviceCancelationReasonId:
+          (json['serviceCancelationReasonId'] as num?)?.toInt(),
       forWorkerId: (json['forWorkerId'] as num?)?.toInt(),
       issuePhotoUrl: json['issuePhotoUrl'] as String?,
       clientId: (json['clientId'] as num).toInt(),
@@ -82,6 +84,7 @@ Map<String, dynamic> _$$ServiceRequestImplToJson(
       'hasTransportPaid': instance.hasTransportPaid,
       'hasServicePaid': instance.hasServicePaid,
       'factureId': instance.factureId,
+      'serviceCancelationReasonId': instance.serviceCancelationReasonId,
       'forWorkerId': instance.forWorkerId,
       'issuePhotoUrl': instance.issuePhotoUrl,
       'clientId': instance.clientId,
@@ -122,4 +125,20 @@ Map<String, dynamic> _$$ServiceRequestWithWorkerImplToJson(
     <String, dynamic>{
       'worker': instance.worker,
       'service': instance.service,
+    };
+
+_$ServiceCancelationReasonImpl _$$ServiceCancelationReasonImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ServiceCancelationReasonImpl(
+      idMotifA: (json['idMotifA'] as num?)?.toInt(),
+      textMotifA: json['textMotifA'] as String?,
+      explication: json['explication'] as String?,
+    );
+
+Map<String, dynamic> _$$ServiceCancelationReasonImplToJson(
+        _$ServiceCancelationReasonImpl instance) =>
+    <String, dynamic>{
+      'idMotifA': instance.idMotifA,
+      'textMotifA': instance.textMotifA,
+      'explication': instance.explication,
     };
