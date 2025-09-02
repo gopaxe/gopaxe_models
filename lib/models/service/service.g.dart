@@ -13,7 +13,9 @@ _$CreateServiceRequestImpl _$$CreateServiceRequestImplFromJson(
       description: json['description'] as String,
       targetedMetierId: (json['targetedMetierId'] as num?)?.toInt(),
       targetedCompetenceId: (json['targetedCompetenceId'] as num?)?.toInt(),
-      issuePhotoUrl: json['issuePhotoUrl'] as String?,
+      issuePhotoUrl: (json['issuePhotoUrl'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
       forWorkerId: (json['forWorkerId'] as num?)?.toInt(),
       completionDate: DateTime.parse(json['completionDate'] as String),
       desiredLocation:
@@ -49,7 +51,9 @@ _$ServiceRequestImpl _$$ServiceRequestImplFromJson(Map<String, dynamic> json) =>
       serviceCancelationReasonId:
           (json['serviceCancelationReasonId'] as num?)?.toInt(),
       forWorkerId: (json['forWorkerId'] as num?)?.toInt(),
-      issuePhotoUrl: json['issuePhotoUrl'] as String?,
+      issuePhotoUrl: (json['issuePhotoUrl'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
       clientId: (json['clientId'] as num).toInt(),
       startDate: json['startDate'] == null
           ? null

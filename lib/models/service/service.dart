@@ -11,7 +11,7 @@ class CreateServiceRequest with _$CreateServiceRequest {
     required String description,
     required int? targetedMetierId,
     required int? targetedCompetenceId,
-    String? issuePhotoUrl,
+    required List<String> issuePhotoUrl,
     int? forWorkerId,
     required DateTime
         completionDate, // Date a laquelle le client aimerais que son travaille soit terminer au plus tart
@@ -41,7 +41,7 @@ class ServiceRequest with _$ServiceRequest {
     /// Contains workerId to which that service is for
     int? forWorkerId,
     // Issue photo
-    String? issuePhotoUrl,
+    required List<String> issuePhotoUrl,
     required int clientId,
     required DateTime? startDate,
     required DateTime? cancelDate,
